@@ -9,4 +9,6 @@ The root page is a static HTML document with no build step, external scripts, fo
 - [`/Caustryn/demo/`](https://nazeeh111.github.io/Caustryn/demo/) is the recorded synthetic radio-inference lab.
 - [`/Phaseglass/demo/`](https://nazeeh111.github.io/Phaseglass/demo/) retains the original Phaseglass replay.
 
-Those directories and their supporting evidence remain in this repository so existing links continue to work. The root index links to both without replacing their project-specific pages. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for asset notices and each project page for the scope of its claims.
+Those directories and their supporting evidence remain in this repository so existing links continue to work. The root index links to the current Caustryn recorded lab without replacing either project-specific page. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for asset notices and each project page for the scope of its claims.
+
+The index's featured Caustryn screenshot is a capture of its recorded synthetic counterexample. The displayed 3.488 m separation is a result of that example, not measured radio-localization accuracy.
