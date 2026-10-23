@@ -1,7 +1,7 @@
 # Dependencies and provenance
 
 Phaseglass application, forward model, inverse search, studio and experiment
-fixtures are original MIT code developed with Codex assistance. No third-party
+fixtures are original MIT code. No third-party
 WiFi application source, trained weights or empirical measurements are bundled.
 
 NumPy and SciPy are separately installed dependencies. Both use BSD licenses;
