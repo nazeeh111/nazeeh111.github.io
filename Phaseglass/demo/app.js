@@ -18,6 +18,7 @@ function render() {
     truth: d.truth, showField: false });
   $("fit-summary").textContent = fit.candidates.length === 1 ? "One found mode, conditional on coherence" : `${fit.candidates.length} compatible modes remain`;
   $("fit-policy").textContent = `${d.training.rx_poses_m.length} training configurations · ${d.training.tx_m.length * d.training.rx_poses_m[0].length} hardware pairs · ${d.training.frequencies_hz.length} frequencies. Finite search; no global uniqueness claim.`;
+  const focusedMode = Array.from($("mode-buttons").children).indexOf(document.activeElement);
   $("mode-buttons").replaceChildren();
   fit.candidates.forEach((mode, i) => {
     const button = document.createElement("button"), title = document.createElement("strong"), info = document.createElement("small");
@@ -26,6 +27,7 @@ function render() {
     button.append(title, info); button.setAttribute("aria-pressed", String(state.selected === i));
     button.onclick = () => chooseMode(i); $("mode-buttons").append(button);
   });
+  if (focusedMode >= 0) $("mode-buttons").children[focusedMode]?.focus({ preventScroll: true });
   $("train-metric").textContent = fmt(candidate?.reduced_residual);
   $("held-metric").textContent = fmt(prediction?.reduced_residual);
   $("held-summary").textContent = `${held.compatible_candidate_count} / ${held.candidate_count} retained modes pass the recorded held diagnostic. No mode was selected or removed.`;
@@ -72,12 +74,12 @@ function drawSignals() {
   $("signal-summary").textContent=`Mode ${state.selected+1}, held configuration ${hi+1}, pair ${pair+1}: complex residual RMS ${rms.toExponential(3)} IQ units. Relative residual over every held pair/frequency: ${pct(candidate.relative_iq_residual)}. Plot scales adapt to this selection; compare numeric diagnostics.`;
 }
 async function load(entry) {
-  const revision=++state.revision;$("reveal-truth").checked=false;$("reveal-truth").disabled=true;
+  const revision=++state.revision;$("reveal-truth").disabled=true;
   $("load-status").textContent="Loading a frozen calculation. No inference is running in this page.";
   try{
     const response=await fetch(entry.file);if(!response.ok)throw Error(`Recorded data unavailable (${response.status}).`);
     const data=await response.json();if(revision!==state.revision)return;
-    state.data=data;state.selected=0;
+    $("reveal-truth").checked=false;state.data=data;state.selected=0;
     $("case-title").textContent=data.title;$("case-description").textContent=data.description;
     const poses=$("pose-select");poses.replaceChildren();
     data.training.rx_poses_m.forEach((_,i)=>poses.add(new Option(`Training ${i+1} / ${data.training.rx_poses_m.length}`,`t${i}`)));
@@ -92,7 +94,11 @@ async function load(entry) {
     $("identities").textContent=`Canonical training SHA-256: ${data.result.fit.training_sha256}\nHeld packet is tied to that exact training identity. Optional truth is frozen synthetic context, never a fitting input.`;
     $("load-status").textContent="Frozen actual calculation loaded. Camera, configuration, modes and signal selection change only the view.";
     render();$("reveal-truth").disabled=false;
-  }catch(error){if(revision===state.revision)$("load-status").textContent=error.message+" Serve these files as static content; no solver service is needed.";}
+  }catch(error){if(revision===state.revision){
+    if(state.data) $("case-select").value=state.data.id;
+    $("reveal-truth").disabled=!state.data;
+    $("load-status").textContent=error.message+" Serve these files as static content; no solver service is needed.";
+  }}
 }
 $("pose-select").onchange=render;$("held-select").onchange=drawSignals;$("pair-select").onchange=drawSignals;
 $("reveal-truth").onchange=render;$("turn-left").onclick=()=>viewer.orbit(-.2);$("turn-right").onclick=()=>viewer.orbit(.2);$("reset-camera").onclick=()=>viewer.reset();
