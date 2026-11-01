@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "path": "app.mjs",
+      "bytes": 26398,
+      "sha256": "ec81c2be9122a2077e441545d5388bd505b61f1ad84af9d8702d71dd3cbb66af"
+    },
+    {
+      "path": "index.html",
+      "bytes": 11971,
+      "sha256": "27225fd86e632c2829a35e1eb9aa2d358c45b2fe6c081739845d916883c4b632"
+    },
+    {
+      "path": "style.css",
+      "bytes": 15104,
+      "sha256": "ffe6f22fd20506a82e796556dc02c85304597066fc9d60c095ddbeb91498c019"
+    },
+    {
+      "path": "verify.mjs",
+      "bytes": 16932,
+      "sha256": "db8a705f77c88794e5f5638b00f88c1444667a8a40e3aa755b629faa0325ef35"
+    },
+    {
+      "path": "worker.mjs",
+      "bytes": 1613,
+      "sha256": "4049363bbed7959cb38e1f68c3f0fb81ad22c1dc4376f8bce7a0bb4705c6110c"
+    },
+    {
+      "path": "examples/FIPY-TERMS.txt",
+      "bytes": 2223,
+      "sha256": "c4b505926291425592ec7b742bbf75b23c1aff0f0334119fe909fbe63af2f8aa"
+    },
+    {
+      "path": "examples/fipy-altered-answer.json",
+      "bytes": 112481,
+      "sha256": "28d24994413a3f26c49b848bdfcefa8eec16c7df4c2ce7055b0740e5407b8f3b"
+    },
+    {
+      "path": "examples/fipy-mesh20x20.py",
+      "bytes": 3190,
+      "sha256": "86e2e3b00aa2160a288ab191fcb47d60fd4faee33dd0bc4e6f81b094761b293d"
+    },
+    {
+      "path": "examples/fipy-provenance.json",
+      "bytes": 3329,
+      "sha256": "efc062396d542139ed0eba535d6e41066ccdca9e80469c004a360782271d0ccf"
+    },
+    {
+      "path": "examples/fipy-steady400.json",
+      "bytes": 112493,
+      "sha256": "19d9d9074341b632e659104f0d676add232c95ab4f3c8bce31c3befd29b77568"
+    },
+    {
+      "path": "examples/fipy-transient400.json",
+      "bytes": 118184,
+      "sha256": "8001aaf16bc86b55ed4912ec18ab9bdaece1e7ed70c26a52ace6c0c0e6175998"
+    },
+    {
+      "path": "examples/fipy-uniform-refusal.json",
+      "bytes": 112493,
+      "sha256": "a65bbc58910471835a149fd03310e3be68a2cd07d03c9c8748ff9a22b7843fb4"
+    },
+    {
+      "path": "examples/hilbert12.json",
+      "bytes": 7549,
+      "sha256": "4a395c29a4569606c6ea2bd0a2787dbb702a69354457b9fb1b462e08441e6c6e"
+    },
+    {
+      "path": "examples/hilbert8.json",
+      "bytes": 3549,
+      "sha256": "8e0551ee478ae944829c94bbead51a04d261385561c198b3937b830e923871ec"
+    },
+    {
+      "path": "examples/ladder64.json",
+      "bytes": 144225,
+      "sha256": "34b0690915263e0e3f0c376fc671fe0a47cea3c3c759bb4d77eecd1bc717760c"
+    },
+    {
+      "path": "examples/manifest.json",
+      "bytes": 3739,
+      "sha256": "6b386e974be34dec93652070fc52e990cdfca63e0b2dcd8ac1c94ced99041287"
+    },
+    {
+      "path": "examples/validation.json",
+      "bytes": 31375,
+      "sha256": "09dce91c4b4ea5670e58891f593b59a4014e1a941a9e891640c49c3495d879f5"
+    },
+    {
+      "path": "examples/wrong-answer.json",
+      "bytes": 388,
+      "sha256": "264bf0022494a47993c0bdf18162da57c3d9c7debee9cb29554ba5b109c930d3"
+    },
+    {
+      "path": "examples/zero-preconditioner.json",
+      "bytes": 346,
+      "sha256": "409c1adbbec97fa3ed11de8bc717fd623fd0f733bc9ca82929aeaaae2c331f2a"
+    },
+    {
+      "path": "docs/method.css",
+      "bytes": 817,
+      "sha256": "8cdd06ba43d4144fc1b4a367b743904370186003f6a960545b613b8a756e1863"
+    },
+    {
+      "path": "docs/method.html",
+      "bytes": 10479,
+      "sha256": "c001ab61f7a7d6019cfbf129a44f54561159468c30eca3eef67ce513f56f731c"
+    },
+    {
+      "path": "checker.py",
+      "bytes": 19287,
+      "sha256": "9eb5e9a31987cf7c09ac2f2f8fd2f938931fab6998c8da8670034cdd5e35fb76"
+    },
+    {
+      "path": "LICENSE.txt",
+      "bytes": 1074,
+      "sha256": "ab0ce13cd5b12cd01185876ef0c286fedd048342b6460f36bc4e9c7ee21d999a"
+    },
+    {
+      "path": "README.txt",
+      "bytes": 515,
+      "sha256": "5fc79ab1d536a785d221073a186b6fa5b0f5c3e2ad054797163c4b2d7590b406"
+    }
+  ]
+}

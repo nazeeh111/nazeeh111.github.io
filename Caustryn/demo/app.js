@@ -16,21 +16,27 @@ function render() {
   viewer.set({ scene: { tx_m: d.training.tx_m, rx_m: rx, bounds_m: d.training.bounds_m },
     result: fit, selected: state.selected, showTruth: $("reveal-truth").checked,
     truth: d.truth, showField: false });
-  $("fit-summary").textContent = fit.candidates.length === 1 ? "One found mode, conditional on coherence" : `${fit.candidates.length} compatible modes remain`;
+  $("fit-summary").textContent = fit.candidates.length === 1 ? "One retained location" : `${fit.candidates.length} retained locations`;
   $("fit-policy").textContent = `${d.training.rx_poses_m.length} training configurations · ${d.training.tx_m.length * d.training.rx_poses_m[0].length} hardware pairs · ${d.training.frequencies_hz.length} frequencies. Finite search; no global uniqueness claim.`;
-  const focusedMode = Array.from($("mode-buttons").children).indexOf(document.activeElement);
-  $("mode-buttons").replaceChildren();
+  const modeButtons = $("mode-buttons");
   fit.candidates.forEach((mode, i) => {
-    const button = document.createElement("button"), title = document.createElement("strong"), info = document.createElement("small");
-    title.textContent = `Mode ${i+1} · (${mode.position_m.map(x=>fmt(x)).join(", ")}) m`;
-    info.textContent = `Training relative IQ residual ${pct(mode.relative_iq_residual)} · held compatible: ${held.candidates[i].compatible ? "yes, under assumptions" : "no"}`;
-    button.append(title, info); button.setAttribute("aria-pressed", String(state.selected === i));
-    button.onclick = () => chooseMode(i); $("mode-buttons").append(button);
+    let button = modeButtons.children[i];
+    if (!button) {
+      button = document.createElement("button");
+      button.type = "button";
+      button.append(document.createElement("strong"), document.createElement("small"));
+      button.onclick = () => chooseMode(i);
+      modeButtons.append(button);
+    }
+    const [title, info] = button.children;
+    title.textContent = `Mode ${i+1}: (${mode.position_m.map(x=>fmt(x)).join(", ")}) m`;
+    info.textContent = `IQ residual ${pct(mode.relative_iq_residual)}; held check ${held.candidates[i].compatible ? "passes" : "fails"}`;
+    button.setAttribute("aria-pressed", String(state.selected === i));
   });
-  if (focusedMode >= 0) $("mode-buttons").children[focusedMode]?.focus({ preventScroll: true });
+  while (modeButtons.children.length > fit.candidates.length) modeButtons.lastElementChild.remove();
   $("train-metric").textContent = fmt(candidate?.reduced_residual);
   $("held-metric").textContent = fmt(prediction?.reduced_residual);
-  $("held-summary").textContent = `${held.compatible_candidate_count} / ${held.candidate_count} retained modes pass the recorded held diagnostic. No mode was selected or removed.`;
+  $("held-summary").textContent = `${held.compatible_candidate_count} of ${held.candidate_count} modes pass the held check.`;
   const truthVisible = $("reveal-truth").checked;
   $("truth-evaluation").hidden = !truthVisible;
   if (truthVisible && candidate) {
@@ -49,10 +55,10 @@ function plot(canvas, frequencies, series, label) {
   const ratio = Math.min(window.devicePixelRatio || 1, 2);
   canvas.width = Math.round(box.width*ratio); canvas.height = Math.round(box.height*ratio);
   ctx.setTransform(ratio,0,0,ratio,0,0);ctx.clearRect(0,0,box.width,box.height);
-  const left = 55, top = 15, width = box.width-left-14, height = box.height-top-32;
+  const left = 55, top = 15, width = box.width-left-24, height = box.height-top-32;
   const finite = series.flatMap(s=>s.values).filter(Number.isFinite), maximum = Math.max(1e-18,...finite)*1.1;
   const first=frequencies[0],last=frequencies.at(-1), fx=(f)=>left+(f-first)/(last-first || 1)*width, fy=(v)=>top+height*(1-v/maximum);
-  ctx.font="9px ui-monospace,monospace";ctx.lineWidth=1;
+  ctx.font="12px ui-monospace,monospace";ctx.lineWidth=1;
   for(let i=0;i<4;i++){const value=maximum*i/3,y=fy(value);ctx.strokeStyle="#38505e77";ctx.beginPath();ctx.moveTo(left,y);ctx.lineTo(left+width,y);ctx.stroke();ctx.fillStyle="#9bb0bd";ctx.textAlign="right";ctx.fillText(value.toExponential(1),left-7,y+3);}
   for(let i=0;i<3;i++){const f=first+(last-first)*i/2;ctx.textAlign="center";ctx.fillText((f/1e9).toFixed(3),fx(f),box.height-13);}
   ctx.textAlign="right";ctx.fillText("GHz",box.width-14,box.height-1);ctx.textAlign="left";
@@ -74,12 +80,13 @@ function drawSignals() {
   $("signal-summary").textContent=`Mode ${state.selected+1}, held configuration ${hi+1}, pair ${pair+1}: complex residual RMS ${rms.toExponential(3)} IQ units. Relative residual over every held pair/frequency: ${pct(candidate.relative_iq_residual)}. Plot scales adapt to this selection; compare numeric diagnostics.`;
 }
 async function load(entry) {
-  const revision=++state.revision;$("reveal-truth").disabled=true;
-  $("load-status").textContent="Loading a frozen calculation. No inference is running in this page.";
+  const revision=++state.revision;$("reveal-truth").checked=false;$("reveal-truth").disabled=true;
+  if (state.data) render();
+  $("load-status").textContent="Loading saved experiment…";
   try{
     const response=await fetch(entry.file);if(!response.ok)throw Error(`Recorded data unavailable (${response.status}).`);
     const data=await response.json();if(revision!==state.revision)return;
-    $("reveal-truth").checked=false;state.data=data;state.selected=0;
+    state.data=data;state.selected=0;
     $("case-title").textContent=data.title;$("case-description").textContent=data.description;
     const poses=$("pose-select");poses.replaceChildren();
     data.training.rx_poses_m.forEach((_,i)=>poses.add(new Option(`Training ${i+1} / ${data.training.rx_poses_m.length}`,`t${i}`)));
@@ -92,16 +99,31 @@ async function load(entry) {
     $("raw-download").href=entry.file;
     $("record").textContent=JSON.stringify(data.result,null,2);
     $("identities").textContent=`Canonical training SHA-256: ${data.result.fit.training_sha256}\nHeld packet is tied to that exact training identity. Optional truth is frozen synthetic context, never a fitting input.`;
-    $("load-status").textContent="Frozen actual calculation loaded. Camera, configuration, modes and signal selection change only the view.";
+    $("load-status").textContent="Recorded experiment ready.";
     render();$("reveal-truth").disabled=false;
   }catch(error){if(revision===state.revision){
     if(state.data) $("case-select").value=state.data.id;
     $("reveal-truth").disabled=!state.data;
-    $("load-status").textContent=error.message+" Serve these files as static content; no solver service is needed.";
+    $("load-status").textContent=error.message+(state.data ? " Previous recorded experiment retained; synthetic truth is hidden. Choose another experiment to retry." : " Choose another experiment to retry. Serve these files as static content; no solver service is needed.");
   }}
 }
 $("pose-select").onchange=render;$("held-select").onchange=drawSignals;$("pair-select").onchange=drawSignals;
 $("reveal-truth").onchange=render;$("turn-left").onclick=()=>viewer.orbit(-.2);$("turn-right").onclick=()=>viewer.orbit(.2);$("reset-camera").onclick=()=>viewer.reset();
 window.addEventListener("resize",drawSignals);
-try{const response=await fetch("cases.json");if(!response.ok)throw Error("Case index unavailable");const entries=await response.json();const select=$("case-select");select.replaceChildren();entries.forEach(e=>select.add(new Option(e.title,e.id)));select.disabled=false;select.onchange=()=>load(entries.find(e=>e.id===select.value));await load(entries[0]);}
+try{
+  const response=await fetch("cases.json");if(!response.ok)throw Error("Case index unavailable");
+  const entries=await response.json(),select=$("case-select");
+  select.replaceChildren();entries.forEach(e=>select.add(new Option(e.title,e.id)));select.disabled=false;
+  select.onchange=()=>{
+    const entry=entries.find(e=>e.id===select.value);if(!entry)return;
+    const url=new URL(window.location.href);url.searchParams.set("case",entry.id);
+    window.history.replaceState(null,"",url);
+    load(entry);
+  };
+  const url=new URL(window.location.href),requested=url.searchParams.get("case");
+  const initial=entries.find(e=>e.id===requested)||entries[0];
+  if(requested!==null&&requested!==initial.id){url.searchParams.delete("case");window.history.replaceState(null,"",url);}
+  select.value=initial.id;
+  await load(initial);
+}
 catch(error){$("load-status").textContent=error.message+". Open this demo from a static web host.";}
