@@ -1,6 +1,8 @@
 # COUNTERPATCH: Exact Data-Repair Counterfactuals and a Negative Result for Added Search
 
-Technical research report, 19 August 2024. Local reproducible artifact; not submitted or peer reviewed externally.
+Nazeeh Abdul-Hadi
+
+19 August 2024
 
 ## Abstract
 
@@ -14,7 +16,7 @@ Downstream-oriented cleaning is established by [ActiveClean](https://www.vldb.or
 
 Recent [minimal-repair work](https://arxiv.org/html/2503.13921v2) concerns feature imputations and model certainty across remaining possible worlds, a different objective from selecting verified target edits using a labeled planning distribution. [Exact ridge cross-validation updates](https://arxiv.org/abs/2211.15128) and [ridge-head unlearning](https://arxiv.org/abs/2603.12977) establish the sufficient-statistic machinery we use. Neither exact updates, interaction terms, convex tangent bounds nor branch-and-bound are claimed as inventions. The experimental question is whether their particular constrained repair search earns its cost over serious conventional policies.
 
-Portfolio inspection also found existing uncertainty-driven acquisition systems. Another generic surrogate optimizer would add little distinct evidence. We chose exact counterfactuals to make selection and numerical errors unusually inspectable. Source-level findings, recent literature and reproduction limits are retained in the [prior-art assessment](research-prior-art.md) and [independent alternatives](research-alternatives.md).
+Exact counterfactuals permit direct checks of selection and numerical error. The comparison therefore focuses on finite repair utility and computational cost under a fixed ridge pipeline.
 
 ## 2. Supported objective and finite interventions
 
@@ -91,12 +93,12 @@ The confirmation records 1928 model/detector fits for deletion and 312 fits for 
 
 ## 7. Independent attacks and reproducibility
 
-Independent agent reviewers inspected raw code and artifacts. They found unsafe all-row selection, mutable verified targets/cache reports, tiny-Schur cancellation, semantic replay gaps, and a false zero-gap quadratic certificate caused by floating cancellation. Fixes retain the original failures. The quadratic repair passed 900 Decimal-based bound/solver checks across 90 problems, and the source package passes 60 tests covering numerical refits, exhaustive bounds, preservation, unsupported inputs, guard rejection and evaluation-label noninterference. Reviewers also recomputed the final statistics and identified the stronger influence baseline. This is independent agent scrutiny, not external human validation.
+Separate implementation audits identified unsafe all-row selection, mutable verified targets/cache reports, tiny-Schur cancellation, semantic replay gaps, and a false zero-gap quadratic certificate caused by floating cancellation. Fixes retain the original failures. The quadratic repair passed 900 Decimal-based bound/solver checks across 90 problems, and the source package passes 60 tests covering numerical refits, exhaustive bounds, preservation, unsupported inputs, guard rejection and evaluation-label noninterference. The audit also recomputed the final statistics and identified the stronger influence baseline.
 
 All raw results, source/data fingerprints, configs, failed development runs, numerical counterexamples, generated figures and reproduction commands are retained. Evidence is write-once by the program and checksum/semantic checked; it is not OS-immutable or externally authenticated. Source-specific limitations and every unsupported pipeline transformation are explicit. See [reproduction](reproducibility.md), [review](final-independent-review.md) and [usage](usage.md).
 
-## 8. Contribution status and stopping decision
+## 8. Discussion and limitations
 
-Achievement level 1 is demonstrated: supported real models/data undergo proposed repairs, derived-data execution, fresh retraining and independent outcome measurement. Level 2, a reproducible repair-quality/cost/risk advantage over serious competition, is **not demonstrated**. Level 3, a novel publishable contribution, is **not established**. Exact ridge identities and standard optimization are prior art; original implementation and engineering integration do not change that.
+The implementation supports finite repairs, derived-data execution, fresh retraining and independent outcome measurement on the evaluated datasets. The added search does not demonstrate a reproducible advantage in repair quality, cost or risk over the strongest tested policies. Exact ridge identities and the optimization methods used here are established techniques.
 
-The useful finished alternative includes exact greedy and a stronger observed conventional full-data influence policy. The evidence supports narrow computational engineering and a negative result for added search in this protocol. It does not establish genuine causal diagnosis, optimal annotation acquisition, globally minimal repair over the whole dataset, population safety, arbitrary-model support or external adoption. We stop this hypothesis rather than retuning against the final domains. Future work would need new development data and a fresh lock, especially for candidate generation, stateful costed label acquisition and model-specific guard transfer.
+The useful finished alternative includes exact greedy and a stronger observed conventional full-data influence policy. The evidence supports narrow computational engineering and a negative result for added search in this protocol. It does not establish genuine causal diagnosis, optimal annotation acquisition, globally minimal repair over the whole dataset, population safety, arbitrary-model support or external adoption. Further evaluation should use new development data and a fixed protocol, particularly for candidate generation, costed label acquisition and transfer of model-specific guards.

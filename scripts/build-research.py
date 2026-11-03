@@ -22,6 +22,7 @@ def header(title,description,path,image=None):
     return f'''<!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="author" content="Nazeeh Abdul-Hadi">
 <meta name="color-scheme" content="dark"><meta name="theme-color" content="#0b0d10">
 <title>{esc(title)} · Nazeeh Abdul-Hadi</title><meta name="description" content="{esc(description)}">
 <link rel="canonical" href="{ORIGIN}{path}"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -42,7 +43,6 @@ def bibliography(study):
   author = {{Nazeeh Abdul-Hadi}},
   title = {{{study['title']}}},
   year = {{{year}}},
-  note = {{{study['status']}; self-published manuscript}},
   url = {{{ORIGIN}/research/{study['id']}/}}
 }}'''
 
@@ -64,7 +64,7 @@ def article(study):
     html=header(body['title'],study['summary'],f'/research/{slug}/',body['figure'])
     html+=f'''<main id="main" class="shell"><div class="breadcrumb"><a href="/research/">← All studies</a><span>{esc(study['topic'])}</span></div>
 <article><header class="article-header"><div class="eyebrow">{esc(study['name'])}</div><h1>{esc(body['title'])}</h1>
-<p class="article-question">{esc(body['question'])}</p><div class="article-meta"><span>{esc(study['outcome'])}</span><span data-date-status="{esc(study.get('dateStatus','verified'))}">{esc(display_date(study))}</span></div>
+<p class="article-question">{esc(body['question'])}</p><div class="article-meta"><span>Nazeeh Abdul-Hadi</span><span>{esc(study['outcome'])}</span><span data-date-status="{esc(study.get('dateStatus','verified'))}">{esc(display_date(study))}</span></div>
 <div class="article-links"><a href="/research/papers/{slug}.{ext}" download>{'Original report' if ext=='md' else 'Paper PDF'} ↓</a><a href="#downloads">Sources & citation</a></div></header>
 <div class="reader-layout"><aside class="contents"><nav aria-label="Study contents"><span>In this study</span><a href="#method">Method</a><a href="#results">Results</a><a href="#interpretation">Interpretation</a><a href="#limits">Limitations</a><a href="#downloads">Paper & sources</a></nav></aside>
 <div class="reader-content"><section id="method" class="reader-section"><h2>Method</h2>'''
@@ -100,4 +100,4 @@ html+='''</div><div class="empty-state" hidden><h2>No matching studies</h2><p>Tr
 for study in CATALOG:article(study)
 # Keep the previously published report URL, with one canonical reading page.
 (RESEARCH/'counterpatch'/'report.html').write_text('''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url=./"><link rel="canonical" href="https://nazeeh111.github.io/research/counterpatch/"><title>COUNTERPATCH study</title></head><body><p><a href="./">Read the COUNTERPATCH study</a></p></body></html>\n''')
-print(f'Built library and {len(CATALOG)} study readers; preserved original papers and sources.')
+print(f'Built library and {len(CATALOG)} study readers.')

@@ -1,112 +1,113 @@
 {
   "published": "2026-11-03",
-  "description": "Downloadable manuscript snapshots with owner-selected document dates and checked typography. SHA-256 hashes identify the exact files. Scientific conclusions and review status are described with each study.",
+  "description": "Research papers with checked typography. SHA-256 hashes identify the exact downloadable files. Methods, results and limitations accompany each study.",
   "files": [
     {
       "slug": "phaseglass-quantum",
-      "sha256": "8de81826386b57312eb980cb9117499fb4cf58fe29d9bf65472c663d93db510f",
-      "bytes": 257100,
+      "sha256": "c8e3249e5b4449864b903922debc6c79b2ee008e7c3b16e8f337e5c4a763b544",
+      "bytes": 257079,
       "pages": 17,
       "date": "2025-10-23"
     },
     {
       "slug": "quantum-records",
-      "sha256": "675367e6cd909d7be6008bc44ebe784ab9c71979142a5cf854917dd4db5a6d8c",
-      "bytes": 126227,
-      "pages": 10,
+      "sha256": "d8984222bc0290857140facf018265b58da24a1bed849710e9251cdc6dc1213f",
+      "bytes": 124558,
+      "pages": 9,
       "date": "2025-02-11"
     },
     {
       "slug": "neutrino-positive-moments",
-      "sha256": "cbf027592b81cd28db7086667756cc20771c11ecc7cc33c30eb1cda522b6508f",
-      "bytes": 374240,
+      "sha256": "c964e92d00eea07324de439bb222b18fcd8cc351d12f33644d29cde188e629e5",
+      "bytes": 373214,
       "pages": 13,
       "date": "2026-09-08"
     },
     {
       "slug": "manifold",
-      "sha256": "88c39f1d535290d5fdaa6629f1df6ac152b30cf8b6923b525266600055fcbbf6",
-      "bytes": 158054,
+      "sha256": "8598ead88cd4dffe86e08d40ce56959cd85db06e2ead7742f788215cfd58ffea",
+      "bytes": 157189,
       "pages": 13,
       "date": "2025-06-17"
     },
     {
       "slug": "inertiaforge",
-      "sha256": "0c8f2a49ff9bf8437cd42485e46d7ae8886bfc1c1596d89aca07e2f144632e43",
-      "bytes": 181876,
+      "sha256": "23164ea3cd1cb57a6696840e0b73f78d2f815c0da810f1877f926786094bd4df",
+      "bytes": 181731,
       "pages": 11,
       "date": "2026-02-26"
     },
     {
       "slug": "revertlab",
-      "sha256": "53fa838919035090036128f1b8a20c71dd72c8a1d2b03c3afc93b57ebea039f7",
-      "bytes": 169726,
+      "sha256": "11b9e07957bbf0677f6212010cf0db688400982054ed5100355093bcebc870e2",
+      "bytes": 169770,
       "pages": 7,
       "date": "2026-05-21"
     },
     {
       "slug": "tailsentry",
-      "sha256": "2e0c80147fbd5330240b67caa68782bbb0b5a740e466251a93f8ab916ae2baba",
-      "bytes": 183237,
+      "sha256": "0fef79b4104c7d8506058441ca4c45040537f22867ab1039ec7400affeff049b",
+      "bytes": 182310,
       "pages": 13,
       "date": "2025-12-04"
     },
     {
       "slug": "counterglass",
-      "sha256": "76934f99e86fcd3728617bcb77c64832895837d7a382ca2202eaade035593184",
-      "bytes": 199602,
+      "sha256": "258b4f82eca3f9f958b74907f919e7ea9beedbdd5840c361dc184e95e206b7af",
+      "bytes": 199615,
       "pages": 12,
       "date": "2026-10-16"
     },
     {
       "slug": "cragshift",
-      "sha256": "5dbfd240ae94eecaadd0e9e37bf534bcf6147929e90194cf071cf61d8cf3e2dd",
-      "bytes": 444967,
+      "sha256": "741d13ea78fcba7d1538bef8a01571a49c30e77abd4c57028d17cdeb71e40e2f",
+      "bytes": 443933,
       "pages": 6,
       "date": "2026-07-13"
     },
     {
       "slug": "spectral-ambiguity",
-      "sha256": "3d8c6ccf92b0b852f64ec37da1353944b769c03bc72fffb6b90b7d78165c460a",
-      "bytes": 152463,
+      "sha256": "5d6f21d740fc4a372ecf00c85dccd8eae0fd9f0067d81782eacbb111d87937aa",
+      "bytes": 151428,
       "pages": 7,
       "date": "2025-04-29"
     },
     {
       "slug": "spectral-ambiguity-followup",
-      "sha256": "09f604b8b344a930d5f64456246e93c42750079efc6b85c264309074e4420bd5",
-      "bytes": 109091,
+      "sha256": "a2e0ad321b96238da47d8c04692bf9a52dee7b2e4995f4e15fd614066699f36c",
+      "bytes": 107732,
       "pages": 4,
       "date": "2025-08-07"
     },
     {
       "slug": "fusionzero",
-      "sha256": "60f9d54bfcef9330b19435f3a082a85fb7a6d6018b236f92ce4e452521fd9c84",
-      "bytes": 203820,
+      "sha256": "fffdf09f07ffc140086d6febc8b2d9f7db7bc4fb60b771516846c0cde58b6b7a",
+      "bytes": 201020,
       "pages": 7,
       "date": "2026-03-10"
     },
     {
       "slug": "fusionzero-observability",
-      "sha256": "012784061b286216b91f41a364fa64c0f7a87648d171a530d9eb801098e10c83",
-      "bytes": 119979,
+      "sha256": "c8c02f7ad701999eedd52b3f961c8e54f256cdd510fe74880ae05f0912442df3",
+      "bytes": 117852,
       "pages": 5,
       "date": "2025-11-18"
     },
     {
       "slug": "fusionzero-relabeling",
-      "sha256": "442e8a3416ba43efea2ebcf3034712a55c1d2bef7be75a360043793da9f1138c",
-      "bytes": 281407,
+      "sha256": "286a88841fe02f2524afdd8d335c632e91ed93b07a8ee76edb73f95cdb368536",
+      "bytes": 279214,
       "pages": 9,
       "date": "2025-07-25"
     },
     {
       "slug": "counterpatch",
-      "sha256": "9cd9b7dda902ef5297a8b52f9cabe4d7c52cbd10ed8ff6f8876b2e72ed3b8153",
-      "bytes": 18938,
+      "sha256": "76089ee6beb2690fff8119b487e67973c6a2d2c01e10d16acf8e05c1b73dda85",
+      "bytes": 18321,
       "format": "Markdown",
       "date": "2024-08-19"
     }
   ],
-  "revised": "2026-11-03"
+  "revised": "2026-11-03",
+  "author": "Nazeeh Abdul-Hadi"
 }

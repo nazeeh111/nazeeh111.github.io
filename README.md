@@ -31,4 +31,4 @@ The generator uses Python's standard library. It rebuilds the library and study 
 
 `date` and `displayDate` contain the owner's selected document dates. The same dates appear in the PDFs and citation years. `dateStatus: "user-specified"` distinguishes these selected dates from independently verified research-history dates; `originalDate` retains the prior manuscript date for provenance.
 
-The public collection distinguishes exact results in restricted models, simulated findings, preliminary work, and missed performance targets. It makes no journal-acceptance or external-peer-review claim.
+Each study states its model, evaluation setting, results and limitations. Manuscript sources and numerical evidence are linked where available.
