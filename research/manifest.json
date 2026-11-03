@@ -1,0 +1,96 @@
+{
+  "published": "2026-11-03",
+  "description": "Manuscript snapshots. SHA-256 hashes identify the exact downloadable files. Scientific conclusions and review status are described with each study.",
+  "files": [
+    {
+      "slug": "phaseglass-quantum",
+      "sha256": "2919bfa1ca56b6703f846bcd095c9dfb18aa23c11a867b15a49642e4c59523d8",
+      "bytes": 256276,
+      "pages": 17
+    },
+    {
+      "slug": "quantum-records",
+      "sha256": "5816e4139975e0c5ae836c914dc699ae66abf68db37569e22fe8033eb40ef0be",
+      "bytes": 126375,
+      "pages": 10
+    },
+    {
+      "slug": "neutrino-positive-moments",
+      "sha256": "76e3fd71beaf66944d38aa0413c8779865eaab5dd97778fd1e271f19103b1c18",
+      "bytes": 375105,
+      "pages": 13
+    },
+    {
+      "slug": "manifold",
+      "sha256": "d23ef63ba67a34fd9a17aee47b4d0593cf18840d616accb6be4f02b11c087ca0",
+      "bytes": 158133,
+      "pages": 13
+    },
+    {
+      "slug": "inertiaforge",
+      "sha256": "765a5b300f6cd73d045f1623bcbcc47976e687aea4802d2f6289e591397c346b",
+      "bytes": 181817,
+      "pages": 11
+    },
+    {
+      "slug": "revertlab",
+      "sha256": "4754f387b3b93b5a79a33dcee94f160c7938bf8052f7fa0c0fb736d11347ee0d",
+      "bytes": 169623,
+      "pages": 7
+    },
+    {
+      "slug": "tailsentry",
+      "sha256": "b2d3d3cc4897435069ad1f48823bef444dcfb185fdcd263822516376e198c4d1",
+      "bytes": 183201,
+      "pages": 13
+    },
+    {
+      "slug": "counterglass",
+      "sha256": "2fa29fbcf2a1f508bbd6e543d7b1491a99c4f958e0311549e1d0b9f458af8ffd",
+      "bytes": 199718,
+      "pages": 12
+    },
+    {
+      "slug": "cragshift",
+      "sha256": "a926af3dca07ccab3866eef9f0350a95f9d011fea44823d211f09d9df3ead330",
+      "bytes": 444914,
+      "pages": 6
+    },
+    {
+      "slug": "spectral-ambiguity",
+      "sha256": "2cbb9c3b124dcd0671aaf13b8b697d2fecd4717ee2fc7fd35743e93365aba487",
+      "bytes": 152525,
+      "pages": 7
+    },
+    {
+      "slug": "spectral-ambiguity-followup",
+      "sha256": "691c4fb95a16e3c4c4758c0b82db555227a8c53165f61c1437e564808e5b1b38",
+      "bytes": 109099,
+      "pages": 4
+    },
+    {
+      "slug": "fusionzero",
+      "sha256": "fa6631680d0da2aa28d8568c72371313537f0e07732a6afd6d808f384e578dbe",
+      "bytes": 203935,
+      "pages": 7
+    },
+    {
+      "slug": "fusionzero-observability",
+      "sha256": "ab152a09f3e94dc9ec419277d1eb9eab72cf7879a637cbda9b29dcbf096deb0b",
+      "bytes": 119797,
+      "pages": 5
+    },
+    {
+      "slug": "fusionzero-relabeling",
+      "sha256": "77ff327f6691e3da2fd8c9810de25249355b577409370b3cc5974598b51939b9",
+      "bytes": 281286,
+      "pages": 9
+    },
+    {
+      "slug": "counterpatch",
+      "sha256": "0da569eb57857acb3cb784bb7a8829bb2f5dcc966455de92ec7d62fd98eb3eec",
+      "bytes": 18939,
+      "format": "Markdown"
+    }
+  ]
+}
