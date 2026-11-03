@@ -6,13 +6,52 @@
     "topic": "Quantum & physics",
     "date": "2026-11-01",
     "status": "Research manuscript",
-    "outcome": "Restricted positive result",
+    "outcome": "Exact two-copy separation",
     "summary": "A two-copy quantum measurement distinguishes states whose whole-block purity statistics are identical.",
     "finding": "On the specified eight-qubit problem, exact success is 75%, above a certified 66.91% upper bound for separate-copy measurements. At eight copies, simulated accuracy is 97.075% versus 81.600% for a model-aware reference.",
     "scope": "The exact theorem uses two total copies and specified symmetry-preserving state families. Longer-budget comparisons are empirical. No hardware, asymptotic, or general phase-recognition advantage is established.",
     "metric": "75%",
     "metricLabel": "exact two-copy success",
-    "supplements": []
+    "supplements": [],
+    "displayDate": "2025-10-23",
+    "dateStatus": "provisional",
+    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "article": {
+      "title": "Two-copy quantum measurements",
+      "question": "Can a joint measurement on two copies distinguish states that look identical to whole-block purity tests?",
+      "method": [
+        "Compare a periodic cluster state with an entangled dimer state under specified unknown rotations within two-qubit blocks. Keep all four symmetry-sector outcomes from a Bell measurement, rather than compressing them into a purity statistic.",
+        "An exact rational certificate bounds the competing separate-copy strategies at the same two-copy budget. A separate finite-shot simulation compares longer-budget classifiers on 400 held-out physical states."
+      ],
+      "columns": [
+        "Comparison",
+        "Sector measurement",
+        "Reference"
+      ],
+      "rows": [
+        [
+          "Exact two-copy discrimination",
+          "75% success",
+          "Separate-copy upper bound <66.91%"
+        ],
+        [
+          "Eight-copy simulation",
+          "97.075% accuracy",
+          "81.600% model-aware reference"
+        ]
+      ],
+      "interpretation": "The exact separation is a positive result for this specified discrimination problem. The longer-budget simulation supports the tested measurement, while the optimal many-copy single-copy strategy remains unresolved.",
+      "limits": [
+        "The theorem concerns two total copies and a restricted family of symmetry-preserving rotations. It does not cover arbitrary states in either phase.",
+        "The model-aware eight-copy comparison was added after inspecting the test cohort, and its numerical integration is not converged at larger budgets.",
+        "All reported experiments use local simulation. Hardware and asymptotic advantages are unproved."
+      ],
+      "caption": "Finite-shot accuracy across source-copy budgets. The exact two-copy theorem and these empirical longer-budget comparisons are separate results.",
+      "alt": "Accuracy curves for sector measurement and tested one-copy references at increasing source-copy budgets.",
+      "figure": "/research/figures/phaseglass-quantum.webp",
+      "figureWidth": 1600,
+      "figureHeight": 747
+    }
   },
   {
     "id": "quantum-records",
@@ -21,7 +60,7 @@
     "topic": "Quantum & physics",
     "date": "2026-10-29",
     "status": "Research manuscript",
-    "outcome": "Restricted theoretical result",
+    "outcome": "Exact result in a restricted model",
     "summary": "The best encoding for separated observers can be the worse encoding when their records are read together.",
     "finding": "The study solves a prescribed pure-product encoder problem under a common random-rotation channel. At an exact benchmark, the optimized consensus gap is 1/16; a coherent-state realization also has rational bounds for unrestricted local measurements.",
     "scope": "The result holds within explicit encoder and noise assumptions. Generic ordering reversal already occurs classically. Historical priority, an entanglement advantage, and experimental validation are not established.",
@@ -29,7 +68,50 @@
     "metricLabel": "exact benchmark consensus gap",
     "supplements": [],
     "lineage": "Quantum Darwinism follow-up",
-    "versionNote": "The selected rebuild of the One-Shot Quantum Darwinism project. It supersedes the earlier allocation and analytic-transition drafts."
+    "versionNote": "This study developed from the One-Shot Quantum Darwinism project and focuses on the encoding-reversal result.",
+    "displayDate": "2025-02-11",
+    "dateStatus": "provisional",
+    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "article": {
+      "title": "Quantum records: separate and pooled decisions",
+      "question": "Does the same encoding best support observers deciding separately and observers combining their quantum records?",
+      "method": [
+        "Two pure-product encodings pass through one common random-rotation channel. Their complete local conditional states are held fixed, so neither encoding gains an advantage from better individual records.",
+        "The analysis classifies the supported encoders and optimizes separate all-correct decisions over all local binary measurements. It then compares that result with pooled inference. A second construction uses coherent records under common Gaussian displacement."
+      ],
+      "columns": [
+        "Result",
+        "What is established"
+      ],
+      "rows": [
+        [
+          "Encoder classification",
+          "Two classes under the prescribed pure-input and fixed-frame assumptions"
+        ],
+        [
+          "Exact benchmark",
+          "1/16 gap in optimized all-correct consensus"
+        ],
+        [
+          "Pooled inference",
+          "The opposite class is optimal; adaptive local measurements with communication attain the pooled optimum"
+        ],
+        [
+          "Coherent-state extension",
+          "Rational bounds establish a reversal without truncating the photon-number basis"
+        ]
+      ],
+      "interpretation": "The preferred encoding depends on the decision task. Identical individual records can conceal different joint information under correlated noise.",
+      "limits": [
+        "The generic possibility of opposite rankings already exists classically. The contribution is the solved, constrained quantum family.",
+        "The encoder, frame, and noise assumptions are part of the result. Historical priority and experimental validation remain open."
+      ],
+      "caption": "The supported encodings trade places when the task changes from separated all-correct consensus to pooled inference.",
+      "alt": "Original study plot comparing consensus and pooled inference for the two supported encoding classes.",
+      "figure": "/research/figures/quantum-records.webp",
+      "figureWidth": 1600,
+      "figureHeight": 644
+    }
   },
   {
     "id": "neutrino-positive-moments",
@@ -38,14 +120,58 @@
     "topic": "Quantum & physics",
     "date": "2026-11-02",
     "status": "Working draft",
-    "outcome": "Theory with open utility",
+    "outcome": "Sharp bounds; usefulness unresolved",
     "summary": "Exact certificates describe which growing frequencies limited angular-moment information permits.",
     "finding": "Positive moment completions yield exact frequency-compatibility tests and sharp growth bounds in specified axial and nonaxial models. The published counter-flux test rejects none of the reproduced closure modes, leaving practical usefulness unresolved.",
     "scope": "These are information bounds for restricted local, collisionless fast-flavor models, rather than predictions for a supernova. Some later extensions await independent review; scientific priority remains unconfirmed.",
     "metric": "504",
     "metricLabel": "independently checked frequency decisions",
     "repository": "https://github.com/nazeeh111/neutrino-positive-moments",
-    "supplements": []
+    "supplements": [],
+    "displayDate": "2026-09-08",
+    "dateStatus": "provisional",
+    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "article": {
+      "title": "Neutrino frequency bounds",
+      "question": "Which growing frequencies are compatible with limited information about a neutrino angular distribution?",
+      "method": [
+        "Treat each species as a positive angular measure constrained by supplied moments. In the restricted axial model, the dispersion equations reduce to a complex Stieltjes value, and classical moment theory turns compatibility into a disk-intersection problem.",
+        "Exact certificates check individual frequency decisions. Further analysis derives sharp growth envelopes, including a finite-wave-number result for equal supplied second moments and a separate nonaxial result with common isotropic full moments."
+      ],
+      "columns": [
+        "Check",
+        "Result"
+      ],
+      "rows": [
+        [
+          "Planned frequency decisions",
+          "504 independently checked: 72 possible and 432 impossible"
+        ],
+        [
+          "Continuous solver comparison",
+          "722 cases; no certified disagreement, and no general end-to-end speed advantage"
+        ],
+        [
+          "Published counter-flux test",
+          "All eight reproduced growing closure modes remain compatible"
+        ],
+        [
+          "Practical usefulness",
+          "Not established by the closure-mode tests"
+        ]
+      ],
+      "interpretation": "The method bounds what the moment information permits. A compatible unstable frequency need not occur in the actual physical background, and different frequencies may need different angular completions.",
+      "limits": [
+        "The models are local and collisionless. The axial and nonaxial results have different moment assumptions.",
+        "Some later extensions have exact checks but still await independent review.",
+        "Scientific priority and practical astrophysical benefit remain unestablished."
+      ],
+      "caption": "Finite-band growth envelopes under equal supplied second moments. Each point can correspond to a different compatible angular distribution.",
+      "alt": "Sharp axial growth envelopes as a function of the allowed wave-number band.",
+      "figure": "/research/figures/neutrino-positive-moments.svg",
+      "figureWidth": 454,
+      "figureHeight": 184
+    }
   },
   {
     "id": "manifold",
@@ -54,13 +180,61 @@
     "topic": "Numerics",
     "date": "2026-11-02",
     "status": "Technical paper",
-    "outcome": "Negative primary result",
+    "outcome": "Practical targets missed",
     "summary": "A spectral-moment stopping rule is tested against established methods for sparse diffusion calculations.",
     "finding": "The original rule saves 0–8.71% of matrix-vector products and misses both frozen practical targets. A separate engineering continuation runs 4.46–8.01 times faster than unchanged v1, primarily through checker improvements.",
     "scope": "The numerical-baseline comparisons remain mixed. The core identities have established precedents, application novelty is unresolved, and no complete floating-point certificate or algorithmic breakthrough is claimed.",
     "metric": "655",
     "metricLabel": "reference-checked timed outputs across both studies",
-    "supplements": []
+    "supplements": [],
+    "displayDate": "2025-06-17",
+    "dateStatus": "provisional",
+    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "article": {
+      "title": "Stopping rules for heat diffusion",
+      "question": "Can spectral moments reduce the work required to approximate a sparse diffusion calculation accurately?",
+      "method": [
+        "Approximate the action of a matrix exponential using Chebyshev terms. Moment information supplies bounds on omitted terms; a partitioning rule chooses a tail bound.",
+        "Compare the complete calculation with ordinary Chebyshev, SciPy Taylor, restarted Hermitian Krylov, and CRAM16. A separately frozen continuation adds a fixed-envelope evaluator and a faster exact dyadic checker."
+      ],
+      "columns": [
+        "Study",
+        "Measured result"
+      ],
+      "rows": [
+        [
+          "Original product savings",
+          "0–8.71%; below the frozen 25% target"
+        ],
+        [
+          "Original median end-to-end ratio",
+          "0.995 against the fastest measured applicable baseline"
+        ],
+        [
+          "Continuation vs unchanged v1",
+          "4.46–8.01× faster, primarily through checker engineering"
+        ],
+        [
+          "Reference checks",
+          "385 original plus 270 continuation timed outputs pass"
+        ]
+      ],
+      "interpretation": "The continuation improves the implementation. It does not establish a generally better numerical algorithm: comparisons against the numerical baselines remain mixed, and the original scientific targets fail.",
+      "limits": [
+        "The core polynomial identities have established precedents; application novelty is unresolved.",
+        "A floating-point counterexample narrows the supported range. The mathematical bound is not a complete floating-point certificate."
+      ],
+      "equation": {
+        "label": "Computed quantity",
+        "html": "<math display=\"block\"><mi>y</mi><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>t</mi><mi>A</mi></mrow></msup><mi>b</mi></math>",
+        "explanation": "A is the diffusion operator, b is the initial vector, and t is elapsed diffusion time. The algorithm computes the resulting vector without forming the full matrix exponential."
+      },
+      "caption": "The continuation separates improvements over the unchanged implementation from comparisons with established numerical methods.",
+      "alt": "Continuation measurements comparing the optimized checker path and numerical baselines.",
+      "figure": "/research/figures/manifold.webp",
+      "figureWidth": 1600,
+      "figureHeight": 972
+    }
   },
   {
     "id": "inertiaforge",
@@ -69,13 +243,57 @@
     "topic": "Numerics",
     "date": "2026-11-02",
     "status": "Technical paper",
-    "outcome": "Negative primary result",
+    "outcome": "Gradient gate failed",
     "summary": "A rigid-body engine tests whether agreement across simulation refinements makes a contact derivative trustworthy.",
     "finding": "The proposed gate accepts 18 of 19 smooth held-out derivatives, but only three accepted derivatives meet the accuracy target. A restricted, established event-time baseline passes all 19 supported smooth cases.",
     "scope": "The study rejects the proposed reliability hypothesis. Its separate 5.474 mm measured-trajectory transfer result covers three bouncing-ball trials; it does not validate general contact physics or certify gradients.",
     "metric": "3 / 18",
     "metricLabel": "accepted derivatives meeting the target",
-    "supplements": []
+    "supplements": [],
+    "displayDate": "2026-02-26",
+    "dateStatus": "provisional",
+    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "article": {
+      "title": "Contact-gradient accuracy",
+      "question": "Does agreement across smaller timesteps and parameter changes make a simulated contact derivative reliable?",
+      "method": [
+        "A self-contained rigid-body engine records trajectories, contact regimes, solver diagnostics, and numerical sensitivities. The proposed gate combines perturbation and timestep checks before accepting a derivative.",
+        "An independent analytic impact reference tests accuracy. An established event-time implementation provides a stronger baseline. Separate studies examine measured bouncing-ball trajectories, external CPU engines, and inverse identification costs."
+      ],
+      "columns": [
+        "Check",
+        "Result"
+      ],
+      "rows": [
+        [
+          "Proposed derivative gate",
+          "18 of 19 smooth cases accepted; only 3 accepted derivatives meet the accuracy target"
+        ],
+        [
+          "Event-time baseline",
+          "All 19 supported smooth cases pass; grazing input is refused"
+        ],
+        [
+          "Measured-data transfer",
+          "5.474 mm pooled root-mean-square vertical error across three untouched trials after one-trial calibration"
+        ],
+        [
+          "Identification study",
+          "The proposed controller fails the two-family cost target"
+        ]
+      ],
+      "interpretation": "Refinement agreement can converge on the wrong contact derivative. Use the event-time reference within its supported isolated-impact domain; treat the proposed gate as an empirical check, not a certificate.",
+      "limits": [
+        "The engine is a CPU reference with a bounded collision and constraint set. General engine superiority is not established.",
+        "The event-time baseline does not cover resting contact, friction, joints, or simultaneous impacts.",
+        "The bouncing-ball transfer result is a separate forward-prediction check and does not validate the rejected gradient gate."
+      ],
+      "caption": "The held-out comparison separates acceptance coverage from actual derivative accuracy. High acceptance alone does not establish a trustworthy gradient.",
+      "alt": "Held-out gradient validation showing the proposed gate failure and the restricted event-time baseline.",
+      "figure": "/research/figures/inertiaforge.webp",
+      "figureWidth": 1600,
+      "figureHeight": 625
+    }
   },
   {
     "id": "cragshift",
@@ -84,13 +302,61 @@
     "topic": "Sensing",
     "date": "2026-11-02",
     "status": "Technical paper",
-    "outcome": "Simulated positive result",
+    "outcome": "Positive simulation result",
     "summary": "Learned sensor-quality weighting is evaluated on original camera–laser surveys of procedural rock slopes.",
     "finding": "On sixteen fresh simulated sites, recall is 82.33% versus 75.93% for simple fusion, at unchanged observation coverage. The paired site-bootstrap recall gain is 6.39 percentage points, with interval [4.28, 8.86].",
     "scope": "False-positive rates are 5.60% and 5.42%; false-alarm equality is not established. This is a preserved simulation study. A later realism and false-positive revision was still unfinished at this snapshot; no field-safety or collapse-prediction claim is supported.",
     "metric": "+6.39 pp",
     "metricLabel": "recall gain on fresh simulated sites",
-    "supplements": []
+    "supplements": [],
+    "displayDate": "2026-07-13",
+    "dateStatus": "provisional",
+    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "article": {
+      "title": "Camera–laser change detection",
+      "question": "Does learning sensor quality improve movement detection over simple camera–laser fusion?",
+      "method": [
+        "Original rendered surveys and independently raycast laser observations measure a common surface-normal motion component. Two learned residual-scale models weight the sensors while keeping dependence and shared-reference uncertainty explicit.",
+        "A temporal confirmation rule misses early movement and is removed. The simpler remaining method is evaluated on sixteen fresh procedural sites with unchanged weights and calibration thresholds."
+      ],
+      "columns": [
+        "Fresh simulated sites",
+        "Learned fusion",
+        "Simple fusion"
+      ],
+      "rows": [
+        [
+          "Recall, including abstentions",
+          "82.33%",
+          "75.93%"
+        ],
+        [
+          "False-positive rate",
+          "5.60%",
+          "5.42%"
+        ],
+        [
+          "Observation coverage",
+          "95.13%",
+          "95.13%"
+        ],
+        [
+          "Root-mean-square motion error",
+          "20.17 mm",
+          "25.17 mm"
+        ]
+      ],
+      "interpretation": "The fresh-site recall gain is 6.39 percentage points, with a paired site-bootstrap interval of 4.28–8.86 points. This supports learned quality weighting on the simulated task, while false-alarm equality is not established.",
+      "limits": [
+        "This is the preserved simulation study, not field validation or a rockfall forecast.",
+        "A later realism and false-positive revision was unfinished at the saved snapshot. Its proposed changes are not treated as verified results."
+      ],
+      "caption": "Detection results from the preserved simulated study. The learned and simple methods have identical observation coverage.",
+      "alt": "Original detection comparison for learned quality weighting and simple sensor fusion.",
+      "figure": "/research/figures/cragshift.webp",
+      "figureWidth": 1600,
+      "figureHeight": 528
+    }
   },
   {
     "id": "tailsentry",
@@ -99,14 +365,57 @@
     "topic": "Finance",
     "date": "2026-11-01",
     "status": "Technical paper",
-    "outcome": "Negative primary result",
+    "outcome": "Efficiency target missed",
     "summary": "An auditable rare-event sampler tests probability bounds, missed catastrophic modes, and efficiency.",
     "finding": "Across 17,280 complete algorithm runs, the selected candidate loses to conditional scrambled Sobol on the primary efficiency comparison. A missing-mode test also shows ordinary intervals can be badly overconfident despite large observed effective sample sizes.",
     "scope": "The numerical results concern supported Gaussian and Student-t loss models. Conditioning improves the corresponding raw union sampler, but neither an original general estimator nor superiority to the strongest comparator is established.",
     "metric": "17,280",
     "metricLabel": "complete algorithm runs",
     "repository": "https://github.com/nazeeh111/TAILSENTRY",
-    "supplements": []
+    "supplements": [],
+    "displayDate": "2025-12-04",
+    "dateStatus": "provisional",
+    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "article": {
+      "title": "Rare-loss sampling and missed failure modes",
+      "question": "Can a structured rare-event sampler improve efficiency while keeping uncertainty meaningful when a catastrophic mode is missed?",
+      "method": [
+        "For supported maximum-of-quadratic losses, a proved union of halfspaces covers the failure regions. Exact conditional sampling and integration of one Gaussian direction produce bounded probability contributions.",
+        "The frozen evaluation contains 17,280 complete algorithm runs across eight known-truth problems and fifteen methods or variants. A separate randomized-order timing study checks the primary efficiency conclusion."
+      ],
+      "columns": [
+        "Comparison",
+        "Result"
+      ],
+      "rows": [
+        [
+          "Primary mean-squared error × runtime ratio vs conditional scrambled Sobol",
+          "38.79; 95% interval 26.48–57.32; lower is better"
+        ],
+        [
+          "Separate timing confirmation",
+          "37.37; same unfavorable conclusion"
+        ],
+        [
+          "Omitted-mode normal-interval coverage",
+          "3 of 512 runs"
+        ],
+        [
+          "Primary finite-bound coverage",
+          "128 of 128 runs; coverage-rate interval 0.9716–1"
+        ]
+      ],
+      "interpretation": "Conditioning improves the corresponding raw union sampler, but the strongest conditional quasi-Monte Carlo comparator wins the primary task. Large observed effective sample sizes do not protect an ordinary interval from a completely missed mode.",
+      "limits": [
+        "The derivation uses established union sampling, conditional expectation, and concentration bounds. An original general estimator is not established.",
+        "The guarantees depend on the supported model and failure cover. The historical FX sensitivity check is separate from estimator efficiency."
+      ],
+      "caption": "The omitted-mode counterexample exposes severe undercoverage despite apparently large observed effective sample sizes.",
+      "alt": "Original omitted-mode experiment comparing ordinary uncertainty intervals with conservative bounds.",
+      "figure": "/research/figures/tailsentry.webp",
+      "figureWidth": 1600,
+      "figureHeight": 517
+    }
   },
   {
     "id": "revertlab",
@@ -115,13 +424,56 @@
     "topic": "Finance",
     "date": "2026-11-01",
     "status": "Technical paper",
-    "outcome": "Negative primary result",
+    "outcome": "No trading advantage established",
     "summary": "A chronological pairs-trading study values convergence, relationship failure, both trading legs, and costs.",
     "finding": "The proposed rule loses 1.20% on deposited capital during the reserved 2023–2025 evaluation. Its uncertainty interval against the development-selected gate includes harm, and simpler methods perform better.",
     "scope": "The study uses six crypto assets and three candidate pairs with simulated borrowing and execution. It establishes no economic advantage or historical short availability. The retained two-leg account supports independent reconciliation.",
     "metric": "−1.20%",
     "metricLabel": "proposed rule’s reserved-period return",
-    "supplements": []
+    "supplements": [],
+    "displayDate": "2026-05-21",
+    "dateStatus": "provisional",
+    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "article": {
+      "title": "Pairs trading under relationship failure",
+      "question": "Does valuing convergence and relationship failure together improve trading decisions after both-leg costs?",
+      "method": [
+        "A forward-only model compares stable mean reversion with a persistent rival. It values a fixed convergence policy using actual holdings, delayed liquidation, borrowing, and execution costs.",
+        "The six-asset, three-pair crypto study uses formation-only selection, development through 2022, and a reserved 2023–2025 evaluation. A separate accountant reconstructs both legs and every cashflow."
+      ],
+      "columns": [
+        "Reserved evaluation",
+        "Result"
+      ],
+      "rows": [
+        [
+          "Proposed-rule return on deposited capital",
+          "−1.20%"
+        ],
+        [
+          "Maximum drawdown",
+          "4.70%"
+        ],
+        [
+          "Average gross exposure",
+          "2.72%"
+        ],
+        [
+          "Improvement over the selected gate",
+          "Uncertainty interval includes harm; economic advantage unestablished"
+        ]
+      ],
+      "interpretation": "The integrated rule does not establish an advantage. Simpler comparators perform better, and known-process tests show that higher volatility can be mistaken for relationship failure.",
+      "limits": [
+        "Borrow availability and execution are simulated assumptions. The study does not establish historical short availability or achievable venue fills.",
+        "The result is specific to this chronological asset universe and protocol. Positive returns in a comparator do not establish an investable edge."
+      ],
+      "caption": "Reserved-period results for the frozen proposed rule and comparison methods. Returns include the declared account and cost assumptions.",
+      "alt": "Original holdout comparison of the proposed pairs-trading rule with simpler methods.",
+      "figure": "/research/figures/revertlab.webp",
+      "figureWidth": 1600,
+      "figureHeight": 1029
+    }
   },
   {
     "id": "counterglass",
@@ -130,13 +482,56 @@
     "topic": "Learning & agents",
     "date": "2026-11-01",
     "status": "Technical paper",
-    "outcome": "Negative primary result",
+    "outcome": "Selection target missed",
     "summary": "Checkpointed tool-agent executions expose failures that successful responses can conceal.",
     "finding": "A locked 1,280-episode study tests ten search policies. The proposed pooled selector misses its frozen improvement target and loses to a simpler schema heuristic. All 7,177 unique recorded pairs were freshly replayed and independently checked with zero mismatches.",
     "scope": "The evaluation uses three authored workflow structures. Separate ToolSandbox and local-model cases support execution evidence, not broad selector generalization. Evidence records are unsigned and do not prove arbitrary agent behavior.",
     "metric": "7,177",
     "metricLabel": "unique paired runs independently replayed",
-    "supplements": []
+    "supplements": [],
+    "displayDate": "2026-10-16",
+    "dateStatus": "provisional",
+    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "article": {
+      "title": "Testing stateful tool agents",
+      "question": "Can a successful agent response conceal an incorrect database or file state?",
+      "method": [
+        "Checkpoint real SQLite and file state together with a resumable policy state. Change one declared environmental condition, continue execution, and check the resulting state independently.",
+        "The selector study compares ten policies over thirty-two seeds and three authored workflow structures. Separate ToolSandbox and local-model cases exercise the testing mechanism beyond the scripted selector evaluation."
+      ],
+      "columns": [
+        "Evidence",
+        "Result"
+      ],
+      "rows": [
+        [
+          "Locked selector study",
+          "1,280 episodes and 54,619 paired trial occurrences"
+        ],
+        [
+          "Primary pooled vs independent index",
+          "4.031 vs 3.812 signatures; frozen composite target missed"
+        ],
+        [
+          "Stronger simple comparator",
+          "Schema heuristic finds 4.719 signatures at the primary budget"
+        ],
+        [
+          "Fresh independent replay",
+          "All 7,177 unique pairs checked with zero mismatches"
+        ]
+      ],
+      "interpretation": "The stateful failure-evidence mechanism is useful within its supported workflows. The added pooled selector does not earn a general discovery claim and loses to the simpler schema heuristic.",
+      "limits": [
+        "The study holds out parameters within three authored structures, not entire unseen applications.",
+        "Evidence records are unsigned. Consistency checking and fresh replay do not authenticate arbitrary executions or prove every internal policy transition."
+      ],
+      "caption": "Cost and failure-signature comparisons for the locked selection policies. Signature counts are not automatically distinct root causes.",
+      "alt": "Original cost-quality comparison across testing policies in the locked counterglass study.",
+      "figure": "/research/figures/counterglass.webp",
+      "figureWidth": 1600,
+      "figureHeight": 887
+    }
   },
   {
     "id": "spectral-ambiguity",
@@ -145,7 +540,7 @@
     "topic": "Quantum & physics",
     "date": "2026-10-29",
     "status": "Paper & follow-up",
-    "outcome": "Negative acquisition result",
+    "outcome": "Acquisition target missed",
     "summary": "Cached adversarial spectra accelerate a measurement-selection calculation, while acquisition tests fail their scientific target.",
     "finding": "The original finite-menu study reports a 5.16× median selection speedup over warm-started HiGHS. Physical acquisition reaches the target in 4/9 cases versus 6/9 for conventional design. A corrected follow-up finds all five policies miss the target in all nine new cases.",
     "scope": "The speedup is for a specialized computation, rather than demonstrated scientific acquisition superiority. The follow-up identifies a resolution bottleneck and leaves independent physical sampling costs unestablished. The original and corrective reports remain separate.",
@@ -154,9 +549,54 @@
     "supplements": [
       {
         "id": "spectral-ambiguity-followup",
-        "title": "Corrective follow-up: A Consistent Cell Model Does Not Establish Spectral Acquisition Superiority"
+        "title": "Corrective follow-up: A Consistent Cell Model Does Not Establish Spectral Acquisition Superiority",
+        "displayDate": "2025-08-07",
+        "dateStatus": "provisional"
       }
-    ]
+    ],
+    "displayDate": "2025-04-29",
+    "dateStatus": "provisional",
+    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "article": {
+      "title": "Choosing measurements for positive spectra",
+      "question": "Can reusing adversarial spectra make minimax measurement selection cheaper, and does that improve acquisition?",
+      "method": [
+        "A shared witness cache bounds candidate noisy-correlator measurements before invoking a full optimization oracle. Compare the finite-menu choice with a persistent, warm-started HiGHS baseline and a simpler ray cache.",
+        "A separate physical acquisition study compares uncertainty reduction. A corrective follow-up makes selection and reported intervals use the same endpoint-cell model, then checks the unchanged target on fresh cases."
+      ],
+      "columns": [
+        "Study",
+        "Result"
+      ],
+      "rows": [
+        [
+          "Original finite-menu selection",
+          "5.16× median speedup across 18 held-out menus"
+        ],
+        [
+          "Original acquisition target",
+          "4/9 cases reached vs 6/9 for conventional target-specific design"
+        ],
+        [
+          "Corrective follow-up",
+          "All five policies miss the target on all nine new cases"
+        ],
+        [
+          "Follow-up diagnosis",
+          "Coarse-cell ambiguity remains above target even with all available observations"
+        ]
+      ],
+      "interpretation": "The original computation is faster on the measured menus. That does not establish better scientific acquisition. The corrective experiment also exposes a resolution bottleneck that makes its ranking comparison inconclusive.",
+      "limits": [
+        "Optimal recovery, positivity bounds, and oracle caching have established precedents. Priority for this specialization is unresolved.",
+        "Independent physical per-time sampling costs are not established. The two reports retain separate models, timings, and outcomes."
+      ],
+      "caption": "Original finite-menu selection measurements. These timings belong to the original study and are not measurements of the corrective follow-up.",
+      "alt": "Original selection-time comparison for witness reuse and optimization baselines.",
+      "figure": "/research/figures/spectral-ambiguity.svg",
+      "figureWidth": 520,
+      "figureHeight": 211
+    }
   },
   {
     "id": "fusionzero",
@@ -165,7 +605,7 @@
     "topic": "Quantum & physics",
     "date": "2026-11-01",
     "status": "Preliminary notes",
-    "outcome": "Preliminary negative result",
+    "outcome": "Preliminary; utility target missed",
     "summary": "Tokamak reconstruction studies separate numerical current constraints from useful predictions of equilibrium geometry.",
     "finding": "All 256 current-constrained predictions pass the declared feasibility and optimality checks, but the local reconstruction score is 0.783302 versus 0.869123 for direct flux regression. Two earlier notes retain flux-relabeling failures and a controlled passive-current ambiguity study.",
     "scope": "This is a development snapshot of ongoing research. No original inverse algorithm, blind-test improvement, experimental ambiguity, or cross-machine performance is established.",
@@ -174,13 +614,61 @@
     "supplements": [
       {
         "id": "fusionzero-observability",
-        "title": "Supplement: Passive-Current Ambiguity in Nonmagnetic Equilibrium Reconstruction"
+        "title": "Supplement: Passive-Current Ambiguity in Nonmagnetic Equilibrium Reconstruction",
+        "displayDate": "2025-11-18",
+        "dateStatus": "provisional"
       },
       {
         "id": "fusionzero-relabeling",
-        "title": "Earlier note: Contour-Preserving Flux Relabeling"
+        "title": "Earlier note: Contour-Preserving Flux Relabeling",
+        "displayDate": "2025-07-25",
+        "dateStatus": "provisional"
       }
-    ]
+    ],
+    "displayDate": "2026-03-10",
+    "dateStatus": "provisional",
+    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "article": {
+      "title": "Current constraints and tokamak geometry",
+      "question": "Does enforcing a feasible, current-conserving plasma source improve predicted equilibrium geometry?",
+      "method": [
+        "A fixed current-space dictionary maps source coefficients to poloidal flux. A convex correction enforces nonnegative current cells and the observed current sum while minimizing flux displacement.",
+        "The source-only development study compares those corrected predictions with direct flux regression on a discharge-separated DIII-D cohort. Earlier notes separately test contour-preserving flux relabeling and synthetic passive-current ambiguity."
+      ],
+      "columns": [
+        "Development comparison",
+        "Result"
+      ],
+      "rows": [
+        [
+          "Feasibility and optimality checks",
+          "All 256 constrained predictions pass"
+        ],
+        [
+          "Composite reconstruction score",
+          "0.783302 constrained vs 0.869123 direct regression"
+        ],
+        [
+          "Boundary distance",
+          "0.060279 constrained vs 0.041442 direct regression"
+        ],
+        [
+          "Synthetic ambiguity supplement",
+          "3.5437 cm axis gap under identical declared instantaneous inputs"
+        ]
+      ],
+      "interpretation": "A feasible current representation does not by itself improve geometry. The tested correction loses to direct regression; the ambiguity supplement identifies a separate information limit in its synthetic setup.",
+      "limits": [
+        "These are preliminary development studies from an ongoing project. There is no blind-test or cross-machine improvement.",
+        "The ambiguity construction is conditional and numerical, not a continuum-certified impossibility theorem or a measured experimental result.",
+        "No original inverse-reconstruction algorithm is established by these notes."
+      ],
+      "caption": "Current-source feasibility and predictive reconstruction utility are evaluated separately in the development study.",
+      "alt": "Original metric comparison between direct flux regression and current-space reconstruction variants.",
+      "figure": "/research/figures/fusionzero.webp",
+      "figureWidth": 1600,
+      "figureHeight": 750
+    }
   },
   {
     "id": "counterpatch",
@@ -189,13 +677,58 @@
     "topic": "Learning & agents",
     "date": "2026-10-29",
     "status": "Technical report",
-    "outcome": "Negative snapshot; research ongoing",
+    "outcome": "Added search missed the target",
     "summary": "Finite training-data repairs are measured through exact ridge counterfactuals and conventional retraining.",
     "finding": "The preserved report’s selector ties greedy on digits and gains 1.4% on Airfoil, with a paired interval crossing zero. A conventional full-data influence baseline recovers more mean error in the primary corrupted settings.",
     "scope": "The report concerns fixed-feature ridge pipelines and controlled defects. Exact update identities are established methods. Later research continued without a successful new mechanism; this is the completed October report, not a claim that the broader goal succeeded.",
     "metric": "2,040",
     "metricLabel": "retained before/after outcomes",
     "format": "Markdown",
-    "supplements": []
+    "supplements": [],
+    "displayDate": "2024-08-19",
+    "dateStatus": "provisional",
+    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "article": {
+      "title": "Choosing training data repairs",
+      "question": "Does searching for interacting data repairs improve a retrained model enough to justify the extra work?",
+      "method": [
+        "Keep the input features and ridge penalty (the cost assigned to large model coefficients) fixed. Evaluate finite row deletions or verified target corrections, select repairs within an edit budget, and send one proposal to a separate validation check.",
+        "Retrain accepted repairs from scratch with scikit-learn and independently check the resulting model. Digits uses official writer-separated test data; Airfoil holds out physical-condition groups. The confirmation retains 2,040 before/after outcomes."
+      ],
+      "columns": [
+        "Primary comparison",
+        "Greedy recovery",
+        "Beam recovery"
+      ],
+      "rows": [
+        [
+          "Digits score MSE",
+          "0.000158129",
+          "0.000158129"
+        ],
+        [
+          "Airfoil MSE, dB²",
+          "1.241507",
+          "1.258849"
+        ]
+      ],
+      "resultNote": "MSE means mean squared error. Recovery is the reduction in error after repair, so larger values are better. The Airfoil gain is 1.4%, with a paired interval spanning harm and benefit. The frozen target required at least 10% extra recovery on both tasks; it fails. Audited-label optimization also ties greedy.",
+      "interpretation": "Use exact greedy as the prospectively chosen default, or inspect the conventional full-data influence alternative that recovers more mean error in these settings. The added beam and label-search machinery does not demonstrate better repair quality.",
+      "limits": [
+        "The update identities apply to fixed-feature ridge models. Changing preprocessing, normalization, or the model family invalidates that contract.",
+        "The guard still accepts some harmful repairs under domain shift. Ridge-selected repairs also degrade the Airfoil random-forest transfer result.",
+        "Fast exact counterfactual calculations are an engineering benefit, not evidence of a novel selector or general reliability restoration."
+      ],
+      "equation": {
+        "label": "How repair quality is scored",
+        "html": "<math display=\"block\"><mi>U</mi><mo>=</mo><msub><mi>E</mi><mtext>before</mtext></msub><mo>−</mo><msub><mi>E</mi><mtext>after</mtext></msub></math>",
+        "explanation": "U is the gain from a repair; E is held-out model error. Positive values mean the repaired model has lower error. Selection and guard checks use separate data from the final evaluation."
+      },
+      "caption": "Measured repair outcomes and paired beam-minus-greedy differences. The reported intervals reuse fixed test domains and resample training/split seeds.",
+      "alt": "Measured repair outcomes and the paired differences between added beam search and exact greedy.",
+      "figure": "/research/figures/counterpatch.png",
+      "figureWidth": 2720,
+      "figureHeight": 850
+    }
   }
 ]

@@ -19,7 +19,7 @@ if (form) {
       if (matches) visible++;
     });
     topics.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.topic === topic)));
-    count.textContent = `${visible} ${visible === 1 ? 'project' : 'projects'}`;
+    count.textContent = `${visible} ${visible === 1 ? 'study' : 'studies'}`;
     empty.hidden = visible > 0;
     const next = new URL(location.href);
     if (input.value.trim()) next.searchParams.set('q', input.value.trim()); else next.searchParams.delete('q');

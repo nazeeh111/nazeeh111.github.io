@@ -2,7 +2,7 @@
 
 This repository serves [`nazeeh111.github.io`](https://nazeeh111.github.io/) as a short entry point to selected public projects. Its root page distinguishes browser experiments from tools that run locally; the [GitHub profile](https://github.com/nazeeh111) and [repository list](https://github.com/nazeeh111?tab=repositories) provide the wider portfolio.
 
-The root page is a static HTML document with no build step, external scripts, fonts, tracking, or account requirement. Open `index.html` in a browser to review it locally. Project links point to their own repositories or hosted pages for source, setup, evidence and limits.
+The root page is a static HTML document with no build step, external scripts, fonts, tracking, or account requirement. Preview locally with `python3 -m http.server 8000 --bind 127.0.0.1`, then open `http://127.0.0.1:8000/`. Project links point to their own repositories or hosted pages for source, setup, evidence and limits.
 
 ## Preserved project routes
 
@@ -15,8 +15,20 @@ The index's featured Caustryn screenshot is a capture of its recorded synthetic 
 
 ## Research library
 
-`/research/` hosts 12 research projects: ten completed paper packages, FUSIONZERO's preliminary notes, and the preserved COUNTERPATCH technical report. The collection contains 14 unchanged PDFs and one original Markdown report, with readable overview pages, actual first-page previews, topic/search controls, BibTeX citations, and manuscript-source bundles. `research/manifest.json` identifies each downloaded manuscript by SHA-256. The collection ZIP includes those exact manuscripts and the manifest.
+`/research/` contains one browser-readable article for each of the 12 studies. Each article explains the method, records the results, shows an original study figure, and states the limitations. Equations use native MathML; there is no client-side mathematics library. The original 14 PDFs, Markdown report, manuscript-source bundles, and collection ZIP remain unchanged and downloadable. `research/manifest.json` identifies those manuscript bytes by SHA-256.
 
-Research status is stated separately from public availability. Negative outcomes, simulation scope, unfinished continuations, and review limits are retained. No journal acceptance or external peer review is implied. Public code/evidence links are included only for verified existing repositories.
+The COUNTERPATCH report URL redirects to its canonical study article. Search and topic filters are progressive enhancements: articles, figures, contents links, and downloads work without JavaScript. The homepage retains the existing project links and adds category navigation.
 
-The library is static HTML/CSS/JavaScript and requires no build or external runtime. With JavaScript disabled all studies and download links remain available. Source bundles contain manuscript files and their referenced figures/bibliography, rather than full experimental environments. Existing project directories are unchanged.
+### Editing
+
+Edit `research/catalog.json`, then run:
+
+```sh
+python3 scripts/build-research.py
+```
+
+The generator uses Python's standard library. It rebuilds the library and study articles; the homepage and shared CSS are edited directly. No build is required to serve the checked-in static files.
+
+`date` records the original manuscript date. `displayDate` is currently a randomized placeholder, explicitly labeled by `dateStatus: "provisional"`. These dates are not research-history claims. Keep manuscript and citation dates separate until the dates are verified.
+
+The public collection distinguishes exact results in restricted models, simulated findings, preliminary work, and missed performance targets. It makes no journal-acceptance or external-peer-review claim.
