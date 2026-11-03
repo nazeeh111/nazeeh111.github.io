@@ -4,7 +4,7 @@
     "name": "Phaseglass Quantum",
     "title": "Two-Copy Symmetry-Sector Discrimination Beyond Matched Block Purities",
     "topic": "Quantum & physics",
-    "date": "2026-11-01",
+    "date": "2025-10-23",
     "status": "Research manuscript",
     "outcome": "Exact two-copy separation",
     "summary": "A two-copy quantum measurement distinguishes states whose whole-block purity statistics are identical.",
@@ -14,8 +14,7 @@
     "metricLabel": "exact two-copy success",
     "supplements": [],
     "displayDate": "2025-10-23",
-    "dateStatus": "provisional",
-    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "dateStatus": "user-specified",
     "article": {
       "title": "Two-copy quantum measurements",
       "question": "Can a joint measurement on two copies distinguish states that look identical to whole-block purity tests?",
@@ -51,14 +50,15 @@
       "figure": "/research/figures/phaseglass-quantum.webp",
       "figureWidth": 1600,
       "figureHeight": 747
-    }
+    },
+    "originalDate": "2026-11-01"
   },
   {
     "id": "quantum-records",
     "name": "Quantum Records",
     "title": "Opposite Encoding Preferences for Quantum-Record Consensus and Pooled Inference",
     "topic": "Quantum & physics",
-    "date": "2026-10-29",
+    "date": "2025-02-11",
     "status": "Research manuscript",
     "outcome": "Exact result in a restricted model",
     "summary": "The best encoding for separated observers can be the worse encoding when their records are read together.",
@@ -70,8 +70,7 @@
     "lineage": "Quantum Darwinism follow-up",
     "versionNote": "This study developed from the One-Shot Quantum Darwinism project and focuses on the encoding-reversal result.",
     "displayDate": "2025-02-11",
-    "dateStatus": "provisional",
-    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "dateStatus": "user-specified",
     "article": {
       "title": "Quantum records: separate and pooled decisions",
       "question": "Does the same encoding best support observers deciding separately and observers combining their quantum records?",
@@ -111,14 +110,15 @@
       "figure": "/research/figures/quantum-records.webp",
       "figureWidth": 1600,
       "figureHeight": 644
-    }
+    },
+    "originalDate": "2026-10-29"
   },
   {
     "id": "neutrino-positive-moments",
     "name": "Neutrino Moments",
     "title": "Exact Frequency Uncertainty from Neutrino Angular Moments",
     "topic": "Quantum & physics",
-    "date": "2026-11-02",
+    "date": "2026-09-08",
     "status": "Working draft",
     "outcome": "Sharp bounds; usefulness unresolved",
     "summary": "Exact certificates describe which growing frequencies limited angular-moment information permits.",
@@ -129,8 +129,7 @@
     "repository": "https://github.com/nazeeh111/neutrino-positive-moments",
     "supplements": [],
     "displayDate": "2026-09-08",
-    "dateStatus": "provisional",
-    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "dateStatus": "user-specified",
     "article": {
       "title": "Neutrino frequency bounds",
       "question": "Which growing frequencies are compatible with limited information about a neutrino angular distribution?",
@@ -171,14 +170,15 @@
       "figure": "/research/figures/neutrino-positive-moments.svg",
       "figureWidth": 454,
       "figureHeight": 184
-    }
+    },
+    "originalDate": "2026-11-02"
   },
   {
     "id": "manifold",
     "name": "Manifold",
     "title": "Moment-Weighted Fourier Envelopes for Heat Actions: A Reproducible Algorithm-Discovery Study",
     "topic": "Numerics",
-    "date": "2026-11-02",
+    "date": "2025-06-17",
     "status": "Technical paper",
     "outcome": "Practical targets missed",
     "summary": "A spectral-moment stopping rule is tested against established methods for sparse diffusion calculations.",
@@ -188,8 +188,7 @@
     "metricLabel": "reference-checked timed outputs across both studies",
     "supplements": [],
     "displayDate": "2025-06-17",
-    "dateStatus": "provisional",
-    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "dateStatus": "user-specified",
     "article": {
       "title": "Stopping rules for heat diffusion",
       "question": "Can spectral moments reduce the work required to approximate a sparse diffusion calculation accurately?",
@@ -234,14 +233,15 @@
       "figure": "/research/figures/manifold.webp",
       "figureWidth": 1600,
       "figureHeight": 972
-    }
+    },
+    "originalDate": "2026-11-02"
   },
   {
     "id": "inertiaforge",
     "name": "InertiaForge",
     "title": "inertiaforge: Auditing Contact Dynamics and the Limits of Gradient Agreement",
     "topic": "Numerics",
-    "date": "2026-11-02",
+    "date": "2026-02-26",
     "status": "Technical paper",
     "outcome": "Gradient gate failed",
     "summary": "A rigid-body engine tests whether agreement across simulation refinements makes a contact derivative trustworthy.",
@@ -251,8 +251,7 @@
     "metricLabel": "accepted derivatives meeting the target",
     "supplements": [],
     "displayDate": "2026-02-26",
-    "dateStatus": "provisional",
-    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "dateStatus": "user-specified",
     "article": {
       "title": "Contact-gradient accuracy",
       "question": "Does agreement across smaller timesteps and parameter changes make a simulated contact derivative reliable?",
@@ -293,14 +292,15 @@
       "figure": "/research/figures/inertiaforge.webp",
       "figureWidth": 1600,
       "figureHeight": 625
-    }
+    },
+    "originalDate": "2026-11-02"
   },
   {
     "id": "cragshift",
     "name": "Cragshift",
     "title": "cragshift: Quality-aware Camera–Laser Monitoring with an Auditable Simulated Rock-slope Benchmark",
     "topic": "Sensing",
-    "date": "2026-11-02",
+    "date": "2026-07-13",
     "status": "Technical paper",
     "outcome": "Positive simulation result",
     "summary": "Learned sensor-quality weighting is evaluated on original camera–laser surveys of procedural rock slopes.",
@@ -310,8 +310,7 @@
     "metricLabel": "recall gain on fresh simulated sites",
     "supplements": [],
     "displayDate": "2026-07-13",
-    "dateStatus": "provisional",
-    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "dateStatus": "user-specified",
     "article": {
       "title": "Camera–laser change detection",
       "question": "Does learning sensor quality improve movement detection over simple camera–laser fusion?",
@@ -356,14 +355,15 @@
       "figure": "/research/figures/cragshift.webp",
       "figureWidth": 1600,
       "figureHeight": 528
-    }
+    },
+    "originalDate": "2026-11-02"
   },
   {
     "id": "tailsentry",
     "name": "TAILSENTRY",
     "title": "TAILSENTRY: Structure-Certified Conditional Union Sampling for Rare Losses",
     "topic": "Finance",
-    "date": "2026-11-01",
+    "date": "2025-12-04",
     "status": "Technical paper",
     "outcome": "Efficiency target missed",
     "summary": "An auditable rare-event sampler tests probability bounds, missed catastrophic modes, and efficiency.",
@@ -374,8 +374,7 @@
     "repository": "https://github.com/nazeeh111/TAILSENTRY",
     "supplements": [],
     "displayDate": "2025-12-04",
-    "dateStatus": "provisional",
-    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "dateStatus": "user-specified",
     "article": {
       "title": "Rare-loss sampling and missed failure modes",
       "question": "Can a structured rare-event sampler improve efficiency while keeping uncertainty meaningful when a catastrophic mode is missed?",
@@ -415,14 +414,15 @@
       "figure": "/research/figures/tailsentry.webp",
       "figureWidth": 1600,
       "figureHeight": 517
-    }
+    },
+    "originalDate": "2026-11-01"
   },
   {
     "id": "revertlab",
     "name": "RevertLab",
     "title": "RevertLab: Cost-aware Continuation under Rival Spread Dynamics",
     "topic": "Finance",
-    "date": "2026-11-01",
+    "date": "2026-05-21",
     "status": "Technical paper",
     "outcome": "No trading advantage established",
     "summary": "A chronological pairs-trading study values convergence, relationship failure, both trading legs, and costs.",
@@ -432,8 +432,7 @@
     "metricLabel": "proposed rule’s reserved-period return",
     "supplements": [],
     "displayDate": "2026-05-21",
-    "dateStatus": "provisional",
-    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "dateStatus": "user-specified",
     "article": {
       "title": "Pairs trading under relationship failure",
       "question": "Does valuing convergence and relationship failure together improve trading decisions after both-leg costs?",
@@ -473,14 +472,15 @@
       "figure": "/research/figures/revertlab.webp",
       "figureWidth": 1600,
       "figureHeight": 1029
-    }
+    },
+    "originalDate": "2026-11-01"
   },
   {
     "id": "counterglass",
     "name": "Counterglass",
     "title": "Counterglass: Stateful Counterfactual Failure Evidence and a Budgeted Search Study",
     "topic": "Learning & agents",
-    "date": "2026-11-01",
+    "date": "2026-10-16",
     "status": "Technical paper",
     "outcome": "Selection target missed",
     "summary": "Checkpointed tool-agent executions expose failures that successful responses can conceal.",
@@ -490,8 +490,7 @@
     "metricLabel": "unique paired runs independently replayed",
     "supplements": [],
     "displayDate": "2026-10-16",
-    "dateStatus": "provisional",
-    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "dateStatus": "user-specified",
     "article": {
       "title": "Testing stateful tool agents",
       "question": "Can a successful agent response conceal an incorrect database or file state?",
@@ -531,14 +530,15 @@
       "figure": "/research/figures/counterglass.webp",
       "figureWidth": 1600,
       "figureHeight": 887
-    }
+    },
+    "originalDate": "2026-11-01"
   },
   {
     "id": "spectral-ambiguity",
     "name": "Spectral Ambiguity",
     "title": "Projected Witness Reuse for Positive Spectral Experiment Design",
     "topic": "Quantum & physics",
-    "date": "2026-10-29",
+    "date": "2025-04-29",
     "status": "Paper & follow-up",
     "outcome": "Acquisition target missed",
     "summary": "Cached adversarial spectra accelerate a measurement-selection calculation, while acquisition tests fail their scientific target.",
@@ -551,12 +551,13 @@
         "id": "spectral-ambiguity-followup",
         "title": "Corrective follow-up: A Consistent Cell Model Does Not Establish Spectral Acquisition Superiority",
         "displayDate": "2025-08-07",
-        "dateStatus": "provisional"
+        "dateStatus": "user-specified",
+        "date": "2025-08-07",
+        "originalDate": "2025-08-07"
       }
     ],
     "displayDate": "2025-04-29",
-    "dateStatus": "provisional",
-    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "dateStatus": "user-specified",
     "article": {
       "title": "Choosing measurements for positive spectra",
       "question": "Can reusing adversarial spectra make minimax measurement selection cheaper, and does that improve acquisition?",
@@ -596,14 +597,15 @@
       "figure": "/research/figures/spectral-ambiguity.svg",
       "figureWidth": 520,
       "figureHeight": 211
-    }
+    },
+    "originalDate": "2026-10-29"
   },
   {
     "id": "fusionzero",
     "name": "FUSIONZERO",
     "title": "Current Conservation Does Not Ensure Accurate Equilibrium Geometry",
     "topic": "Quantum & physics",
-    "date": "2026-11-01",
+    "date": "2026-03-10",
     "status": "Preliminary notes",
     "outcome": "Preliminary; utility target missed",
     "summary": "Tokamak reconstruction studies separate numerical current constraints from useful predictions of equilibrium geometry.",
@@ -616,18 +618,21 @@
         "id": "fusionzero-observability",
         "title": "Supplement: Passive-Current Ambiguity in Nonmagnetic Equilibrium Reconstruction",
         "displayDate": "2025-11-18",
-        "dateStatus": "provisional"
+        "dateStatus": "user-specified",
+        "date": "2025-11-18",
+        "originalDate": "2025-11-18"
       },
       {
         "id": "fusionzero-relabeling",
         "title": "Earlier note: Contour-Preserving Flux Relabeling",
         "displayDate": "2025-07-25",
-        "dateStatus": "provisional"
+        "dateStatus": "user-specified",
+        "date": "2025-07-25",
+        "originalDate": "2025-07-25"
       }
     ],
     "displayDate": "2026-03-10",
-    "dateStatus": "provisional",
-    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "dateStatus": "user-specified",
     "article": {
       "title": "Current constraints and tokamak geometry",
       "question": "Does enforcing a feasible, current-conserving plasma source improve predicted equilibrium geometry?",
@@ -668,14 +673,15 @@
       "figure": "/research/figures/fusionzero.webp",
       "figureWidth": 1600,
       "figureHeight": 750
-    }
+    },
+    "originalDate": "2026-11-01"
   },
   {
     "id": "counterpatch",
     "name": "COUNTERPATCH",
     "title": "COUNTERPATCH: Exact Data-Repair Counterfactuals and a Negative Result for Added Search",
     "topic": "Learning & agents",
-    "date": "2026-10-29",
+    "date": "2024-08-19",
     "status": "Technical report",
     "outcome": "Added search missed the target",
     "summary": "Finite training-data repairs are measured through exact ridge counterfactuals and conventional retraining.",
@@ -686,8 +692,7 @@
     "format": "Markdown",
     "supplements": [],
     "displayDate": "2024-08-19",
-    "dateStatus": "provisional",
-    "displayDateNote": "Randomized placeholder pending verification; not a verified research or publication date.",
+    "dateStatus": "user-specified",
     "article": {
       "title": "Choosing training data repairs",
       "question": "Does searching for interacting data repairs improve a retrained model enough to justify the extra work?",
@@ -729,6 +734,7 @@
       "figure": "/research/figures/counterpatch.png",
       "figureWidth": 2720,
       "figureHeight": 850
-    }
+    },
+    "originalDate": "2026-10-29"
   }
 ]

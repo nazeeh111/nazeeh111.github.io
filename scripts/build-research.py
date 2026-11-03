@@ -15,9 +15,8 @@ def esc(value):return escape(str(value),quote=True)
 def pretty_date(value):return date.fromisoformat(value).strftime('%b %d, %Y').replace(' 0',' ')
 def size(value):return f'{value/1024/1024:.1f} MB' if value>=1024*1024 else f'{round(value/1024)} KB'
 def display_date(study):
-    provisional=study.get('dateStatus')=='provisional'
     value=study.get('displayDate',study.get('date'))
-    return ('Provisional date: ' if provisional else '')+pretty_date(value)
+    return pretty_date(value)
 def header(title,description,path,image=None):
     image=image or '/research/figures/phaseglass-quantum.webp'
     return f'''<!doctype html>
@@ -35,7 +34,7 @@ def header(title,description,path,image=None):
 <header class="shell site-header"><a class="identity" href="/">Nazeeh Abdul-Hadi</a>
 <nav aria-label="Portfolio"><a href="/#projects">Projects</a><a href="/research/" {'aria-current="page"' if path=='/research/' else ''}>Research</a><a href="https://github.com/nazeeh111">GitHub ↗</a></nav></header>\n'''
 
-def footer():return '''<footer class="shell site-footer"><a class="identity" href="/">Nazeeh Abdul-Hadi</a><nav aria-label="Footer"><a href="/research/">All studies</a><a href="/research/manifest.json">File manifest</a><a href="https://github.com/nazeeh111/nazeeh111.github.io">Site source ↗</a></nav><p class="fine">Display dates are provisional placeholders. Original manuscript and citation dates are preserved.</p></footer></body></html>\n'''
+def footer():return '''<footer class="shell site-footer"><a class="identity" href="/">Nazeeh Abdul-Hadi</a><nav aria-label="Footer"><a href="/research/">All studies</a><a href="/research/manifest.json">File manifest</a><a href="https://github.com/nazeeh111/nazeeh111.github.io">Site source ↗</a></nav></footer></body></html>\n'''
 
 def bibliography(study):
     year=study['date'][:4]
@@ -49,7 +48,7 @@ def bibliography(study):
 
 def downloads(study):
     slug=study['id'];info=FILES[slug];text=study.get('format')=='Markdown'
-    extension='md' if text else 'pdf';label='Original report · Markdown' if text else f'Original paper · PDF · {info["pages"]} pages'
+    extension='md' if text else 'pdf';label='Report · Markdown' if text else f'Paper · PDF · {info["pages"]} pages'
     html=f'''<section id="downloads" class="reader-section downloads"><h2>Paper & sources</h2><p class="paper-title">{esc(study['title'])}</p><div class="download-list"><a href="/research/papers/{slug}.{extension}" download>{label}<span>{size(info['bytes'])} ↓</span></a>'''
     if not text:html+=f'<a href="/research/sources/{slug}.zip" download>Manuscript sources<span>ZIP ↓</span></a>'
     if study.get('repository'):html+=f'<a href="{esc(study["repository"])}">Code & evidence<span>GitHub ↗</span></a>'
@@ -57,7 +56,7 @@ def downloads(study):
         doc=FILES[supplement['id']]
         html+=f'<a class="companion" href="/research/papers/{supplement["id"]}.pdf" download><span>{esc(supplement["title"])}<small>{esc(display_date(supplement))}</small></span><span>{doc["pages"]} pages ↓</span></a>'
         html+=f'<a class="companion-source" href="/research/sources/{supplement["id"]}.zip" download>Companion manuscript sources<span>ZIP ↓</span></a>'
-    html+='</div><details class="citation"><summary>Cite this study</summary><p class="fine">The citation uses the original manuscript year.</p><pre id="bibtex">'+esc(bibliography(study))+'</pre><button type="button" class="copy-button" hidden>Copy BibTeX</button><p id="copy-status" role="status" aria-live="polite"></p></details></section>'
+    html+='</div><details class="citation"><summary>Cite this study</summary><pre id="bibtex">'+esc(bibliography(study))+'</pre><button type="button" class="copy-button" hidden>Copy BibTeX</button><p id="copy-status" role="status" aria-live="polite"></p></details></section>'
     return html
 
 def article(study):
@@ -91,7 +90,7 @@ html=header('Research','Study write-ups, results, original papers, and manuscrip
 html+='''<main id="main" class="shell"><header class="library-intro"><div class="eyebrow">Independent research</div><h1>Research</h1><p>Physics, numerical methods, sensing, agents, and finance.</p><div class="library-actions"><a href="/research/all-papers.zip" download>Download all papers <span>14 PDFs + 1 report · 2.5 MB ↓</span></a></div></header>
 <section class="library" aria-label="Research studies"><form class="search-form" role="search" hidden><label for="paper-search">Search studies</label><div class="search-row"><input id="paper-search" type="search" name="q" placeholder="Search topics, methods, or results…" autocomplete="off"><button type="reset" class="reset-search">Clear</button></div><fieldset><legend>Filter by topic</legend><div class="filters"><button type="button" data-topic="all" aria-pressed="true">All studies</button>'''
 for topic in dict.fromkeys(d['topic'] for d in CATALOG):html+=f'<button type="button" data-topic="{esc(topic)}" aria-pressed="false">{esc(topic)}</button>'
-html+='''</div></fieldset></form><div class="results-line"><p id="result-count" role="status" aria-live="polite">12 studies</p><span>Dates are randomized placeholders pending verification.</span></div><div class="paper-list">'''
+html+='''</div></fieldset></form><div class="results-line"><p id="result-count" role="status" aria-live="polite">12 studies</p></div><div class="paper-list">'''
 for study in CATALOG:
     slug=study['id'];body=study['article']
     terms=' '.join([study['name'],study['title'],study['topic'],study['summary'],study['outcome'],study['finding'],study.get('lineage',''),body['title']])

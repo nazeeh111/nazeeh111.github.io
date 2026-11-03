@@ -1,6 +1,6 @@
 # COUNTERPATCH: Exact Data-Repair Counterfactuals and a Negative Result for Added Search
 
-Technical research report, 29 October 2026. Local reproducible artifact; not submitted or peer reviewed externally.
+Technical research report, 19 August 2024. Local reproducible artifact; not submitted or peer reviewed externally.
 
 ## Abstract
 

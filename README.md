@@ -15,7 +15,7 @@ The index's featured Caustryn screenshot is a capture of its recorded synthetic 
 
 ## Research library
 
-`/research/` contains one browser-readable article for each of the 12 studies. Each article explains the method, records the results, shows an original study figure, and states the limitations. Equations use native MathML; there is no client-side mathematics library. The original 14 PDFs, Markdown report, manuscript-source bundles, and collection ZIP remain unchanged and downloadable. `research/manifest.json` identifies those manuscript bytes by SHA-256.
+`/research/` contains one browser-readable article for each of the 12 studies. Each article explains the method, records the results, shows an original study figure, and states the limitations. Equations use native MathML; there is no client-side mathematics library. The 14 PDFs, Markdown report, manuscript-source bundles, and collection ZIP are downloadable. PDFs are compiled from the included sources with synchronized title dates and checked typography. `research/manifest.json` identifies the downloadable manuscript bytes by SHA-256.
 
 The COUNTERPATCH report URL redirects to its canonical study article. Search and topic filters are progressive enhancements: articles, figures, contents links, and downloads work without JavaScript. The homepage retains the existing project links and adds category navigation.
 
@@ -29,6 +29,6 @@ python3 scripts/build-research.py
 
 The generator uses Python's standard library. It rebuilds the library and study articles; the homepage and shared CSS are edited directly. No build is required to serve the checked-in static files.
 
-`date` records the original manuscript date. `displayDate` is currently a randomized placeholder, explicitly labeled by `dateStatus: "provisional"`. These dates are not research-history claims. Keep manuscript and citation dates separate until the dates are verified.
+`date` and `displayDate` contain the owner's selected document dates. The same dates appear in the PDFs and citation years. `dateStatus: "user-specified"` distinguishes these selected dates from independently verified research-history dates; `originalDate` retains the prior manuscript date for provenance.
 
 The public collection distinguishes exact results in restricted models, simulated findings, preliminary work, and missed performance targets. It makes no journal-acceptance or external-peer-review claim.
