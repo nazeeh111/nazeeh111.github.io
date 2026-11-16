@@ -490,7 +490,7 @@
         "fault-injection"
       ],
       "upstream": null,
-      "source_revision": "7a21947d033a634474ed0a4efd42756ced81232d"
+      "source_revision": "86e3c18f343a6aeac3d2e75ff38225b9b644e8c8"
     },
     {
       "name": "graftline",
@@ -507,7 +507,7 @@
         "Python"
       ],
       "upstream": null,
-      "source_revision": "7493cea117c2f054f9eb35222c04e98c335909c8"
+      "source_revision": "13261db3cf8778157398295f221aac93f975531a"
     },
     {
       "name": "hardware-studio-skill",
@@ -789,7 +789,7 @@
         "python"
       ],
       "upstream": null,
-      "source_revision": "14d7b9fdbab52b7098a5c3ea998c4db01c14f000"
+      "source_revision": "7b2ef38b7506aabc01745b3eae68ff035960c1de"
     },
     {
       "name": "Rewynth",
