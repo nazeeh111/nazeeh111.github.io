@@ -175,7 +175,7 @@
         "ee"
       ],
       "upstream": null,
-      "source_revision": "1d8abc346b680ced95395e30d793fea833379b2c"
+      "source_revision": "ccb0d22ad1651390ae86283143f8b069bd7dc78b"
     },
     {
       "name": "CausalOS",
@@ -372,7 +372,7 @@
         "Enclose"
       ],
       "upstream": null,
-      "source_revision": "2f0dcb2e10d9c0114e2001d264d00e5302d4e679"
+      "source_revision": "eeee7b0aff08d8a9c80da9658080151152ec596e"
     },
     {
       "name": "ChirpMotion",
@@ -390,7 +390,7 @@
         "electrical-engineering"
       ],
       "upstream": null,
-      "source_revision": "67a7d9f6f3e2385d1d1ef283529e5b73631eb7c4"
+      "source_revision": "db81f1af36f09498c8b3eaeb4368e93347420225"
     },
     {
       "name": "chronal",
@@ -690,7 +690,7 @@
         "python"
       ],
       "upstream": null,
-      "source_revision": "8bb5bb006bdae16a15723de36bdc41ec1571b0d1"
+      "source_revision": "13912d9d640938acf8ce299a152298666ae61d44"
     },
     {
       "name": "PolicyDelta",
@@ -706,7 +706,7 @@
         "python"
       ],
       "upstream": null,
-      "source_revision": "b2998f4a9b83d2595f28c3865e17c7df2a08e58c"
+      "source_revision": "dc1ea52c8268a9e26f949ecd9b538f427bdf1c0a"
     },
     {
       "name": "Polyweft",
@@ -976,7 +976,7 @@
         "electrical-engineering"
       ],
       "upstream": null,
-      "source_revision": "5c649a4870238ff9521159a63f6ebf29740f59c1"
+      "source_revision": "db2594d6ff15d75151785c388ed35c473533d3b9"
     },
     {
       "name": "WideAwake",
