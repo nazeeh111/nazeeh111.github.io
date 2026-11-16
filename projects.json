@@ -261,7 +261,7 @@
       "source_revision": "b31acb6344b305f4311346850c9d5c8d0b800cd4"
     },
     {
-      "name": "Aetiory",
+      "name": "Faultsplice",
       "summary": "Test an alternate return value in a failed Python run, then compare it with the original and an unchanged control.",
       "url": "https://github.com/nazeeh111/Aetiory",
       "subject": "Systems & developer tools",
@@ -276,7 +276,11 @@
         "Faultsplice"
       ],
       "upstream": null,
-      "source_revision": "1d44aeed0d5790b52145d8ad9a287a5d99b95df7"
+      "source_revision": "69db8619ce24ba542d24152a110c9eb6a6390ad8",
+      "repository": "Aetiory",
+      "aliases": [
+        "Aetiory"
+      ]
     },
     {
       "name": "AHEADDB",
