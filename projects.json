@@ -68,7 +68,7 @@
         "Python"
       ],
       "upstream": null,
-      "source_revision": "4ebe5f37c98f0b1eb5b78d49da01b4fa8d268932"
+      "source_revision": "ddcce9317bdc59e053f6b6fec3cedf43b9203111"
     },
     {
       "name": "MaterialMind",
@@ -87,7 +87,7 @@
         "ml"
       ],
       "upstream": null,
-      "source_revision": "8d11857fd54d93d1f5159e7e5105e1f927ccf33d"
+      "source_revision": "2340213234ab6ddf8e0f5f86361d71ac432ff59c"
     },
     {
       "name": "SILICONPILOT",
@@ -372,7 +372,7 @@
         "Enclose"
       ],
       "upstream": null,
-      "source_revision": "eeee7b0aff08d8a9c80da9658080151152ec596e"
+      "source_revision": "0c7728c9af019b60209a9f7c557a97fbd5b197f7"
     },
     {
       "name": "ChirpMotion",
@@ -1012,7 +1012,7 @@
     },
     {
       "name": "advisory-database",
-      "summary": "Fork of GitHub’s database of open-source security advisories and CVEs.",
+      "summary": "Fork of GitHub\u2019s database of open-source security advisories and CVEs.",
       "url": "https://github.com/nazeeh111/advisory-database",
       "subject": "Systems & developer tools",
       "kind": "Fork",
@@ -1044,7 +1044,7 @@
     },
     {
       "name": "binaryen.js",
-      "summary": "Fork of Binaryen’s JavaScript API for generating and optimizing WebAssembly.",
+      "summary": "Fork of Binaryen\u2019s JavaScript API for generating and optimizing WebAssembly.",
       "url": "https://github.com/nazeeh111/binaryen.js",
       "subject": "Systems & developer tools",
       "kind": "Fork",
