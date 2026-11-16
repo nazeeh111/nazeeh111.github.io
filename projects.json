@@ -241,7 +241,7 @@
         "electrical-engineering"
       ],
       "upstream": null,
-      "source_revision": "ac8dc4d262a79c8c04cfae04b00f058a7f650b6f"
+      "source_revision": "f0ed9e43dd065eff2b91e7e27b1ac4fc8e65958f"
     },
     {
       "name": "QubitGuard",
@@ -474,7 +474,7 @@
         "Python"
       ],
       "upstream": null,
-      "source_revision": "7b10111623cb2fa61eb0e3cedb1a68b0927880fc"
+      "source_revision": "f69bfdc9e8bd12efaa49ab3cf35620afdcdffd45"
     },
     {
       "name": "Forkwake",
@@ -543,7 +543,7 @@
         "electrical-engineering"
       ],
       "upstream": null,
-      "source_revision": "331272ebe5a86248322fc13ee0fb5e6f4b31fe10"
+      "source_revision": "c1a252300159e2e8e161db43191aafcbea701077"
     },
     {
       "name": "KERNELDARWIN",
@@ -858,7 +858,7 @@
         "python"
       ],
       "upstream": null,
-      "source_revision": "bdc4fb3537ee87712242c867781f213cfd635c14"
+      "source_revision": "a219bce84a570946add8d4e3236e26d8ed2ad2df"
     },
     {
       "name": "Sley",
