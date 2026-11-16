@@ -771,9 +771,6 @@ nav a:hover {
   .intro h1 span {
     display: inline;
   }
-  .intro h1 span::before {
-    content: " ";
-  }
   .intro p {
     font-size: 17px;
     margin-top: 16px;
