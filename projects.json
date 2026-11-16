@@ -258,7 +258,7 @@
         "Python"
       ],
       "upstream": null,
-      "source_revision": "b31acb6344b305f4311346850c9d5c8d0b800cd4"
+      "source_revision": "549a186f1ea96be900429669f2f104dc12a5cc59"
     },
     {
       "name": "Faultsplice",
@@ -313,7 +313,7 @@
         "python"
       ],
       "upstream": null,
-      "source_revision": "ed16e44727c858838bf0e42c9677212d1df2f2db"
+      "source_revision": "b34a6a84089a72beb999830862e5712d26070540"
     },
     {
       "name": "cascade",
@@ -674,7 +674,7 @@
         "Python"
       ],
       "upstream": null,
-      "source_revision": "59011b45fdb619a790a4372764605f09bd1afdd2"
+      "source_revision": "3809e47e6d3c6efc4be4ec457c1075d81f5db59f"
     },
     {
       "name": "PhotonSmith",
@@ -942,7 +942,7 @@
         "HTML"
       ],
       "upstream": null,
-      "source_revision": "e6e8b3f59238610f944ae25364fc606545a51085"
+      "source_revision": "4bfa93043513f6167983299fc3dd52b5ad017ab3"
     },
     {
       "name": "ToolScope",
