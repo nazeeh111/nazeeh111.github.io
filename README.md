@@ -9,10 +9,10 @@ The checked-in site uses static HTML, CSS and a small local JavaScript enhanceme
 Edit `projects.json` for public catalog content and `scripts/portfolio.html` for page structure, then run:
 
 ```sh
-python3 scripts/build-portfolio.py
+python3 scripts/build-site.py --out /tmp/portfolio-generation
 ```
 
-`index.html` is the generated deployable document. The catalog records the source revision behind each entry; a description is not a runtime-validation claim. Keep private repositories and data out of this file. Search includes names, summaries, disciplines, topics, languages and recorded aliases. A curated selection opens first; filtering searches the complete catalog. New figures need accurate captions and an entry in [asset provenance](assets/PROVENANCE.md).
+`index.html` in the new generation is the rendered homepage. The checked-in site remains unchanged. The catalog records the source revision behind each entry; a description is not a runtime-validation claim. Keep private repositories and data out of this file. Search includes names, summaries, disciplines, topics, languages and recorded aliases. A curated selection opens first; filtering searches the complete catalog. New figures need accurate captions and an entry in [asset provenance](assets/PROVENANCE.md).
 
 Homepage styling and scripts are independent of the research library. Check the final page on phone and desktop, operate controls from a keyboard, and verify linked applications before publication.
 
@@ -36,10 +36,10 @@ The COUNTERPATCH report URL redirects to its canonical study article. Search and
 Edit `research/catalog.json`, then run:
 
 ```sh
-python3 scripts/build-research.py
+python3 scripts/build-site.py --out /tmp/portfolio-generation
 ```
 
-The generator uses Python's standard library. It rebuilds the library and study articles; the homepage has its own generator above. No build is required to serve the checked-in static files.
+The reviewed `scripts/site-inputs.json` lists every public input to include; add a new public file there deliberately. Unlisted local files are never read or copied. The inventory also works from an extracted source archive without Git. The standard-library build validates the catalog and paper hashes, renders the homepage, library and study articles, then writes a complete copy to a fresh directory outside the checkout. Use a new output path on each run. Existing site files and earlier generations are never overwritten. A `.build-manifest.json` appears last; if a write is interrupted, an incomplete output directory may remain without that marker and a retry needs a new path. The manifest records file hashes, not authorship or deployment. Input files should remain stable while captured. Paper hashes come from the research manifest; source ZIP integrity is checked and their exact bytes recorded in the output manifest, but no independent expected source-ZIP hashes are supplied. No build is required to serve the checked-in static files.
 
 `date` and `displayDate` contain the owner's selected document dates. The same dates appear in the PDFs and citation years. `dateStatus: "user-specified"` distinguishes these selected dates from independently verified research-history dates; `originalDate` retains the prior manuscript date for provenance.
 
