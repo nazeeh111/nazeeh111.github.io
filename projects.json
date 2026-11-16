@@ -334,7 +334,7 @@
       "source_revision": "6ea2e84013c9f68a66019c6cd67b1f25a0e3c98c"
     },
     {
-      "name": "Caustryn",
+      "name": "PhaseGlass RF",
       "summary": "Explore radio-location estimates and test predictions on withheld positions in a simulated signal experiment.",
       "url": "https://github.com/nazeeh111/Caustryn",
       "subject": "EE & sensing",
@@ -349,7 +349,12 @@
         "PhaseGlass"
       ],
       "upstream": null,
-      "source_revision": "36371edd72f3762026403b465d890b43a494c204"
+      "source_revision": "fca0aa39e29870b3a9fba2358866d8932d6bfab0",
+      "repository": "Caustryn",
+      "aliases": [
+        "Caustryn",
+        "PhaseGlass"
+      ]
     },
     {
       "name": "Certloom",
@@ -436,7 +441,7 @@
         "Python"
       ],
       "upstream": null,
-      "source_revision": "3c14d8b64ea378d8cd479d068643958a7593eb2d"
+      "source_revision": "ac039d70182bf00175ac2ccefacd38f62bcfde88"
     },
     {
       "name": "DurableStore",
@@ -452,7 +457,7 @@
         "write-ahead-log"
       ],
       "upstream": null,
-      "source_revision": "f0ba9d6a6543d3edf5a2c8414b3e05ee6cb06a21"
+      "source_revision": "465feb2227f66d1bfb213419e1b5fd9b2b781578"
     },
     {
       "name": "FLUXATLAS",
@@ -605,7 +610,7 @@
         "JavaScript"
       ],
       "upstream": null,
-      "source_revision": "8c97b9390a4aac751b6a92127105bd4909cb5334"
+      "source_revision": "aed0636566e7936c996564beeecb9c69172ea3a6"
     },
     {
       "name": "nazeeh111",
@@ -803,7 +808,7 @@
       "source_revision": "e9f4261b9ffda97186fa1ced4cbcfc6a78516189"
     },
     {
-      "name": "SchemaRehearsal",
+      "name": "Keepstep",
       "summary": "Run the same SQLite workload before and after a migration to reveal changed behavior.",
       "url": "https://github.com/nazeeh111/SchemaRehearsal",
       "subject": "Systems & developer tools",
@@ -817,7 +822,11 @@
         "Keepstep"
       ],
       "upstream": null,
-      "source_revision": "52c3d481b6e26b8ba81d68752fded6c2b7a6e1dd"
+      "source_revision": "1f0c4243615762a5111271b64640285a5229b9b8",
+      "repository": "SchemaRehearsal",
+      "aliases": [
+        "SchemaRehearsal"
+      ]
     },
     {
       "name": "ShiftDrop",
@@ -865,7 +874,7 @@
         "python"
       ],
       "upstream": null,
-      "source_revision": "3d3d73e0776e21e9c017d30f558a5d3cd3631595"
+      "source_revision": "e93ac8fd4e6810658150e8f1f8357973c748ddf1"
     },
     {
       "name": "SoundMap",
@@ -883,7 +892,7 @@
         "electrical-engineering"
       ],
       "upstream": null,
-      "source_revision": "9e688da794af1dc780bbfdaa124589375f2df318"
+      "source_revision": "452eb6870a5601fa34d90bf81676015c185f5d82"
     },
     {
       "name": "StemScene",
