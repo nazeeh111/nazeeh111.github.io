@@ -121,7 +121,7 @@
         "electrical-engineering"
       ],
       "upstream": null,
-      "source_revision": "a8a19a08798b3376fac563e2907b726a4f8db07e"
+      "source_revision": "8759b0faa462b47d35bfc7d46755bc32e21cca1a"
     },
     {
       "name": "Capsulith",
@@ -674,7 +674,7 @@
         "Python"
       ],
       "upstream": null,
-      "source_revision": "885f3572ac52b226531b0a8c5a5b7ef9948c14da"
+      "source_revision": "59011b45fdb619a790a4372764605f09bd1afdd2"
     },
     {
       "name": "PhotonSmith",
