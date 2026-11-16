@@ -68,7 +68,7 @@
         "Python"
       ],
       "upstream": null,
-      "source_revision": "f897dac23c96a87d5cfec1c44768ca2710ddfd8a"
+      "source_revision": "4ebe5f37c98f0b1eb5b78d49da01b4fa8d268932"
     },
     {
       "name": "MaterialMind",
@@ -87,7 +87,7 @@
         "ml"
       ],
       "upstream": null,
-      "source_revision": "b6da6866c77789fdb92fc6d880ec8f28a1897efb"
+      "source_revision": "8d11857fd54d93d1f5159e7e5105e1f927ccf33d"
     },
     {
       "name": "SILICONPILOT",
