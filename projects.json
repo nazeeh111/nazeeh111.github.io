@@ -139,7 +139,7 @@
         "JavaScript"
       ],
       "upstream": null,
-      "source_revision": "b65dfc6c1ec2fe68857a0d57e388b7a0dcf46e12"
+      "source_revision": "45e5ec4a02201e91c52d60b89b911e7b4d92b0c8"
     },
     {
       "name": "SolveTide",
@@ -191,7 +191,7 @@
         "python"
       ],
       "upstream": null,
-      "source_revision": "c7eeb6ca64e4e2b35bb32729780d3a3cc9eed40d"
+      "source_revision": "1f25fabdf066358cd56963acddaa647f5349bc5c"
     },
     {
       "name": "ReplaySmith",
@@ -258,7 +258,7 @@
         "Python"
       ],
       "upstream": null,
-      "source_revision": "549a186f1ea96be900429669f2f104dc12a5cc59"
+      "source_revision": "9b9c7885584bedb1ef0965ed9d96b1ea83b01dc7"
     },
     {
       "name": "Faultsplice",
@@ -756,7 +756,7 @@
         "Python"
       ],
       "upstream": null,
-      "source_revision": "e467a4954285b45f98aacfeaffb7c01e3543857d"
+      "source_revision": "54c24eabf5513632775158a2fd391013dd39ae37"
     },
     {
       "name": "Reclay",
