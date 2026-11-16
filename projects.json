@@ -1,0 +1,1118 @@
+{
+  "observed_date": "2026-11-16",
+  "scope": "Retained public repositories. Upstream forks and foundations are identified; source metadata is a snapshot, not runtime validation.",
+  "projects": [
+    {
+      "name": "Solidrift",
+      "summary": "Reduce a Blender union failure to a smaller case and inspect the geometry behind it.",
+      "url": "https://github.com/nazeeh111/Solidrift",
+      "subject": "Geometry & CAD",
+      "kind": "Python",
+      "topics": [
+        "blender",
+        "boolean-operations",
+        "computational-geometry",
+        "delta-debugging",
+        "mesh-processing",
+        "Python"
+      ],
+      "upstream": null,
+      "source_revision": "66bf422806891121d1fed7e5f08e7fa8aa89d3df"
+    },
+    {
+      "name": "SolidFrame",
+      "summary": "Chili3D-based browser CAD for modeling plates and brackets, saving locally and exporting STEP or STL.",
+      "url": "https://github.com/nazeeh111/SolidFrame",
+      "subject": "Geometry & CAD",
+      "kind": "TypeScript",
+      "topics": [
+        "browser-cad",
+        "cad",
+        "solid-modeling",
+        "opencascade",
+        "typescript",
+        "webassembly"
+      ],
+      "upstream": null,
+      "source_revision": "2e12454960f6c19f0de9e0c9a54d7b70416874f7"
+    },
+    {
+      "name": "nstack",
+      "summary": "Set up Codex with reviewed specialist skills, scoped activation and rollback support.",
+      "url": "https://github.com/nazeeh111/nstack",
+      "subject": "Systems & developer tools",
+      "kind": "Python",
+      "topics": [
+        "codex",
+        "developer-tools",
+        "agent-skills",
+        "local-first",
+        "developer-workflow",
+        "Python"
+      ],
+      "upstream": null,
+      "source_revision": "0fb79336af26c00882edc181c1a94944ba24ef02"
+    },
+    {
+      "name": "QLOOM",
+      "summary": "Compile small quantum circuits on a CPU, compare search strategies and check numerical equivalence.",
+      "url": "https://github.com/nazeeh111/QLOOM",
+      "subject": "Physics & quantum",
+      "kind": "Python",
+      "topics": [
+        "quantum-computing",
+        "quantum-compiler",
+        "quantum-circuits",
+        "qiskit",
+        "circuit-optimization",
+        "Python"
+      ],
+      "upstream": null,
+      "source_revision": "f897dac23c96a87d5cfec1c44768ca2710ddfd8a"
+    },
+    {
+      "name": "MaterialMind",
+      "summary": "Compare crystal stability models and active-learning choices against existing computed reference data.",
+      "url": "https://github.com/nazeeh111/MaterialMind",
+      "subject": "ML & data",
+      "kind": "Python",
+      "topics": [
+        "materials-science",
+        "crystal-structures",
+        "active-learning",
+        "machine-learning",
+        "reproducible-research",
+        "Python",
+        "machine learning",
+        "ml"
+      ],
+      "upstream": null,
+      "source_revision": "b6da6866c77789fdb92fc6d880ec8f28a1897efb"
+    },
+    {
+      "name": "SILICONPILOT",
+      "summary": "Compile small neural classifiers into fixed-point Verilog and inspect recorded FPGA synthesis results.",
+      "url": "https://github.com/nazeeh111/SILICONPILOT",
+      "subject": "EE & sensing",
+      "kind": "Verilog",
+      "topics": [
+        "fpga",
+        "verilog",
+        "quantization",
+        "hardware-acceleration",
+        "yosys",
+        "electrical-engineering"
+      ],
+      "upstream": null,
+      "source_revision": "e2bd5f5eef12b807dbcedceb573097d1f071e022"
+    },
+    {
+      "name": "EchoSight",
+      "summary": "Reconstruct published ultrasound measurements into volumes; a separate pipeline studies acoustic room mapping.",
+      "url": "https://github.com/nazeeh111/EchoSight",
+      "subject": "EE & sensing",
+      "kind": "Python",
+      "topics": [
+        "ultrasound",
+        "acoustic-imaging",
+        "3d-reconstruction",
+        "signal-processing",
+        "python",
+        "electrical-engineering"
+      ],
+      "upstream": null,
+      "source_revision": "a8a19a08798b3376fac563e2907b726a4f8db07e"
+    },
+    {
+      "name": "Capsulith",
+      "summary": "Run preserved ARM64 code in Node or a browser and inspect its image output and memory.",
+      "url": "https://github.com/nazeeh111/Capsulith",
+      "subject": "Systems & developer tools",
+      "kind": "JavaScript",
+      "topics": [
+        "arm64",
+        "emulation",
+        "binary-analysis",
+        "webassembly",
+        "nodejs",
+        "software-preservation",
+        "JavaScript"
+      ],
+      "upstream": null,
+      "source_revision": "b65dfc6c1ec2fe68857a0d57e388b7a0dcf46e12"
+    },
+    {
+      "name": "SolveTide",
+      "summary": "Solve heat and elasticity problems on a CPU and inspect gradients; its learned reuse policy is disabled.",
+      "url": "https://github.com/nazeeh111/SolveTide",
+      "subject": "Physics & quantum",
+      "kind": "Python",
+      "topics": [
+        "numerical-analysis",
+        "differentiable-simulation",
+        "sparse-linear-algebra",
+        "scientific-computing",
+        "python"
+      ],
+      "upstream": null,
+      "source_revision": "ef5067e084f9c03e914aff5cbc6fd7b631811458"
+    },
+    {
+      "name": "LadderProof",
+      "summary": "Find decreasing steps in ideal resistor-ladder converters and calculate exact tolerance bounds.",
+      "url": "https://github.com/nazeeh111/LadderProof",
+      "subject": "EE & sensing",
+      "kind": "Python",
+      "topics": [
+        "circuit-analysis",
+        "resistor-ladder",
+        "digital-to-analog-converter",
+        "tolerance-analysis",
+        "exact-arithmetic",
+        "Python",
+        "electrical-engineering",
+        "electrical engineering",
+        "ee"
+      ],
+      "upstream": null,
+      "source_revision": "1d8abc346b680ced95395e30d793fea833379b2c"
+    },
+    {
+      "name": "CausalOS",
+      "summary": "Compare causal explanations and choose simulated experiments; conclusions depend on the stated assumptions.",
+      "url": "https://github.com/nazeeh111/CausalOS",
+      "subject": "ML & data",
+      "kind": "Python",
+      "topics": [
+        "causal-inference",
+        "causal-discovery",
+        "experimental-design",
+        "statistics",
+        "python"
+      ],
+      "upstream": null,
+      "source_revision": "c7eeb6ca64e4e2b35bb32729780d3a3cc9eed40d"
+    },
+    {
+      "name": "ReplaySmith",
+      "summary": "Record browser tasks and replay them with outcome checks; export Playwright code or an agent skill.",
+      "url": "https://github.com/nazeeh111/ReplaySmith",
+      "subject": "Systems & developer tools",
+      "kind": "TypeScript",
+      "topics": [
+        "browser-automation",
+        "playwright",
+        "workflow-automation",
+        "typescript",
+        "local-first"
+      ],
+      "upstream": null,
+      "source_revision": "adc2bb738f8a504d13e28f38c42230b94bdaa4d0"
+    },
+    {
+      "name": "Sweepforge",
+      "summary": "Turn timed paths into one-motor linkage designs and check modeled clearance through a cycle.",
+      "url": "https://github.com/nazeeh111/Sweepforge",
+      "subject": "Geometry & CAD",
+      "kind": "Python",
+      "topics": [
+        "mechanism-design",
+        "kinematics",
+        "linkage-synthesis",
+        "computational-geometry",
+        "python"
+      ],
+      "upstream": null,
+      "source_revision": "4925ccafeddf92682fe40f87dbae1aa4f40c5ecf"
+    },
+    {
+      "name": "ETHERGLASS",
+      "summary": "Inspect radio recordings, test interference separation and export signals in SigMF format.",
+      "url": "https://github.com/nazeeh111/ETHERGLASS",
+      "subject": "EE & sensing",
+      "kind": "Python",
+      "topics": [
+        "radio-frequency",
+        "signal-processing",
+        "signal-separation",
+        "sigmf",
+        "pytorch",
+        "Python",
+        "electrical-engineering"
+      ],
+      "upstream": null,
+      "source_revision": "ac8dc4d262a79c8c04cfae04b00f058a7f650b6f"
+    },
+    {
+      "name": "QubitGuard",
+      "summary": "Compare learned and matching decoders for surface-code quantum error correction in a simulator.",
+      "url": "https://github.com/nazeeh111/QubitGuard",
+      "subject": "Physics & quantum",
+      "kind": "Python",
+      "topics": [
+        "quantum-error-correction",
+        "surface-codes",
+        "pymatching",
+        "stim",
+        "pytorch",
+        "Python"
+      ],
+      "upstream": null,
+      "source_revision": "b31acb6344b305f4311346850c9d5c8d0b800cd4"
+    },
+    {
+      "name": "Aetiory",
+      "summary": "Test an alternate return value in a failed Python run, then compare it with the original and an unchanged control.",
+      "url": "https://github.com/nazeeh111/Aetiory",
+      "subject": "Systems & developer tools",
+      "kind": "Python",
+      "topics": [
+        "python",
+        "debugging",
+        "execution-tracing",
+        "replay",
+        "differential-testing",
+        "program-analysis",
+        "Faultsplice"
+      ],
+      "upstream": null,
+      "source_revision": "1d44aeed0d5790b52145d8ad9a287a5d99b95df7"
+    },
+    {
+      "name": "AHEADDB",
+      "summary": "Add predictions to PostgreSQL data, with snapshot-based refresh jobs and checks for stale results.",
+      "url": "https://github.com/nazeeh111/AHEADDB",
+      "subject": "ML & data",
+      "kind": "Python",
+      "topics": [
+        "duckdb",
+        "sql",
+        "temporal-data",
+        "forecasting",
+        "incremental-computation",
+        "python"
+      ],
+      "upstream": null,
+      "source_revision": "6a16b0c6315f8469d3997e440dbec445681c0956"
+    },
+    {
+      "name": "Camwright",
+      "summary": "Design roller cams from motion cycles, check modeled geometry and export the result.",
+      "url": "https://github.com/nazeeh111/Camwright",
+      "subject": "Geometry & CAD",
+      "kind": "Python",
+      "topics": [
+        "cam-follower",
+        "mechanism-design",
+        "kinematics",
+        "computational-geometry",
+        "python"
+      ],
+      "upstream": null,
+      "source_revision": "ed16e44727c858838bf0e42c9677212d1df2f2db"
+    },
+    {
+      "name": "cascade",
+      "summary": "Reconstruct flight disruptions, forecast network pressure and test recovery scenarios using flight and weather data.",
+      "url": "https://github.com/nazeeh111/cascade",
+      "subject": "ML & data",
+      "kind": "Python",
+      "topics": [
+        "aviation",
+        "duckdb",
+        "dbt",
+        "sql",
+        "forecasting",
+        "operations-research",
+        "Python"
+      ],
+      "upstream": null,
+      "source_revision": "6ea2e84013c9f68a66019c6cd67b1f25a0e3c98c"
+    },
+    {
+      "name": "Caustryn",
+      "summary": "Explore radio-location estimates and test predictions on withheld positions in a simulated signal experiment.",
+      "url": "https://github.com/nazeeh111/Caustryn",
+      "subject": "EE & sensing",
+      "kind": "Python",
+      "topics": [
+        "radio-localization",
+        "signal-processing",
+        "inverse-problems",
+        "parameter-estimation",
+        "python",
+        "electrical-engineering",
+        "PhaseGlass"
+      ],
+      "upstream": null,
+      "source_revision": "36371edd72f3762026403b465d890b43a494c204"
+    },
+    {
+      "name": "Certloom",
+      "summary": "Check error bounds for stored linear equations in Python or a browser; the bounds do not validate the physical model.",
+      "url": "https://github.com/nazeeh111/Certloom",
+      "subject": "Physics & quantum",
+      "kind": "Python",
+      "topics": [
+        "numerical-verification",
+        "error-bounds",
+        "linear-algebra",
+        "exact-arithmetic",
+        "python",
+        "javascript",
+        "Enclose"
+      ],
+      "upstream": null,
+      "source_revision": "2f0dcb2e10d9c0114e2001d264d00e5302d4e679"
+    },
+    {
+      "name": "ChirpMotion",
+      "summary": "Analyze recorded acoustic chirps with a C17 command-line engine and MATLAB research workflows.",
+      "url": "https://github.com/nazeeh111/ChirpMotion",
+      "subject": "EE & sensing",
+      "kind": "C",
+      "topics": [
+        "acoustics",
+        "signal-processing",
+        "c",
+        "matlab",
+        "fft",
+        "cli",
+        "electrical-engineering"
+      ],
+      "upstream": null,
+      "source_revision": "67a7d9f6f3e2385d1d1ef283529e5b73631eb7c4"
+    },
+    {
+      "name": "chronal",
+      "summary": "Test portfolio strategies with simulated trades, train-only models and an offline research terminal.",
+      "url": "https://github.com/nazeeh111/chronal",
+      "subject": "ML & data",
+      "kind": "Python",
+      "topics": [
+        "portfolio-research",
+        "simulation",
+        "backtesting",
+        "python",
+        "reproducible-research"
+      ],
+      "upstream": null,
+      "source_revision": "d3ffe89c012756309844d1d5659fd6befdb0b062"
+    },
+    {
+      "name": "CipherShape",
+      "summary": "Run bounded numerical calculations on encrypted inputs using approximate homomorphic encryption.",
+      "url": "https://github.com/nazeeh111/CipherShape",
+      "subject": "Systems & developer tools",
+      "kind": "Python",
+      "topics": [
+        "homomorphic-encryption",
+        "openfhe",
+        "compiler",
+        "cryptography",
+        "privacy-preserving-computation",
+        "Python"
+      ],
+      "upstream": null,
+      "source_revision": "46b8ab32f2fd0d2a3c1064a8106cbab443d098af"
+    },
+    {
+      "name": "civicledger",
+      "summary": "Trace U.S. federal contract actions to source records and review possible links between organizations.",
+      "url": "https://github.com/nazeeh111/civicledger",
+      "subject": "ML & data",
+      "kind": "Python",
+      "topics": [
+        "public-procurement",
+        "open-data",
+        "duckdb",
+        "dbt",
+        "entity-resolution",
+        "sql",
+        "Python"
+      ],
+      "upstream": null,
+      "source_revision": "3c14d8b64ea378d8cd479d068643958a7593eb2d"
+    },
+    {
+      "name": "DurableStore",
+      "summary": "Store byte keys and values in Rust with atomic batches, checksummed recovery and a single writer.",
+      "url": "https://github.com/nazeeh111/DurableStore",
+      "subject": "Systems & developer tools",
+      "kind": "Rust",
+      "topics": [
+        "rust",
+        "key-value-store",
+        "storage-engine",
+        "crash-recovery",
+        "write-ahead-log"
+      ],
+      "upstream": null,
+      "source_revision": "f0ba9d6a6543d3edf5a2c8414b3e05ee6cb06a21"
+    },
+    {
+      "name": "FLUXATLAS",
+      "summary": "Compare saved radiation-transport simulations with learned radiation fields and their uncertainty.",
+      "url": "https://github.com/nazeeh111/FLUXATLAS",
+      "subject": "Physics & quantum",
+      "kind": "Python",
+      "topics": [
+        "radiation-transport",
+        "openmc",
+        "monte-carlo",
+        "uncertainty-quantification",
+        "scientific-computing",
+        "Python"
+      ],
+      "upstream": null,
+      "source_revision": "7b10111623cb2fa61eb0e3cedb1a68b0927880fc"
+    },
+    {
+      "name": "Forkwake",
+      "summary": "Branch JavaScript and WebAssembly execution at a decision to explore alternate outcomes.",
+      "url": "https://github.com/nazeeh111/Forkwake",
+      "subject": "Systems & developer tools",
+      "kind": "JavaScript",
+      "topics": [
+        "webassembly",
+        "javascript",
+        "debugging",
+        "program-analysis",
+        "fault-injection"
+      ],
+      "upstream": null,
+      "source_revision": "7a21947d033a634474ed0a4efd42756ced81232d"
+    },
+    {
+      "name": "graftline",
+      "summary": "Extract supported ARM64 Mach-O library code into callable artifacts with explicit contracts and bounded memory.",
+      "url": "https://github.com/nazeeh111/graftline",
+      "subject": "Systems & developer tools",
+      "kind": "Python",
+      "topics": [
+        "arm64",
+        "binary-analysis",
+        "native-code",
+        "emulation",
+        "reverse-engineering",
+        "Python"
+      ],
+      "upstream": null,
+      "source_revision": "7493cea117c2f054f9eb35222c04e98c335909c8"
+    },
+    {
+      "name": "hardware-studio-skill",
+      "summary": "Plan hardware builds with editable parts, wiring diagrams, CAD checks and a reusable Codex skill.",
+      "url": "https://github.com/nazeeh111/hardware-studio-skill",
+      "subject": "EE & sensing",
+      "kind": "JavaScript",
+      "topics": [
+        "hardware-design",
+        "electronics",
+        "cad",
+        "agent-skills",
+        "wiring-diagrams",
+        "JavaScript",
+        "electrical-engineering"
+      ],
+      "upstream": null,
+      "source_revision": "c649cc9b9ee84b8b667aa0fa26984d1d7746bc9d"
+    },
+    {
+      "name": "InstrumentZero",
+      "summary": "Turn supported measurement questions into signal simulations, analysis procedures and uncertainty estimates.",
+      "url": "https://github.com/nazeeh111/InstrumentZero",
+      "subject": "EE & sensing",
+      "kind": "Python",
+      "topics": [
+        "signal-processing",
+        "instrumentation",
+        "simulation",
+        "measurement",
+        "embedded-systems",
+        "Python",
+        "electrical-engineering"
+      ],
+      "upstream": null,
+      "source_revision": "331272ebe5a86248322fc13ee0fb5e6f4b31fe10"
+    },
+    {
+      "name": "KERNELDARWIN",
+      "summary": "Investigate kernel performance with numerical checks and CPU timings; its CUDA path remains unverified.",
+      "url": "https://github.com/nazeeh111/KERNELDARWIN",
+      "subject": "Systems & developer tools",
+      "kind": "JavaScript",
+      "topics": [
+        "benchmarking",
+        "performance-engineering",
+        "auto-tuning",
+        "gpu-optimization",
+        "metal",
+        "JavaScript"
+      ],
+      "upstream": null,
+      "source_revision": "e4d490c87f3e07f40bdee0bd19c58a346be87dac"
+    },
+    {
+      "name": "Kinetyl",
+      "summary": "Place labels and frame cameras across motion paths while preserving timing and editable output.",
+      "url": "https://github.com/nazeeh111/Kinetyl",
+      "subject": "Creative & everyday tools",
+      "kind": "JavaScript",
+      "topics": [
+        "animation",
+        "label-placement",
+        "camera-framing",
+        "computational-geometry",
+        "scientific-visualization",
+        "JavaScript"
+      ],
+      "upstream": null,
+      "source_revision": "3ad5349454687d09eba9289ad2ef7679dd927e35"
+    },
+    {
+      "name": "MorphProof",
+      "summary": "Compare Python code with its Rust transformation using tests and minimized counterexamples.",
+      "url": "https://github.com/nazeeh111/MorphProof",
+      "subject": "Systems & developer tools",
+      "kind": "Python",
+      "topics": [
+        "differential-testing",
+        "python",
+        "rust",
+        "code-migration",
+        "property-based-testing"
+      ],
+      "upstream": null,
+      "source_revision": "80a0daaf3eec332642159971ac33b8c59e3d0eaf"
+    },
+    {
+      "name": "Muster",
+      "summary": "Repair volunteer schedules around locked commitments and explain remaining coverage gaps.",
+      "url": "https://github.com/nazeeh111/Muster",
+      "subject": "Creative & everyday tools",
+      "kind": "JavaScript",
+      "topics": [
+        "scheduling",
+        "rostering",
+        "volunteer-management",
+        "constraint-solving",
+        "local-first",
+        "JavaScript"
+      ],
+      "upstream": null,
+      "source_revision": "8c97b9390a4aac751b6a92127105bd4909cb5334"
+    },
+    {
+      "name": "nazeeh111",
+      "summary": "GitHub profile introducing projects in software, sensing and scientific computing.",
+      "url": "https://github.com/nazeeh111/nazeeh111",
+      "subject": "Systems & developer tools",
+      "kind": "Portfolio",
+      "topics": [
+        "engineering-portfolio",
+        "github-profile",
+        "scientific-computing",
+        "Swift"
+      ],
+      "upstream": null,
+      "source_revision": "349b3a720396bb5efe43cf98e838b57249350efb"
+    },
+    {
+      "name": "nazeeh111.github.io",
+      "summary": "Portfolio site for browsing engineering, research and software projects.",
+      "url": "https://github.com/nazeeh111/nazeeh111.github.io",
+      "subject": "Systems & developer tools",
+      "kind": "Portfolio",
+      "topics": [
+        "engineering-portfolio",
+        "github-pages",
+        "portfolio-website",
+        "static-site",
+        "HTML"
+      ],
+      "upstream": null,
+      "source_revision": "587be092f0f8c6f91ccc2399a042bb3392a35d68"
+    },
+    {
+      "name": "neutrino-positive-moments",
+      "summary": "Working research draft on exact frequency certificates and growth bounds for a restricted neutrino model.",
+      "url": "https://github.com/nazeeh111/neutrino-positive-moments",
+      "subject": "Physics & quantum",
+      "kind": "Python",
+      "topics": [
+        "neutrino-physics",
+        "mathematical-physics",
+        "scientific-computing",
+        "research",
+        "Python"
+      ],
+      "upstream": null,
+      "source_revision": "852b6c63915e326d9a9572f6d8130cc56fbadf9e"
+    },
+    {
+      "name": "ObjectDNA",
+      "summary": "Fit editable CAD to prealigned scans of supported brackets, enclosures and drilled blocks; export STEP or CadQuery.",
+      "url": "https://github.com/nazeeh111/ObjectDNA",
+      "subject": "Geometry & CAD",
+      "kind": "Python",
+      "topics": [
+        "cad",
+        "point-cloud",
+        "cadquery",
+        "reverse-engineering",
+        "parametric-modeling",
+        "Python"
+      ],
+      "upstream": null,
+      "source_revision": "885f3572ac52b226531b0a8c5a5b7ef9948c14da"
+    },
+    {
+      "name": "PhotonSmith",
+      "summary": "Design two-dimensional photonic gratings and inspect simulated fields and spectra.",
+      "url": "https://github.com/nazeeh111/PhotonSmith",
+      "subject": "Physics & quantum",
+      "kind": "Python",
+      "topics": [
+        "photonics",
+        "electromagnetics",
+        "inverse-design",
+        "scientific-computing",
+        "python"
+      ],
+      "upstream": null,
+      "source_revision": "8bb5bb006bdae16a15723de36bdc41ec1571b0d1"
+    },
+    {
+      "name": "PolicyDelta",
+      "summary": "Replay the same requests against two OpenBao policies and report access changes.",
+      "url": "https://github.com/nazeeh111/PolicyDelta",
+      "subject": "Systems & developer tools",
+      "kind": "Python",
+      "topics": [
+        "openbao",
+        "policy-testing",
+        "access-control",
+        "differential-testing",
+        "python"
+      ],
+      "upstream": null,
+      "source_revision": "b2998f4a9b83d2595f28c3865e17c7df2a08e58c"
+    },
+    {
+      "name": "Polyweft",
+      "summary": "Merge prepared Blender mesh edits and inspect crossings introduced by the combined geometry.",
+      "url": "https://github.com/nazeeh111/Polyweft",
+      "subject": "Geometry & CAD",
+      "kind": "Python",
+      "topics": [
+        "blender",
+        "mesh-processing",
+        "computational-geometry",
+        "three-way-merge",
+        "python"
+      ],
+      "upstream": null,
+      "source_revision": "534b42d19b55460b14ee8e617ac34b7e0d329da4"
+    },
+    {
+      "name": "ProofRipple",
+      "summary": "Derive consequences from supported Lean theorems, check their proofs and test their use in later searches.",
+      "url": "https://github.com/nazeeh111/ProofRipple",
+      "subject": "Systems & developer tools",
+      "kind": "Lean",
+      "topics": [
+        "lean4",
+        "mathlib",
+        "theorem-proving",
+        "formal-verification",
+        "automated-reasoning",
+        "Lean"
+      ],
+      "upstream": null,
+      "source_revision": "e7aa2f49036b1d1de5970159a0b6df303580be03"
+    },
+    {
+      "name": "QueueCraft",
+      "summary": "Simulate order execution with a C++ engine and exact accounting; it does not place live orders.",
+      "url": "https://github.com/nazeeh111/QueueCraft",
+      "subject": "ML & data",
+      "kind": "Python",
+      "topics": [
+        "cpp",
+        "market-microstructure",
+        "order-book",
+        "quantitative-finance",
+        "backtesting",
+        "Python"
+      ],
+      "upstream": null,
+      "source_revision": "e467a4954285b45f98aacfeaffb7c01e3543857d"
+    },
+    {
+      "name": "Reclay",
+      "summary": "Infer binary file structure from examples and build standalone editors in a browser.",
+      "url": "https://github.com/nazeeh111/Reclay",
+      "subject": "Systems & developer tools",
+      "kind": "Python",
+      "topics": [
+        "binary-format",
+        "format-inference",
+        "binary-parser",
+        "reverse-engineering",
+        "webassembly",
+        "Python"
+      ],
+      "upstream": null,
+      "source_revision": "9d4b6b008c6474afd4bc91a1ab19de36c15b9106"
+    },
+    {
+      "name": "Reticle",
+      "summary": "Compare microscopy TIFF calibration before and after export and save local inspection reports.",
+      "url": "https://github.com/nazeeh111/Reticle",
+      "subject": "Physics & quantum",
+      "kind": "Python",
+      "topics": [
+        "microscopy",
+        "calibration",
+        "tiff",
+        "image-metadata",
+        "python"
+      ],
+      "upstream": null,
+      "source_revision": "14d7b9fdbab52b7098a5c3ea998c4db01c14f000"
+    },
+    {
+      "name": "Rewynth",
+      "summary": "Analyze ARM64 behavior, compare edits and export portable C from a local workbench.",
+      "url": "https://github.com/nazeeh111/Rewynth",
+      "subject": "Systems & developer tools",
+      "kind": "Python",
+      "topics": [
+        "arm64",
+        "reverse-engineering",
+        "symbolic-execution",
+        "program-synthesis",
+        "python"
+      ],
+      "upstream": null,
+      "source_revision": "e9f4261b9ffda97186fa1ced4cbcfc6a78516189"
+    },
+    {
+      "name": "SchemaRehearsal",
+      "summary": "Run the same SQLite workload before and after a migration to reveal changed behavior.",
+      "url": "https://github.com/nazeeh111/SchemaRehearsal",
+      "subject": "Systems & developer tools",
+      "kind": "Python",
+      "topics": [
+        "sqlite",
+        "database-migrations",
+        "differential-testing",
+        "regression-testing",
+        "python",
+        "Keepstep"
+      ],
+      "upstream": null,
+      "source_revision": "52c3d481b6e26b8ba81d68752fded6c2b7a6e1dd"
+    },
+    {
+      "name": "ShiftDrop",
+      "summary": "Convert files beside their originals from Finder using a macOS menu bar utility.",
+      "url": "https://github.com/nazeeh111/ShiftDrop",
+      "subject": "Creative & everyday tools",
+      "kind": "Swift",
+      "topics": [
+        "macos",
+        "swift",
+        "appkit",
+        "file-converter",
+        "drag-and-drop"
+      ],
+      "upstream": null,
+      "source_revision": "9078b854a38b41c6bd198e8526871357308f3f95"
+    },
+    {
+      "name": "Signelet",
+      "summary": "Carry text annotations across edits when the best alignments agree; flag ambiguous spans for review.",
+      "url": "https://github.com/nazeeh111/Signelet",
+      "subject": "Systems & developer tools",
+      "kind": "Python",
+      "topics": [
+        "text-annotation",
+        "text-alignment",
+        "annotation-transfer",
+        "edit-distance",
+        "python"
+      ],
+      "upstream": null,
+      "source_revision": "bdc4fb3537ee87712242c867781f213cfd635c14"
+    },
+    {
+      "name": "Sley",
+      "summary": "Adapt supported weaving drafts to available pedals and export a pressing sequence.",
+      "url": "https://github.com/nazeeh111/Sley",
+      "subject": "Geometry & CAD",
+      "kind": "Python",
+      "topics": [
+        "weaving",
+        "textiles",
+        "weaving-drafts",
+        "constraint-solving",
+        "python"
+      ],
+      "upstream": null,
+      "source_revision": "3d3d73e0776e21e9c017d30f558a5d3cd3631595"
+    },
+    {
+      "name": "SoundMap",
+      "summary": "Map sound sources from microphone-array measurements with beamforming and optional camera overlays.",
+      "url": "https://github.com/nazeeh111/SoundMap",
+      "subject": "EE & sensing",
+      "kind": "Python",
+      "topics": [
+        "acoustics",
+        "beamforming",
+        "microphone-array",
+        "acoular",
+        "signal-processing",
+        "Python",
+        "electrical-engineering"
+      ],
+      "upstream": null,
+      "source_revision": "9e688da794af1dc780bbfdaa124589375f2df318"
+    },
+    {
+      "name": "StemScene",
+      "summary": "Edit estimated sound layers locally and export WAV files; trained refinement is experimental.",
+      "url": "https://github.com/nazeeh111/StemScene",
+      "subject": "ML & data",
+      "kind": "Python",
+      "topics": [
+        "audio-editing",
+        "audio-source-separation",
+        "signal-processing",
+        "pytorch",
+        "local-first",
+        "Python"
+      ],
+      "upstream": null,
+      "source_revision": "7d568cc580512fdef04b5331500705258fb11984"
+    },
+    {
+      "name": "Syllune",
+      "summary": "Write math by hand, check supported steps and practice in a local notebook.",
+      "url": "https://github.com/nazeeh111/Syllune",
+      "subject": "Creative & everyday tools",
+      "kind": "JavaScript",
+      "topics": [
+        "mathematics-education",
+        "handwriting",
+        "exact-arithmetic",
+        "local-first",
+        "javascript"
+      ],
+      "upstream": null,
+      "source_revision": "1aa8372110d91d565582c73c1e8f969305aaeb51"
+    },
+    {
+      "name": "TAILSENTRY",
+      "summary": "Estimate rare-loss probabilities and inspect finite-budget bounds and a negative-result study.",
+      "url": "https://github.com/nazeeh111/TAILSENTRY",
+      "subject": "ML & data",
+      "kind": "HTML",
+      "topics": [
+        "risk-analysis",
+        "rare-events",
+        "probability",
+        "quantitative-finance",
+        "reproducible-research",
+        "HTML"
+      ],
+      "upstream": null,
+      "source_revision": "e6e8b3f59238610f944ae25364fc606545a51085"
+    },
+    {
+      "name": "ToolScope",
+      "summary": "An MCP Inspector adaptation for checking tool definitions and comparing schemas in a browser or terminal.",
+      "url": "https://github.com/nazeeh111/ToolScope",
+      "subject": "Systems & developer tools",
+      "kind": "TypeScript",
+      "topics": [
+        "mcp",
+        "developer-tools",
+        "json-schema",
+        "protocol-testing",
+        "typescript",
+        "cli"
+      ],
+      "upstream": null,
+      "source_revision": "60115549e22af20016f9cbafe830e88a5b115653"
+    },
+    {
+      "name": "VibeScope",
+      "summary": "Track image-plane vibration in video and inspect motion frequencies locally.",
+      "url": "https://github.com/nazeeh111/VibeScope",
+      "subject": "EE & sensing",
+      "kind": "Python",
+      "topics": [
+        "vibration-analysis",
+        "motion-magnification",
+        "computer-vision",
+        "signal-processing",
+        "python",
+        "electrical-engineering"
+      ],
+      "upstream": null,
+      "source_revision": "5c649a4870238ff9521159a63f6ebf29740f59c1"
+    },
+    {
+      "name": "WideAwake",
+      "summary": "Set a macOS menu bar timer intended to keep a closed MacBook awake; hardware testing is pending.",
+      "url": "https://github.com/nazeeh111/WideAwake",
+      "subject": "Creative & everyday tools",
+      "kind": "Swift",
+      "topics": [
+        "macos",
+        "swift",
+        "menu-bar",
+        "sleep-prevention",
+        "timer"
+      ],
+      "upstream": null,
+      "source_revision": "6588f67464fe0d66b2b6bef320d0e927c72f3ecc"
+    },
+    {
+      "name": "AdaCAD",
+      "summary": "Fork of AdaCAD, tools for creating and editing weaving drafts with algorithms.",
+      "url": "https://github.com/nazeeh111/AdaCAD",
+      "subject": "Geometry & CAD",
+      "kind": "Fork",
+      "topics": [
+        "weaving",
+        "textiles",
+        "computational-design",
+        "creative-coding",
+        "Ada"
+      ],
+      "upstream": "UnstableDesign/AdaCAD",
+      "source_revision": "249c4e374532634b7517d6a8a75894b7b9705bfd"
+    },
+    {
+      "name": "advisory-database",
+      "summary": "Fork of GitHub\u2019s database of open-source security advisories and CVEs.",
+      "url": "https://github.com/nazeeh111/advisory-database",
+      "subject": "Systems & developer tools",
+      "kind": "Fork",
+      "topics": [
+        "security-advisories",
+        "cve",
+        "osv",
+        "vulnerability-database"
+      ],
+      "upstream": "github/advisory-database",
+      "source_revision": "ee99060a9675529b3a9a760a0f1002538ba7cefb"
+    },
+    {
+      "name": "AsterScan",
+      "summary": "LOKI-based scanner for known indicators and YARA rules, with a desktop workspace and offline reports.",
+      "url": "https://github.com/nazeeh111/AsterScan",
+      "subject": "Systems & developer tools",
+      "kind": "Fork",
+      "topics": [
+        "yara",
+        "ioc",
+        "malware-scanner",
+        "incident-response",
+        "python",
+        "desktop-application"
+      ],
+      "upstream": "Neo23x0/Loki",
+      "source_revision": "13651b2cfe27886ff11b9cdf1dee7b12b24c00bb"
+    },
+    {
+      "name": "binaryen.js",
+      "summary": "Fork of Binaryen\u2019s JavaScript API for generating and optimizing WebAssembly.",
+      "url": "https://github.com/nazeeh111/binaryen.js",
+      "subject": "Systems & developer tools",
+      "kind": "Fork",
+      "topics": [
+        "binaryen",
+        "webassembly",
+        "javascript",
+        "nodejs",
+        "compiler"
+      ],
+      "upstream": "AssemblyScript/binaryen.js",
+      "source_revision": "82a1f0421f415d3641dd5550aa3677f8063071c4"
+    },
+    {
+      "name": "fluids",
+      "summary": "Fork of Fluids, a Python library for fluid dynamics in chemical and mechanical engineering.",
+      "url": "https://github.com/nazeeh111/fluids",
+      "subject": "Physics & quantum",
+      "kind": "Fork",
+      "topics": [
+        "fluid-dynamics",
+        "chemical-engineering",
+        "hydraulics",
+        "python",
+        "scientific-computing"
+      ],
+      "upstream": "CalebBell/fluids",
+      "source_revision": "cbcce36c65704ee771fed38c3e79b132019d30f8"
+    },
+    {
+      "name": "meent",
+      "summary": "Fork of Meent, a Python package for electromagnetic simulation and optimization.",
+      "url": "https://github.com/nazeeh111/meent",
+      "subject": "Physics & quantum",
+      "kind": "Fork",
+      "topics": [
+        "electromagnetics",
+        "rcwa",
+        "photonics",
+        "simulation",
+        "python"
+      ],
+      "upstream": "kc-ml2/meent",
+      "source_revision": "bae28024476d4af2826b8412cb8288d79a0630ac"
+    },
+    {
+      "name": "pattern-projector",
+      "summary": "Fork of Pattern Projector with work on viewport-outline transforms for sewing patterns.",
+      "url": "https://github.com/nazeeh111/pattern-projector",
+      "subject": "Geometry & CAD",
+      "kind": "Fork",
+      "topics": [
+        "projector-calibration",
+        "sewing-patterns",
+        "pdf-viewer",
+        "react",
+        "typescript"
+      ],
+      "upstream": "Pattern-Projector/pattern-projector",
+      "source_revision": "3c9152f3c44dd8e3fa87311018c5e280348f46bb"
+    },
+    {
+      "name": "Automation Hub",
+      "summary": "Organize internship discovery, reviewed documents and application evidence in a local, macOS-first workspace.",
+      "url": "https://github.com/nazeeh111/automation-hub",
+      "subject": "Creative & everyday tools",
+      "kind": "Local app",
+      "topics": [
+        "automation",
+        "job-search",
+        "internships",
+        "resume",
+        "n8n"
+      ],
+      "upstream": null,
+      "source_revision": "061e2feffd49430eca3dec21e6ededadbb40bec1",
+      "aliases": [
+        "automation-hub",
+        "career",
+        "applications"
+      ]
+    }
+  ]
+}

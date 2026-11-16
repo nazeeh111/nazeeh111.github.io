@@ -1,8 +1,20 @@
-# Nazeeh Abdul-Hadi's project index
+# Nazeeh Abdul-Hadi's engineering portfolio
 
-This repository serves [`nazeeh111.github.io`](https://nazeeh111.github.io/) as a short entry point to selected public projects. Its root page distinguishes browser experiments from tools that run locally; the [GitHub profile](https://github.com/nazeeh111) and [repository list](https://github.com/nazeeh111?tab=repositories) provide the wider portfolio.
+[`nazeeh111.github.io`](https://nazeeh111.github.io/) brings together working engineering tools, source code and research. The opening cases show a recorded geometry failure, an exact quantum-measurement result, and an executed native image decoder. A searchable catalog spans the 66 public repositories observed on November 16, 2026, distinguishing upstream forks and foundations.
 
-The root page is a static HTML document with no build step, external scripts, fonts, tracking, or account requirement. Preview locally with `python3 -m http.server 8000 --bind 127.0.0.1`, then open `http://127.0.0.1:8000/`. Project links point to their own repositories or hosted pages for source, setup, evidence and limits.
+The checked-in site uses static HTML, CSS and a small local JavaScript enhancement. It has no framework, external fonts, tracking or account requirement. Without JavaScript, all selected cases and repository links remain available. Preview with `python3 -m http.server 8000 --bind 127.0.0.1`, then open `http://127.0.0.1:8000/`.
+
+## Update the portfolio
+
+Edit `projects.json` for public catalog content and `scripts/portfolio.html` for page structure, then run:
+
+```sh
+python3 scripts/build-portfolio.py
+```
+
+`index.html` is the generated deployable document. The catalog records the source revision behind each entry; a description is not a runtime-validation claim. Keep private repositories and data out of this file. Search includes names, summaries, disciplines, topics, languages and recorded aliases. A curated selection opens first; filtering searches the complete catalog. New figures need accurate captions and an entry in [asset provenance](assets/PROVENANCE.md).
+
+Homepage styling and scripts are independent of the research library. Check the final page on phone and desktop, operate controls from a keyboard, and verify linked applications before publication.
 
 ## Preserved project routes
 
@@ -11,7 +23,7 @@ The root page is a static HTML document with no build step, external scripts, fo
 
 Those directories and their supporting evidence remain in this repository so existing links continue to work. The root index links to the current Caustryn recorded lab without replacing either project-specific page. Each project page describes the scope of its claims.
 
-The index's featured Caustryn screenshot is a capture of its recorded synthetic counterexample. The displayed 3.488 m separation is a result of that example, not measured radio-localization accuracy.
+The retained Caustryn screenshot captures its recorded synthetic counterexample; it is no longer the homepage's social preview. The displayed 3.488 m separation is a result of that example, not measured radio-localization accuracy.
 
 ## Research library
 
@@ -27,7 +39,7 @@ Edit `research/catalog.json`, then run:
 python3 scripts/build-research.py
 ```
 
-The generator uses Python's standard library. It rebuilds the library and study articles; the homepage and shared CSS are edited directly. No build is required to serve the checked-in static files.
+The generator uses Python's standard library. It rebuilds the library and study articles; the homepage has its own generator above. No build is required to serve the checked-in static files.
 
 `date` and `displayDate` contain the owner's selected document dates. The same dates appear in the PDFs and citation years. `dateStatus: "user-specified"` distinguishes these selected dates from independently verified research-history dates; `originalDate` retains the prior manuscript date for provenance.
 

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f3f5f8">
+<meta name="description" content="Nazeeh Abdul-Hadi builds geometry tools, systems software and scientific computing projects. Explore working applications, code and research.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nazeeh Abdul-Hadi · Engineering & research">
+<meta property="og:description" content="Geometry, systems software, and scientific computing. Open the tools, inspect the code, read the research.">
+<meta property="og:url" content="https://nazeeh111.github.io/">
+<meta property="og:image" content="https://nazeeh111.github.io/assets/capsulith-restored.jpg">
+<meta property="og:image:alt" content="Capsulith's compiled image decoder and restored native pixel memory after a verified browser run.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://nazeeh111.github.io/">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="assets/portfolio.css">
+<script src="assets/portfolio.js" defer></script>
+<title>Nazeeh Abdul-Hadi · Engineering & research</title>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead wrap">
+<a class="brand" href="/" aria-label="Nazeeh Abdul-Hadi home"><img src="assets/identity.png" width="34" height="34" alt=""><span class="brand-name">Nazeeh Abdul-Hadi</span></a>
+<nav aria-label="Main navigation"><a href="#projects">Projects</a><a href="/research/">Research</a><a href="https://github.com/nazeeh111">GitHub</a></nav>
+</header>
+<main id="main">
+<div class="wrap">
+<div class="intro">
+<h1>Nazeeh<span>Abdul-Hadi.</span></h1>
+<div><p>I build geometry tools, systems software, and scientific computing projects.</p></div>
+</div>
+<div class="exhibit-nav" role="group" aria-label="Selected work">
+<button type="button" data-exhibit="geometry" aria-controls="geometry" aria-pressed="true">Geometry</button>
+<button type="button" data-exhibit="science" aria-controls="science" aria-pressed="false">Quantum research</button>
+<button type="button" data-exhibit="systems" aria-controls="systems" aria-pressed="false">Systems</button>
+</div>
+<section class="exhibit" id="geometry" aria-labelledby="geometry-title">
+<div class="exhibit-copy"><p class="project-context">Solidrift · Geometry debugging</p><h2 id="geometry-title">Where did the other solid go?</h2><p>A Blender union drops one of its inputs. Solidrift reduces the recorded failure from 132 triangles to 12, preserving the defect at every accepted step.</p><div class="actions"><a class="action" href="https://nazeeh111.github.io/Solidrift/">Follow the reduction</a><a class="text-link" href="https://github.com/nazeeh111/Solidrift">Read the code</a></div></div>
+<figure class="exhibit-media"><div class="mesh-comparison"><div><p>Two input solids</p><img src="assets/solidrift-input.svg" width="500" height="300" alt="Two overlapping mesh bodies, one cyan and one blue, in the original recorded input."></div><div><p>Blender returned one</p><img src="assets/solidrift-union.svg" width="500" height="300" alt="Recorded FLOAT union: the blue body remains and the cyan body is absent."></div></div><figcaption>Original 132-triangle input and recorded output. The reduced 12-triangle witness is a later step. <a href="assets/provenance.html#solidrift">Figure source</a>.</figcaption></figure>
+</section>
+<section class="exhibit" id="science" aria-labelledby="science-title">
+<div class="exhibit-copy"><p class="project-context">Two-copy quantum measurements</p><h2 id="science-title">Same purity. Different states.</h2><p>Can joint measurements distinguish quantum states that look identical to whole-block purity tests? An exact two-copy result answers this for a specified eight-qubit problem.</p><div class="actions"><a class="action" href="/research/phaseglass-quantum/">Read the study</a><a class="text-link" href="/research/">Explore the papers</a></div></div>
+<figure class="exhibit-media quantum-media"><div class="comparison" role="img" aria-label="Exact two-copy success: joint sector measurement 75 percent. Certified upper bound for separate-copy strategies less than 66.91 percent. Restricted eight-qubit discrimination problem."><div class="comparison-row"><span>Joint sector measurement</span><strong>75%</strong><div class="bar-track"><div class="bar" style="--value:75%"></div></div></div><div class="comparison-row"><span>Separate-copy upper bound</span><strong>&lt;66.91%</strong><div class="bar-track"><div class="bar reference" style="--value:66.91%"></div></div></div><p class="comparison-note">Success probability on the specified discrimination problem. Two total copies for both strategies.</p></div><figcaption>Exact result under the study's symmetry and state-family assumptions. Hardware and general phase-recognition advantages are unproved. <a href="/research/phaseglass-quantum/">Method and limits</a>.</figcaption></figure>
+</section>
+<section class="exhibit" id="systems" aria-labelledby="systems-title">
+<div class="exhibit-copy"><p class="project-context">Capsulith · Native code and state</p><h2 id="systems-title">A new worker. The same pixels.</h2><p>Execute a compiled ARM64 image decoder, retain its pixel allocation, and reopen it in a fresh worker. Inspect the returned bytes, then free the restored native memory.</p><div class="actions"><a class="action" href="https://nazeeh111.github.io/Capsulith/studio/image.html">Run the workbench</a><a class="text-link" href="https://github.com/nazeeh111/Capsulith">Read the code</a></div></div>
+<figure class="exhibit-media"><a href="assets/capsulith-restored.jpg" aria-label="Open the full Capsulith execution capture"><img src="assets/capsulith-restored.jpg" width="1280" height="720" loading="lazy" alt="Capsulith workbench after executing the compiled QOI decoder and restoring native pixel memory in a fresh worker."></a><p class="pixel-result">49,152 RGBA bytes restored and compared.</p><figcaption>Actual browser run of the prepared Orbit example. Pixel (64, 48) reads (126, 135, 250, 255). Fresh-worker read and native free completed. <a href="assets/provenance.html#capsulith">Execution and credits</a>.</figcaption></figure>
+</section>
+<div class="crossroads" aria-label="More disciplines">
+<a href="https://nazeeh111.github.io/SolidFrame/"><strong>Edit a mechanical part</strong><span>SolidFrame: browser CAD, editable dimensions and STEP/STL export.</span></a>
+<a href="https://github.com/nazeeh111/LadderProof"><strong>Find a circuit's breaking point</strong><span>LadderProof: exact tolerance bounds for ideal resistor-ladder DACs.</span></a>
+<a href="https://github.com/nazeeh111/MaterialMind"><strong>Explore materials with ML</strong><span>MaterialMind: crystal features, stability models and retrospective experiments.</span></a>
+</div>
+</div>
+<section class="research-section section" id="research" aria-labelledby="research-heading">
+<div class="wrap"><div class="section-intro"><h2 id="research-heading">Research</h2><p>Quantum measurements, physical models, numerical methods and learning systems. Read the methods alongside their results and limits.</p></div>
+<div class="research-layout"><figure class="research-image"><img src="/research/figures/phaseglass-quantum.webp" width="1600" height="747" loading="lazy" alt="Finite-shot classification accuracy of tested quantum measurement strategies at increasing copy budgets."><figcaption><a href="/research/phaseglass-quantum/">Two-copy quantum measurements</a>: finite-shot simulation across copy budgets. The study separately establishes an exact result at two total copies.</figcaption></figure>
+<div class="research-list"><article><h3>When combining records changes the answer</h3><p>The best encoding for separated observers can be the worse choice when their quantum records are read together.</p><a href="/research/quantum-records/">Read Quantum Records</a></article><article><h3>When refinement does not settle trust</h3><p>A rigid-body simulation tests whether agreement across refinements makes a contact derivative reliable.</p><a href="/research/inertiaforge/">Read InertiaForge</a></article><article><h3>Exact bounds for neutrino frequencies</h3><p>Positive-moment certificates and growth envelopes, with the derivation and working research draft.</p><a href="/research/neutrino-positive-moments/">Read the draft</a></article></div></div>
+<a class="library-link" href="/research/">All studies, manuscripts and source bundles</a></div>
+</section>
+<section class="section wrap" id="projects" aria-labelledby="projects-title">
+<span id="project-geometry"></span><span id="project-sensing"></span><span id="project-data-and-motion"></span><span id="project-systems"></span><span id="project-scientific-tools"></span>
+<div class="section-intro"><h2 id="projects-title">Projects</h2><p>Explore the work by problem, discipline or technology. Open a repository for its source, setup and technical detail.</p></div>
+<aside class="contributions" aria-labelledby="contributions-title"><h3 id="contributions-title">Work beyond my repositories</h3><ul><li><a href="https://github.com/pyvista/pyvista/pull/9457">PyVista</a>: closed periodic seams in the ParametricKlein surface.</li><li><a href="https://github.com/Pattern-Projector/pattern-projector/pull/431">Pattern Projector</a>: viewport transforms and calibration fixes.</li><li><a href="https://github.com/github/advisory-database/pull/9912">GitHub advisory database</a>: corrected Django package and affected-version mapping.</li></ul></aside>
+<div class="filters"><div><label for="project-search">Find a project</label><input id="project-search" type="search" placeholder="Try quantum, CAD, Rust, or a project name" autocomplete="off" aria-controls="project-list"></div><div><label for="project-subject">Explore a discipline</label><select id="project-subject" aria-controls="project-list"><option value="">All disciplines</option>{{SUBJECTS}}</select></div></div>
+<div class="catalog-controls"><p class="catalog-status" id="catalog-status" role="status" aria-live="polite">{{COUNT}} public repositories</p><button type="button" id="catalog-toggle" aria-controls="project-list" aria-expanded="false">Browse all {{COUNT}} repositories</button></div>
+<ul class="project-list" id="project-list">{{PROJECTS}}</ul>
+<div class="empty" id="catalog-empty" hidden><p>No projects match this combination.</p><button class="text-link" type="button" id="reset-search">Clear filters</button></div>
+
+</section>
+</main>
+<footer class="site-footer wrap"><div><div class="footer-name">Nazeeh Abdul-Hadi</div><p>Geometry, systems software, scientific computing.</p></div><nav aria-label="Footer"><a href="https://github.com/nazeeh111">GitHub</a><a href="/research/">Research</a><a href="https://github.com/nazeeh111/nazeeh111.github.io">Site source</a></nav></footer>
+</body>
+</html>
