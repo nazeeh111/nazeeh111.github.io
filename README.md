@@ -1,18 +1,21 @@
 # Nazeeh Abdul-Hadi's engineering portfolio
 
-[`nazeeh111.github.io`](https://nazeeh111.github.io/) brings together working engineering tools, source code and research. The opening cases show a recorded geometry failure, an exact quantum-measurement result, and an executed native image decoder. A searchable catalog spans the 66 public repositories observed on November 16, 2026, distinguishing upstream forks and foundations.
+[`nazeeh111.github.io`](https://nazeeh111.github.io/) brings together working engineering tools, source code and research. The opening cases show a recorded geometry failure, an exact quantum-measurement result, and an executed native image decoder. Six further cases connect CAD, video measurement, quantum compilation, photonics, signal analysis and developer tooling to their actual artifacts. A searchable catalog spans the 66 public repositories observed on November 16, 2026, distinguishing upstream forks and foundations.
 
-The checked-in site uses static HTML, CSS and a small local JavaScript enhancement. It has no framework, external fonts, tracking or account requirement. Without JavaScript, all selected cases and repository links remain available. Preview with `python3 -m http.server 8000 --bind 127.0.0.1`, then open `http://127.0.0.1:8000/`.
+The checked-in site uses static HTML, CSS, self-hosted Rethink Sans and a small local JavaScript enhancement. It has no framework, tracking or account requirement. Without JavaScript, all selected cases and repository links remain available. Preview the checked-in files with `python3 -m http.server 8000 --bind 127.0.0.1`, then open `http://127.0.0.1:8000/`.
 
 ## Update the portfolio
 
-Edit `projects.json` for public catalog content and `scripts/portfolio.html` for page structure, then run:
+Edit `projects.json` for public catalog content and `scripts/portfolio.html` for page structure. Build the complete site into a **new directory outside the checkout**, then preview that generation:
 
 ```sh
-python3 scripts/build-portfolio.py
+python3 scripts/build-site.py --out /tmp/nazeeh-portfolio-preview
+python3 -m http.server 8000 --bind 127.0.0.1 --directory /tmp/nazeeh-portfolio-preview
 ```
 
-`index.html` is the generated deployable document. The catalog records the source revision behind each entry; a description is not a runtime-validation claim. Keep private repositories and data out of this file. Search includes names, summaries, disciplines, topics, languages and recorded aliases. A curated selection opens first; filtering searches the complete catalog. New figures need accurate captions and an entry in [asset provenance](assets/PROVENANCE.md).
+Open `http://127.0.0.1:8000/`. If the output path already exists, choose another new path; the builder refuses to overwrite an earlier generation. It validates the explicit public file list in `scripts/site-inputs.json`, renders both the homepage and research library, and writes a `.build-manifest.json` with output hashes. Unlisted local files are excluded. Add intended new public assets to that file list before building. `build-portfolio.py` and `build-research.py` are renderer modules used by this command.
+
+`index.html` is the generated deployable document. The catalog records the source revision behind each entry; a description is not a runtime-validation claim. Keep private repositories and data out of this file. Search includes names, summaries, disciplines, topics, languages and recorded aliases; its URL preserves the current query and discipline for sharing. A curated selection opens first; filtering searches the complete catalog. New figures need accurate captions and provenance in [the original exhibits](assets/PROVENANCE.md) or [selected project cases](assets/featured/evidence.html). Font source and license are in `assets/fonts/`.
 
 Homepage styling and scripts are independent of the research library. Check the final page on phone and desktop, operate controls from a keyboard, and verify linked applications before publication.
 
@@ -33,13 +36,13 @@ The COUNTERPATCH report URL redirects to its canonical study article. Search and
 
 ### Editing
 
-Edit `research/catalog.json`, then run:
+Edit `research/catalog.json`, then run the complete build command above. Both renderers use Python's standard library:
 
 ```sh
-python3 scripts/build-research.py
+python3 scripts/build-site.py --out /tmp/nazeeh-portfolio-research-preview
 ```
 
-The generator uses Python's standard library. It rebuilds the library and study articles; the homepage has its own generator above. No build is required to serve the checked-in static files.
+This validates and rebuilds the library, study articles and homepage together. No build is required to serve the checked-in static files.
 
 `date` and `displayDate` contain the owner's selected document dates. The same dates appear in the PDFs and citation years. `dateStatus: "user-specified"` distinguishes these selected dates from independently verified research-history dates; `originalDate` retains the prior manuscript date for provenance.
 
