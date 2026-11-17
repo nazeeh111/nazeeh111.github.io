@@ -1056,7 +1056,7 @@
         "compiler"
       ],
       "upstream": "AssemblyScript/binaryen.js",
-      "source_revision": "82a1f0421f415d3641dd5550aa3677f8063071c4"
+      "source_revision": "6faff286eb98d8d48a4d87d6565d4e590947c35e"
     },
     {
       "name": "fluids",
