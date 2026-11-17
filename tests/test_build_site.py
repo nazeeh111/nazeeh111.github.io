@@ -55,3 +55,20 @@ class BuildTests(unittest.TestCase):
     listed=source/'research/papers/counterpatch.md';listed.unlink()
     with self.assertRaisesRegex(ValueError,'Missing regular public input'):builder.snapshot(source)
    finally:builder.ROOT=old
+
+ def test_asset_cache_identity_changes_with_asset_bytes_and_stays_stable_otherwise(self):
+  old=builder.render(self.files)
+  files=dict(self.files);files['assets/design/portfolio.css']+=b'\n/* SYNTHETIC CACHE REVISION */'
+  new=builder.render(files)
+  old_css=b'/assets/design/portfolio.css?v='+hashlib.sha256(self.files['assets/design/portfolio.css']).hexdigest()[:16].encode()
+  new_css=b'/assets/design/portfolio.css?v='+hashlib.sha256(files['assets/design/portfolio.css']).hexdigest()[:16].encode()
+  for page in ['index.html','work/index.html','work/solidframe/index.html','assets/provenance.html','assets/featured/evidence.html']:
+   self.assertIn(old_css,old[page]);self.assertIn(new_css,new[page]);self.assertNotIn(old_css,new[page])
+  stable_js=b'/assets/portfolio.js?v='+hashlib.sha256(self.files['assets/portfolio.js']).hexdigest()[:16].encode()
+  self.assertIn(stable_js,old['index.html']);self.assertIn(stable_js,new['index.html'])
+  self.assertEqual(builder.stamp_asset_urls(new),new)
+  self.assertNotEqual(files['assets/design/portfolio.css'],self.files['assets/design/portfolio.css'])
+
+  literal=b'<code>src="/assets/work.js"</code>'
+  sample=dict(self.files);sample['scripts/portfolio.html']+=literal
+  self.assertIn(literal,builder.render(sample)['index.html'])
