@@ -1,0 +1,46 @@
+[
+  {
+    "file": "Archivo.ttf",
+    "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/archivo/Archivo%5Bwdth%2Cwght%5D.ttf",
+    "source_git_blob": "cc64253d36665a5ca0d6719cdf1e32b3de453b51",
+    "sha256": "0e094a7d3c7c4c25cf1310c4b30014f1dae9332220b1c2c88f4fa996f0b05053",
+    "license": "SIL OFL 1.1",
+    "notice": "archivo-OFL.txt",
+    "axes": [
+      {
+        "tag": "wght",
+        "min": 100.0,
+        "default": 600.0,
+        "max": 900.0
+      },
+      {
+        "tag": "wdth",
+        "min": 62.0,
+        "default": 100.0,
+        "max": 125.0
+      }
+    ]
+  },
+  {
+    "file": "IBMPlexSans.ttf",
+    "source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexsans/IBMPlexSans%5Bwdth%2Cwght%5D.ttf",
+    "source_git_blob": "30f837e8b02e8ecddce6cbebc425b1f422392515",
+    "sha256": "3b031aa4216174205bd8471f88a49b91f093169e9e87bd5262242bc5967fe2e3",
+    "license": "SIL OFL 1.1",
+    "notice": "ibmplexsans-OFL.txt",
+    "axes": [
+      {
+        "tag": "wght",
+        "min": 100.0,
+        "default": 400.0,
+        "max": 700.0
+      },
+      {
+        "tag": "wdth",
+        "min": 75.0,
+        "default": 100.0,
+        "max": 100.0
+      }
+    ]
+  }
+]

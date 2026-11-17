@@ -1,0 +1,121 @@
+{
+  "schema": "portfolio-featured-source-copy-v1",
+  "cases": [
+    {
+      "name": "SILICONPILOT",
+      "repository": "https://github.com/nazeeh111/SILICONPILOT",
+      "recorded_source_revision": "61badd38086dc8c0395fff3dfd814f4073c90b93",
+      "notices": "/assets/featured/notices/siliconpilot/README.md"
+    },
+    {
+      "name": "MaterialMind",
+      "repository": "https://github.com/nazeeh111/MaterialMind",
+      "recorded_source_revision": "8d11857fd54d93d1f5159e7e5105e1f927ccf33d",
+      "notices": "/assets/featured/notices/materialmind/README.md"
+    },
+    {
+      "name": "MorphProof",
+      "repository": "https://github.com/nazeeh111/MorphProof",
+      "recorded_source_revision": "36208c6a6ed15ae62c62e73eb99076fd5c79286d",
+      "notices": "/assets/featured/notices/morphproof/README.md"
+    },
+    {
+      "name": "LadderProof",
+      "repository": "https://github.com/nazeeh111/LadderProof",
+      "recorded_source_revision": "12604d131498ba3851bea6a45066a0d1d71fa7c0",
+      "notices": "/assets/featured/notices/ladderproof/README.md"
+    }
+  ],
+  "assets": [
+    {
+      "public_path": "/assets/featured/siliconpilot-hdl.png",
+      "sha256": "926630221cba693ab8c7779d310fe6ce584f0461bf632c9a7564ef49b2aef709",
+      "bytes": 272315,
+      "repository_url": "https://github.com/nazeeh111/SILICONPILOT",
+      "recorded_source_revision": "61badd38086dc8c0395fff3dfd814f4073c90b93",
+      "producer_path": "docs/media/hdl.png",
+      "source_url": "https://github.com/nazeeh111/SILICONPILOT/blob/61badd38086dc8c0395fff3dfd814f4073c90b93/docs/media/hdl.png"
+    },
+    {
+      "public_path": "/assets/featured/siliconpilot-waveform.png",
+      "sha256": "fd623228a162fedc172962e9742a363b2907fea92c8438ddd8686fda53ac926f",
+      "bytes": 334069,
+      "repository_url": "https://github.com/nazeeh111/SILICONPILOT",
+      "recorded_source_revision": "61badd38086dc8c0395fff3dfd814f4073c90b93",
+      "producer_path": "docs/media/waveform.png",
+      "source_url": "https://github.com/nazeeh111/SILICONPILOT/blob/61badd38086dc8c0395fff3dfd814f4073c90b93/docs/media/waveform.png"
+    },
+    {
+      "public_path": "/assets/featured/materialmind-workbench.jpg",
+      "sha256": "c575895f647c7c2a9548df175767f7f2e7d0dc6080a7dac13175e4e3c9d5dde4",
+      "bytes": 118165,
+      "repository_url": "https://github.com/nazeeh111/MaterialMind",
+      "recorded_source_revision": "8d11857fd54d93d1f5159e7e5105e1f927ccf33d",
+      "producer_path": "docs/media/lab-workbench.jpg",
+      "source_url": "https://github.com/nazeeh111/MaterialMind/blob/8d11857fd54d93d1f5159e7e5105e1f927ccf33d/docs/media/lab-workbench.jpg"
+    },
+    {
+      "public_path": "/assets/featured/materialmind-workflow.png",
+      "sha256": "2102d0bfa2d270cd1799f3dc4278244728a89026f3c0d2e5c97c106e0182bd41",
+      "bytes": 171311,
+      "repository_url": "https://github.com/nazeeh111/MaterialMind",
+      "recorded_source_revision": "8d11857fd54d93d1f5159e7e5105e1f927ccf33d",
+      "producer_path": "docs/media/workflow.png",
+      "source_url": "https://github.com/nazeeh111/MaterialMind/blob/8d11857fd54d93d1f5159e7e5105e1f927ccf33d/docs/media/workflow.png"
+    },
+    {
+      "public_path": "/assets/featured/morphproof-studio.png",
+      "sha256": "8f0161bfa3b1b55b2a030b584deca5aa29f22f0b6c190d6ae26b8f39ccbc0429",
+      "bytes": 151431,
+      "repository_url": "https://github.com/nazeeh111/MorphProof",
+      "recorded_source_revision": "36208c6a6ed15ae62c62e73eb99076fd5c79286d",
+      "producer_path": "docs/current-studio/studio-desktop.png",
+      "source_url": "https://github.com/nazeeh111/MorphProof/blob/36208c6a6ed15ae62c62e73eb99076fd5c79286d/docs/current-studio/studio-desktop.png"
+    },
+    {
+      "public_path": "/assets/featured/morphproof-studio-mobile.png",
+      "sha256": "dbdb265ae422d76a4717c54d0c2e08b2b12bb87fdd3c64f5d0c0fcb3865c8730",
+      "bytes": 44694,
+      "repository_url": "https://github.com/nazeeh111/MorphProof",
+      "recorded_source_revision": "36208c6a6ed15ae62c62e73eb99076fd5c79286d",
+      "producer_path": "docs/current-studio/studio-mobile.png",
+      "source_url": "https://github.com/nazeeh111/MorphProof/blob/36208c6a6ed15ae62c62e73eb99076fd5c79286d/docs/current-studio/studio-mobile.png"
+    },
+    {
+      "public_path": "/assets/featured/morphproof-witness.png",
+      "sha256": "63c969478f0f1e569a1a0c53deba36a373392fcb9f3bdb0681e26a16152c16c0",
+      "bytes": 84157,
+      "repository_url": "https://github.com/nazeeh111/MorphProof",
+      "recorded_source_revision": "36208c6a6ed15ae62c62e73eb99076fd5c79286d",
+      "producer_path": "docs/presentation/witness.png",
+      "source_url": "https://github.com/nazeeh111/MorphProof/blob/36208c6a6ed15ae62c62e73eb99076fd5c79286d/docs/presentation/witness.png"
+    },
+    {
+      "public_path": "/assets/featured/morphproof-witness-mobile.png",
+      "sha256": "f339807f10847d8c3085cbc361d546a1673320f0f7dfad1ab09e1a846cbefdd0",
+      "bytes": 67269,
+      "repository_url": "https://github.com/nazeeh111/MorphProof",
+      "recorded_source_revision": "36208c6a6ed15ae62c62e73eb99076fd5c79286d",
+      "producer_path": "docs/presentation/witness-mobile.png",
+      "source_url": "https://github.com/nazeeh111/MorphProof/blob/36208c6a6ed15ae62c62e73eb99076fd5c79286d/docs/presentation/witness-mobile.png"
+    },
+    {
+      "public_path": "/assets/featured/ladderproof-workbench.jpg",
+      "sha256": "05bed340dbef6b8f7082cc1d4d385395c81c76b8553eb0434d055958de8cac6e",
+      "bytes": 238764,
+      "repository_url": "https://github.com/nazeeh111/LadderProof",
+      "recorded_source_revision": "12604d131498ba3851bea6a45066a0d1d71fa7c0",
+      "producer_path": "docs/workbench.jpg",
+      "source_url": "https://github.com/nazeeh111/LadderProof/blob/12604d131498ba3851bea6a45066a0d1d71fa7c0/docs/workbench.jpg"
+    },
+    {
+      "public_path": "/assets/featured/ladderproof-catalog.jpg",
+      "sha256": "b7a7d844c037479aabb8cef5058c03067f659c3f35d38ebd038bb69a131386e0",
+      "bytes": 65506,
+      "repository_url": "https://github.com/nazeeh111/LadderProof",
+      "recorded_source_revision": "12604d131498ba3851bea6a45066a0d1d71fa7c0",
+      "producer_path": "docs/catalog-desktop.jpg",
+      "source_url": "https://github.com/nazeeh111/LadderProof/blob/12604d131498ba3851bea6a45066a0d1d71fa7c0/docs/catalog-desktop.jpg"
+    }
+  ]
+}

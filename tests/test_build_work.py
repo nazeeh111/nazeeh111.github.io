@@ -59,6 +59,28 @@ class WorkBuilderTests(unittest.TestCase):
         self.assertEqual(catalog, original)
         self.assertEqual(data, builder.render(catalog, TEMPLATE))
 
+    def test_explicit_featured_order_preserves_each_identity_and_alphabetical_remainder(self):
+        catalog = {"projects": [project("Zulu", "Zulu"), project("beta", "beta"),
+                                project("Alpha", "Alpha"), project("Selected", "selected")],
+                   "featured_repositories": ["https://github.com/nazeeh111/selected",
+                                             "https://github.com/nazeeh111/Zulu"]}
+        original = copy.deepcopy(catalog)
+        parsed = Index(builder.render(catalog, TEMPLATE).decode())
+        self.assertEqual([row["id"] for row in parsed.projects],
+                         ["repository-nazeeh111-selected", "repository-nazeeh111-zulu",
+                          "repository-nazeeh111-alpha", "repository-nazeeh111-beta"])
+        self.assertEqual(catalog, original)
+        self.assertEqual(len(parsed.projects), len(catalog["projects"]))
+        for project_row in catalog["projects"]:
+            self.assertEqual(sum(link.get("href") == project_row["url"] for link in parsed.links), 1)
+        for featured in [["https://github.com/nazeeh111/missing"],
+                         ["https://github.com/nazeeh111/Zulu"] * 2,
+                         ["javascript:alert(1)"]]:
+            invalid = copy.deepcopy(catalog)
+            invalid["featured_repositories"] = featured
+            with self.subTest(featured=featured), self.assertRaises(ValueError):
+                builder.render(invalid, TEMPLATE)
+
     def test_untrusted_names_summaries_aliases_and_subjects_are_escaped(self):
         name = 'A "quoted" <script>alert(1)</script>'
         summary = 'Read <img src=x onerror=alert(1)> & keep the source.'

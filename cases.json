@@ -24,7 +24,7 @@
       {
         "src": "/assets/featured/solidframe-fixture-current.png",
         "alt": "SolidFrame with the seven-part workholding fixture, the base plate selected and its Width property set to 85 millimetres.",
-        "caption": "Actual deployed workspace, November 17, 2026. The completed 70 \u2192 85 mm edit, Undo \u2192 70 and Redo \u2192 85 sequence is preserved in the journey record.",
+        "caption": "Actual deployed workspace, November 17, 2026. The completed 70 → 85 mm edit, Undo → 70 and Redo → 85 sequence is preserved in the journey record.",
         "mobile_details": [
           {
             "x": 500,
@@ -53,7 +53,9 @@
       "Native .cd documents preserve editable project structure. Exchange exports such as STEP and STL carry geometry; they do not promise to preserve all builder settings.",
       "The project includes a drilled-plate and bracket builder with whole-configuration validation. Its ideal geometry does not calculate strength, bend allowance or fabrication approval."
     ],
-    "legacy_fragment": ["case-solidframe"]
+    "legacy_fragment": [
+      "case-solidframe"
+    ]
   },
   {
     "slug": "capsulith",
@@ -74,7 +76,7 @@
     "mechanism": "Capsulith packages selected ARM64 functions with calling contracts and owned memory. The image workbench runs the prepared QOI decoder through native-code emulation, retains the decoded allocation, then reopens it in a fresh worker. Pixel inspection and native free expose the memory lifecycle instead of hiding it behind a static preview.",
     "observed_result": "The November 16 browser run reported that 49,152 restored RGBA bytes matched the prior native output and that native free completed. Pixel (64, 48) read RGBA (126, 135, 250, 255).",
     "scope_note": "This is one observed prepared Orbit example. The workbench comparison is not an independent native oracle, a new codec, universal binary compatibility or a security-isolation proof. The exact source revision of this retained screenshot was not recorded.",
-    "foundations": "QOI is by Dominic Szablewski and contributors under MIT. Native emulation uses Unicorn.js and Unicorn. Capsulith\u2019s runtime is GPL-2.0-only; the project retains the complete third-party notices.",
+    "foundations": "QOI is by Dominic Szablewski and contributors under MIT. Native emulation uses Unicorn.js and Unicorn. Capsulith’s runtime is GPL-2.0-only; the project retains the complete third-party notices.",
     "evidence_url": "/assets/provenance.html#capsulith",
     "media": [
       {
@@ -109,7 +111,9 @@
       "Choose Load & run example in the image workbench, then Reopen in a fresh worker. The prepared case does not require an account, original application or compiler in the browser.",
       "The screenshot preserves the earlier prepared-QOI workflow. Newer PNG/QOI controls are documented in the repository; they are not retroactively claimed as part of this retained capture."
     ],
-    "legacy_fragment": ["systems"]
+    "legacy_fragment": [
+      "systems"
+    ]
   },
   {
     "slug": "qloom",
@@ -126,8 +130,8 @@
       "label": "Inspect the circuit record",
       "url": "https://github.com/nazeeh111/QLOOM/blob/ddcce9317bdc59e053f6b6fec3cedf43b9203111/examples/live-studio/report.json"
     },
-    "problem": "A physical circuit must respect a device\u2019s connectivity without silently changing the logical program. Gate count alone cannot show whether routing, placement and phase have been handled correctly.",
-    "mechanism": "QLOOM searches a bounded set of compiler strategies on a CPU. The Studio exposes the logical input, physical gates, logical-to-physical mapping, candidate costs and numerical verification. A trained policy ranks strategies, while explicit checks decide whether a candidate preserves the supported program\u2019s meaning.",
+    "problem": "A physical circuit must respect a device’s connectivity without silently changing the logical program. Gate count alone cannot show whether routing, placement and phase have been handled correctly.",
+    "mechanism": "QLOOM searches a bounded set of compiler strategies on a CPU. The Studio exposes the logical input, physical gates, logical-to-physical mapping, candidate costs and numerical verification. A trained policy ranks strategies, while explicit checks decide whether a candidate preserves the supported program’s meaning.",
     "observed_result": "The retained three-qubit line-device example maps H(q0), CX(q0,q2) and Ry(0.31)(q1) to selected physical operations U(p1), U(p2) and CX(p1,p0). Initial and final mappings are [1, 2, 0]. The recorded maximum operator error is 1.401642967028923e-16 against tolerance 1e-8.",
     "scope_note": "This is one stored synthetic example with a two-candidate budget. No SWAP appears in this selected circuit. Numerical evidence is not a formal equivalence proof, a QPU execution or a claim that the learned policy beats established compilers.",
     "foundations": "Qiskit supplies circuit interchange and standard gate translation. QLOOM implements the selected layout/routing strategies; Qiskit levels, MQT QMAP and BQSKit are separately attributed comparison tools with their own licenses.",
@@ -142,9 +146,11 @@
     ],
     "technical_details": [
       "The diagram reads the saved report rather than running a new compiler experiment. It must not be confused with the separate five-qubit, eight-candidate Studio demonstration.",
-      "The project\u2019s measured study retains ties, failures and timeouts. It does not establish broad learned-policy superiority; the complete comparison belongs with its stated budgets and verification results."
+      "The project’s measured study retains ties, failures and timeouts. It does not establish broad learned-policy superiority; the complete comparison belongs with its stated budgets and verification results."
     ],
-    "legacy_fragment": ["case-qloom"]
+    "legacy_fragment": [
+      "case-qloom"
+    ]
   },
   {
     "slug": "photonsmith",
@@ -163,7 +169,7 @@
     },
     "problem": "An optimizer can find geometry that looks promising to a learned model while failing a physical solve or a stronger numerical check. The design needs a trace from target and geometry to field, power and validation.",
     "mechanism": "PhotonSmith searches a constrained three-layer periodic grating. A compact learned surrogate screens candidates, a Fourier-modal Maxwell solver and adjoint refinement evaluate them, and a separately assembled real-space solver checks the result. The Studio keeps the target, geometry, field, spectrum and exported evidence together.",
-    "observed_result": "For the retained refined 1550 nm design, the stored M9 target-order efficiency is 0.9358787717897128, about 93.59% of incident power into order +1. M13 and independent real-space checks are separately recorded. The figure pairs the same design\u2019s field with all 21 stored wavelength solves.",
+    "observed_result": "For the retained refined 1550 nm design, the stored M9 target-order efficiency is 0.9358787717897128, about 93.59% of incident power into order +1. M13 and independent real-space checks are separately recorded. The figure pairs the same design’s field with all 21 stored wavelength solves.",
     "scope_note": "This is a two-dimensional periodic numerical model, not a fabricated-device measurement. Agreement between the disclosed resolutions and formulations does not certify convergence, omitted physics, global optimality or manufacturing readiness.",
     "foundations": "The runtime uses NumPy and SciPy. Research foundations and optional external validation tools are separately credited in the repository; an available Meep adapter is not evidence of an executed Meep validation.",
     "evidence_url": "/assets/featured/evidence.html#photonsmith",
@@ -176,10 +182,12 @@
       }
     ],
     "technical_details": [
-      "The field figure uses all 97 \u00d7 96 stored real-field values at equal spatial x/z scale. It does not smooth, normalize or replace the stored numerical arrays with an illustration.",
+      "The field figure uses all 97 × 96 stored real-field values at equal spatial x/z scale. It does not smooth, normalize or replace the stored numerical arrays with an illustration.",
       "Search used M5; the displayed final solve uses M9, with M13 and independent-grid results recorded separately. The spectrum lines connect actual samples without adding intermediate solutions."
     ],
-    "legacy_fragment": ["case-photonsmith"]
+    "legacy_fragment": [
+      "case-photonsmith"
+    ]
   },
   {
     "slug": "vibescope",
@@ -216,10 +224,12 @@
       }
     ],
     "technical_details": [
-      "The original and enhanced frame pixels are retained at native 320 \u00d7 192 resolution; nearest-neighbor enlargement changes display size only. No selective contrast, color or denoising adjustment was applied for the portfolio figure.",
+      "The original and enhanced frame pixels are retained at native 320 × 192 resolution; nearest-neighbor enlargement changes display size only. No selective contrast, color or denoising adjustment was applied for the portfolio figure.",
       "The figure reads the browser-exported reports and CSVs. It performs no new estimator, fit, filter or physical experiment."
     ],
-    "legacy_fragment": ["case-vibescope"]
+    "legacy_fragment": [
+      "case-vibescope"
+    ]
   },
   {
     "slug": "instrumentzero",
@@ -238,23 +248,25 @@
     },
     "problem": "A frequency or damping estimate is hard to assess without the input signal, processing path and calibration assumptions. Agreement with a reference calculation also needs to be distinguished from a physical measurement.",
     "mechanism": "InstrumentZero turns supported experiment questions into procedures, calibration contracts and executable analysis. This case uses its Edge simulation workflow: a seeded signal passes through explicit processing placements, with sample records and numerical references retained beside the estimates.",
-    "observed_result": "The retained custom ringdown contains 769 displayed acceleration samples. Its analytic model is 9.75 Hz with decay 0.45 s\u207b\u00b9 at seed 9132301. The stored numerical reference returns 9.750006565906396 Hz and decay 0.4499236618270089 s\u207b\u00b9 on the same captured input.",
+    "observed_result": "The retained custom ringdown contains 769 displayed acceleration samples. Its analytic model is 9.75 Hz with decay 0.45 s⁻¹ at seed 9132301. The stored numerical reference returns 9.750006565906396 Hz and decay 0.4499236618270089 s⁻¹ on the same captured input.",
     "scope_note": "This is seeded simulation and a same-input numerical reference, not a physical sensor capture or independently measured resonance. The declared resolution/clock envelope is not a validated confidence interval or a coverage guarantee.",
-    "foundations": "The retained reference uses NumPy float64 processing and SciPy lfilter, distinguished from the recorded C-path results. The project\u2019s external recordings and dependencies retain their own notices; none is relabeled as this synthetic capture.",
+    "foundations": "The retained reference uses NumPy float64 processing and SciPy lfilter, distinguished from the recorded C-path results. The project’s external recordings and dependencies retain their own notices; none is relabeled as this synthetic capture.",
     "evidence_url": "/assets/featured/evidence.html#instrumentzero",
     "media": [
       {
         "src": "/assets/featured/instrumentzero-ringdown.png",
         "mobile_src": "/assets/featured/instrumentzero-ringdown-mobile.png",
         "alt": "All stored acceleration samples of the seeded InstrumentZero ringdown with its retained reference frequency and decay.",
-        "caption": "Seeded 9.75 Hz, 0.45 s\u207b\u00b9 ringdown. All 769 stored plot samples are shown without new fitting or filtering; the eight-second run\u2019s processed plot segment ends at 7.68 seconds."
+        "caption": "Seeded 9.75 Hz, 0.45 s⁻¹ ringdown. All 769 stored plot samples are shown without new fitting or filtering; the eight-second run’s processed plot segment ends at 7.68 seconds."
       }
     ],
     "technical_details": [
-      "The portfolio figure displays stored time in seconds and acceleration in m/s\u00b2. Connecting lines aid reading between samples and do not create additional observations.",
+      "The portfolio figure displays stored time in seconds and acceleration in m/s². Connecting lines aid reading between samples and do not create additional observations.",
       "The same retained JSON includes raw-host, calibrated-edge and filtered-edge C-path results, estimator diagnostics and source identity. It supports comparing processing paths without calling numerical agreement a hardware measurement."
     ],
-    "legacy_fragment": ["case-instrumentzero"]
+    "legacy_fragment": [
+      "case-instrumentzero"
+    ]
   },
   {
     "slug": "nstack",
@@ -274,7 +286,7 @@
     "problem": "A list of agent skills does not explain when a capability applies, what it depends on or which licensed source will be installed. Discovery needs to stay separate from activation.",
     "mechanism": "nstack keeps a reviewed capability registry with source revisions, selected paths, rights, activation conditions and task checks. Its search, show and route commands expose those decisions before installation. A component can contain several native skills; its catalog identifier is not the same as an installed skill name.",
     "observed_result": "The recorded search for web-ui-design returned component L010 with web-ui-design and mcp-builder. Show and route exposed the pinned upstream source, selected paths, rights and prerequisites. The absent temporary state directory stayed absent throughout this read-only session.",
-    "scope_note": "This case verifies source-only discovery, not an installed runtime, live activation, rollback or another machine\u2019s setup. A catalog route is not permission to install, and available source is not target-specific acceptance.",
+    "scope_note": "This case verifies source-only discovery, not an installed runtime, live activation, rollback or another machine’s setup. A catalog route is not permission to install, and available source is not target-specific acceptance.",
     "foundations": "Each selected capability keeps its upstream identity and license. In this recorded L010 case, the source is anthropics/skills at ca45fc496a3436251f191354091d557da31c15b5; only the eligible selected leaves are covered by the stated route.",
     "evidence_url": "/assets/featured/evidence.html#nstack",
     "media": [],
@@ -282,7 +294,9 @@
       "The actual command sequence is python3 nstack.py search web-ui-design --brief, followed by show L010 and route L010. The complete JSON outputs are retained as site assets, so readers can inspect the result rather than a mock terminal.",
       "The selected route distinguishes Apache-2.0 frontend/MCP leaves from restricted artifact sources. Discovery, source preparation and actual target-runtime checks remain separate operations."
     ],
-    "legacy_fragment": ["case-nstack"]
+    "legacy_fragment": [
+      "case-nstack"
+    ]
   },
   {
     "slug": "solidrift",
@@ -300,10 +314,10 @@
       "url": "https://github.com/nazeeh111/Solidrift"
     },
     "problem": "A Boolean union quietly drops part of the input. Sending the full model is easy; reducing it to a valid, small example that still reproduces the same failure is harder.",
-    "mechanism": "Solidrift contracts edges while checking that both operands remain valid closed solids and the same native failure survives. It tracks each vertex\u2019s source ancestry, searches small boundary interventions on the witness, lifts a selected intervention back to the full inputs, and records native repair and undo results.",
+    "mechanism": "Solidrift contracts edges while checking that both operands remain valid closed solids and the same native failure survives. It tracks each vertex’s source ancestry, searches small boundary interventions on the witness, lifts a selected intervention back to the full inputs, and records native repair and undo results.",
     "observed_result": "The retained investigation reduces 132 input triangles to a 12-triangle witness through 60 accepted contractions. Its recorded intervention moves three witness vertices whose ancestry covers thirteen original vertices. Undo restores the original input coordinates and the native omission. The two portfolio panels show the original 132-triangle stage, not the later witness.",
-    "scope_note": "The browser viewer replays stored geometry and never runs Blender. This is a bounded greedy reduction, not a globally smallest witness. The intervention changes the input geometry, not Blender\u2019s implementation; agreement with MANIFOLD is not proof of an ideal union.",
-    "foundations": "The two operands are Manifold regression fixtures under Apache-2.0, not original models. Blender supplies the FLOAT and MANIFOLD Boolean implementations. Solidrift\u2019s implementation is MIT licensed, with fixture attribution retained.",
+    "scope_note": "The browser viewer replays stored geometry and never runs Blender. This is a bounded greedy reduction, not a globally smallest witness. The intervention changes the input geometry, not Blender’s implementation; agreement with MANIFOLD is not proof of an ideal union.",
+    "foundations": "The two operands are Manifold regression fixtures under Apache-2.0, not original models. Blender supplies the FLOAT and MANIFOLD Boolean implementations. Solidrift’s implementation is MIT licensed, with fixture attribution retained.",
     "evidence_url": "/assets/provenance.html#solidrift",
     "media": [
       {
@@ -318,9 +332,211 @@
       }
     ],
     "technical_details": [
-      "This case is tied to the retained Blender 5.3.0 Alpha build bad8871dc58d record at the cited source revision. Newer public investigations have separate backend identities and must not be merged into this older capture\u2019s provenance.",
+      "This case is tied to the retained Blender 5.3.0 Alpha build bad8871dc58d record at the cited source revision. Newer public investigations have separate backend identities and must not be merged into this older capture’s provenance.",
       "The compact case bundles original identities, reduced and restored operands, contraction trace, coordinate patch, validity checks and backend identity. Intermediate input states can be replayed without inventing intermediate native output surfaces."
     ],
-    "legacy_fragment": ["geometry"]
+    "legacy_fragment": [
+      "geometry"
+    ]
+  },
+  {
+    "slug": "siliconpilot",
+    "name": "SILICONPILOT",
+    "repository_url": "https://github.com/nazeeh111/SILICONPILOT",
+    "source_revision": "61badd38086dc8c0395fff3dfd814f4073c90b93",
+    "case_url": "/work/siliconpilot/",
+    "lead": "Turn a small neural classifier into inspectable hardware, then see what accuracy, area and latency cost.",
+    "action": {
+      "label": "Explore recorded designs",
+      "url": "https://nazeeh111.github.io/SILICONPILOT/"
+    },
+    "secondary_action": {
+      "label": "Generate Verilog locally",
+      "url": "https://github.com/nazeeh111/SILICONPILOT/blob/6e2bbbe2faca1f10eb4a2a1e71a8aa858c56ffd1/README.md#generate-your-first-verilog-without-installing"
+    },
+    "problem": "A neural model is only the start of a hardware design. Precision, multiplier reuse and scheduling change its answers, circuit size and speed. Those choices need visible arithmetic, generated hardware and comparable implementation evidence.",
+    "mechanism": "SILICONPILOT compiles fixed-shape dense/ReLU networks into signed fixed-point Verilog. An independent integer reference checks output bits and handshakes in RTL simulation; an open ECP5 synthesis and routing flow records implementation costs. The observatory connects each saved design to its source, waveform, resource report and tradeoff position.",
+    "observed_result": "The recorded corpus contains 40 RTL-verified, synthesized and routed designs. In the demonstrated constraint change, a 1,929-LUT4 design has 0.52 microseconds of simulated core latency; a 1,170-LUT4 alternative has 2.00 microseconds. Both retain 100% accuracy on this validation split. A separate LUT-only mapped implementation matches the integer reference on 353 vectors.",
+    "scope_note": "These are recorded simulations and FPGA-tool estimates, not board measurements. The pictured 0.1.0 corpus is preserved separately from the newer 0.1.1.dev0 compiler.",
+    "foundations": "Original small RTL backend using established ML-to-FPGA and surrogate-search ideas. Icarus Verilog, Yosys and nextpnr supply simulation, synthesis and routing. Four precomputed input features come from Volker Lohweg’s UCI Banknote Authentication dataset (CC BY 4.0), not raw camera frames. Source is Apache-2.0; retain its license and upstream dataset/tool notices.",
+    "evidence_url": "https://github.com/nazeeh111/SILICONPILOT/blob/61badd38086dc8c0395fff3dfd814f4073c90b93/docs/benchmarks.md",
+    "media": [
+      {
+        "src": "/assets/featured/siliconpilot-hdl.png",
+        "alt": "Recorded SILICONPILOT observatory with selected design w8-c16 and its generated fixed-point Verilog.",
+        "caption": "Recorded 0.1.0 design w8-c16: generated HDL, 1,929 mapped LUT4 equivalents and 0.52 microseconds simulated packed-core latency. The 33.6 MHz value is a routing-tool estimate, not a measured board clock."
+      },
+      {
+        "src": "/assets/featured/siliconpilot-waveform.png",
+        "alt": "Recorded waveform replay associated with a selected compiled SILICONPILOT design.",
+        "caption": "Saved waveform evidence from the original 0.1.0 corpus: recorded RTL simulation, not a live compile or physical logic-analyzer trace."
+      }
+    ],
+    "technical_details": [
+      "The recorded case source pin is v0.1.0 at 61badd38086dc8c0395fff3dfd814f4073c90b93. Current source 6e2bbbe2faca1f10eb4a2a1e71a8aa858c56ffd1 identifies itself as 0.1.1.dev0. The online observatory is a static evidence browser; the separate local compiler action produces new RTL.",
+      "The current overlapped-products-v2 schedule reports 49 clocks to core output availability and a 34-clock sustained interval for the default packaged 4→8→2 model; two lanes with product pipelining report 27 and 19. These current modeled/simulation-checked values are not historical screenshot implementation costs. Recompiling an old configuration requires fresh synthesis and routing.",
+      "Core cycle latency excludes serial-shell transfers, stalls and board I/O. Fmax is a nextpnr estimate for the disclosed ECP5 device/constraint; pins are automatically assigned and external I/O delays unspecified. No physical FPGA was tested. Default DSP-mapped designs have a documented simulation-model limitation; the separate LUT-only mapped-netlist result does not validate every mapping.",
+      "Host preprocessing supplies four standardized wavelet features. Search uses validation rows; 100% validation is not test-population robustness or a deployed authentication result. UCI data attribution is Volker Lohweg, DOI 10.24432/C55P57, CC BY 4.0; the original source/provenance and changes remain documented.",
+      "The matched-budget finite replay does not show broad learned-search superiority: the fixed sweep recovers the full reference tradeoff volume and uses less compilation time on average. Cost uncertainty under-covers. Established compilers/search methods, including hls4ml, are credited in docs/research.md; this project does not invent hardware-aware optimization."
+    ],
+    "legacy_fragment": [],
+    "notices_url": "/assets/featured/notices/siliconpilot/README.md"
+  },
+  {
+    "slug": "materialmind",
+    "name": "MaterialMind",
+    "repository_url": "https://github.com/nazeeh111/MaterialMind",
+    "source_revision": "8d11857fd54d93d1f5159e7e5105e1f927ccf33d",
+    "case_url": "/work/materialmind/",
+    "lead": "Choose the next crystal to evaluate, inspect the model’s uncertainty and reveal the existing reference result.",
+    "action": {
+      "label": "Run the laboratory locally",
+      "url": "https://github.com/nazeeh111/MaterialMind/blob/8d11857fd54d93d1f5159e7e5105e1f927ccf33d/README.md#run-the-laboratory"
+    },
+    "secondary_action": {
+      "label": "Read the experiment",
+      "url": "https://github.com/nazeeh111/MaterialMind/blob/8d11857fd54d93d1f5159e7e5105e1f927ccf33d/README.md#what-the-experiment-found"
+    },
+    "problem": "Expensive evaluations make candidate selection important. A useful materials workflow must distinguish a model estimate from a reference result and show whether its selection rule actually helps.",
+    "mechanism": "MaterialMind displays real WBM crystal structures alongside stability estimates, uncertainty and acquisition scores. Frozen pretrained CHGNet embeddings and composition descriptors feed a fitted residual ensemble. The workbench ranks a held-out candidate pool; revealing a historical DFT label updates the session, while CIF and portable-record exports preserve the geometry and decision trail.",
+    "observed_result": "The study uses 3,072 existing structures, with 641 chemical-system-held-out candidates. At a budget of 40 evaluations, the fitted policy finds an average 29.6 stable candidates versus 6.7 for random selection and 30.6 for adapted greedy. The actual local workflow also reveals a reference, exports, resets and restores the session with history and candidate order intact.",
+    "scope_note": "This is retrospective evaluation against previously computed DFT labels. It reports no new DFT calculations, synthesis or newly discovered materials; the fitted policy did not beat adapted greedy.",
+    "foundations": "WBM structures, labels and published CHGNet predictions come from the Matbench Discovery collection by Janosh Riebesell and contributors (CC BY 4.0), with the original Wang–Botti–Marques WBM study credited. CHGNet 0.3.0 is a frozen BSD-3-Clause foundation; the residual model and acquisition study are the project’s work. Code and bundled Three.js are MIT licensed with their respective notices.",
+    "evidence_url": "https://github.com/nazeeh111/MaterialMind/blob/8d11857fd54d93d1f5159e7e5105e1f927ccf33d/docs/SESSIONS.md",
+    "media": [
+      {
+        "src": "/assets/featured/materialmind-workbench.jpg",
+        "alt": "MaterialMind workbench with PaMnF6 selected, its crystal structure and model estimates; one earlier ErI4 reference is in the session.",
+        "caption": "Actual workbench candidate published at 8d11857. PaMnF6 is selected but its reference is unrevealed; one earlier ErI4 reference is in the session. The selected estimates are predictions.",
+        "mobile_details": [
+          {
+            "x": 355,
+            "y": 270,
+            "width": 720,
+            "height": 690,
+            "source_width": 1440,
+            "source_height": 1000,
+            "alt": "Recorded PaMnF6 crystal geometry; the selected reference is still unrevealed.",
+            "caption": "Desktop crystal detail from the same retained workbench. Model estimates are predictions; WBM/Matbench Discovery data, CC BY 4.0."
+          }
+        ]
+      },
+      {
+        "src": "/assets/featured/materialmind-workflow.png",
+        "alt": "MaterialMind data workflow separating dataset partitions, frozen features, residual fitting, calibration, acquisition and reference reveals.",
+        "caption": "Project workflow diagram, not a new experiment or measured performance chart. Fitting, prediction and reference reveal are separate stages."
+      }
+    ],
+    "technical_details": [
+      "The pictured workbench source was published as 8d11857fd54d93d1f5159e7e5105e1f927ccf33d. Capture provenance records base b6da6866 plus the portable-session/UI candidate and SHA-256 c575895f647c7c2a9548df175767f7f2e7d0dc6080a7dac13175e4e3c9d5dde4. Later 2340213234ab6ddf8e0f5f86361d71ac432ff59c changes only CSS readability; actual exported records match except their export timestamps. It did not rerun the scientific campaign.",
+      "The CPU demo includes frozen graph features/source predictions and needs no model download. First startup fits the small residual model. The server binds to loopback; the primary action opens installation instructions, not a hosted laboratory.",
+      "Frozen CHGNet 0.3.0 embeddings plus 20 composition descriptors feed an ExtraTrees residual ensemble and held-out calibration. No official blind Matbench Discovery score, universal acquisition improvement or novel algorithm is established. The chosen policy stays frozen; the better greedy comparator is not relabeled as the validated policy.",
+      "Revealing a label retrieves a previously computed reference, not a new DFT solve. Imported geometry remains geometry-only without a compatible prediction/composition reference. A schema-3 record restores only under matching dataset, policy, code and scientific environment; export is not automatic persistence or arbitrary-version migration.",
+      "The recorded HTTP workflow covered reveal/export/reset/restore/reload and session isolation; controlled UI checks covered stale and failed responses. These workflow checks do not rerun all original materials experiments or establish physical discoveries.",
+      "Preserve DATA_LICENSE.md, materialmind/data/provenance.json, source DOI 10.6084/m9.figshare.22715158, WBM/Matbench/CHGNet citations and the recorded changes. Keep project MIT and bundled Three.js MIT notices. Its data are CC BY 4.0; a crystal image derived from them should retain that source credit."
+    ],
+    "legacy_fragment": [],
+    "notices_url": "/assets/featured/notices/materialmind/README.md"
+  },
+  {
+    "slug": "morphproof",
+    "name": "MorphProof",
+    "repository_url": "https://github.com/nazeeh111/MorphProof",
+    "source_revision": "36208c6a6ed15ae62c62e73eb99076fd5c79286d",
+    "case_url": "/work/morphproof/",
+    "lead": "Find the input where a Python-to-Rust transformation changes the answer, then keep a replayable witness.",
+    "action": {
+      "label": "Inspect the worked case",
+      "url": "https://github.com/nazeeh111/MorphProof/blob/36208c6a6ed15ae62c62e73eb99076fd5c79286d/docs/presentation/README.md"
+    },
+    "secondary_action": {
+      "label": "Compile a supported function locally",
+      "url": "https://github.com/nazeeh111/MorphProof/blob/36208c6a6ed15ae62c62e73eb99076fd5c79286d/README.md#a-small-complete-workflow"
+    },
+    "problem": "A successful build does not show that rewritten code behaves the same way. A useful transformation workflow needs an explicit input contract, observable comparisons and a small case that explains any disagreement.",
+    "mechanism": "MorphProof compiles a bounded numerical Python subset into a Rust-backed package. Separate workers run reference and candidate under the declared contract; bounded minimization reduces a mismatch to a replayable input. The portable Studio puts source, tested inputs, observed differences and untested claims together, while the worked artifact retains native snapshots and notices.",
+    "observed_result": "In the disclosed synthetic example, a deliberately inserted loop omission reduces [1.0, -1.0] to the witness [1.0]: Python returns 1.0 and Rust returns 0.0. Restoring the generated loop passes 64 fresh positional comparisons and 3 keyword checks. The native worked package reopens in a fresh Python 3.12 environment; newer native CI separately builds and imports packages on Linux, macOS ARM64 and Windows.",
+    "scope_note": "The loop omission is a disclosed seed and its restoration is deterministic. Finite comparisons do not prove universal equivalence; the portable Studio replays evidence rather than executing uploaded code.",
+    "foundations": "Original MIT-licensed compiler, comparison workflow and evidence viewer, using Python, Rust, PyO3 0.27.2 and Maturin. Keep the worked artifact’s MIT license, dependency manifest and actual Cargo dependency notices. Separately attributed upstream experiment fixtures remain distinct from this one-function example.",
+    "evidence_url": "https://github.com/nazeeh111/MorphProof/blob/36208c6a6ed15ae62c62e73eb99076fd5c79286d/docs/presentation/README.md",
+    "media": [
+      {
+        "src": "/assets/featured/morphproof-studio.png",
+        "alt": "Actual MorphProof Studio showing generated Rust, behavioral claims and the minimized input whose Python and Rust results differ.",
+        "caption": "Current Studio capture at 36208c6 exposes source, the disclosed failure and explicitly untested claims. It reads recorded evidence; it does not run a transformation in the browser.",
+        "mobile_src": "/assets/featured/morphproof-studio-mobile.png"
+      },
+      {
+        "src": "/assets/featured/morphproof-witness.png",
+        "alt": "Mechanism diagram of a disclosed skip-first-item seed: input [1.0] returns Python 1.0 and Rust 0.0; deterministic restoration passes the finite comparisons.",
+        "caption": "Diagram from the actual native record, not a performance chart. That record used Rust 1.100.0; its footer’s unexercised 1.99.1 statement is historical. Later separate CI exercised 1.99.1 on three operating systems.",
+        "mobile_src": "/assets/featured/morphproof-witness-mobile.png"
+      }
+    ],
+    "technical_details": [
+      "Current Studio/public source is 36208c6a6ed15ae62c62e73eb99076fd5c79286d. The original one-function native run used source 80a0daaf3eec332642159971ac33b8c59e3d0eaf, Rust/cargo 1.100.0, PyO3 0.27.2 and Python 3.12.13. The diagram first appeared at 399600c51eba4b14821f65517a8388f66495cbf9 and remains unchanged. Do not relabel its binary as a Rust 1.99.1 artifact.",
+      "Later current-source CI exercised Rust/cargo 1.99.1 on Linux, macOS ARM64 and Windows, including transformation, wheel build, installation and keyword import. This is separate evidence from the original witness, not a repeat of every historical timing or selector experiment.",
+      "The supported subset is pure deterministic numerical functions with one list[float] argument and float result. It handles declared keyword names, binary64 operation order, signed zero, infinity and NaN class as documented. Arbitrary repositories, NumPy objects and stateful code are outside the claim; unsupported syntax is refused.",
+      "Five bounded minimization calls found [1.0], not a proven globally smallest witness. Comparison budgets are not unique-input counts: each positional campaign contains 27 unique inputs. Passing the restored campaign is finite evidence, not autonomous repair or formal proof.",
+      "The Studio is a portable recorded evidence viewer. Exact retained native snapshots require macOS ARM64 and Python 3.12; other systems rebuild with an explicit toolchain. Its abi3 wheel tag does not establish every platform/interpreter combination. Worker separation isolates state/time, not filesystem access: execute trusted source only.",
+      "If redistributing native artifacts, preserve docs/presentation/LICENSE.txt, DEPENDENCIES.md, Cargo.lock files and the actual dependency notices. This portfolio links the intact worked package rather than stripping notices or copying its binaries. Separately attributed boltons/more_itertools research fixtures are not inputs to this case."
+    ],
+    "legacy_fragment": [],
+    "notices_url": "/assets/featured/notices/morphproof/README.md"
+  },
+  {
+    "slug": "ladderproof",
+    "name": "LadderProof",
+    "repository_url": "https://github.com/nazeeh111/LadderProof",
+    "source_revision": "12604d131498ba3851bea6a45066a0d1d71fa7c0",
+    "case_url": "/work/ladderproof/",
+    "lead": "Find when a higher digital code produces a lower voltage, then choose resistor tolerances that prevent it.",
+    "action": {
+      "label": "Run the tolerance workflow locally",
+      "url": "https://github.com/nazeeh111/LadderProof/blob/12604d131498ba3851bea6a45066a0d1d71fa7c0/README.md#try-the-complete-workflow"
+    },
+    "secondary_action": {
+      "label": "Inspect the exact six-bit certificate",
+      "url": "https://github.com/nazeeh111/LadderProof/blob/12604d131498ba3851bea6a45066a0d1d71fa7c0/examples/six-bit-five-percent.certificate.json"
+    },
+    "problem": "A digital-to-analog converter should increase its output as the input code increases. Resistor variation can reverse a step. Knowing the worst allowed step and which tolerances repair it turns a bad example into a design decision.",
+    "mechanism": "LadderProof enumerates every admitted corner of a small resistor-tolerance box using exact fractions. A nodal circuit solve finds the worst adjacent-code transition and attaining resistor assignment; a separate Thevenin-based verifier recomputes the complete bounds. A finite catalog search trades user-defined component costs against a required minimum step.",
+    "observed_result": "The included six-bit ±5% case decreases at code 31→32, while the ±1% case has no decreasing step across all 4,096 modeled corners. In the synthetic two-bit catalog, tightening B1 and S0 meets the 1/5 V requirement for cost 2 rather than cost 4 for every part. The chosen exact worst step is 151/731 V; the all-loose baseline is 68/409 V.",
+    "scope_note": "Exact results apply to the declared ideal static 2–6-bit circuit and independent resistor intervals. Catalog costs are synthetic units, not part prices; this is not measured hardware or manufacturing yield.",
+    "foundations": "Established R–2R circuit analysis and exact arithmetic, implemented as an inspectable bounded analyzer with a separate complete verifier. The project credits its model references and keeps its MIT license. It is not a SPICE replacement or an invention of the converter architecture.",
+    "evidence_url": "https://github.com/nazeeh111/LadderProof/blob/12604d131498ba3851bea6a45066a0d1d71fa7c0/docs/verification.md",
+    "media": [
+      {
+        "src": "/assets/featured/ladderproof-workbench.jpg",
+        "alt": "Six-bit resistor-ladder analysis with a negative 31 to 32 voltage step and the exact attaining resistor assignment.",
+        "caption": "Retained ideal six-bit ±5% example: the 31→32 step is −269227/7660721 V at a 1 V reference. The component assignment and complete interval result are inspectable; no physical voltage was measured.",
+        "mobile_details": [
+          {
+            "x": 475,
+            "y": 805,
+            "width": 525,
+            "height": 90,
+            "source_width": 1280,
+            "source_height": 2012,
+            "alt": "Recorded negative minimum step and the 31 to 32 transition."
+          }
+        ]
+      },
+      {
+        "src": "/assets/featured/ladderproof-catalog.jpg",
+        "alt": "LadderProof finite-catalog result for the synthetic two-bit example, cost 2 and independently verified selected tolerances.",
+        "caption": "Actual finite-catalog workflow published at 12604d1: cost 2 synthetic units and exact minimum step 151/731 V. A limited search reports unfinished rather than claiming optimality."
+      }
+    ],
+    "technical_details": [
+      "This case is pinned to the complete finite-catalog workflow at 12604d131498ba3851bea6a45066a0d1d71fa7c0, corresponding to actual approved V6 computation. Later ccb0d22ad1651390ae86283143f8b069bd7dc78b is a CSS-only V7 successor: narrow labels/focus were checked while JS, HTML and exact arithmetic stayed unchanged. This is not a new V7 worker computation run.",
+      "The retained workbench image originated at 67925bd3140d004164248f119aafcebd943644dd and remains unchanged in this workflow. Its exact minimum is −269227/7660721 V; the ±1% minimum is 186147971/34016602567 V. Verification re-enumerates every corner, not merely the displayed adverse assignment.",
+      "The recorded browser workflow exercised optimal selection, finite exhaustion/infeasibility, a work-limit stop, malformed exact-fraction recovery and independent Verify and use selection. The successful two-bit selection was independently recomputed over 16 corners and 3 adjacent transitions.",
+      "The model assumes ideal switches, a fixed positive reference and unloaded output. Independent intervals do not model matched/correlated resistor families. Switching glitches, settling, temperature, noise, reference regulation and physical yield are outside the result.",
+      "Search returns optimal only under its exact cost-order/verification conditions, infeasible after exhausting the admitted finite catalog, and unfinished when candidate/corner/deadline limits stop it. Arbitrary additive costs are not prices. Certificates are replayable computations, not succinct formal proofs or cryptographic attestations.",
+      "Keep the MIT license and docs/references.md context with redistributed material. Runtime uses Python standard-library exact arithmetic and local browser code; no account, paid service or hardware is needed."
+    ],
+    "legacy_fragment": [],
+    "notices_url": "/assets/featured/notices/ladderproof/README.md"
   }
 ]

@@ -112,9 +112,20 @@ def render(catalog, template, cases=None):
                          "aliases": aliases, "upstream": upstream})
 
     case_links = _case_links(cases, known)
+    # Optional editorial order uses canonical identities. Unselected work keeps
+    # the stable alphabetical order; every repository remains present once.
+    featured = _strings(catalog.get("featured_repositories", []), "featured_repositories")
+    priority = {}
+    for position, repository in enumerate(featured):
+        key = _repository(repository).casefold()
+        if key not in known or key in priority:
+            raise ValueError("Featured repository must be known and unique")
+        priority[key] = position
     escape = lambda value: html.escape(str(value), quote=True)
     entries = []
-    for project in sorted(projects, key=lambda item: (item["name"].casefold(), item["url"].casefold())):
+    for project in sorted(projects, key=lambda item: (
+            priority.get(item["url"].casefold(), len(priority)),
+            item["name"].casefold(), item["url"].casefold())):
         url = project["url"]
         upstream = project["upstream"]
         words = [project["name"], project["summary"], project["subject"],

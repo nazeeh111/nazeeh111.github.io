@@ -18,7 +18,7 @@
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
     <link
       rel="preload"
-      href="/assets/fonts/RethinkSans.ttf"
+      href="/assets/fonts/IBMPlexSans.ttf"
       as="font"
       type="font/ttf"
       crossorigin
@@ -29,26 +29,19 @@
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
-    <header class="site-header shell">
-      <a class="brand" href="/" aria-label="Nazeeh Abdul-Hadi home"
-        ><img src="/assets/identity.png" alt="" width="32" height="32" /><span
-          >Nazeeh Abdul-Hadi</span
-        ></a
-      >
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="/work/" aria-current="page">Work</a
-        ><a href="/research/">Research</a><a href="/#about">About</a>
-      </nav>
-    </header>
+    <header class="masthead shell">
+  <a class="identity" href="/" aria-label="Nazeeh Abdul-Hadi home"><span class="full-name">Nazeeh Abdul-Hadi</span><span class="short-name" aria-hidden="true">Nazeeh</span></a>
+  <nav aria-label="Main navigation"><a href="/work/" aria-current="page">Work</a><a href="/research/">Research</a><a href="/#about">About</a></nav>
+</header>
     <main class="shell catalog-page" id="main">
       <section id="projects" aria-labelledby="work-heading">
         <div class="catalog-heading">
           <h1 id="work-heading">All projects.</h1>
           <p>
-            Applications, scientific tools, libraries and open-source
-            contributions. Find a project, inspect its source or read a case.
+            Selected work first, then the complete alphabetical index.
           </p>
         </div>
+        <p class="work-research">Quantum research: <a href="/research/phaseglass-quantum/">Phaseglass Quantum</a>. <a href="/research/">All studies</a>.</p>
         <div class="filters" id="work-filters" hidden>
           <div>
             <label for="project-search">Search projects</label

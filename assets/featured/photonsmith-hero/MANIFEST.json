@@ -1,0 +1,47 @@
+{
+  "purpose": "Portable PhotonSmith retained-data figure generator",
+  "source_revision": "13912d9d640938acf8ce299a152298666ae61d44",
+  "original_source_sha256": "bf63ba3ebec2013dde9f10cbd65fa438634d71abd1bbf504577701dbd8a23b1e",
+  "files": {
+    "LICENSE.txt": {
+      "sha256": "ab0ce13cd5b12cd01185876ef0c286fedd048342b6460f36bc4e9c7ee21d999a",
+      "bytes": 1074
+    },
+    "PROVENANCE.md": {
+      "sha256": "7cc55f329566db9a42377e19f8b643c643a67c7b155fdbdbe18c6f6bb21acb41",
+      "bytes": 3766
+    },
+    "README.md": {
+      "sha256": "ac94729524383f0ae95091df95dd6ee9098a8c4e9d5a4799c7e5b1bb19788260",
+      "bytes": 1847
+    },
+    "captions.json": {
+      "sha256": "c1ba1c3f2d4d1d5b3b5d6de9ab6707393d759ebea396d9ab91ef46660b4758e0",
+      "bytes": 2255
+    },
+    "data/plot-data.json": {
+      "sha256": "21c935558d8fe79e937e47c959f7d6288dc563c3671fc4440a196269b80055f7",
+      "bytes": 203779
+    },
+    "fonts/IBMPlexSans.ttf": {
+      "sha256": "3b031aa4216174205bd8471f88a49b91f093169e9e87bd5262242bc5967fe2e3",
+      "bytes": 537244
+    },
+    "fonts/OFL.txt": {
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "bytes": 4456
+    },
+    "renderer/extract_data.py": {
+      "sha256": "5d43468178510cb89c25fcf73c911e2800e4bf544cb526074c208342400776bd",
+      "bytes": 1545
+    },
+    "renderer/render.py": {
+      "sha256": "dbc97fa1a218cfd010736123e407006786e0b92ffaa1708912192fd0bc4bdbaa",
+      "bytes": 13796
+    },
+    "sources.json": {
+      "sha256": "68fce8ecceed7badf78353acfecd8f92e78f8c78bf09a59990237438d3d7e75b",
+      "bytes": 1204
+    }
+  }
+}

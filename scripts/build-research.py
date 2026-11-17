@@ -28,8 +28,8 @@ def header(title,description,path,image=None):
 <meta property="og:image" content="{ORIGIN}{image}"><meta name="twitter:card" content="summary_large_image">
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="shell site-header"><a class="identity" href="/">Nazeeh Abdul-Hadi</a>
-<nav aria-label="Portfolio"><a href="/#projects">Projects</a><a href="/research/" {'aria-current="page"' if path=='/research/' else ''}>Research</a><a href="https://github.com/nazeeh111">GitHub ↗</a></nav></header>\n'''
+<header class="shell site-header"><a class="identity" href="/" aria-label="Nazeeh Abdul-Hadi home"><span class="full-name">Nazeeh Abdul-Hadi</span><span class="short-name" aria-hidden="true">Nazeeh</span></a>
+<nav aria-label="Portfolio"><a href="/work/">Work</a><a href="/research/" {'aria-current="page"' if path=='/research/' else ''}>Research</a><a href="/#about">About</a></nav></header>\n'''
 
 def footer():return '''<footer class="shell site-footer"><a class="identity" href="/">Nazeeh Abdul-Hadi</a><nav aria-label="Footer"><a href="/research/">All studies</a><a href="/research/manifest.json">File manifest</a><a href="https://github.com/nazeeh111/nazeeh111.github.io">Site source ↗</a></nav></footer></body></html>\n'''
 

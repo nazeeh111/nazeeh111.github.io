@@ -1,0 +1,50 @@
+{
+  "source_records": "sources.json",
+  "portable_zip": {
+    "path": "source.zip",
+    "bytes": 394414,
+    "sha256": "5c093729c11221ab878a58be4607e053ccc0d4d055686bc15abf201a657c5a9f"
+  },
+  "display_assets": {
+    "assets/field-desktop.png": {
+      "bytes": 37930,
+      "sha256": "766919586dceb73c46419f1da2b0adb880b2de274bc2cd14a117473b5b6d433c"
+    },
+    "assets/field-desktop.svg": {
+      "bytes": 1846469,
+      "sha256": "dd8e856ccdf27339be732e048a3706a5f8465f5d19e7653826a69cc8d9632ab2"
+    },
+    "assets/field-mobile.png": {
+      "bytes": 28392,
+      "sha256": "f9a08adccbd0f7f4a1cc065396fc1ce853fe38c4c199b411e25ffc4f4ebcca4f"
+    },
+    "assets/field-mobile.svg": {
+      "bytes": 1525141,
+      "sha256": "e55ade34778fd38fc2608e83679e029d0b966b678a1bd7b878c24b46ee439503"
+    },
+    "assets/field.csv": {
+      "bytes": 456198,
+      "sha256": "498bad82466865a46ba5fda7663861656c700e1173d7435e17f6d20f0c63552e"
+    },
+    "assets/spectrum-desktop.png": {
+      "bytes": 24517,
+      "sha256": "84617d350d89340ffc85d3e6b4598c870c25599974f25c491fd969efa7eb1ed4"
+    },
+    "assets/spectrum-desktop.svg": {
+      "bytes": 29462,
+      "sha256": "9f21f9edf8ef1186db965b768d58a43bf1337d6e3879e46cb935c32165b54855"
+    },
+    "assets/spectrum-mobile.png": {
+      "bytes": 12600,
+      "sha256": "96e9ae9e23455a64e7d39812dac50b0a5a95f5a73cd0e391516ce68c5db395f1"
+    },
+    "assets/spectrum-mobile.svg": {
+      "bytes": 29357,
+      "sha256": "8ad65dcfd7ae108ee74b91f8c5ae7d7d419c81ca401f772296182ab8342140df"
+    },
+    "assets/spectrum.csv": {
+      "bytes": 1162,
+      "sha256": "113d5504fdb0f3245ff5f894a291cb6137adaeb98f219ee5bcdee44ffb98613f"
+    }
+  }
+}

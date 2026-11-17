@@ -41,11 +41,12 @@ def details(image, src):
         x,y,w,h,sw,sh=(crop[k] for k in keys)
         if x<0 or y<0 or min(w,h,sw,sh)<=0 or x+w>sw or y+h>sh:
             raise ValueError("Capture detail must stay within its source image")
-        caption=crop['caption'];alt=crop['alt']
-        if not isinstance(caption,str) or not caption.strip() or not isinstance(alt,str) or not alt.strip():
+        caption=crop.get('caption');alt=crop['alt']
+        if (caption is not None and (not isinstance(caption,str) or not caption.strip())) or not isinstance(alt,str) or not alt.strip():
             raise ValueError("Capture detail requires accurate labels")
         style=';'.join('--'+k+':'+str(v) for k,v in zip(('crop-x','crop-y','crop-width','crop-height','source-width'),(x,y,w,h,sw)))
-        rendered.append('<figure><a class="capture-detail" style="'+style+'" href="'+escape(src)+'"><img src="'+escape(src)+'" width="'+str(sw)+'" height="'+str(sh)+'" alt="'+escape(alt)+'" loading="lazy"></a><figcaption>'+escape(caption)+'</figcaption></figure>')
+        caption_html='<figcaption>'+escape(caption)+'</figcaption>' if caption is not None else ''
+        rendered.append('<figure><a class="capture-detail" style="'+style+'" href="'+escape(src)+'"><img src="'+escape(src)+'" width="'+str(sw)+'" height="'+str(sh)+'" alt="'+escape(alt)+'" loading="lazy"></a>'+caption_html+'</figure>')
     return '<div class="mobile-details">'+''.join(rendered)+'</div>' if rendered else ''
 
 def render(cases, files):
@@ -64,6 +65,8 @@ def render(cases, files):
         if revision is not None and (not isinstance(revision,str) or not REVISION.fullmatch(revision)):
             raise ValueError("Recorded case revision must be a full Git hash")
         media=[]
+        if slug=='vibescope':
+            media.append('<section class="case-comparison" aria-labelledby="comparison-title"><h2 id="comparison-title">Display gain, fixed measurement</h2><div class="frame-comparison" style="--reveal:50%"><figure class="frame-original"><img src="/assets/featured/vibescope/original-frame72.png" width="320" height="192" alt="Original recorded synthetic frame72."><figcaption>Original</figcaption></figure><figure class="frame-enhanced"><img src="/assets/featured/vibescope/enhanced-frame72.png" width="320" height="192" alt="The same recorded frame with visualization gain20."><figcaption>Visualization ×20</figcaption></figure><span class="comparison-divider" aria-hidden="true"></span></div><div class="comparison-control" hidden><label for="frame-reveal">Reveal enhanced view</label><input id="frame-reveal" type="range" min="0" max="100" value="50" step="1" aria-describedby="comparison-note"><div class="comparison-ends" aria-hidden="true"><span>Original</span><span>Visualization ×20</span></div></div><p id="comparison-note">Both stored gain runs analyze the original frames: 7.30 Hz and 0.280 px remain fixed. This control reveals recorded images, not a new measurement.</p></section>')
         for image in case['media']:
             src=url(image['src'])
             if not src.startswith('/') or src[1:]not in files:
@@ -81,6 +84,13 @@ def render(cases, files):
         if evidence.startswith('/') and evidence.split('#',1)[0][1:]not in files:
             raise ValueError("Case evidence must be in the public source inventory")
         extra=''.join(paragraph(p)for p in case.get('technical_details',[]))
+        if case.get('notices_url'):
+            notice=url(case['notices_url'])
+            if not notice.startswith('/') or notice[1:] not in files:
+                raise ValueError("Case notices must be a listed public asset")
+            extra+='<p><a href="'+escape(notice)+'">Source, data and license notices</a></p>' 
+        if slug=='photonsmith':
+            extra+='<p><a href="/assets/featured/photonsmith-hero/">Retained figure data, source ZIP and precise figure meaning</a></p>'
         if slug=='nstack':
             data=files['assets/featured/nstack-search.json'].decode('utf-8')
             json.loads(data)
@@ -88,8 +98,13 @@ def render(cases, files):
         recorded=''
         if revision:
             recorded='<p class="case-source">Recorded case source: <a href="'+escape(repo+'/tree/'+revision)+'">'+escape(revision)+'</a></p>'
-        page=r'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>__NAME__ · Nazeeh Abdul-Hadi</title><meta name="description" content="__DESCRIPTION__"><link rel="canonical" href="https://nazeeh111.github.io__ROUTE__"><link rel="icon" href="/assets/favicon.svg"><link rel="stylesheet" href="/assets/design/portfolio.css"><link rel="preload" href="/assets/fonts/RethinkSans.ttf" as="font" type="font/ttf" crossorigin></head><body><a class="skip" href="#main">Skip to content</a><header class="site-header shell"><a class="brand" href="/" aria-label="Nazeeh Abdul-Hadi home"><img src="/assets/identity.png" width="32" height="32" alt=""><span>Nazeeh Abdul-Hadi</span></a><nav class="site-nav" aria-label="Main navigation"><a href="/work/">Work</a><a href="/research/">Research</a><a href="/#about">About</a></nav></header><main class="case-page shell" id="main"><div class="case-hero"><div><h1>__NAME__</h1><p class="case-lead">__DESCRIPTION__</p><div class="case-actions">__ACTIONS__</div></div><p class="case-scope">__SCOPE__</p></div>__MEDIA__<section class="case-text"><div><h2>The problem</h2>__PROBLEM__</div><div><h2>The mechanism</h2>__MECHANISM__</div></section><section class="case-text"><div><h2>The observed result</h2>__RESULT__</div><div><h2>Foundations</h2>__FOUNDATIONS__</div></section><section class="case-details"><h2>Inspect the details</h2>__EXTRA__<p class="case-source"><a href="__EVIDENCE__">Recorded evidence and limits</a> · <a href="__REPO__">Project source</a></p>__RECORDED__</section></main><footer class="site-footer"><div class="shell footer-top"><a class="brand" href="/">Nazeeh Abdul-Hadi</a><nav aria-label="Footer"><a href="/work/">All projects</a><a href="/research/">Research</a><a href="https://github.com/nazeeh111">GitHub</a></nav></div></footer></body></html>'''
+        page=r'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>__NAME__ · Nazeeh Abdul-Hadi</title><meta name="description" content="__DESCRIPTION__"><link rel="canonical" href="https://nazeeh111.github.io__ROUTE__"><link rel="icon" href="/assets/favicon.svg"><link rel="stylesheet" href="/assets/design/portfolio.css"><link rel="preload" href="/assets/fonts/IBMPlexSans.ttf" as="font" type="font/ttf" crossorigin></head><body><a class="skip" href="#main">Skip to content</a><header class="masthead shell">
+  <a class="identity" href="/" aria-label="Nazeeh Abdul-Hadi home"><span class="full-name">Nazeeh Abdul-Hadi</span><span class="short-name" aria-hidden="true">Nazeeh</span></a>
+  <nav aria-label="Main navigation"><a href="/work/">Work</a><a href="/research/">Research</a><a href="/#about">About</a></nav>
+</header><main class="case-page shell" id="main"><div class="case-hero"><div><h1>__NAME__</h1><p class="case-lead">__DESCRIPTION__</p><div class="case-actions">__ACTIONS__</div></div></div>__MEDIA__<section class="case-notes"><h2>Scope of this case</h2><p>__SCOPE__</p></section><section class="case-text"><div><h2>The problem</h2>__PROBLEM__</div><div><h2>The mechanism</h2>__MECHANISM__</div></section><section class="case-text"><div><h2>The observed result</h2>__RESULT__</div><div><h2>Foundations</h2>__FOUNDATIONS__</div></section><section class="case-details"><h2>Inspect the details</h2>__EXTRA__<p class="case-source"><a href="__EVIDENCE__">Recorded evidence and limits</a> · <a href="__REPO__">Project source</a></p>__RECORDED__</section></main><footer class="site-footer"><div class="shell footer-top"><a class="brand" href="/">Nazeeh Abdul-Hadi</a><nav aria-label="Footer"><a href="/work/">All projects</a><a href="/research/">Research</a><a href="https://github.com/nazeeh111">GitHub</a></nav></div></footer></body></html>'''
         values={'NAME':name,'DESCRIPTION':escape(case['lead']),'ROUTE':escape(route),'ACTIONS':action(case['action'],True)+action(case['secondary_action']),'SCOPE':escape(case['scope_note']),'MEDIA':''.join(media),'PROBLEM':paragraph(case['problem']),'MECHANISM':paragraph(case['mechanism']),'RESULT':paragraph(case['observed_result']),'FOUNDATIONS':paragraph(case['foundations']),'EXTRA':extra,'EVIDENCE':escape(evidence),'REPO':escape(repo),'RECORDED':recorded}
         page=re.sub(r'__([A-Z]+)__',lambda match:values[match[1]],page)
+        if slug=='vibescope':
+            page=page.replace('</head>','<script src="/assets/portfolio.js" defer></script></head>')
         outputs['work/'+slug+'/index.html']=page.encode('utf-8')
     return outputs

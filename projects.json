@@ -372,7 +372,8 @@
         "Enclose"
       ],
       "upstream": null,
-      "source_revision": "0c7728c9af019b60209a9f7c557a97fbd5b197f7"
+      "source_revision": "2d256bd2b35f76c2abb97b4b5182a086dd716f1a",
+      "source_revision_note": "Repository source pin. Retained site demos and captures remain separately versioned."
     },
     {
       "name": "ChirpMotion",
@@ -390,7 +391,8 @@
         "electrical-engineering"
       ],
       "upstream": null,
-      "source_revision": "db81f1af36f09498c8b3eaeb4368e93347420225"
+      "source_revision": "6789e3fb665a67164e109acfd4a4fda5b12ed3ce",
+      "source_revision_note": "Repository source pin. Retained site demos and captures remain separately versioned."
     },
     {
       "name": "chronal",
@@ -1133,5 +1135,12 @@
         "applications"
       ]
     }
+  ],
+  "featured_repositories": [
+    "https://github.com/nazeeh111/PhotonSmith",
+    "https://github.com/nazeeh111/SILICONPILOT",
+    "https://github.com/nazeeh111/MaterialMind",
+    "https://github.com/nazeeh111/MorphProof",
+    "https://github.com/nazeeh111/LadderProof"
   ]
 }

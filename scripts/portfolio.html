@@ -1,403 +1,65 @@
 <!doctype html>
 <html lang="en" class="no-js">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Nazeeh Abdul-Hadi · Engineering &amp; physics</title>
-    <meta
-      name="description"
-      content="Electrical engineering and physics at Virginia Tech. Explore Nazeeh Abdul-Hadi’s working geometry tools, systems software and scientific computing projects."
-    />
-    <meta name="theme-color" content="#0a0a0a" />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="Nazeeh Abdul-Hadi · Engineering &amp; physics"
-    />
-    <meta
-      property="og:description"
-      content="Working tools, inspectable engineering and research. Explore selected projects and the complete work index."
-    />
-    <meta property="og:url" content="https://nazeeh111.github.io/" />
-    <meta
-      property="og:image"
-      content="https://nazeeh111.github.io/assets/social/portfolio-preview.png"
-    />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="Nazeeh Abdul-Hadi’s engineering portfolio."
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="canonical" href="https://nazeeh111.github.io/" />
-    <link rel="icon" href="/assets/favicon.svg" />
-    <link
-      rel="preload"
-      href="/assets/fonts/RethinkSans.ttf"
-      as="font"
-      type="font/ttf"
-      crossorigin
-    />
-    <link rel="stylesheet" href="/assets/design/portfolio.css" />
-    <script src="/assets/portfolio.js" defer></script>
-  </head>
-  <body>
-    <a class="skip" href="#main">Skip to content</a>
-    <header class="site-header shell">
-      <a class="brand" href="/" aria-label="Nazeeh Abdul-Hadi home"
-        ><img src="/assets/identity.png" alt="" width="32" height="32" /><span
-          >Nazeeh Abdul-Hadi</span
-        ></a
-      >
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="/work/">Work</a><a href="/research/">Research</a
-        ><a href="#about">About</a>
-      </nav>
-    </header>
-    <main id="main">
-      <section class="hero shell" aria-labelledby="intro-title">
-        <div class="hero-copy">
-          <h1 id="intro-title"><span>Nazeeh</span> <span>Abdul-Hadi</span></h1>
-          <p class="hero-intro">
-            Electrical engineering and physics at Virginia Tech. I build tools
-            for geometry, scientific computing and the systems underneath.
-          </p>
-          <a class="button" href="#selected">Explore selected work</a>
-        </div>
-        <div
-          class="hero-work motion-proof"
-          role="group"
-          aria-labelledby="motion-title"
-        >
-          <div class="proof-heading">
-            <div>
-              <a href="/work/vibescope/">VibeScope</a>
-              <h2 id="motion-title">Small motion. Measurable.</h2>
-            </div>
-            <p>Recorded synthetic example</p>
-          </div>
-          <div class="frame-comparison" style="--reveal: 50%">
-            <figure class="frame-original">
-              <img
-                src="/assets/featured/vibescope/original-frame72.png"
-                width="320"
-                height="192"
-                fetchpriority="high"
-                alt="Original recorded frame 72: a textured specimen beside a reference scale."
-              />
-              <figcaption>Original</figcaption>
-            </figure>
-            <figure class="frame-enhanced">
-              <img
-                src="/assets/featured/vibescope/enhanced-frame72.png"
-                width="320"
-                height="192"
-                alt="The same recorded frame with visualization ×20 and the analysis region outlined."
-              />
-              <figcaption>Visualization ×20</figcaption>
-            </figure>
-            <span class="comparison-divider" aria-hidden="true"></span>
-          </div>
-          <div class="comparison-control" hidden>
-            <label for="frame-reveal">Reveal enhanced view</label
-            ><input
-              id="frame-reveal"
-              type="range"
-              min="0"
-              max="100"
-              value="50"
-              step="1"
-              aria-describedby="comparison-note"
-            />
-            <div class="comparison-ends" aria-hidden="true">
-              <span>Original</span><span>Visualization ×20</span>
-            </div>
-          </div>
-          <div class="proof-results">
-            <p>
-              <strong>7.30 <span>Hz</span></strong
-              ><span>Observed frequency</span>
-            </p>
-            <p>
-              <strong>0.280 <span>px</span></strong
-              ><span>Observed peak amplitude</span>
-            </p>
-          </div>
-          <p id="comparison-note" class="proof-note">
-            Move the view. The measurement stays the same: both recorded gain
-            runs analyze the original frames.
-          </p>
-          <a class="proof-link" href="/work/vibescope/"
-            >Inspect the experiment <span aria-hidden="true">↗</span></a
-          >
-        </div>
-      </section>
-      <section
-        class="selected shell"
-        id="selected"
-        aria-labelledby="selected-title"
-      >
-        <div class="section-heading">
-          <h2 id="selected-title">Open the work</h2>
-          <a href="/work/">Browse every project</a>
-        </div>
-        <article
-          class="work-feature feature-cad"
-          aria-labelledby="solidframe-title"
-        >
-          <div class="feature-copy">
-            <h3 id="solidframe-title">
-              <span id="case-solidframe"></span>SolidFrame
-            </h3>
-            <p class="feature-lead">A part you can keep editing.</p>
-            <p>
-              Sketch, constrain and change solid features in a browser CAD
-              workspace. The recorded fixture keeps its seven independent solids
-              through a reversible dimension edit.
-            </p>
-            <p class="scope">Built on Chili3D and OpenCascade.</p>
-            <div class="text-actions">
-              <a href="https://nazeeh111.github.io/SolidFrame/"
-                >Try the CAD app</a
-              ><a href="/work/solidframe/">How it works</a>
-            </div>
-          </div>
-          <figure class="feature-media">
-            <a
-              class="home-capture-detail"
-              style="
-                --crop-x: 500;
-                --crop-y: 300;
-                --crop-width: 800;
-                --crop-height: 640;
-                --source-width: 1440;
-              "
-              href="/work/solidframe/"
-              ><img
-                src="/assets/featured/solidframe-fixture-current.png"
-                width="1440"
-                height="1000"
-                loading="lazy"
-                alt="Desktop detail: the seven-solid workholding fixture, with the selected base plate outlined in green."
-            /></a>
-            <figcaption>
-              Width 70 → 85 mm. Undo and Redo preserve the editable result.
-            </figcaption>
-          </figure>
-        </article>
-        <article
-          class="work-feature feature-native"
-          id="systems"
-          aria-labelledby="capsulith-title"
-        >
-          <figure class="feature-media">
-            <a
-              class="home-capture-detail"
-              style="
-                --crop-x: 26;
-                --crop-y: 0;
-                --crop-width: 950;
-                --crop-height: 320;
-                --source-width: 1280;
-              "
-              href="/work/capsulith/"
-              ><img
-                src="/assets/capsulith-restored.jpg"
-                width="1280"
-                height="720"
-                loading="lazy"
-                alt="Desktop detail: the original and restored colored Orbit images in Capsulith."
-            /></a>
-            <figcaption>
-              49,152 RGBA bytes restored and compared in the prepared example.
-            </figcaption>
-          </figure>
-          <div class="feature-copy">
-            <h3 id="capsulith-title">Capsulith</h3>
-            <p class="feature-lead">The worker ends. The image stays.</p>
-            <p>
-              Execute a compiled ARM64 decoder, reopen its pixel allocation in a
-              fresh worker, inspect the bytes and free native memory.
-            </p>
-            <p class="scope">
-              One known-source example. QOI, Unicorn and runtime notices stay
-              with the case.
-            </p>
-            <div class="text-actions">
-              <a href="https://nazeeh111.github.io/Capsulith/studio/image.html"
-                >Open the workbench</a
-              ><a href="/work/capsulith/">Inside the mechanism</a>
-            </div>
-          </div>
-        </article>
-        <article
-          class="work-feature feature-quantum"
-          id="case-qloom"
-          aria-labelledby="qloom-title"
-        >
-          <div class="feature-copy">
-            <h3 id="qloom-title">QLOOM</h3>
-            <p class="feature-lead">A different circuit. The same operation.</p>
-            <p>
-              Compile a logical circuit for a physical layout, compare candidate
-              mappings and check the resulting operation numerically.
-            </p>
-            <p class="scope">
-              CPU numerical evidence. No QPU measurement or universal proof.
-            </p>
-            <div class="text-actions">
-              <a href="/work/qloom/">Inspect the circuit case</a
-              ><a href="https://github.com/nazeeh111/QLOOM#run-the-studio"
-                >Run locally</a
-              >
-            </div>
-          </div>
-          <figure class="feature-media">
-            <a href="/work/qloom/"
-              ><picture
-                ><source
-                  media="(max-width:640px)"
-                  srcset="/assets/featured/qloom-circuit-mobile.png" />
-                <img
-                  src="/assets/featured/qloom-circuit.png"
-                  width="2112"
-                  height="704"
-                  loading="lazy"
-                  alt="Logical gates and the selected QLOOM physical operations with their retained initial and final mapping." /></picture
-            ></a>
-            <figcaption>
-              The retained line-3 case, with its source, mapping and error
-              check.
-            </figcaption>
-          </figure>
-        </article>
-        <div class="more-work">
-          <h3>Keep exploring</h3>
-          <p>
-            <a id="case-vibescope" href="/work/vibescope/">VibeScope</a>,
-            <a id="case-photonsmith" href="/work/photonsmith/">PhotonSmith</a>,
-            <a id="case-instrumentzero" href="/work/instrumentzero/"
-              >InstrumentZero</a
-            >, <a id="case-nstack" href="/work/nstack/">nstack</a> and the
-            <a id="geometry" href="/work/solidrift/"
-              >Solidrift failure investigation</a
-            >.
-          </p>
-        </div>
-        <div class="all-work-route" id="projects">
-          <span id="project-geometry"></span><span id="project-sensing"></span
-          ><span id="project-data-and-motion"></span
-          ><span id="project-systems"></span
-          ><span id="project-scientific-tools"></span
-          ><a class="button button-light" href="/work/">Find a project</a>
-          <p>
-            Search the complete repository index by topic, technology or
-            discipline.
-          </p>
-        </div>
-      </section>
-      <section
-        class="research-preview"
-        id="research"
-        aria-labelledby="research-title"
-      >
-        <div class="shell">
-          <div class="section-heading">
-            <h2 id="research-title">Research</h2>
-            <a href="/research/">Read the library</a>
-          </div>
-          <div class="research-pair">
-            <article id="science">
-              <h3>What two copies can reveal</h3>
-              <p>
-                Joint measurements distinguish states that separate-copy
-                strategies cannot match in the study’s restricted eight-qubit
-                problem.
-              </p>
-              <div
-                class="exact-result"
-                role="group"
-                aria-label="Exact two-copy success probabilities"
-              >
-                <div>
-                  <strong>75%</strong><span>Joint sector measurement</span>
-                </div>
-                <div>
-                  <strong>&lt;66.91%</strong
-                  ><span>Certified separate-copy upper bound</span>
-                </div>
-              </div>
-              <p class="scope">
-                Two total copies for both strategies. The state family and
-                symmetry assumptions matter.
-              </p>
-              <a href="/research/phaseglass-quantum/">Read Phaseglass</a>
-            </article>
-            <article>
-              <h3>Quantum Records</h3>
-              <p>
-                The best encoding for separated observers can be the worse
-                encoding when their records are read together.
-              </p>
-              <a href="/research/quantum-records/">Read Quantum Records</a>
-              <div class="research-more">
-                <p>
-                  The library also covers contact derivatives, spectral bounds
-                  and other working research drafts.
-                </p>
-                <a href="/research/">Browse all studies</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="about shell" id="about" aria-labelledby="about-title">
-        <h2 id="about-title">About</h2>
-        <div class="about-body">
-          <p class="about-statement">
-            I study electrical engineering and physics at Virginia Tech,
-            building software that connects models, measurements and useful
-            tools.
-          </p>
-          <div class="contribution-copy">
-            <h3>Contributions upstream</h3>
-            <ul>
-              <li>
-                <a href="https://github.com/pyvista/pyvista/pull/9457"
-                  >PyVista</a
-                ><span>Periodic seams in a parametric surface.</span>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/Pattern-Projector/pattern-projector/pull/431"
-                  >Pattern Projector</a
-                ><span>Viewport transforms and calibration.</span>
-              </li>
-              <li>
-                <a href="https://github.com/github/advisory-database/pull/9912"
-                  >GitHub advisory database</a
-                ><span>Django package and affected-version mapping.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="site-footer">
-      <div class="shell">
-        <div class="footer-top">
-          <h2>Keep in touch</h2>
-          <nav aria-label="Footer">
-            <a href="https://github.com/nazeeh111">GitHub</a
-            ><a href="/work/">Work</a><a href="/research/">Research</a
-            ><a href="https://github.com/nazeeh111/nazeeh111.github.io"
-              >Site source</a
-            >
-          </nav>
-        </div>
-        <p class="footer-name">Nazeeh Abdul-Hadi</p>
-      </div>
-    </footer>
-  </body>
-</html>
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'self'; font-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Nazeeh Abdul-Hadi · Physics, learning and systems</title>
+<link rel="stylesheet" href="/assets/design/portfolio.css">
+<meta name="description" content="Nazeeh Abdul-Hadi’s physics, learning and systems projects. Inspect real photonics, hardware, materials and software evidence.">
+<link rel="canonical" href="https://nazeeh111.github.io/">
+<link rel="icon" href="/assets/favicon.svg">
+<meta name="theme-color" content="#f7f9fb">
+<meta property="og:type" content="website"><meta property="og:title" content="Nazeeh Abdul-Hadi · Physics, learning and systems"><meta property="og:description" content="Working tools and inspectable results across physics, learning and systems."><meta property="og:url" content="https://nazeeh111.github.io/"><meta property="og:image" content="https://nazeeh111.github.io/assets/social/portfolio-preview.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Nazeeh Abdul-Hadi’s engineering portfolio with retained PhotonSmith numerical figures."><meta name="twitter:card" content="summary_large_image">
+<script src="/assets/portfolio.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="masthead shell">
+  <a class="identity" href="/" aria-label="Nazeeh Abdul-Hadi home"><span class="full-name">Nazeeh Abdul-Hadi</span><span class="short-name" aria-hidden="true">Nazeeh</span></a>
+  <nav aria-label="Main navigation"><a href="/work/">Work</a><a href="/research/">Research</a><a href="#about">About</a></nav>
+</header>
+<main id="main">
+<section class="opening shell" aria-labelledby="intro">
+  <div class="introduction">
+    <h1 id="intro">Physics, learning<br>and systems.</h1>
+    <div class="biography"><p>I’m Nazeeh Abdul-Hadi, studying electrical engineering and physics at Virginia Tech.</p><a class="text-action" href="#selected">See selected work</a></div>
+  </div>
+  <div class="photon-heading"><h2>PhotonSmith</h2><a class="primary-action" href="/work/photonsmith/">Explore PhotonSmith</a></div>
+  <div class="photon-panels">
+    <figure class="field-panel"><a href="/work/photonsmith/" aria-label="Explore PhotonSmith’s simulated electric field"><picture><source media="(max-width:1050px)" srcset="/assets/featured/photonsmith-hero/assets/field-mobile.png"><img src="/assets/featured/photonsmith-hero/assets/field-desktop.png" width="640" height="576" fetchpriority="high" alt="Saved 1550 nm electric field Re(Ey)/Einc, including the photonic grating boundary, equal-scale micrometre axes and a colour scale from −2 to 2."></picture></a><figcaption>Stored M9 simulation at 1550 nm. <a href="/assets/featured/photonsmith-hero/assets/field-desktop.svg">Full-resolution field</a> · <a href="/assets/featured/photonsmith-hero/">Data and source</a></figcaption></figure>
+    <div class="spectrum-column"><p class="photon-statement">A grating. Its field.<br>Its spectrum.</p><p class="body">Design a periodic structure, then inspect the solved field and where the light goes.</p><figure><a href="/work/photonsmith/" aria-label="Explore PhotonSmith’s saved wavelength spectrum"><picture><source media="(max-width:1050px)" srcset="/assets/featured/photonsmith-hero/assets/spectrum-mobile.svg"><img src="/assets/featured/photonsmith-hero/assets/spectrum-desktop.svg" width="640" height="486" alt="Twenty-one stored wavelength solves from 1300 to 1700 nm, with efficiency into diffraction order +1 on a zero-based percentage axis."></picture></a><figcaption>21 stored wavelength solves, target order +1. A numerical 2D model, not a fabricated device.</figcaption></figure></div>
+  </div>
+</section>
+<section class="selected shell" id="selected" aria-labelledby="selected-title">
+  <div class="section-heading"><h2 id="selected-title">Selected work</h2><a href="/work/">Complete work index</a></div>
+  <article class="silicon story" id="siliconpilot" aria-labelledby="silicon-title">
+    <div class="story-heading"><div><h3 id="silicon-title">SILICONPILOT</h3><p class="statement">A neural model,<br>made into hardware.</p></div><div class="story-summary"><p>Compile a small classifier into fixed-point Verilog. Inspect the generated logic and the recorded design tradeoffs.</p><a class="text-action" href="https://nazeeh111.github.io/SILICONPILOT/">Explore recorded designs</a><a class="quiet-action" href="/work/siliconpilot/">How the compiler works</a></div></div>
+    <figure><a class="waveform detail" href="/assets/featured/siliconpilot-waveform.png" aria-label="Open the complete recorded SILICONPILOT waveform capture"><img src="/assets/featured/siliconpilot-waveform.png" alt="Actual recorded RTL waveform with clock, reset, valid/ready handshakes, busy and output data." width="1470" height="801" loading="lazy"></a><figcaption>Recorded RTL trace from the preserved 0.1.0 corpus. Simulated handshakes and timing, not board measurements. <a href="/assets/featured/siliconpilot-waveform.png">Full capture</a></figcaption></figure>
+    <div class="silicon-foot"><p>Generated arithmetic is checked against an independent integer reference.</p><a href="https://github.com/nazeeh111/SILICONPILOT/blob/6e2bbbe2faca1f10eb4a2a1e71a8aa858c56ffd1/README.md#generate-your-first-verilog-without-installing">Generate Verilog locally</a></div>
+  </article>
+</section>
+<section class="materials dark-field" aria-labelledby="material-title"><div class="shell materials-layout">
+  <figure><a class="crystal detail" href="/assets/featured/materialmind-workbench.jpg" aria-label="Open the complete MaterialMind workbench capture"><img src="/assets/featured/materialmind-workbench.jpg" alt="Actual PaMnF6 crystal geometry and unit-cell axes, excerpted from the recorded MaterialMind workbench." width="1440" height="1000" loading="lazy"></a><figcaption>PaMnF6, selected with its reference still unrevealed. Crystal detail from the actual workbench. WBM/Matbench Discovery data, CC BY 4.0. <a href="/assets/featured/materialmind-workbench.jpg">Full capture</a></figcaption></figure>
+  <div class="material-copy"><h2 id="material-title">MaterialMind</h2><p class="statement">Which crystal<br>comes next?</p><p>Rank a candidate pool, inspect uncertainty, then reveal an existing reference result. Export and restore the decision trail.</p><p class="scope">Retrospective DFT labels, not new calculations or material discoveries. The fitted policy did not beat adapted greedy.</p><a class="primary-action inverse" href="https://github.com/nazeeh111/MaterialMind/blob/8d11857fd54d93d1f5159e7e5105e1f927ccf33d/README.md#run-the-laboratory">Run the laboratory locally</a><a class="quiet-action" href="/work/materialmind/">Read the experiment</a></div>
+</div></section>
+<section class="morph shell section-space" aria-labelledby="morph-title">
+  <div class="morph-heading"><h2 id="morph-title">MorphProof</h2><p class="statement">Find the input that changes the answer.</p><p>Compare a bounded Python-to-Rust transformation, then keep the small input that explains a mismatch.</p><a class="text-action" href="https://github.com/nazeeh111/MorphProof/blob/36208c6a6ed15ae62c62e73eb99076fd5c79286d/docs/presentation/README.md">Inspect the worked case</a></div>
+  <div class="witness" role="group" aria-label="Recorded synthetic counterexample"><div class="witness-input"><p>Saved input</p><code>[1.0]</code></div><div><p>Python reference</p><strong>1.0</strong></div><div><p>Seeded Rust omission</p><strong>0.0</strong></div></div>
+  <div class="witness-caption"><p>One disclosed skipped-item seed. Restoring the loop passes the finite comparisons; this is not universal equivalence.</p><a href="/work/morphproof/">Source, checks and limits</a></div>
+  <details class="record-detail"><summary>See the complete recorded witness</summary><figure><picture><source media="(max-width:650px)" srcset="/assets/featured/morphproof-witness-mobile.png"><img src="/assets/featured/morphproof-witness.png" width="1200" height="640" alt="Original mechanism diagram disclosing the skip-first-item seed, the saved mismatch and deterministic restoration." loading="lazy"></picture><figcaption>Original native record: Rust 1.100.0. Its historical 1.99.1 footer differs from later, separate three-platform native CI. No new transformation runs in this page.</figcaption></figure></details>
+</section>
+<section class="ladder shell section-space" aria-labelledby="ladder-title">
+  <div class="ladder-intro"><div><h2 id="ladder-title">LadderProof</h2><p class="statement">A higher code.<br>A lower voltage.</p></div><div><p>Find the resistor tolerances that let a converter step backwards. Inspect the exact worst case, then select tolerances that meet a required minimum step.</p><a class="text-action" href="https://github.com/nazeeh111/LadderProof/blob/12604d131498ba3851bea6a45066a0d1d71fa7c0/README.md#try-the-complete-workflow">Run the tolerance workflow</a></div></div>
+  <figure><a class="ladder-record detail" href="/assets/featured/ladderproof-workbench.jpg" aria-label="Open the complete LadderProof six-bit workbench capture"><img src="/assets/featured/ladderproof-workbench.jpg" width="1280" height="2012" alt="Desktop detail of the attaining six-bit resistor ladder; on a phone, the recorded negative-step and 31→32 transition detail." loading="lazy"></a><figcaption><span class="desktop-caption">Attaining six-bit resistor assignment from the retained workbench.</span><span class="phone-caption">Recorded negative-step and 31→32 transition detail.</span> Ideal static circuit with independent intervals, not a measured device. <a href="/assets/featured/ladderproof-workbench.jpg">Full capture</a></figcaption></figure>
+  <div class="ladder-result"><p>Exact arithmetic. Every admitted corner.</p><a href="/work/ladderproof/">Inspect the certificate and catalog</a></div>
+</section>
+<section class="research-field section-space" id="research" aria-labelledby="research-title"><div class="shell research-layout">
+  <div><h2 id="research-title">Phaseglass Quantum</h2><p class="statement">What can two<br>copies reveal?</p><p>Joint measurements distinguish states that separate-copy strategies cannot match in this specified eight-qubit problem.</p><a class="primary-action" href="/research/phaseglass-quantum/">Read the exact result</a></div>
+  <div class="research-evidence"><p class="research-kind">Research study</p><dl class="exact-result"><div><dt>Joint sector measurement</dt><dd>75%</dd></div><div><dt>Separate-copy upper bound</dt><dd>&lt;66.91%</dd></div></dl><p class="scope">Exact result at the same two-total-copy budget, for the declared state families and symmetry assumptions. Longer-budget curves are separate simulations; no hardware advantage is established.</p><div class="research-more"><a href="/research/quantum-records/">Quantum Records</a><p>Why the preferred encoding changes when records are read together.</p><a href="/research/">Explore the research library</a></div></div>
+</div></section>
+<section class="archive shell section-space" aria-labelledby="archive-title"><div class="section-heading"><h2 id="archive-title">More work</h2><a href="/work/">Browse the complete index</a></div><nav class="archive-links" aria-label="Existing case studies"><a href="/work/solidframe/">SolidFrame</a><a href="/work/capsulith/">Capsulith</a><a href="/work/qloom/">QLOOM</a><a href="/work/photonsmith/">PhotonSmith</a><a href="/work/vibescope/">VibeScope</a><a href="/work/instrumentzero/">InstrumentZero</a><a href="/work/nstack/">nstack</a><a href="/work/solidrift/">Solidrift</a></nav></section>
+<section class="about shell section-space" id="about" aria-labelledby="about-title"><h2 id="about-title">About</h2><div class="about-layout"><p class="about-copy">I study electrical engineering and physics at Virginia Tech, building scientific tools and systems software.</p><div class="upstream"><h3>Contributions upstream</h3><ul><li><a href="https://github.com/pyvista/pyvista/pull/9457">PyVista</a><p>Periodic seams in a parametric surface.</p></li><li><a href="https://github.com/Pattern-Projector/pattern-projector/pull/431">Pattern Projector</a><p>Viewport transforms and calibration.</p></li><li><a href="https://github.com/github/advisory-database/pull/9912">GitHub advisory database</a><p>Django package and affected-version mapping.</p></li></ul></div></div></section>
+</main>
+<footer class="site-footer"><div class="shell footer-top"><p>Nazeeh Abdul-Hadi</p><nav aria-label="Footer"><a href="https://github.com/nazeeh111">GitHub</a><a href="/assets/provenance.html">Sources &amp; foundations</a><a href="https://github.com/nazeeh111/nazeeh111.github.io">Site source</a></nav></div><p class="shell footer-note">Project source, inherited foundations and scientific assumptions remain part of each case.</p></footer>
+</body></html>

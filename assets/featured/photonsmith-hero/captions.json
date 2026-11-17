@@ -1,0 +1,23 @@
+{
+  "alt": {
+    "field": "Stored real electric field across a two-dimensional periodic photonic grating at 1550 nm. Blue and red encode signed Re(Ey) relative to unit incident amplitude; outlined rectangles show the saved dielectric geometry. Both spatial axes use micrometres at equal scale.",
+    "spectrum": "Twenty-one stored target-order efficiency samples from 1300 to 1700 nanometres. Open circles show the actual solves; straight segments connect them. The vertical axis is incident-power percentage from zero to one hundred."
+  },
+  "captions": {
+    "short_field": "Stored M9 simulation at 1550 nm \u00b7 Re(Ey) relative to unit incident amplitude \u00b7 2D model, not measured intensity.",
+    "short_spectrum": "21 stored wavelength solves \u00b7 target order +1 \u00b7 percent of incident power. Straight segments connect samples; no intermediate solve.",
+    "combined": "Exact retained PhotonSmith data: all 97 \u00d7 96 signed real-field samples at 1550 nm, with the saved grating geometry and equal spatial scale, plus all 21 sampled target-order efficiencies. This is a legacy M9 two-dimensional numerical model, not device data. Search used M5. The field is Re(Ey) relative to unit incident amplitude, not intensity.",
+    "detail": "Wavelength is multiplied by 1000 from micrometres to nanometres, and efficiency by 100 from an incident-power fraction to percent. The spectrum samples are 1300\u20131700 nm in 20 nm steps; the separate 1550 nm design solve (93.58787717897128%) is not one of those 21 samples and is not inserted or fitted into the curve. The stored spectrum maximum is 93.18919426520034% at 1540 nm."
+  },
+  "underlying_values": [
+    "data/plot-data.json",
+    "assets/field.csv",
+    "assets/spectrum.csv"
+  ],
+  "integration": {
+    "field": "Use field-desktop.svg or field-mobile.svg at <=640px, preserving aspect ratio; matching PNGs are substantially smaller web fallbacks.",
+    "spectrum": "Use spectrum-desktop.svg or spectrum-mobile.svg at <=640px, preserving aspect ratio.",
+    "phone": "Mobile files are designed at 320 CSS pixels; the review390 PNGs are direct numeric rerasterizations of the same composition at 390 pixels.",
+    "font": "IBM Plex Sans glyph outlines, no external font runtime."
+  }
+}

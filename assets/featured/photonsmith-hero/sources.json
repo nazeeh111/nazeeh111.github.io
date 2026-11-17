@@ -1,0 +1,26 @@
+{
+  "original_data": {
+    "revision": "13912d9d640938acf8ce299a152298666ae61d44",
+    "sha256": "bf63ba3ebec2013dde9f10cbd65fa438634d71abd1bbf504577701dbd8a23b1e",
+    "url": "https://github.com/nazeeh111/PhotonSmith/blob/13912d9d640938acf8ce299a152298666ae61d44/experiments/designs/interactive-refined-1550nm.json",
+    "bytes": 733968
+  },
+  "minimal_plot_data": {
+    "path": "data/plot-data.json",
+    "sha256": "21c935558d8fe79e937e47c959f7d6288dc563c3671fc4440a196269b80055f7",
+    "bytes": 203779,
+    "method": "Copy geometry, material_index, field nx/nz/x/z/real/epsilon and spectrum wavelength/efficiency; no numeric change. Omit unused imaginary field, powers, validation and model-training metadata."
+  },
+  "font": {
+    "name": "IBMPlexSans[wdth,wght].ttf",
+    "path": "ofl/ibmplexsans/IBMPlexSans[wdth,wght].ttf",
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexsans/IBMPlexSans%5Bwdth%2Cwght%5D.ttf",
+    "git_blob": "30f837e8b02e8ecddce6cbebc425b1f422392515",
+    "sha256": "3b031aa4216174205bd8471f88a49b91f093169e9e87bd5262242bc5967fe2e3"
+  },
+  "font_local_path": "fonts/IBMPlexSans.ttf",
+  "license_paths": [
+    "LICENSE.txt",
+    "fonts/OFL.txt"
+  ]
+}

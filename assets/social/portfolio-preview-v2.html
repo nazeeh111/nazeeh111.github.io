@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Nazeeh Abdul-Hadi · Portfolio share image</title>
+    <style>
+      @font-face {
+        font-family: Rethink;
+        src: url("../fonts/RethinkSans.ttf");
+        font-weight: 400 800;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1200px;
+        height: 630px;
+        background: #0a0a0a;
+        color: #efefef;
+        font-family: Rethink, Arial, sans-serif;
+      }
+      .preview {
+        padding: 56px 64px;
+        height: 630px;
+        display: grid;
+        grid-template-columns: 1.15fr 1fr;
+        gap: 72px;
+        align-items: center;
+      }
+      .identity img {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 40px;
+      }
+      h1 {
+        font-size: 76px;
+        line-height: 0.95;
+        letter-spacing: -0.06em;
+        margin: 0;
+        font-weight: 650;
+      }
+      h1 span {
+        display: block;
+      }
+      p {
+        font-size: 24px;
+        line-height: 1.35;
+        margin: 28px 0 0;
+        max-width: 25ch;
+        color: #b0b0b0;
+      }
+      .rule {
+        width: 80px;
+        height: 6px;
+        background: #b11226;
+        margin-top: 32px;
+      }
+      .artifact h2 {
+        font-size: 24px;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+        margin: 0 0 20px;
+        font-weight: 600;
+      }
+      .artifact img {
+        display: block;
+        width: 100%;
+        height: auto;
+        image-rendering: pixelated;
+      }
+      .artifact p {
+        font-size: 16px;
+        margin-top: 16px;
+        max-width: none;
+      }
+      .domain {
+        position: absolute;
+        left: 64px;
+        bottom: 40px;
+        color: #b0b0b0;
+        font-size: 18px;
+        letter-spacing: 0.01em;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="preview">
+      <div class="identity">
+        <img src="../identity.png" alt="" width="36" height="36" />
+        <h1><span>Nazeeh</span><span>Abdul-Hadi</span></h1>
+        <p>Electrical engineering<br />and physics at Virginia Tech.</p>
+        <div class="rule"></div>
+      </div>
+      <div class="artifact">
+        <h2>Working tools.<br />Inspectable engineering.</h2>
+        <img
+          src="../featured/vibescope/enhanced-frame72.png"
+          width="320"
+          height="192"
+          alt="VibeScope’s retained visualization ×20 of controlled synthetic frame72."
+        />
+        <p>VibeScope · recorded synthetic example</p>
+      </div>
+    </main>
+    <div class="domain">nazeeh111.github.io</div>
+  </body>
+</html>
