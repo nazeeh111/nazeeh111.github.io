@@ -1012,7 +1012,7 @@
     },
     {
       "name": "advisory-database",
-      "summary": "Fork of GitHub\u2019s database of open-source security advisories and CVEs.",
+      "summary": "Fork of GitHub’s database of open-source security advisories and CVEs.",
       "url": "https://github.com/nazeeh111/advisory-database",
       "subject": "Systems & developer tools",
       "kind": "Fork",
@@ -1044,7 +1044,7 @@
     },
     {
       "name": "binaryen.js",
-      "summary": "Fork of Binaryen\u2019s JavaScript API for generating and optimizing WebAssembly.",
+      "summary": "Fork of Binaryen’s JavaScript API for generating and optimizing WebAssembly.",
       "url": "https://github.com/nazeeh111/binaryen.js",
       "subject": "Systems & developer tools",
       "kind": "Fork",
