@@ -1012,7 +1012,7 @@
     },
     {
       "name": "advisory-database",
-      "summary": "Fork of GitHub’s database of open-source security advisories and CVEs.",
+      "summary": "Fork of GitHub\u2019s database of open-source security advisories and CVEs.",
       "url": "https://github.com/nazeeh111/advisory-database",
       "subject": "Systems & developer tools",
       "kind": "Fork",
@@ -1040,11 +1040,11 @@
         "desktop-application"
       ],
       "upstream": "Neo23x0/Loki",
-      "source_revision": "13651b2cfe27886ff11b9cdf1dee7b12b24c00bb"
+      "source_revision": "594e6144245769b69b642252f7877250c6890308"
     },
     {
       "name": "binaryen.js",
-      "summary": "Fork of Binaryen’s JavaScript API for generating and optimizing WebAssembly.",
+      "summary": "Fork of Binaryen\u2019s JavaScript API for generating and optimizing WebAssembly.",
       "url": "https://github.com/nazeeh111/binaryen.js",
       "subject": "Systems & developer tools",
       "kind": "Fork",
