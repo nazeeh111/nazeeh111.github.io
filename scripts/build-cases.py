@@ -73,7 +73,10 @@ def render(cases, files):
                 m=url(image['mobile_src'])
                 if not m.startswith('/') or m[1:]not in files:
                     raise ValueError("Case mobile image must be a listed public asset")
-                mobile='<source media="(max-width:640px)" srcset="'+escape(m)+'">'
+                width=image.get('mobile_width',640)
+                if type(width) is not int or not 320<=width<=1600:
+                    raise ValueError("Case mobile width must be an integer between320 and1600")
+                mobile='<source media="(max-width:'+str(width)+'px)" srcset="'+escape(m)+'">'
             crops=details(image,src)
             css='case-media has-details' if crops else 'case-media'
             media.append('<figure class="'+css+'"><a class="capture-overview" href="'+escape(src)+'"><picture>'+mobile+'<img src="'+escape(src)+'" alt="'+escape(image['alt'])+'" loading="lazy"></picture></a>'+crops+'<figcaption>'+escape(image['caption'])+' <a class="full-capture-link" href="'+escape(src)+'">Open full capture <span aria-hidden="true">↗</span></a></figcaption></figure>')

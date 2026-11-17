@@ -87,7 +87,8 @@
         <noscript><p>All repositories are listed below.</p></noscript>
         <div id="catalog-empty" class="empty" hidden>
           <h2>No matching projects.</h2>
-          <p>No projects match these filters.</p>
+          <p id="catalog-empty-message">No projects match these filters.</p>
+          <div class="empty-actions"><button class="button" id="search-all-disciplines" type="button" hidden>Search all disciplines</button></div>
         </div>
         <ul class="project-list" id="project-list">
           {{PROJECTS}}

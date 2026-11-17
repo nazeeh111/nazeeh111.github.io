@@ -291,6 +291,7 @@ summary:focus-visible {
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
 }
 .feature-quantum {
+  --focus: #b11226;
   background: var(--light);
   color: var(--dark);
   margin-inline: calc(-1 * var(--gutter));
@@ -1353,3 +1354,9 @@ pre {
     top: calc(-100% * var(--crop-y) / var(--crop-height));
   }
 }
+
+/* Reviewed curation behavior in the current visual system. */
+.empty-actions { display:flex; gap:24px; flex-wrap:wrap; margin-top:24px; }
+.empty-actions .button { border:0; }
+.contact-route p { margin-top:12px; }
+.contact-route .button { margin-top:20px; }

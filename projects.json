@@ -1,6 +1,6 @@
 {
-  "observed_date": "2026-11-16",
-  "scope": "Retained public repositories. Upstream forks and foundations are identified; source metadata is a snapshot, not runtime validation.",
+  "observed_date": "2026-11-17",
+  "scope": "Owner-curated retained public projects. Contribution forks removed by owner request; upstream foundations and historical source snapshots remain explicitly credited. Descriptions are not runtime validation.",
   "projects": [
     {
       "name": "Solidrift",
@@ -68,7 +68,11 @@
         "Python"
       ],
       "upstream": null,
-      "source_revision": "ddcce9317bdc59e053f6b6fec3cedf43b9203111"
+      "source_revision": "ddcce9317bdc59e053f6b6fec3cedf43b9203111",
+      "subjects": [
+        "Physics & quantum",
+        "Systems & developer tools"
+      ]
     },
     {
       "name": "MaterialMind",
@@ -87,7 +91,11 @@
         "ml"
       ],
       "upstream": null,
-      "source_revision": "2340213234ab6ddf8e0f5f86361d71ac432ff59c"
+      "source_revision": "c879afa4b616649cac73ef46b010f24e12ed3544",
+      "subjects": [
+        "ML & data",
+        "Physics & quantum"
+      ]
     },
     {
       "name": "SILICONPILOT",
@@ -104,7 +112,11 @@
         "electrical-engineering"
       ],
       "upstream": null,
-      "source_revision": "6e2bbbe2faca1f10eb4a2a1e71a8aa858c56ffd1"
+      "source_revision": "6e2bbbe2faca1f10eb4a2a1e71a8aa858c56ffd1",
+      "subjects": [
+        "EE & sensing",
+        "ML & data"
+      ]
     },
     {
       "name": "EchoSight",
@@ -121,7 +133,11 @@
         "electrical-engineering"
       ],
       "upstream": null,
-      "source_revision": "8759b0faa462b47d35bfc7d46755bc32e21cca1a"
+      "source_revision": "8759b0faa462b47d35bfc7d46755bc32e21cca1a",
+      "subjects": [
+        "EE & sensing",
+        "Physics & quantum"
+      ]
     },
     {
       "name": "Capsulith",
@@ -258,7 +274,11 @@
         "Python"
       ],
       "upstream": null,
-      "source_revision": "9b9c7885584bedb1ef0965ed9d96b1ea83b01dc7"
+      "source_revision": "9b9c7885584bedb1ef0965ed9d96b1ea83b01dc7",
+      "subjects": [
+        "Physics & quantum",
+        "ML & data"
+      ]
     },
     {
       "name": "Faultsplice",
@@ -423,7 +443,11 @@
         "Python"
       ],
       "upstream": null,
-      "source_revision": "0fd63ab89535661e40cb798201fa206c3e0b7265"
+      "source_revision": "0fd63ab89535661e40cb798201fa206c3e0b7265",
+      "subjects": [
+        "Systems & developer tools",
+        "ML & data"
+      ]
     },
     {
       "name": "civicledger",
@@ -474,7 +498,11 @@
         "Python"
       ],
       "upstream": null,
-      "source_revision": "f69bfdc9e8bd12efaa49ab3cf35620afdcdffd45"
+      "source_revision": "f69bfdc9e8bd12efaa49ab3cf35620afdcdffd45",
+      "subjects": [
+        "Physics & quantum",
+        "ML & data"
+      ]
     },
     {
       "name": "Forkwake",
@@ -543,7 +571,11 @@
         "electrical-engineering"
       ],
       "upstream": null,
-      "source_revision": "c1a252300159e2e8e161db43191aafcbea701077"
+      "source_revision": "c1a252300159e2e8e161db43191aafcbea701077",
+      "subjects": [
+        "EE & sensing",
+        "Physics & quantum"
+      ]
     },
     {
       "name": "KERNELDARWIN",
@@ -560,7 +592,11 @@
         "JavaScript"
       ],
       "upstream": null,
-      "source_revision": "e4d490c87f3e07f40bdee0bd19c58a346be87dac"
+      "source_revision": "e4d490c87f3e07f40bdee0bd19c58a346be87dac",
+      "subjects": [
+        "Systems & developer tools",
+        "ML & data"
+      ]
     },
     {
       "name": "Kinetyl",
@@ -593,7 +629,7 @@
         "property-based-testing"
       ],
       "upstream": null,
-      "source_revision": "36208c6a6ed15ae62c62e73eb99076fd5c79286d"
+      "source_revision": "80a0daaf3eec332642159971ac33b8c59e3d0eaf"
     },
     {
       "name": "Muster",
@@ -690,7 +726,11 @@
         "python"
       ],
       "upstream": null,
-      "source_revision": "13912d9d640938acf8ce299a152298666ae61d44"
+      "source_revision": "13912d9d640938acf8ce299a152298666ae61d44",
+      "subjects": [
+        "Physics & quantum",
+        "EE & sensing"
+      ]
     },
     {
       "name": "PolicyDelta",
@@ -909,7 +949,11 @@
         "Python"
       ],
       "upstream": null,
-      "source_revision": "bd396be42e63bfb89b84ec7773aa944609d58b62"
+      "source_revision": "bd396be42e63bfb89b84ec7773aa944609d58b62",
+      "subjects": [
+        "ML & data",
+        "Creative & everyday tools"
+      ]
     },
     {
       "name": "Syllune",
@@ -993,124 +1037,6 @@
       ],
       "upstream": null,
       "source_revision": "6588f67464fe0d66b2b6bef320d0e927c72f3ecc"
-    },
-    {
-      "name": "AdaCAD",
-      "summary": "Fork of AdaCAD, tools for creating and editing weaving drafts with algorithms.",
-      "url": "https://github.com/nazeeh111/AdaCAD",
-      "subject": "Geometry & CAD",
-      "kind": "Fork",
-      "topics": [
-        "weaving",
-        "textiles",
-        "computational-design",
-        "creative-coding",
-        "Ada"
-      ],
-      "upstream": "UnstableDesign/AdaCAD",
-      "source_revision": "249c4e374532634b7517d6a8a75894b7b9705bfd"
-    },
-    {
-      "name": "advisory-database",
-      "summary": "Fork of GitHub’s database of open-source security advisories and CVEs.",
-      "url": "https://github.com/nazeeh111/advisory-database",
-      "subject": "Systems & developer tools",
-      "kind": "Fork",
-      "topics": [
-        "security-advisories",
-        "cve",
-        "osv",
-        "vulnerability-database"
-      ],
-      "upstream": "github/advisory-database",
-      "source_revision": "ee99060a9675529b3a9a760a0f1002538ba7cefb"
-    },
-    {
-      "name": "AsterScan",
-      "summary": "LOKI-based scanner for known indicators and YARA rules, with a desktop workspace and offline reports.",
-      "url": "https://github.com/nazeeh111/AsterScan",
-      "subject": "Systems & developer tools",
-      "kind": "Fork",
-      "topics": [
-        "yara",
-        "ioc",
-        "malware-scanner",
-        "incident-response",
-        "python",
-        "desktop-application"
-      ],
-      "upstream": "Neo23x0/Loki",
-      "source_revision": "594e6144245769b69b642252f7877250c6890308"
-    },
-    {
-      "name": "binaryen.js",
-      "summary": "Fork of Binaryen’s JavaScript API for generating and optimizing WebAssembly.",
-      "url": "https://github.com/nazeeh111/binaryen.js",
-      "subject": "Systems & developer tools",
-      "kind": "Fork",
-      "topics": [
-        "binaryen",
-        "webassembly",
-        "javascript",
-        "nodejs",
-        "compiler"
-      ],
-      "upstream": "AssemblyScript/binaryen.js",
-      "source_revision": "6faff286eb98d8d48a4d87d6565d4e590947c35e"
-    },
-    {
-      "name": "fluids",
-      "summary": "Fork of Fluids, a Python library for fluid dynamics in chemical and mechanical engineering.",
-      "url": "https://github.com/nazeeh111/fluids",
-      "subject": "Physics & quantum",
-      "kind": "Fork",
-      "topics": [
-        "fluid-dynamics",
-        "chemical-engineering",
-        "hydraulics",
-        "python",
-        "scientific-computing"
-      ],
-      "upstream": "CalebBell/fluids",
-      "source_revision": "34581313817d9c1f0590449b049efbd2afe4bdf0"
-    },
-    {
-      "name": "meent",
-      "summary": "Fork of Meent, a Python package for electromagnetic simulation and optimization.",
-      "url": "https://github.com/nazeeh111/meent",
-      "subject": "Physics & quantum",
-      "kind": "Fork",
-      "topics": [
-        "electromagnetics",
-        "rcwa",
-        "photonics",
-        "simulation",
-        "python"
-      ],
-      "upstream": "kc-ml2/meent",
-      "source_revision": "37f9fd5c3de31bcd73799d89e0bd50ce2a49f1ef"
-    },
-    {
-      "name": "Pattern Projector",
-      "summary": "Sewing-pattern projection fork: four-corner calibration, PDF layers and page stitching, with recoverable settings and compact controls.",
-      "url": "https://github.com/nazeeh111/pattern-projector",
-      "subject": "Geometry & CAD",
-      "kind": "Fork",
-      "topics": [
-        "nextjs",
-        "pdf-viewer",
-        "progressive-web-app",
-        "projective-geometry",
-        "projector-calibration",
-        "react",
-        "sewing-patterns",
-        "typescript"
-      ],
-      "upstream": "Pattern-Projector/pattern-projector",
-      "source_revision": "93e8c6936cd5fb65a5c811cb2132aabbd8db79d8",
-      "aliases": [
-        "pattern-projector"
-      ]
     },
     {
       "name": "Automation Hub",

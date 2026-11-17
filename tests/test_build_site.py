@@ -42,6 +42,25 @@ class BuildTests(unittest.TestCase):
    fresh=Path(d)/'fresh';builder.publish(fresh,rendered);self.assertTrue((fresh/'.build-manifest.json').is_file())
    for path,data in rendered.items():self.assertEqual(hashlib.sha256((fresh/path).read_bytes()).digest(),hashlib.sha256(data).digest())
 
+ def test_retained_curation_case_assets_and_generated_work_index(self):
+  outputs=builder.render(self.files)
+  from html.parser import HTMLParser
+  class Catalog(HTMLParser):
+   def __init__(self):super().__init__();self.entries=[]
+   def handle_starttag(self,tag,attrs):
+    a=dict(attrs)
+    if tag=='li' and a.get('class')=='project-item':self.entries.append(a)
+  page=Catalog();page.feed(outputs['work/index.html'].decode());self.assertEqual(len(page.entries),59)
+  projects=json.loads(self.files['projects.json'])['projects'];names={p['url'].rsplit('/',1)[-1]for p in projects}
+  self.assertFalse(names & {'AsterScan','AdaCAD','advisory-database','pattern-projector','binaryen.js','meent','fluids'})
+  for name in ('QubitGuard','FLUXATLAS'):
+   entry=next(e for e in page.entries if name in e['data-search'])
+   self.assertEqual(set(entry['data-subjects'].split('|')),{'Physics & quantum','ML & data'})
+  cases=json.loads(self.files['cases.json']);self.assertEqual(len(cases),9)
+  for case in cases:self.assertIn(case['case_url'].lstrip('/')+'index.html',outputs)
+  self.assertIn(b'/assets/featured/materialmind/query-mobile.png',outputs['work/materialmind/index.html'])
+  self.assertIn(b'Open my GitHub profile',outputs['index.html'])
+
  def test_only_reviewed_inputs_enter_extracted_archive_build(self):
   with tempfile.TemporaryDirectory() as d:
    root=Path(d);source=root/'source';shutil.copytree(ROOT,source,ignore=shutil.ignore_patterns('.git','__pycache__'))
