@@ -21,7 +21,7 @@
     },
     {
       "name": "SolidFrame",
-      "summary": "Chili3D-based browser CAD for modeling plates and brackets, saving locally and exporting STEP or STL.",
+      "summary": "Parametric browser CAD on Chili3D and OpenCascade: sketch, constrain, edit solid features and export STEP or STL.",
       "url": "https://github.com/nazeeh111/SolidFrame",
       "subject": "Geometry & CAD",
       "kind": "TypeScript",
@@ -34,7 +34,7 @@
         "webassembly"
       ],
       "upstream": null,
-      "source_revision": "4f3540f949be41ef9f35e1c3f8b815db0826d29d"
+      "source_revision": "7986c79725cf7429d7ec816d647805947ce434bf"
     },
     {
       "name": "nstack",
@@ -976,7 +976,7 @@
         "electrical-engineering"
       ],
       "upstream": null,
-      "source_revision": "db2594d6ff15d75151785c388ed35c473533d3b9"
+      "source_revision": "fdd2991196ce3dc22667f20c6681ef0754ac461e"
     },
     {
       "name": "WideAwake",

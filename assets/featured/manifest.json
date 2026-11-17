@@ -2,42 +2,107 @@
   "observed": "2026-11-17",
   "entries": {
     "solidframe": {
-      "files": [
-        "solidframe-fixture.jpg"
-      ],
       "repository": "SolidFrame",
-      "evidence_commit": "3876655ea1e19eba6b5f2de204d3b6a0f946263e",
-      "repository_head_observed": "4f3540f949be41ef9f35e1c3f8b815db0826d29d",
-      "source_path": "docs/images/editable-fixture.jpg",
-      "recorded_date": "2026-10-26",
-      "kind": "retained actual browser capture",
-      "current_source_check": "Older native-fixture snapshot checked relative to image commit; root-selected current default commit/tree recorded separately. Retained October26capture, not a newly accepted application capture.",
-      "limit": "Not a new browser execution or manufacturing approval; part dimensions are independent",
+      "evidence_commit": "7986c79725cf7429d7ec816d647805947ce434bf",
+      "repository_tree_observed": "96eb0e8bbe46338de62de7a1ceb309395c7f03e8",
+      "recorded_date": "2026-11-17",
+      "kind": "fresh actual deployed CAD workspace browser capture",
+      "workflow_success": "https://github.com/nazeeh111/SolidFrame/actions/runs/44045764173",
+      "files": [
+        "solidframe-fixture-current.png",
+        "solidframe-current-journey.json"
+      ],
+      "copied_sha256": {
+        "solidframe-fixture-current.png": "49ec3fe2af8f1340ae31e1acaac22ee443d55eb446c052f51911007ac63e5682",
+        "solidframe-current-journey.json": "5a85ef79e4a06abc16bd413b66b11ce201ecdc5d70630a2e4188bb94b0fc5154"
+      },
       "foundations": [
         "Chili3D",
         "OpenCascade"
       ],
-      "copied_sha256": {
-        "solidframe-fixture.jpg": "accfe975d068db4255538d78b8eb94ed15e2322515464182eb2ce5d954d0a274"
-      },
-      "repository_tree_observed": "80335116d0893f33e781b66bca7d5cd57b381ebc"
+      "limit": "Independent editable dimensions; no manufacturing approval, full assembly constraint claim or new universal export acceptance"
     },
     "vibescope": {
-      "files": [
-        "vibescope-measurement.png"
-      ],
       "repository": "VibeScope",
-      "evidence_commit": "28be68bee807a9e901f901ae4d4967a464cba919",
-      "measurement_interface_reference": "7dbfef264152a27fcbfe16625573d32e351c18fb",
-      "repository_head_observed": "5c649a4870238ff9521159a63f6ebf29740f59c1",
-      "source_path": "examples/measurement/measurement.png",
-      "recorded_date": "2026-10-25",
-      "kind": "retained actual controlled-synthetic measurement export",
-      "current_source_check": "motion.py, signals.py, pipeline.py unchanged from documented measurement commit; current Local history additions preserve the approved measurement interface",
-      "limit": "Original-frame image-plane displacement; display gain is excluded; physical calibration and arbitrary media not established",
-      "copied_sha256": {
-        "vibescope-measurement.png": "67d6019c1ed0cee398e8bcb4318728ab7ae79aa6e6e192cf720df82c3246f58e"
-      }
+      "application_evidence_commit": "db2594d6ff15d75151785c388ed35c473533d3b9",
+      "application_evidence_tree": "0386b5004fabaa1408c455c50b47c8613b9a7675",
+      "accepted_presentation_commit": "321e35721f7238cea41231056479d78e01dfd65d",
+      "public_main_observed": "fdd2991196ce3dc22667f20c6681ef0754ac461e",
+      "recorded_date": "2026-11-17",
+      "kind": "accepted actual paired-gain browser measurements and unchanged source-derived figures",
+      "copied": {
+        "vibescope/gain5-report.json": {
+          "producer_path": "docs/presentation/gain5-report.json",
+          "sha256": "a60eb313f4f8cafc727f841c56c0b20d6876c9096c23049949d1ca73420a3fae",
+          "bytes": 27424
+        },
+        "vibescope/enhanced-frame72.png": {
+          "producer_path": "docs/presentation/enhanced-frame72.png",
+          "sha256": "da9b3af617c00e113c160ae7dcb01b398f507927cd4f683dbf2da974a703dc79",
+          "bytes": 88281
+        },
+        "vibescope/gain20-displacement.csv": {
+          "producer_path": "docs/presentation/gain20-displacement.csv",
+          "sha256": "fb90300dba4560c10bb828826d56f875c52f51736cfb31a631f4ace49877853a",
+          "bytes": 23442
+        },
+        "vibescope/workspace-current.png": {
+          "producer_path": "docs/presentation/workspace-current.png",
+          "sha256": "186fb715172eaf17393cfaa1f393a41bb804c63656c6e2adc2528db9daf5fd42",
+          "bytes": 567259
+        },
+        "vibescope/render.py": {
+          "producer_path": "docs/presentation/render.py",
+          "sha256": "0e52f74ecafbfc39af2fce6aa95491a96e6de08e8041495e1890cef7e864e59e",
+          "bytes": 5654
+        },
+        "vibescope/gain20-report.json": {
+          "producer_path": "docs/presentation/gain20-report.json",
+          "sha256": "e1be14fde2a8184a2bfe2b27115d2bfc3621a5c6d0c4239f4fff62b43144932c",
+          "bytes": 27425
+        },
+        "vibescope/README.md": {
+          "producer_path": "docs/presentation/README.md",
+          "sha256": "43bb71a4fd00c95cbae4217a56dfa0b4b62eadc184f0323ac7e32de13af1ecaa",
+          "bytes": 2375
+        },
+        "vibescope/measurement-story-mobile.svg": {
+          "producer_path": "docs/presentation/measurement-story-mobile.svg",
+          "sha256": "3f6df551154c1ebf3a6e01cc3a62f4451f8148360acb0a3dedfd9406420ab659",
+          "bytes": 194153
+        },
+        "vibescope/measurement-story.png": {
+          "producer_path": "docs/presentation/measurement-story.png",
+          "sha256": "ed76b2df641a2cccb533d7608eb06a6e0f15751119a6203bbafe12486de680dc",
+          "bytes": 480489
+        },
+        "vibescope/manifest.json": {
+          "producer_path": "docs/presentation/manifest.json",
+          "sha256": "c329a96a64b8405978086228a1e42345f387a8d22d4b9631883a91432d949c98",
+          "bytes": 3523
+        },
+        "vibescope/measurement-story.svg": {
+          "producer_path": "docs/presentation/measurement-story.svg",
+          "sha256": "c02d1b24306f297a07d177f4da111c8ded6a9bbdfc15fc9d4ad6ce93860c8118",
+          "bytes": 203437
+        },
+        "vibescope/measurement-story-mobile.png": {
+          "producer_path": "docs/presentation/measurement-story-mobile.png",
+          "sha256": "ef0143a36c2cdbd82310639b1ff9e63d56c0dce9ee42a8b51a2b9817cdb74e76",
+          "bytes": 434877
+        },
+        "vibescope/original-frame72.png": {
+          "producer_path": "docs/presentation/original-frame72.png",
+          "sha256": "08eeb3b37ff278398d8af8699128110cd505f1570954a22cb973c78b5f8651f6",
+          "bytes": 90349
+        },
+        "vibescope/gain5-displacement.csv": {
+          "producer_path": "docs/presentation/gain5-displacement.csv",
+          "sha256": "fb90300dba4560c10bb828826d56f875c52f51736cfb31a631f4ace49877853a",
+          "bytes": 23442
+        }
+      },
+      "limit": "Controlled synthetic image-plane measurement; no independent physical calibration, verified timing, arbitrary-media or diagnostic accuracy claim"
     },
     "nstack": {
       "files": [
