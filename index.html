@@ -1,306 +1,416 @@
 <!doctype html>
 <html lang="en" class="no-js">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#eeede8">
-<meta name="description" content="Nazeeh Abdul-Hadi builds geometry tools, systems software and scientific computing projects. Explore working applications, code and research.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Nazeeh Abdul-Hadi · Engineering & research">
-<meta property="og:description" content="Geometry, systems software, and scientific computing. Open the tools, inspect the code, read the research.">
-<meta property="og:url" content="https://nazeeh111.github.io/">
-<meta property="og:image" content="https://nazeeh111.github.io/assets/social/portfolio-preview.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:alt" content="Nazeeh Abdul-Hadi&#x27;s electrical engineering and physics portfolio, with Solidrift&#x27;s two input meshes and the recorded Blender union missing one body.">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://nazeeh111.github.io/assets/social/portfolio-preview.png">
-<meta name="twitter:image:alt" content="Nazeeh Abdul-Hadi&#x27;s electrical engineering and physics portfolio, with Solidrift&#x27;s two input meshes and the recorded Blender union missing one body.">
-<link rel="canonical" href="https://nazeeh111.github.io/">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="preload" href="assets/fonts/RethinkSans.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="assets/design/portfolio.css">
-<script src="assets/portfolio.js" defer></script>
-<title>Nazeeh Abdul-Hadi · Engineering & research</title>
-</head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="masthead wrap">
-<div class="identity"><a class="brand" href="/" aria-label="Nazeeh Abdul-Hadi home"><img src="assets/identity.png" width="34" height="34" alt=""><h1 class="brand-name">Nazeeh Abdul-Hadi</h1></a><p>Electrical engineering &amp; physics at Virginia Tech.<br>Geometry, scientific computing and working software.</p></div>
-<nav aria-label="Main navigation"><a href="#projects">Projects</a><a href="/research/">Research</a><a href="https://github.com/nazeeh111">GitHub</a></nav>
-</header>
-<main id="main">
-<div class="exhibition wrap">
-<div class="exhibit-nav" role="group" aria-label="Selected work">
-<button type="button" data-exhibit="geometry" aria-controls="geometry" aria-pressed="true">Geometry</button>
-<button type="button" data-exhibit="science" aria-controls="science" aria-pressed="false">Quantum</button>
-<button type="button" data-exhibit="systems" aria-controls="systems" aria-pressed="false">Systems</button>
-</div>
-<section class="exhibit" id="geometry" aria-labelledby="geometry-title">
-<div class="exhibit-copy"><h2 id="geometry-title">Where did the<br>other solid go?</h2><p><strong>Solidrift.</strong> A Blender union drops an input. Reduce the failure from 132 triangles to 12, preserving the defect.</p></div>
-<figure class="exhibit-media geometry-media"><div class="mesh-comparison"><div><p>Two input solids</p><img fetchpriority="high" src="assets/solidrift-input.svg" width="500" height="300" alt="Two overlapping mesh bodies, one cyan and one blue, in the original recorded input."></div><div><p>Blender returned one</p><img src="assets/solidrift-union.svg" width="500" height="300" alt="Recorded FLOAT union: the blue body remains and the cyan body is absent."></div></div><figcaption>Recorded 132-triangle input and output. The 12-triangle witness is a later step. <a href="assets/provenance.html#solidrift">Figure source</a>.</figcaption></figure>
-<div class="exhibit-route"><a class="action" href="https://nazeeh111.github.io/Solidrift/">Follow the reduction</a><a class="text-link" href="https://github.com/nazeeh111/Solidrift">Read the code</a><a class="text-link all-work" href="#projects">Explore the work</a></div>
-</section>
-<section class="exhibit" id="science" aria-labelledby="science-title">
-<div class="exhibit-copy"><h2 id="science-title">Two copies distinguish<br>these quantum states.</h2><p>Joint measurements separate states that whole-block purity tests cannot distinguish, in a specified eight-qubit problem.</p><div class="actions"><a class="action" href="/research/phaseglass-quantum/">Read the study</a><a class="text-link" href="/research/">Explore the papers</a></div></div>
-<figure class="exhibit-media quantum-media"><div class="comparison" role="img" aria-label="Exact two-copy success: joint sector measurement 75 percent. Certified upper bound for separate-copy strategies less than 66.91 percent. Restricted eight-qubit discrimination problem."><div class="comparison-row"><span>Joint sector measurement</span><strong>75%</strong><div class="bar-track"><div class="bar" style="--value:75%"></div></div></div><div class="comparison-row"><span>Separate-copy upper bound</span><strong>&lt;66.91%</strong><div class="bar-track"><div class="bar reference" style="--value:66.91%"></div></div></div><p class="comparison-note">Success probability on the specified discrimination problem. Two total copies for both strategies.</p></div><figcaption>Exact result under the study’s symmetry and state-family assumptions. Hardware and general phase-recognition advantages are unproved. <a href="/research/phaseglass-quantum/">Method and limits</a>.</figcaption></figure>
-</section>
-<section class="exhibit" id="systems" aria-labelledby="systems-title">
-<div class="exhibit-copy"><h2 id="systems-title">Capsulith restores<br>the same pixels.</h2><p>Run a compiled ARM64 decoder. Reopen its pixel allocation in a fresh worker, inspect the bytes, and free native memory.</p><div class="actions"><a class="action" href="https://nazeeh111.github.io/Capsulith/studio/image.html">Run the workbench</a><a class="text-link" href="https://github.com/nazeeh111/Capsulith">Read the code</a></div></div>
-<figure class="exhibit-media"><a href="assets/capsulith-restored.jpg" aria-label="Open the full Capsulith execution capture"><img src="assets/capsulith-restored.jpg" width="1280" height="720" loading="lazy" alt="Capsulith workbench after executing the compiled QOI decoder and restoring native pixel memory in a fresh worker."></a><p class="pixel-result">49,152 RGBA bytes restored and compared.</p><figcaption>Actual browser run of the prepared Orbit example. Pixel (64, 48) reads (126, 135, 250, 255). Fresh-worker read and native free completed. <a href="assets/provenance.html#capsulith">Execution and credits</a>.</figcaption></figure>
-</section>
-<div class="crossroads" aria-label="More disciplines">
-<a href="https://nazeeh111.github.io/SolidFrame/"><strong>Edit a mechanical part</strong><span>SolidFrame: browser CAD, editable dimensions and STEP/STL export.</span></a>
-<a href="https://github.com/nazeeh111/LadderProof"><strong>Find a circuit’s breaking point</strong><span>LadderProof: exact tolerance bounds for ideal resistor-ladder DACs.</span></a>
-<a href="https://github.com/nazeeh111/MaterialMind"><strong>Explore materials with ML</strong><span>MaterialMind: crystal features, stability models and retrospective experiments.</span></a>
-</div>
-</div>
-<section class="selected-section section wrap" id="selected" aria-labelledby="selected-heading">
-<div class="section-intro"><h2 id="selected-heading">Solids, circuits<br>and light fields.</h2><div><p>Selected projects across CAD, sensing, quantum, photonics, machine learning and developer tools.</p><a class="library-link" href="#projects">Search the complete catalog</a></div></div>
-<ul class="case-index" aria-label="Selected project index"><li><a href="#case-solidframe">SolidFrame</a></li><li><a href="#case-vibescope">VibeScope</a></li><li><a href="#case-qloom">QLOOM</a></li><li><a href="#case-photonsmith">PhotonSmith</a></li><li><a href="#case-materialmind">MaterialMind</a></li><li><a href="#case-nstack">nstack</a></li></ul>
-<div class="case-grid">
-<article class="case-study case-solidframe" id="case-solidframe" aria-labelledby="solidframe-case-title">
-<div class="case-heading"><h3 id="solidframe-case-title">SolidFrame</h3><p>A seven-part fixture with native, editable solids.</p></div>
-<figure><a href="assets/featured/solidframe-fixture-current.png" aria-label="Open the current SolidFrame editable fixture capture"><img src="assets/featured/solidframe-fixture-current.png" width="1440" height="1000" loading="lazy" alt="Current deployed SolidFrame workspace: seven independent fixture solids, the base plate selected, and its editable Width set to 85 millimetres in Properties."></a><figcaption>November 17, 2026, deployed workspace: Width 70 → 85 mm, Undo → 70, Redo → 85. Selection and Properties shown after the command completed. Chili3D / OpenCascade foundations. <a href="assets/featured/evidence.html#solidframe">Source and limits</a>.</figcaption></figure>
-<p class="case-explanation">Edit a real part dimension and reverse the change. Seven independent native solids remain available for modeling, local save and geometry export.</p>
-<div class="case-routes"><a href="https://nazeeh111.github.io/SolidFrame/">Open the CAD workspace</a><a href="https://github.com/nazeeh111/SolidFrame/blob/main/docs/mechanical-parts.md">Read the modeling workflow</a></div>
-</article>
-<article class="case-study case-vibescope" id="case-vibescope" aria-labelledby="vibescope-case-title">
-<div class="case-heading"><h3 id="vibescope-case-title">VibeScope</h3><p>Measure the original, magnify the view.</p></div>
-<p class="case-explanation">Compare actual original and enhanced frames, then follow the original-frame measurement through two display gains and a reopened saved run.</p>
-<figure><a href="assets/featured/vibescope/measurement-story.png" aria-label="Open VibeScope paired-gain frames, displacement and spectrum"><picture><source media="(max-width: 40rem)" srcset="assets/featured/vibescope/measurement-story-mobile.png"><img src="assets/featured/vibescope/measurement-story.png" width="1920" height="1296" loading="lazy" alt="Actual controlled synthetic VibeScope runs at gains 5 and 20: different visual enhancement, identical 240-sample original-frame displacement and metrics, and one spectrum near 7.3 hertz."></picture></a><figcaption>November 17 paired runs: gain 5 and gain 20 change the visualization while the complete measured signal, metrics and raw CSV bytes match. Controlled synthetic input: 7.3 Hz / 0.28 px; physical calibration and timing verification remain unestablished. <a href="assets/featured/evidence.html#vibescope">Source and limits</a>.</figcaption></figure>
-<div class="case-routes"><a href="https://github.com/nazeeh111/VibeScope#start-locally">Run the controlled demo</a><a href="https://github.com/nazeeh111/VibeScope/blob/main/docs/presentation/README.md">Inspect paired-run evidence</a></div>
-<p class="case-related">Related signal work: <a href="https://github.com/nazeeh111/InstrumentZero">InstrumentZero’s replayable ringdown experiment</a>.</p>
-</article>
-<article class="case-study case-qloom" id="case-qloom" aria-labelledby="qloom-case-title">
-<div class="case-heading"><h3 id="qloom-case-title">QLOOM</h3><p>A logical circuit becomes physical operations.</p><p class="case-explanation">Follow saved gates and qubit mapping through CPU compilation and a finite numerical-equivalence check.</p><div class="case-routes"><a href="https://github.com/nazeeh111/QLOOM#run-the-studio">Compile a circuit locally</a><a href="https://github.com/nazeeh111/QLOOM/blob/main/docs/presentation/README.md">Inspect this case</a></div></div>
-<figure><a href="assets/featured/qloom-circuit.png" aria-label="Open the full QLOOM circuit and physical mapping figure"><picture><source media="(max-width: 640px)" srcset="assets/featured/qloom-circuit-mobile.png"><img src="assets/featured/qloom-circuit.png" width="2112" height="704" loading="lazy" alt="Recorded QLOOM logical gates beside the selected physical operations and logical-to-physical mapping for a three-qubit line device."></picture></a><figcaption>Retained line-3 example. No SWAP in this selected output. Numerical evidence, not a QPU measurement. <a href="assets/featured/evidence.html#qloom">Source and limits</a>.</figcaption></figure>
-</article>
-<article class="case-study case-photonsmith" id="case-photonsmith" aria-labelledby="photon-case-title">
-<div class="case-heading"><h3 id="photon-case-title">PhotonSmith</h3><p>Geometry becomes a solved light field.</p><p class="case-explanation">Inspect one periodic cell and its sampled spectrum from the same retained two-dimensional grating design.</p></div>
-<figure><a href="assets/featured/photonsmith-field.png" aria-label="Open PhotonSmith light field and wavelength spectrum"><picture><source media="(max-width: 640px)" srcset="assets/featured/photonsmith-field-mobile.png"><img src="assets/featured/photonsmith-field.png" width="2112" height="816" loading="lazy" alt="PhotonSmith stored real electric field across one grating cell, with sampled target-order efficiency versus wavelength."></picture></a><figcaption>Real electric field, not intensity. Stored M9 simulation; no device or fabrication claim. <a href="assets/featured/evidence.html#photonsmith">Source and limits</a>.</figcaption></figure>
-<div class="case-routes"><a href="https://github.com/nazeeh111/PhotonSmith#quick-start">Run the design workbench</a><a href="https://github.com/nazeeh111/PhotonSmith/blob/main/experiments/designs/interactive-refined-1550nm.json">Inspect the retained design</a></div>
-</article>
-<article class="case-study case-materialmind" id="case-materialmind" aria-labelledby="materialmind-case-title">
-<div class="case-heading"><h3 id="materialmind-case-title">MaterialMind</h3><p>A confident query. An interval miss.</p></div>
-<p class="case-explanation">Choose an actual initial crystal, inspect the model’s ranking and uncertainty, then reveal its archived DFT reference. The selected candidate ranks first, but its reference energy falls outside the stated 90% interval.</p>
-<figure><a href="assets/featured/materialmind/query.svg" aria-label="Open the full MaterialMind crystal and uncertainty figure"><picture><source media="(max-width: 60rem)" srcset="assets/featured/materialmind/query-mobile.png"><img src="assets/featured/materialmind/query.png" width="1160" height="680" loading="lazy" alt="PaMnF6 initial crystal, pre-reveal model interval and archived DFT energy outside that interval; the recorded query score explains why the model ranked it first."></picture></a><figcaption>One selected retrospective case, not an uncertainty-coverage study. Both energies remain below the fixed reference hull. The fitted policy did not outperform adapted greedy in the released study. <a href="assets/featured/evidence.html#materialmind">Data, source and limits</a>.</figcaption></figure>
-<div class="case-routes"><a href="https://github.com/nazeeh111/MaterialMind#run-the-laboratory">Run the local laboratory</a><a href="https://github.com/nazeeh111/MaterialMind/blob/main/docs/presentation/README.md">Inspect and reopen this case</a></div>
-<p class="case-related">Related work: <a href="https://github.com/nazeeh111/QubitGuard">learned quantum decoding</a> · <a href="https://github.com/nazeeh111/FLUXATLAS">neural field comparison</a></p>
-</article>
-<article class="case-study case-nstack" id="case-nstack" aria-labelledby="nstack-case-title">
-<div class="case-heading"><h3 id="nstack-case-title">nstack</h3><p>Choose a capability before installing it.</p></div>
-<p class="case-explanation">A read-only task narrows to a pinned source, explicit rights and a task-specific route.</p>
-<figure class="nstack-session"><pre><code>python3 nstack.py search web-ui-design --brief
-
-[
-  {
-    &quot;id&quot;: &quot;L010&quot;,
-    &quot;summary&quot;: &quot;Anthropic specialist skills and packaging examples.&quot;,
-    &quot;admission&quot;: &quot;on demand&quot;,
-    &quot;selected_native_names&quot;: [
-      &quot;web-ui-design&quot;,
-      &quot;mcp-builder&quot;
-    ]
-  }
-]</code></pre><figcaption>Actual source-only discovery output. No installed-runtime or live activation acceptance. <a href="assets/featured/evidence.html#nstack">Inspect the session</a>.</figcaption></figure>
-<div class="case-routes"><a href="https://github.com/nazeeh111/nstack/blob/main/docs/ONBOARDING.md">Follow onboarding</a><a href="assets/featured/nstack-show.json">Read the pinned source</a><a href="assets/featured/nstack-route.json">Read the task route</a></div>
-</article>
-</div></section>
-<section class="research-section section" id="research" aria-labelledby="research-heading">
-<div class="wrap"><div class="section-intro"><h2 id="research-heading">Quantum records.<br>Physical limits.</h2><p>Quantum measurements, physical models and numerical methods. Results with their derivations and limits.</p></div>
-<div class="research-layout"><figure class="research-image"><img src="/research/figures/phaseglass-quantum.webp" width="1600" height="747" loading="lazy" alt="Finite-shot classification accuracy of tested quantum measurement strategies at increasing copy budgets."><figcaption><a href="/research/phaseglass-quantum/">Two-copy quantum measurements</a>: finite-shot simulation across copy budgets. The study separately establishes an exact result at two total copies.</figcaption></figure>
-<div class="research-list"><article><h3>Quantum records, read together</h3><p>The best encoding for separated observers can be the worse choice when their quantum records are read together.</p><a href="/research/quantum-records/">Read Quantum Records</a></article><article><h3>The limits of contact derivatives</h3><p>A rigid-body simulation tests whether agreement across refinements makes a contact derivative reliable.</p><a href="/research/inertiaforge/">Read InertiaForge</a></article><article><h3>Exact bounds for neutrino frequencies</h3><p>Positive-moment certificates and growth envelopes, with the derivation and working research draft.</p><a href="/research/neutrino-positive-moments/">Read the draft</a></article></div></div>
-<a class="library-link" href="/research/">Browse the research library</a></div>
-</section>
-<section class="section wrap" id="projects" aria-labelledby="projects-title">
-<span id="project-geometry"></span><span id="project-sensing"></span><span id="project-data-and-motion"></span><span id="project-systems"></span><span id="project-scientific-tools"></span>
-<div class="section-intro"><h2 id="projects-title">Explore the<br>engineering.</h2><p>Explore by discipline, problem or technology. Every entry leads to source, setup and technical detail.</p></div>
-<aside class="contributions" aria-labelledby="contributions-title"><h3 id="contributions-title">Contributions upstream</h3><ul><li><a href="https://github.com/pyvista/pyvista/pull/9457">PyVista</a>: closed periodic seams in the ParametricKlein surface.</li><li><a href="https://github.com/Pattern-Projector/pattern-projector/pull/431">Pattern Projector</a>: corrected viewport outlines under panning and projective transforms.</li><li><a href="https://github.com/github/advisory-database/pull/9912">GitHub advisory database</a>: corrected Django package and affected-version mapping.</li></ul></aside>
-<div class="filters"><div><label for="project-search">Find a project</label><input id="project-search" name="q" type="search" placeholder="Quantum, CAD, Rust…" autocomplete="off" aria-controls="project-list"></div><div><label for="project-subject">Explore a discipline</label><select id="project-subject" aria-controls="project-list"><option value="">All disciplines</option><option value="Creative &amp; everyday tools">Creative &amp; everyday tools</option><option value="EE &amp; sensing">EE &amp; sensing</option><option value="Geometry &amp; CAD">Geometry &amp; CAD</option><option value="ML &amp; data">ML &amp; data</option><option value="Physics &amp; quantum">Physics &amp; quantum</option><option value="Systems &amp; developer tools">Systems &amp; developer tools</option></select></div></div>
-<div class="catalog-controls"><p class="catalog-status" id="catalog-status" role="status" aria-live="polite">59 public repositories</p><button type="button" id="catalog-toggle" aria-controls="project-list" aria-expanded="false">Browse all 59 repositories</button></div>
-<ul class="project-list" id="project-list"><li class="project-item" data-subject="Geometry &amp; CAD" data-subjects="Geometry &amp; CAD" data-search="solidrift reduce a blender union failure to a smaller case and inspect the geometry behind it. geometry &amp; cad blender boolean-operations computational-geometry delta-debugging mesh-processing python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/Solidrift">Solidrift</a></h3><p>Reduce a Blender union failure to a smaller case and inspect the geometry behind it.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Geometry &amp; CAD" data-subjects="Geometry &amp; CAD" data-search="solidframe parametric browser cad on chili3d and opencascade: sketch, constrain, edit solid features and export step or stl. geometry &amp; cad browser-cad cad solid-modeling opencascade typescript webassembly">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/SolidFrame">SolidFrame</a></h3><p>Parametric browser CAD on Chili3D and OpenCascade: sketch, constrain, edit solid features and export STEP or STL.</p></div>
-<span class="project-kind">TypeScript</span></li>
-<li class="project-item" data-subject="Systems &amp; developer tools" data-subjects="Systems &amp; developer tools" data-search="nstack set up codex with reviewed specialist skills, scoped activation and rollback support. systems &amp; developer tools codex developer-tools agent-skills local-first developer-workflow python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/nstack">nstack</a></h3><p>Set up Codex with reviewed specialist skills, scoped activation and rollback support.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Physics &amp; quantum" data-subjects="Physics &amp; quantum|Systems &amp; developer tools" data-search="qloom compile small quantum circuits on a cpu, compare search strategies and check numerical equivalence. physics &amp; quantum systems &amp; developer tools quantum-computing quantum-compiler quantum-circuits qiskit circuit-optimization python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/QLOOM">QLOOM</a></h3><p>Compile small quantum circuits on a CPU, compare search strategies and check numerical equivalence.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="ML &amp; data" data-subjects="ML &amp; data|Physics &amp; quantum" data-search="materialmind compare crystal stability models and active-learning choices against existing computed reference data. ml &amp; data physics &amp; quantum materials-science crystal-structures active-learning machine-learning reproducible-research python machine learning ml">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/MaterialMind">MaterialMind</a></h3><p>Compare crystal stability models and active-learning choices against existing computed reference data.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="EE &amp; sensing" data-subjects="EE &amp; sensing|ML &amp; data" data-search="siliconpilot compile small neural classifiers into fixed-point verilog and inspect recorded fpga synthesis results. ee &amp; sensing ml &amp; data fpga verilog quantization hardware-acceleration yosys electrical-engineering">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/SILICONPILOT">SILICONPILOT</a></h3><p>Compile small neural classifiers into fixed-point Verilog and inspect recorded FPGA synthesis results.</p></div>
-<span class="project-kind">Verilog</span></li>
-<li class="project-item" data-subject="EE &amp; sensing" data-subjects="EE &amp; sensing|Physics &amp; quantum" data-search="echosight reconstruct published ultrasound measurements into volumes; a separate pipeline studies acoustic room mapping. ee &amp; sensing physics &amp; quantum ultrasound acoustic-imaging 3d-reconstruction signal-processing python electrical-engineering">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/EchoSight">EchoSight</a></h3><p>Reconstruct published ultrasound measurements into volumes; a separate pipeline studies acoustic room mapping.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Systems &amp; developer tools" data-subjects="Systems &amp; developer tools" data-search="capsulith run preserved arm64 code in node or a browser and inspect its image output and memory. systems &amp; developer tools arm64 emulation binary-analysis webassembly nodejs software-preservation javascript">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/Capsulith">Capsulith</a></h3><p>Run preserved ARM64 code in Node or a browser and inspect its image output and memory.</p></div>
-<span class="project-kind">JavaScript</span></li>
-<li class="project-item" data-subject="Physics &amp; quantum" data-subjects="Physics &amp; quantum" data-search="solvetide solve heat and elasticity problems on a cpu and inspect gradients; its learned reuse policy is disabled. physics &amp; quantum numerical-analysis differentiable-simulation sparse-linear-algebra scientific-computing python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/SolveTide">SolveTide</a></h3><p>Solve heat and elasticity problems on a CPU and inspect gradients; its learned reuse policy is disabled.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="EE &amp; sensing" data-subjects="EE &amp; sensing" data-search="ladderproof find decreasing steps in ideal resistor-ladder converters and calculate exact tolerance bounds. ee &amp; sensing circuit-analysis resistor-ladder digital-to-analog-converter tolerance-analysis exact-arithmetic python electrical-engineering electrical engineering ee">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/LadderProof">LadderProof</a></h3><p>Find decreasing steps in ideal resistor-ladder converters and calculate exact tolerance bounds.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="ML &amp; data" data-subjects="ML &amp; data" data-search="causalos compare causal explanations and choose simulated experiments; conclusions depend on the stated assumptions. ml &amp; data causal-inference causal-discovery experimental-design statistics python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/CausalOS">CausalOS</a></h3><p>Compare causal explanations and choose simulated experiments; conclusions depend on the stated assumptions.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Systems &amp; developer tools" data-subjects="Systems &amp; developer tools" data-search="replaysmith record browser tasks and replay them with outcome checks; export playwright code or an agent skill. systems &amp; developer tools browser-automation playwright workflow-automation typescript local-first">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/ReplaySmith">ReplaySmith</a></h3><p>Record browser tasks and replay them with outcome checks; export Playwright code or an agent skill.</p></div>
-<span class="project-kind">TypeScript</span></li>
-<li class="project-item" data-subject="Geometry &amp; CAD" data-subjects="Geometry &amp; CAD" data-search="sweepforge turn timed paths into one-motor linkage designs and check modeled clearance through a cycle. geometry &amp; cad mechanism-design kinematics linkage-synthesis computational-geometry python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/Sweepforge">Sweepforge</a></h3><p>Turn timed paths into one-motor linkage designs and check modeled clearance through a cycle.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="EE &amp; sensing" data-subjects="EE &amp; sensing" data-search="etherglass inspect radio recordings, test interference separation and export signals in sigmf format. ee &amp; sensing radio-frequency signal-processing signal-separation sigmf pytorch python electrical-engineering">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/ETHERGLASS">ETHERGLASS</a></h3><p>Inspect radio recordings, test interference separation and export signals in SigMF format.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Physics &amp; quantum" data-subjects="Physics &amp; quantum|ML &amp; data" data-search="qubitguard compare learned and matching decoders for surface-code quantum error correction in a simulator. physics &amp; quantum ml &amp; data quantum-error-correction surface-codes pymatching stim pytorch python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/QubitGuard">QubitGuard</a></h3><p>Compare learned and matching decoders for surface-code quantum error correction in a simulator.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Systems &amp; developer tools" data-subjects="Systems &amp; developer tools" data-search="faultsplice test an alternate return value in a failed python run, then compare it with the original and an unchanged control. systems &amp; developer tools python debugging execution-tracing replay differential-testing program-analysis faultsplice aetiory">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/Aetiory">Faultsplice</a></h3><p>Test an alternate return value in a failed Python run, then compare it with the original and an unchanged control.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="ML &amp; data" data-subjects="ML &amp; data" data-search="aheaddb add predictions to postgresql data, with snapshot-based refresh jobs and checks for stale results. ml &amp; data duckdb sql temporal-data forecasting incremental-computation python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/AHEADDB">AHEADDB</a></h3><p>Add predictions to PostgreSQL data, with snapshot-based refresh jobs and checks for stale results.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Geometry &amp; CAD" data-subjects="Geometry &amp; CAD" data-search="camwright design roller cams from motion cycles, check modeled geometry and export the result. geometry &amp; cad cam-follower mechanism-design kinematics computational-geometry python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/Camwright">Camwright</a></h3><p>Design roller cams from motion cycles, check modeled geometry and export the result.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="ML &amp; data" data-subjects="ML &amp; data" data-search="cascade reconstruct flight disruptions, forecast network pressure and test recovery scenarios using flight and weather data. ml &amp; data aviation duckdb dbt sql forecasting operations-research python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/cascade">cascade</a></h3><p>Reconstruct flight disruptions, forecast network pressure and test recovery scenarios using flight and weather data.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="EE &amp; sensing" data-subjects="EE &amp; sensing" data-search="phaseglass rf explore radio-location estimates and test predictions on withheld positions in a simulated signal experiment. ee &amp; sensing radio-localization signal-processing inverse-problems parameter-estimation python electrical-engineering phaseglass caustryn phaseglass">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/Caustryn">PhaseGlass RF</a></h3><p>Explore radio-location estimates and test predictions on withheld positions in a simulated signal experiment.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Physics &amp; quantum" data-subjects="Physics &amp; quantum" data-search="certloom check error bounds for stored linear equations in python or a browser; the bounds do not validate the physical model. physics &amp; quantum numerical-verification error-bounds linear-algebra exact-arithmetic python javascript enclose">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/Certloom">Certloom</a></h3><p>Check error bounds for stored linear equations in Python or a browser; the bounds do not validate the physical model.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="EE &amp; sensing" data-subjects="EE &amp; sensing" data-search="chirpmotion analyze recorded acoustic chirps with a c17 command-line engine and matlab research workflows. ee &amp; sensing acoustics signal-processing c matlab fft cli electrical-engineering">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/ChirpMotion">ChirpMotion</a></h3><p>Analyze recorded acoustic chirps with a C17 command-line engine and MATLAB research workflows.</p></div>
-<span class="project-kind">C</span></li>
-<li class="project-item" data-subject="ML &amp; data" data-subjects="ML &amp; data" data-search="chronal test portfolio strategies with simulated trades, train-only models and an offline research terminal. ml &amp; data portfolio-research simulation backtesting python reproducible-research">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/chronal">chronal</a></h3><p>Test portfolio strategies with simulated trades, train-only models and an offline research terminal.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Systems &amp; developer tools" data-subjects="Systems &amp; developer tools|ML &amp; data" data-search="ciphershape run bounded numerical calculations on encrypted inputs using approximate homomorphic encryption. systems &amp; developer tools ml &amp; data homomorphic-encryption openfhe compiler cryptography privacy-preserving-computation python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/CipherShape">CipherShape</a></h3><p>Run bounded numerical calculations on encrypted inputs using approximate homomorphic encryption.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="ML &amp; data" data-subjects="ML &amp; data" data-search="civicledger trace u.s. federal contract actions to source records and review possible links between organizations. ml &amp; data public-procurement open-data duckdb dbt entity-resolution sql python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/civicledger">civicledger</a></h3><p>Trace U.S. federal contract actions to source records and review possible links between organizations.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Systems &amp; developer tools" data-subjects="Systems &amp; developer tools" data-search="durablestore store byte keys and values in rust with atomic batches, checksummed recovery and a single writer. systems &amp; developer tools rust key-value-store storage-engine crash-recovery write-ahead-log">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/DurableStore">DurableStore</a></h3><p>Store byte keys and values in Rust with atomic batches, checksummed recovery and a single writer.</p></div>
-<span class="project-kind">Rust</span></li>
-<li class="project-item" data-subject="Physics &amp; quantum" data-subjects="Physics &amp; quantum|ML &amp; data" data-search="fluxatlas compare saved radiation-transport simulations with learned radiation fields and their uncertainty. physics &amp; quantum ml &amp; data radiation-transport openmc monte-carlo uncertainty-quantification scientific-computing python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/FLUXATLAS">FLUXATLAS</a></h3><p>Compare saved radiation-transport simulations with learned radiation fields and their uncertainty.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Systems &amp; developer tools" data-subjects="Systems &amp; developer tools" data-search="forkwake branch javascript and webassembly execution at a decision to explore alternate outcomes. systems &amp; developer tools webassembly javascript debugging program-analysis fault-injection">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/Forkwake">Forkwake</a></h3><p>Branch JavaScript and WebAssembly execution at a decision to explore alternate outcomes.</p></div>
-<span class="project-kind">JavaScript</span></li>
-<li class="project-item" data-subject="Systems &amp; developer tools" data-subjects="Systems &amp; developer tools" data-search="graftline extract supported arm64 mach-o library code into callable artifacts with explicit contracts and bounded memory. systems &amp; developer tools arm64 binary-analysis native-code emulation reverse-engineering python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/graftline">graftline</a></h3><p>Extract supported ARM64 Mach-O library code into callable artifacts with explicit contracts and bounded memory.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="EE &amp; sensing" data-subjects="EE &amp; sensing" data-search="hardware-studio-skill plan hardware builds with editable parts, wiring diagrams, cad checks and a reusable codex skill. ee &amp; sensing hardware-design electronics cad agent-skills wiring-diagrams javascript electrical-engineering">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/hardware-studio-skill">hardware-studio-skill</a></h3><p>Plan hardware builds with editable parts, wiring diagrams, CAD checks and a reusable Codex skill.</p></div>
-<span class="project-kind">JavaScript</span></li>
-<li class="project-item" data-subject="EE &amp; sensing" data-subjects="EE &amp; sensing|Physics &amp; quantum" data-search="instrumentzero turn supported measurement questions into signal simulations, analysis procedures and uncertainty estimates. ee &amp; sensing physics &amp; quantum signal-processing instrumentation simulation measurement embedded-systems python electrical-engineering">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/InstrumentZero">InstrumentZero</a></h3><p>Turn supported measurement questions into signal simulations, analysis procedures and uncertainty estimates.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Systems &amp; developer tools" data-subjects="Systems &amp; developer tools|ML &amp; data" data-search="kerneldarwin investigate kernel performance with numerical checks and cpu timings; its cuda path remains unverified. systems &amp; developer tools ml &amp; data benchmarking performance-engineering auto-tuning gpu-optimization metal javascript">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/KERNELDARWIN">KERNELDARWIN</a></h3><p>Investigate kernel performance with numerical checks and CPU timings; its CUDA path remains unverified.</p></div>
-<span class="project-kind">JavaScript</span></li>
-<li class="project-item" data-subject="Creative &amp; everyday tools" data-subjects="Creative &amp; everyday tools" data-search="kinetyl place labels and frame cameras across motion paths while preserving timing and editable output. creative &amp; everyday tools animation label-placement camera-framing computational-geometry scientific-visualization javascript">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/Kinetyl">Kinetyl</a></h3><p>Place labels and frame cameras across motion paths while preserving timing and editable output.</p></div>
-<span class="project-kind">JavaScript</span></li>
-<li class="project-item" data-subject="Systems &amp; developer tools" data-subjects="Systems &amp; developer tools" data-search="morphproof compare python code with its rust transformation using tests and minimized counterexamples. systems &amp; developer tools differential-testing python rust code-migration property-based-testing">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/MorphProof">MorphProof</a></h3><p>Compare Python code with its Rust transformation using tests and minimized counterexamples.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Creative &amp; everyday tools" data-subjects="Creative &amp; everyday tools" data-search="muster repair volunteer schedules around locked commitments and explain remaining coverage gaps. creative &amp; everyday tools scheduling rostering volunteer-management constraint-solving local-first javascript">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/Muster">Muster</a></h3><p>Repair volunteer schedules around locked commitments and explain remaining coverage gaps.</p></div>
-<span class="project-kind">JavaScript</span></li>
-<li class="project-item" data-subject="Systems &amp; developer tools" data-subjects="Systems &amp; developer tools" data-search="nazeeh111 github profile introducing projects in software, sensing and scientific computing. systems &amp; developer tools engineering-portfolio github-profile scientific-computing swift">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/nazeeh111">nazeeh111</a></h3><p>GitHub profile introducing projects in software, sensing and scientific computing.</p></div>
-<span class="project-kind">Portfolio</span></li>
-<li class="project-item" data-subject="Systems &amp; developer tools" data-subjects="Systems &amp; developer tools" data-search="nazeeh111.github.io portfolio site for browsing engineering, research and software projects. systems &amp; developer tools engineering-portfolio github-pages portfolio-website static-site html">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/nazeeh111.github.io">nazeeh111.github.io</a></h3><p>Portfolio site for browsing engineering, research and software projects.</p></div>
-<span class="project-kind">Portfolio</span></li>
-<li class="project-item" data-subject="Physics &amp; quantum" data-subjects="Physics &amp; quantum" data-search="neutrino-positive-moments working research draft on exact frequency certificates and growth bounds for a restricted neutrino model. physics &amp; quantum neutrino-physics mathematical-physics scientific-computing research python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/neutrino-positive-moments">neutrino-positive-moments</a></h3><p>Working research draft on exact frequency certificates and growth bounds for a restricted neutrino model.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Geometry &amp; CAD" data-subjects="Geometry &amp; CAD" data-search="objectdna fit editable cad to prealigned scans of supported brackets, enclosures and drilled blocks; export step or cadquery. geometry &amp; cad cad point-cloud cadquery reverse-engineering parametric-modeling python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/ObjectDNA">ObjectDNA</a></h3><p>Fit editable CAD to prealigned scans of supported brackets, enclosures and drilled blocks; export STEP or CadQuery.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Physics &amp; quantum" data-subjects="Physics &amp; quantum|EE &amp; sensing" data-search="photonsmith design two-dimensional photonic gratings and inspect simulated fields and spectra. physics &amp; quantum ee &amp; sensing photonics electromagnetics inverse-design scientific-computing python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/PhotonSmith">PhotonSmith</a></h3><p>Design two-dimensional photonic gratings and inspect simulated fields and spectra.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Systems &amp; developer tools" data-subjects="Systems &amp; developer tools" data-search="policydelta replay the same requests against two openbao policies and report access changes. systems &amp; developer tools openbao policy-testing access-control differential-testing python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/PolicyDelta">PolicyDelta</a></h3><p>Replay the same requests against two OpenBao policies and report access changes.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Geometry &amp; CAD" data-subjects="Geometry &amp; CAD" data-search="polyweft merge prepared blender mesh edits and inspect crossings introduced by the combined geometry. geometry &amp; cad blender mesh-processing computational-geometry three-way-merge python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/Polyweft">Polyweft</a></h3><p>Merge prepared Blender mesh edits and inspect crossings introduced by the combined geometry.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Systems &amp; developer tools" data-subjects="Systems &amp; developer tools" data-search="proofripple derive consequences from supported lean theorems, check their proofs and test their use in later searches. systems &amp; developer tools lean4 mathlib theorem-proving formal-verification automated-reasoning lean">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/ProofRipple">ProofRipple</a></h3><p>Derive consequences from supported Lean theorems, check their proofs and test their use in later searches.</p></div>
-<span class="project-kind">Lean</span></li>
-<li class="project-item" data-subject="ML &amp; data" data-subjects="ML &amp; data" data-search="queuecraft simulate order execution with a c++ engine and exact accounting; it does not place live orders. ml &amp; data cpp market-microstructure order-book quantitative-finance backtesting python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/QueueCraft">QueueCraft</a></h3><p>Simulate order execution with a C++ engine and exact accounting; it does not place live orders.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Systems &amp; developer tools" data-subjects="Systems &amp; developer tools" data-search="reclay infer binary file structure from examples and build standalone editors in a browser. systems &amp; developer tools binary-format format-inference binary-parser reverse-engineering webassembly python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/Reclay">Reclay</a></h3><p>Infer binary file structure from examples and build standalone editors in a browser.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Physics &amp; quantum" data-subjects="Physics &amp; quantum" data-search="reticle compare microscopy tiff calibration before and after export and save local inspection reports. physics &amp; quantum microscopy calibration tiff image-metadata python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/Reticle">Reticle</a></h3><p>Compare microscopy TIFF calibration before and after export and save local inspection reports.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Systems &amp; developer tools" data-subjects="Systems &amp; developer tools" data-search="rewynth analyze arm64 behavior, compare edits and export portable c from a local workbench. systems &amp; developer tools arm64 reverse-engineering symbolic-execution program-synthesis python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/Rewynth">Rewynth</a></h3><p>Analyze ARM64 behavior, compare edits and export portable C from a local workbench.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Systems &amp; developer tools" data-subjects="Systems &amp; developer tools" data-search="keepstep run the same sqlite workload before and after a migration to reveal changed behavior. systems &amp; developer tools sqlite database-migrations differential-testing regression-testing python keepstep schemarehearsal">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/SchemaRehearsal">Keepstep</a></h3><p>Run the same SQLite workload before and after a migration to reveal changed behavior.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Creative &amp; everyday tools" data-subjects="Creative &amp; everyday tools" data-search="shiftdrop convert files beside their originals from finder using a macos menu bar utility. creative &amp; everyday tools macos swift appkit file-converter drag-and-drop">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/ShiftDrop">ShiftDrop</a></h3><p>Convert files beside their originals from Finder using a macOS menu bar utility.</p></div>
-<span class="project-kind">Swift</span></li>
-<li class="project-item" data-subject="Systems &amp; developer tools" data-subjects="Systems &amp; developer tools" data-search="signelet carry text annotations across edits when the best alignments agree; flag ambiguous spans for review. systems &amp; developer tools text-annotation text-alignment annotation-transfer edit-distance python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/Signelet">Signelet</a></h3><p>Carry text annotations across edits when the best alignments agree; flag ambiguous spans for review.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Geometry &amp; CAD" data-subjects="Geometry &amp; CAD" data-search="sley adapt supported weaving drafts to available pedals and export a pressing sequence. geometry &amp; cad weaving textiles weaving-drafts constraint-solving python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/Sley">Sley</a></h3><p>Adapt supported weaving drafts to available pedals and export a pressing sequence.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="EE &amp; sensing" data-subjects="EE &amp; sensing" data-search="soundmap map sound sources from microphone-array measurements with beamforming and optional camera overlays. ee &amp; sensing acoustics beamforming microphone-array acoular signal-processing python electrical-engineering">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/SoundMap">SoundMap</a></h3><p>Map sound sources from microphone-array measurements with beamforming and optional camera overlays.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="ML &amp; data" data-subjects="ML &amp; data|Creative &amp; everyday tools" data-search="stemscene edit estimated sound layers locally and export wav files; trained refinement is experimental. ml &amp; data creative &amp; everyday tools audio-editing audio-source-separation signal-processing pytorch local-first python">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/StemScene">StemScene</a></h3><p>Edit estimated sound layers locally and export WAV files; trained refinement is experimental.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Creative &amp; everyday tools" data-subjects="Creative &amp; everyday tools" data-search="syllune write math by hand, check supported steps and practice in a local notebook. creative &amp; everyday tools mathematics-education handwriting exact-arithmetic local-first javascript">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/Syllune">Syllune</a></h3><p>Write math by hand, check supported steps and practice in a local notebook.</p></div>
-<span class="project-kind">JavaScript</span></li>
-<li class="project-item" data-subject="ML &amp; data" data-subjects="ML &amp; data" data-search="tailsentry estimate rare-loss probabilities and inspect finite-budget bounds and a negative-result study. ml &amp; data risk-analysis rare-events probability quantitative-finance reproducible-research html">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/TAILSENTRY">TAILSENTRY</a></h3><p>Estimate rare-loss probabilities and inspect finite-budget bounds and a negative-result study.</p></div>
-<span class="project-kind">HTML</span></li>
-<li class="project-item" data-subject="Systems &amp; developer tools" data-subjects="Systems &amp; developer tools" data-search="toolscope an mcp inspector adaptation for checking tool definitions and comparing schemas in a browser or terminal. systems &amp; developer tools mcp developer-tools json-schema protocol-testing typescript cli">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/ToolScope">ToolScope</a></h3><p>An MCP Inspector adaptation for checking tool definitions and comparing schemas in a browser or terminal.</p></div>
-<span class="project-kind">TypeScript</span></li>
-<li class="project-item" data-subject="EE &amp; sensing" data-subjects="EE &amp; sensing" data-search="vibescope track image-plane vibration in video and inspect motion frequencies locally. ee &amp; sensing vibration-analysis motion-magnification computer-vision signal-processing python electrical-engineering">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/VibeScope">VibeScope</a></h3><p>Track image-plane vibration in video and inspect motion frequencies locally.</p></div>
-<span class="project-kind">Python</span></li>
-<li class="project-item" data-subject="Creative &amp; everyday tools" data-subjects="Creative &amp; everyday tools" data-search="wideawake set a macos menu bar timer intended to keep a closed macbook awake; hardware testing is pending. creative &amp; everyday tools macos swift menu-bar sleep-prevention timer">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/WideAwake">WideAwake</a></h3><p>Set a macOS menu bar timer intended to keep a closed MacBook awake; hardware testing is pending.</p></div>
-<span class="project-kind">Swift</span></li>
-<li class="project-item" data-subject="Creative &amp; everyday tools" data-subjects="Creative &amp; everyday tools" data-search="automation hub organize internship discovery, reviewed documents and application evidence in a local, macos-first workspace. creative &amp; everyday tools automation job-search internships resume n8n automation-hub career applications">
-<div><h3><a class="project-wordmark" href="https://github.com/nazeeh111/automation-hub">Automation Hub</a></h3><p>Organize internship discovery, reviewed documents and application evidence in a local, macOS-first workspace.</p></div>
-<span class="project-kind">Local app</span></li></ul>
-<div class="empty" id="catalog-empty" hidden><p id="catalog-empty-message">No projects match this combination.</p><button class="text-link" type="button" id="search-all-disciplines" hidden>Search all disciplines</button><button class="text-link" type="button" id="reset-search">Clear filters</button></div>
-
-</section>
-</main>
-<footer class="site-footer wrap"><div><div class="footer-name">Nazeeh Abdul-Hadi</div><p>Electrical engineering. Physics. Working software.</p></div><nav aria-label="Footer"><a href="https://github.com/nazeeh111">GitHub</a><a href="/research/">Research</a><a href="https://github.com/nazeeh111/nazeeh111.github.io">Site source</a></nav></footer>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Nazeeh Abdul-Hadi · Engineering &amp; physics</title>
+    <meta
+      name="description"
+      content="Electrical engineering and physics at Virginia Tech. Explore Nazeeh Abdul-Hadi’s working geometry tools, systems software and scientific computing projects."
+    />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Nazeeh Abdul-Hadi · Engineering &amp; physics"
+    />
+    <meta
+      property="og:description"
+      content="Working tools, inspectable engineering and research. Explore selected projects and the complete work index."
+    />
+    <meta property="og:url" content="https://nazeeh111.github.io/" />
+    <meta
+      property="og:image"
+      content="https://nazeeh111.github.io/assets/social/portfolio-preview.png?v=2ca3a3e89570b59f"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Nazeeh Abdul-Hadi’s engineering portfolio."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://nazeeh111.github.io/" />
+    <link rel="icon" href="/assets/favicon.svg" />
+    <link
+      rel="preload"
+      href="/assets/fonts/RethinkSans.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/assets/design/portfolio.css?v=b0f8472821ca8499" />
+    <script src="/assets/portfolio.js?v=7e01a5ccfcc179ef" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header shell">
+      <a class="brand" href="/" aria-label="Nazeeh Abdul-Hadi home"
+        ><img src="/assets/identity.png" alt="" width="32" height="32" /><span
+          >Nazeeh Abdul-Hadi</span
+        ></a
+      >
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/work/">Work</a><a href="/research/">Research</a
+        ><a href="#about">About</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero shell" aria-labelledby="intro-title">
+        <div class="hero-copy">
+          <h1 id="intro-title"><span>Nazeeh</span> <span>Abdul-Hadi</span></h1>
+          <p class="hero-intro">
+            Electrical engineering and physics at Virginia Tech. I build tools
+            for geometry, scientific computing and the systems underneath.
+          </p>
+          <a class="button" href="#selected">Explore selected work</a>
+        </div>
+        <div
+          class="hero-work motion-proof"
+          role="group"
+          aria-labelledby="motion-title"
+        >
+          <div class="proof-heading">
+            <div>
+              <a href="/work/vibescope/">VibeScope</a>
+              <h2 id="motion-title">Small motion. Measurable.</h2>
+            </div>
+            <p>Recorded synthetic example</p>
+          </div>
+          <div class="frame-comparison" style="--reveal: 50%">
+            <figure class="frame-original">
+              <img
+                src="/assets/featured/vibescope/original-frame72.png"
+                width="320"
+                height="192"
+                fetchpriority="high"
+                alt="Original recorded frame 72: a textured specimen beside a reference scale."
+              />
+              <figcaption>Original</figcaption>
+            </figure>
+            <figure class="frame-enhanced">
+              <img
+                src="/assets/featured/vibescope/enhanced-frame72.png"
+                width="320"
+                height="192"
+                alt="The same recorded frame with visualization ×20 and the analysis region outlined."
+              />
+              <figcaption>Visualization ×20</figcaption>
+            </figure>
+            <span class="comparison-divider" aria-hidden="true"></span>
+          </div>
+          <div class="comparison-control" hidden>
+            <label for="frame-reveal">Reveal enhanced view</label
+            ><input
+              id="frame-reveal"
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              step="1"
+              aria-describedby="comparison-note"
+            />
+            <div class="comparison-ends" aria-hidden="true">
+              <span>Original</span><span>Visualization ×20</span>
+            </div>
+          </div>
+          <div class="proof-results">
+            <p>
+              <strong>7.30 <span>Hz</span></strong
+              ><span>Observed frequency</span>
+            </p>
+            <p>
+              <strong>0.280 <span>px</span></strong
+              ><span>Observed peak amplitude</span>
+            </p>
+          </div>
+          <p id="comparison-note" class="proof-note">
+            Move the view. The measurement stays the same: both recorded gain
+            runs analyze the original frames.
+          </p>
+          <a class="proof-link" href="/work/vibescope/"
+            >Inspect the experiment <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+      <section
+        class="selected shell"
+        id="selected"
+        aria-labelledby="selected-title"
+      >
+        <div class="section-heading">
+          <h2 id="selected-title">Open the work</h2>
+          <a href="/work/">Browse every project</a>
+        </div>
+        <article
+          class="work-feature feature-cad"
+          aria-labelledby="solidframe-title"
+        >
+          <div class="feature-copy">
+            <h3 id="solidframe-title">
+              <span id="case-solidframe"></span>SolidFrame
+            </h3>
+            <p class="feature-lead">A part you can keep editing.</p>
+            <p>
+              Sketch, constrain and change solid features in a browser CAD
+              workspace. The recorded fixture keeps its seven independent solids
+              through a reversible dimension edit.
+            </p>
+            <p class="scope">Built on Chili3D and OpenCascade.</p>
+            <div class="text-actions">
+              <a href="https://nazeeh111.github.io/SolidFrame/"
+                >Try the CAD app</a
+              ><a href="/work/solidframe/">How it works</a>
+            </div>
+          </div>
+          <figure class="feature-media">
+            <a
+              class="home-capture-detail"
+              style="
+                --crop-x: 500;
+                --crop-y: 300;
+                --crop-width: 800;
+                --crop-height: 640;
+                --source-width: 1440;
+              "
+              href="/work/solidframe/"
+              ><img
+                src="/assets/featured/solidframe-fixture-current.png"
+                width="1440"
+                height="1000"
+                loading="lazy"
+                alt="Desktop detail: the seven-solid workholding fixture, with the selected base plate outlined in green."
+            /></a>
+            <figcaption>
+              Width 70 → 85 mm. Undo and Redo preserve the editable result.
+            </figcaption>
+          </figure>
+        </article>
+        <article
+          class="work-feature feature-native"
+          id="systems"
+          aria-labelledby="capsulith-title"
+        >
+          <figure class="feature-media">
+            <a
+              class="home-capture-detail"
+              style="
+                --crop-x: 26;
+                --crop-y: 0;
+                --crop-width: 950;
+                --crop-height: 320;
+                --source-width: 1280;
+              "
+              href="/work/capsulith/"
+              ><img
+                src="/assets/capsulith-restored.jpg"
+                width="1280"
+                height="720"
+                loading="lazy"
+                alt="Desktop detail: the original and restored colored Orbit images in Capsulith."
+            /></a>
+            <figcaption>
+              49,152 RGBA bytes restored and compared in the prepared example.
+            </figcaption>
+          </figure>
+          <div class="feature-copy">
+            <h3 id="capsulith-title">Capsulith</h3>
+            <p class="feature-lead">The worker ends. The image stays.</p>
+            <p>
+              Execute a compiled ARM64 decoder, reopen its pixel allocation in a
+              fresh worker, inspect the bytes and free native memory.
+            </p>
+            <p class="scope">
+              One known-source example. QOI, Unicorn and runtime notices stay
+              with the case.
+            </p>
+            <div class="text-actions">
+              <a href="https://nazeeh111.github.io/Capsulith/studio/image.html"
+                >Open the workbench</a
+              ><a href="/work/capsulith/">Inside the mechanism</a>
+            </div>
+          </div>
+        </article>
+        <article
+          class="work-feature feature-quantum"
+          id="case-qloom"
+          aria-labelledby="qloom-title"
+        >
+          <div class="feature-copy">
+            <h3 id="qloom-title">QLOOM</h3>
+            <p class="feature-lead">A different circuit. The same operation.</p>
+            <p>
+              Compile a logical circuit for a physical layout, compare candidate
+              mappings and check the resulting operation numerically.
+            </p>
+            <p class="scope">
+              CPU numerical evidence. No QPU measurement or universal proof.
+            </p>
+            <div class="text-actions">
+              <a href="/work/qloom/">Inspect the circuit case</a
+              ><a href="https://github.com/nazeeh111/QLOOM#run-the-studio"
+                >Run locally</a
+              >
+            </div>
+          </div>
+          <figure class="feature-media">
+            <a href="/work/qloom/"
+              ><picture
+                ><source
+                  media="(max-width:640px)"
+                  srcset="/assets/featured/qloom-circuit-mobile.png" />
+                <img
+                  src="/assets/featured/qloom-circuit.png"
+                  width="2112"
+                  height="704"
+                  loading="lazy"
+                  alt="Logical gates and the selected QLOOM physical operations with their retained initial and final mapping." /></picture
+            ></a>
+            <figcaption>
+              The retained line-3 case, with its source, mapping and error
+              check.
+            </figcaption>
+          </figure>
+        </article>
+        <article class="work-feature feature-native feature-ml" id="case-materialmind" aria-labelledby="materialmind-title">
+          <figure class="feature-media">
+            <a href="/work/materialmind/"><picture><source media="(max-width:60rem)" srcset="/assets/featured/materialmind/query-mobile.png"><img src="/assets/featured/materialmind/query.png" width="1160" height="680" loading="lazy" alt="PaMnF6 initial crystal and the recorded model interval, with the archived DFT energy outside that interval."></picture></a>
+            <figcaption>One selected retrospective miss. Both energies remain below the fixed reference hull. Open the case for the full figure and data.</figcaption>
+          </figure>
+          <div class="feature-copy">
+            <h3 id="materialmind-title">MaterialMind</h3>
+            <p class="feature-lead">A confident query. An interval miss.</p>
+            <p>Inspect a crystal, its model ranking and uncertainty, then reveal the archived DFT reference. The first-ranked candidate falls outside the stated 90% energy interval.</p>
+            <p class="scope">A retained computed-reference case, not a coverage study or new measurement. The fitted policy did not outperform adapted greedy in the released study.</p>
+            <div class="text-actions"><a href="/work/materialmind/">Inspect the ML case</a><a href="https://github.com/nazeeh111/MaterialMind#run-the-laboratory">Run the local laboratory</a></div>
+          </div>
+        </article>
+        <div class="more-work">
+          <h3>Keep exploring</h3>
+          <p>
+            <a id="case-vibescope" href="/work/vibescope/">VibeScope</a>,
+            <a id="case-photonsmith" href="/work/photonsmith/">PhotonSmith</a>,
+            <a id="case-instrumentzero" href="/work/instrumentzero/"
+              >InstrumentZero</a
+            >, <a id="case-nstack" href="/work/nstack/">nstack</a> and the
+            <a id="geometry" href="/work/solidrift/"
+              >Solidrift failure investigation</a
+            >.
+          </p>
+        </div>
+        <div class="all-work-route" id="projects">
+          <span id="project-geometry"></span><span id="project-sensing"></span
+          ><span id="project-data-and-motion"></span
+          ><span id="project-systems"></span
+          ><span id="project-scientific-tools"></span
+          ><a class="button button-light" href="/work/">Find a project</a>
+          <p>
+            Search the complete repository index by topic, technology or
+            discipline.
+          </p>
+        </div>
+      </section>
+      <section
+        class="research-preview"
+        id="research"
+        aria-labelledby="research-title"
+      >
+        <div class="shell">
+          <div class="section-heading">
+            <h2 id="research-title">Research</h2>
+            <a href="/research/">Read the library</a>
+          </div>
+          <div class="research-pair">
+            <article id="science">
+              <h3>What two copies can reveal</h3>
+              <p>
+                Joint measurements distinguish states that separate-copy
+                strategies cannot match in the study’s restricted eight-qubit
+                problem.
+              </p>
+              <div
+                class="exact-result"
+                role="group"
+                aria-label="Exact two-copy success probabilities"
+              >
+                <div>
+                  <strong>75%</strong><span>Joint sector measurement</span>
+                </div>
+                <div>
+                  <strong>&lt;66.91%</strong
+                  ><span>Certified separate-copy upper bound</span>
+                </div>
+              </div>
+              <p class="scope">
+                Two total copies for both strategies. The state family and
+                symmetry assumptions matter.
+              </p>
+              <a href="/research/phaseglass-quantum/">Read Phaseglass</a>
+            </article>
+            <article>
+              <h3>Quantum Records</h3>
+              <p>
+                The best encoding for separated observers can be the worse
+                encoding when their records are read together.
+              </p>
+              <a href="/research/quantum-records/">Read Quantum Records</a>
+              <div class="research-more">
+                <p>
+                  The library also covers contact derivatives, spectral bounds
+                  and other working research drafts.
+                </p>
+                <a href="/research/">Browse all studies</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="about shell" id="about" aria-labelledby="about-title">
+        <h2 id="about-title">About</h2>
+        <div class="about-body">
+          <p class="about-statement">
+            I study electrical engineering and physics at Virginia Tech,
+            building software that connects models, measurements and useful
+            tools.
+          </p>
+          <div class="contribution-copy">
+            <h3>Contributions upstream</h3>
+            <ul>
+              <li>
+                <a href="https://github.com/pyvista/pyvista/pull/9457"
+                  >PyVista</a
+                ><span>Periodic seams in a parametric surface.</span>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Pattern-Projector/pattern-projector/pull/431"
+                  >Pattern Projector</a
+                ><span>Viewport outlines while panning and under projective transforms.</span>
+              </li>
+              <li>
+                <a href="https://github.com/github/advisory-database/pull/9912"
+                  >GitHub advisory database</a
+                ><span>Django package and affected-version mapping.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" id="contact">
+      <div class="shell">
+        <div class="footer-top">
+          <div class="contact-route"><h2>Find me on GitHub.</h2><p>Explore my public work and profile.</p><a class="button" href="https://github.com/nazeeh111">Open my GitHub profile</a></div>
+          <nav aria-label="Footer">
+            <a href="https://github.com/nazeeh111">GitHub</a
+            ><a href="/work/">Work</a><a href="/research/">Research</a
+            ><a href="https://github.com/nazeeh111/nazeeh111.github.io"
+              >Site source</a
+            >
+          </nav>
+        </div>
+        <p class="footer-name">Nazeeh Abdul-Hadi</p>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -109,6 +109,22 @@ def prepare(files):
     return catalog, by_id, formats, projects, archive
 
 
+def stamp_asset_urls(outputs):
+    """Give shared browser assets cache identities derived from their actual bytes."""
+    assets = ('assets/design/portfolio.css', 'assets/portfolio.js',
+              'assets/work.js', 'assets/social/portfolio-preview.png')
+    result = dict(outputs)
+    for asset in assets:
+        revision = hashlib.sha256(outputs[asset]).hexdigest()[:16].encode('ascii')
+        pattern = re.compile(rb'(<(?:link|script|meta)\b[^>]*?[ \t\r\n](?:href|src|content)="(?:https://nazeeh111\.github\.io)?/'
+                             + re.escape(asset.encode('ascii'))
+                             + rb')(?:\?v=[a-f0-9]{16})?(")')
+        for name, data in result.items():
+            if name.endswith('.html') and not name.startswith('scripts/'):
+                result[name] = pattern.sub(lambda match: match[1] + b'?v=' + revision + match[2], data)
+    return result
+
+
 def render(files):
     catalog, by_id, formats, projects, archive = prepare(files)
     research = module('research_builder', files['scripts/build-research.py'], ROOT / 'scripts/build-research.py')
@@ -117,7 +133,12 @@ def render(files):
     outputs.update(research.render(catalog, by_id, sum(v == 'pdf' for v in formats.values()),
                                    sum(v == 'md' for v in formats.values()), len(archive)))
     outputs['index.html'] = portfolio.render(projects, files['scripts/portfolio.html'].decode('utf-8'))
-    return outputs
+    cases = json.loads(files['cases.json'])
+    work = module('work_builder', files['scripts/build-work.py'], ROOT / 'scripts/build-work.py')
+    case_builder = module('case_builder', files['scripts/build-cases.py'], ROOT / 'scripts/build-cases.py')
+    outputs['work/index.html'] = work.render(projects, files['scripts/work.html'].decode('utf-8'), cases)
+    outputs.update(case_builder.render(cases, files))
+    return stamp_asset_urls(outputs)
 
 
 def publish(out, files):

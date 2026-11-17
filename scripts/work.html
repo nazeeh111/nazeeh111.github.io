@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Browse Nazeeh Abdul-Hadi's public engineering repositories by project, discipline or technology. Source and upstream foundations remain identified."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Work · Nazeeh Abdul-Hadi" />
+    <meta
+      property="og:description"
+      content="Engineering applications, scientific tools, libraries and open-source contributions."
+    />
+    <meta property="og:url" content="https://nazeeh111.github.io/work/" />
+    <link rel="canonical" href="https://nazeeh111.github.io/work/" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link
+      rel="preload"
+      href="/assets/fonts/RethinkSans.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/assets/design/portfolio.css" />
+    <script src="/assets/work.js" defer></script>
+    <title>Work · Nazeeh Abdul-Hadi</title>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header shell">
+      <a class="brand" href="/" aria-label="Nazeeh Abdul-Hadi home"
+        ><img src="/assets/identity.png" alt="" width="32" height="32" /><span
+          >Nazeeh Abdul-Hadi</span
+        ></a
+      >
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/work/" aria-current="page">Work</a
+        ><a href="/research/">Research</a><a href="/#about">About</a>
+      </nav>
+    </header>
+    <main class="shell catalog-page" id="main">
+      <section id="projects" aria-labelledby="work-heading">
+        <div class="catalog-heading">
+          <h1 id="work-heading">All projects.</h1>
+          <p>
+            Applications, scientific tools, libraries and open-source
+            contributions. Find a project, inspect its source or read a case.
+          </p>
+        </div>
+        <div class="filters" id="work-filters" hidden>
+          <div>
+            <label for="project-search">Search projects</label
+            ><input
+              id="project-search"
+              name="q"
+              type="search"
+              placeholder="Name, problem or technology"
+              autocomplete="off"
+              aria-controls="project-list"
+            />
+          </div>
+          <div>
+            <label for="project-subject">Discipline</label
+            ><select
+              id="project-subject"
+              name="discipline"
+              aria-controls="project-list"
+            >
+              <option value="">All disciplines</option>
+              {{SUBJECTS}}
+            </select>
+          </div>
+        </div>
+        <div class="catalog-controls">
+          <p
+            id="catalog-status"
+            class="catalog-status"
+            role="status"
+            aria-live="polite"
+          >
+            {{COUNT}} public repositories
+          </p>
+          <button type="button" id="reset-search" hidden>Clear filters</button>
+        </div>
+        <noscript><p>All repositories are listed below.</p></noscript>
+        <div id="catalog-empty" class="empty" hidden>
+          <h2>No matching projects.</h2>
+          <p id="catalog-empty-message">No projects match these filters.</p>
+          <div class="empty-actions"><button class="button" id="search-all-disciplines" type="button" hidden>Search all disciplines</button></div>
+        </div>
+        <ul class="project-list" id="project-list">
+          {{PROJECTS}}
+        </ul>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="shell footer-top">
+        <a class="brand" href="/" aria-label="Nazeeh Abdul-Hadi home"
+          ><img src="/assets/identity.png" alt="" width="32" height="32" /><span
+            >Nazeeh Abdul-Hadi</span
+          ></a
+        >
+        <nav class="site-nav" aria-label="Footer">
+          <a href="/research/">Research</a
+          ><a href="https://github.com/nazeeh111">GitHub</a
+          ><a href="https://github.com/nazeeh111/nazeeh111.github.io"
+            >Site source</a
+          >
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

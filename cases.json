@@ -1,0 +1,380 @@
+[
+  {
+    "slug": "solidframe",
+    "name": "SolidFrame",
+    "repository_url": "https://github.com/nazeeh111/SolidFrame",
+    "source_revision": "7986c79725cf7429d7ec816d647805947ce434bf",
+    "case_url": "/work/solidframe/",
+    "lead": "Build and edit native mechanical solids in a browser, with a complete CAD workspace rather than a static model viewer.",
+    "action": {
+      "label": "Try in browser",
+      "url": "https://nazeeh111.github.io/SolidFrame/"
+    },
+    "secondary_action": {
+      "label": "Read the modeling guide",
+      "url": "https://github.com/nazeeh111/SolidFrame/blob/main/docs/mechanical-parts.md"
+    },
+    "problem": "A useful browser CAD tool needs editable geometry, reversible changes and portable documents. A rendered mesh alone cannot carry the dimensions that produced a part.",
+    "mechanism": "SolidFrame builds on Chili3D and OpenCascade. The mechanical-part workflow turns dimensions and hole layouts into native solids, while the editable fixture exposes separate parts in the model tree. Properties edits rebuild geometry; the command history makes changes reversible. Local browser snapshots and editable .cd downloads serve different storage needs.",
+    "observed_result": "In the recorded deployed workflow, Open editable sample created seven native solids. Editing the selected base plate changed Width from 70 to 85 mm. Undo returned it to 70 mm; Redo restored 85 mm, with all seven parts retained.",
+    "scope_note": "The fixture contains independent editable solids, not a constraint-solved assembly or a manufacturing-approved design. This capture verifies the shown edit and history sequence, not every CAD command or export format.",
+    "foundations": "Adapted from Chili3D and built on OpenCascade. The AGPL-3.0 source license and the C++/WebAssembly notice remain with the project and the retained case assets.",
+    "evidence_url": "/assets/featured/evidence.html#solidframe",
+    "media": [
+      {
+        "src": "/assets/featured/solidframe-fixture-current.png",
+        "alt": "SolidFrame with the seven-part workholding fixture, the base plate selected and its Width property set to 85 millimetres.",
+        "caption": "Actual deployed workspace, November 17, 2026. The completed 70 → 85 mm edit, Undo → 70 and Redo → 85 sequence is preserved in the journey record.",
+        "mobile_details": [
+          {
+            "x": 500,
+            "y": 300,
+            "width": 800,
+            "height": 640,
+            "source_width": 1440,
+            "source_height": 1000,
+            "caption": "The fixture after the dimension edit.",
+            "alt": "Desktop detail: the seven-solid workholding fixture, with the selected base plate outlined in green."
+          },
+          {
+            "x": 18,
+            "y": 858,
+            "width": 270,
+            "height": 98,
+            "source_width": 1440,
+            "source_height": 1000,
+            "caption": "The retained Properties panel: Width 85 mm.",
+            "alt": "Desktop detail: SolidFrame Properties show Length 100, Width 85 and Height 8."
+          }
+        ]
+      }
+    ],
+    "technical_details": [
+      "Native .cd documents preserve editable project structure. Exchange exports such as STEP and STL carry geometry; they do not promise to preserve all builder settings.",
+      "The project includes a drilled-plate and bracket builder with whole-configuration validation. Its ideal geometry does not calculate strength, bend allowance or fabrication approval."
+    ],
+    "legacy_fragment": [
+      "case-solidframe"
+    ]
+  },
+  {
+    "slug": "capsulith",
+    "name": "Capsulith",
+    "repository_url": "https://github.com/nazeeh111/Capsulith",
+    "source_revision": null,
+    "case_url": "/work/capsulith/",
+    "lead": "Run a prepared native image component in the browser, reopen its initialized pixel allocation in a fresh worker, and inspect the result.",
+    "action": {
+      "label": "Try in browser",
+      "url": "https://nazeeh111.github.io/Capsulith/studio/image.html"
+    },
+    "secondary_action": {
+      "label": "Read the runtime source",
+      "url": "https://github.com/nazeeh111/Capsulith"
+    },
+    "problem": "A native component can depend on initialized state and owned memory, not just a function address. Reusing it requires preserving that state and an explicit calling contract.",
+    "mechanism": "Capsulith packages selected ARM64 functions with calling contracts and owned memory. The image workbench runs the prepared QOI decoder through native-code emulation, retains the decoded allocation, then reopens it in a fresh worker. Pixel inspection and native free expose the memory lifecycle instead of hiding it behind a static preview.",
+    "observed_result": "The November 16 browser run reported that 49,152 restored RGBA bytes matched the prior native output and that native free completed. Pixel (64, 48) read RGBA (126, 135, 250, 255).",
+    "scope_note": "This is one observed prepared Orbit example. The workbench comparison is not an independent native oracle, a new codec, universal binary compatibility or a security-isolation proof. The exact source revision of this retained screenshot was not recorded.",
+    "foundations": "QOI is by Dominic Szablewski and contributors under MIT. Native emulation uses Unicorn.js and Unicorn. Capsulith’s runtime is GPL-2.0-only; the project retains the complete third-party notices.",
+    "evidence_url": "/assets/provenance.html#capsulith",
+    "media": [
+      {
+        "src": "/assets/capsulith-restored.jpg",
+        "alt": "Actual Capsulith image workbench after decoding the prepared Orbit QOI image and restoring its native pixels in a fresh worker.",
+        "caption": "Actual browser capture, November 16, 2026. The prepared decoder output was reopened, its 49,152 RGBA bytes compared, and the native allocation freed.",
+        "mobile_details": [
+          {
+            "x": 26,
+            "y": 0,
+            "width": 950,
+            "height": 320,
+            "source_width": 1280,
+            "source_height": 720,
+            "caption": "Original decoded output and the fresh-worker view.",
+            "alt": "Desktop detail: the original and restored colored Orbit images in Capsulith."
+          },
+          {
+            "x": 1000,
+            "y": 288,
+            "width": 240,
+            "height": 188,
+            "source_width": 1280,
+            "source_height": 720,
+            "caption": "The retained pixel and byte inspector.",
+            "alt": "Desktop detail: the pixel inspector at X64 Y48 with RGBA values 126, 135, 250 and 255."
+          }
+        ]
+      }
+    ],
+    "technical_details": [
+      "Choose Load & run example in the image workbench, then Reopen in a fresh worker. The prepared case does not require an account, original application or compiler in the browser.",
+      "The screenshot preserves the earlier prepared-QOI workflow. Newer PNG/QOI controls are documented in the repository; they are not retroactively claimed as part of this retained capture."
+    ],
+    "legacy_fragment": [
+      "systems"
+    ]
+  },
+  {
+    "slug": "qloom",
+    "name": "QLOOM",
+    "repository_url": "https://github.com/nazeeh111/QLOOM",
+    "source_revision": "ddcce9317bdc59e053f6b6fec3cedf43b9203111",
+    "case_url": "/work/qloom/",
+    "lead": "Compile a logical quantum circuit for a device graph, inspect the physical operations and mapping, and check that its meaning survives.",
+    "action": {
+      "label": "Run locally",
+      "url": "https://github.com/nazeeh111/QLOOM#run-the-studio"
+    },
+    "secondary_action": {
+      "label": "Inspect the circuit record",
+      "url": "https://github.com/nazeeh111/QLOOM/blob/ddcce9317bdc59e053f6b6fec3cedf43b9203111/examples/live-studio/report.json"
+    },
+    "problem": "A physical circuit must respect a device’s connectivity without silently changing the logical program. Gate count alone cannot show whether routing, placement and phase have been handled correctly.",
+    "mechanism": "QLOOM searches a bounded set of compiler strategies on a CPU. The Studio exposes the logical input, physical gates, logical-to-physical mapping, candidate costs and numerical verification. A trained policy ranks strategies, while explicit checks decide whether a candidate preserves the supported program’s meaning.",
+    "observed_result": "The retained three-qubit line-device example maps H(q0), CX(q0,q2) and Ry(0.31)(q1) to selected physical operations U(p1), U(p2) and CX(p1,p0). Initial and final mappings are [1, 2, 0]. The recorded maximum operator error is 1.401642967028923e-16 against tolerance 1e-8.",
+    "scope_note": "This is one stored synthetic example with a two-candidate budget. No SWAP appears in this selected circuit. Numerical evidence is not a formal equivalence proof, a QPU execution or a claim that the learned policy beats established compilers.",
+    "foundations": "Qiskit supplies circuit interchange and standard gate translation. QLOOM implements the selected layout/routing strategies; Qiskit levels, MQT QMAP and BQSKit are separately attributed comparison tools with their own licenses.",
+    "evidence_url": "/assets/featured/evidence.html#qloom",
+    "media": [
+      {
+        "src": "/assets/featured/qloom-circuit.png",
+        "mobile_src": "/assets/featured/qloom-circuit-mobile.png",
+        "alt": "Recorded QLOOM logical gates beside selected physical operations and the logical-to-physical mapping for the synthetic three-qubit line device.",
+        "caption": "Presentation of the retained line-3 report. Exact angles and terminal measurements remain in the source record; the compact drawing omits the terminal measurement symbols."
+      }
+    ],
+    "technical_details": [
+      "The diagram reads the saved report rather than running a new compiler experiment. It must not be confused with the separate five-qubit, eight-candidate Studio demonstration.",
+      "The project’s measured study retains ties, failures and timeouts. It does not establish broad learned-policy superiority; the complete comparison belongs with its stated budgets and verification results."
+    ],
+    "legacy_fragment": [
+      "case-qloom"
+    ]
+  },
+  {
+    "slug": "photonsmith",
+    "name": "PhotonSmith",
+    "repository_url": "https://github.com/nazeeh111/PhotonSmith",
+    "source_revision": "13912d9d640938acf8ce299a152298666ae61d44",
+    "case_url": "/work/photonsmith/",
+    "lead": "Design a periodic photonic grating, inspect its solved electric field and spectrum, and compare the result with a separate numerical formulation.",
+    "action": {
+      "label": "Run locally",
+      "url": "https://github.com/nazeeh111/PhotonSmith#quick-start"
+    },
+    "secondary_action": {
+      "label": "Inspect the retained design",
+      "url": "https://github.com/nazeeh111/PhotonSmith/blob/13912d9d640938acf8ce299a152298666ae61d44/experiments/designs/interactive-refined-1550nm.json"
+    },
+    "problem": "An optimizer can find geometry that looks promising to a learned model while failing a physical solve or a stronger numerical check. The design needs a trace from target and geometry to field, power and validation.",
+    "mechanism": "PhotonSmith searches a constrained three-layer periodic grating. A compact learned surrogate screens candidates, a Fourier-modal Maxwell solver and adjoint refinement evaluate them, and a separately assembled real-space solver checks the result. The Studio keeps the target, geometry, field, spectrum and exported evidence together.",
+    "observed_result": "For the retained refined 1550 nm design, the stored M9 target-order efficiency is 0.9358787717897128, about 93.59% of incident power into order +1. M13 and independent real-space checks are separately recorded. The figure pairs the same design’s field with all 21 stored wavelength solves.",
+    "scope_note": "This is a two-dimensional periodic numerical model, not a fabricated-device measurement. Agreement between the disclosed resolutions and formulations does not certify convergence, omitted physics, global optimality or manufacturing readiness.",
+    "foundations": "The runtime uses NumPy and SciPy. Research foundations and optional external validation tools are separately credited in the repository; an available Meep adapter is not evidence of an executed Meep validation.",
+    "evidence_url": "/assets/featured/evidence.html#photonsmith",
+    "media": [
+      {
+        "src": "/assets/featured/photonsmith-field.png",
+        "mobile_src": "/assets/featured/photonsmith-field-mobile.png",
+        "alt": "Stored PhotonSmith real electric field across one grating cell and target-order efficiency across the retained wavelength samples.",
+        "caption": "The retained 1550 nm refined design: Re(Ey), relative to unit incident amplitude, and 21 sampled wavelength solves. This is a stored M9 simulation, not intensity or device data."
+      }
+    ],
+    "technical_details": [
+      "The field figure uses all 97 × 96 stored real-field values at equal spatial x/z scale. It does not smooth, normalize or replace the stored numerical arrays with an illustration.",
+      "Search used M5; the displayed final solve uses M9, with M13 and independent-grid results recorded separately. The spectrum lines connect actual samples without adding intermediate solutions."
+    ],
+    "legacy_fragment": [
+      "case-photonsmith"
+    ]
+  },
+  {
+    "slug": "vibescope",
+    "name": "VibeScope",
+    "repository_url": "https://github.com/nazeeh111/VibeScope",
+    "source_revision": "db2594d6ff15d75151785c388ed35c473533d3b9",
+    "case_url": "/work/vibescope/",
+    "lead": "Measure small motion from original video frames, then change the display gain without changing the displacement history or frequency estimate.",
+    "action": {
+      "label": "Run locally",
+      "url": "https://github.com/nazeeh111/VibeScope#start-locally"
+    },
+    "secondary_action": {
+      "label": "Inspect paired-run evidence",
+      "url": "/assets/featured/vibescope/README.md"
+    },
+    "problem": "A convincing magnified video is not a displacement measurement. Display enhancement must remain separate from the original-frame signal used for quantitative analysis.",
+    "mechanism": "VibeScope tracks a selected image region against an independent stationary reference, derives displacement and frequency information from original decoded frames, and renders motion visualization separately. Exported reports, CSV and saved-run history retain the settings and measurement records.",
+    "observed_result": "The recorded gain-5 and gain-20 runs have identical complete 240-sample signals, quantitative metrics and raw displacement CSV bytes, while their visualization settings and enhanced output differ. For the controlled 7.3 Hz / 0.28 px input, the observed result was 7.299959660082684 Hz / 0.2798920570385787 px. The saved gain-20 run reopened after server restart.",
+    "scope_note": "This is controlled synthetic image-plane evidence. Physical calibration, arbitrary-media and diagnostic accuracy are not established. Timing was explicitly unverified because ffprobe was unavailable; magnification is a visualization, not a new sensor measurement.",
+    "foundations": "Core inference runs in NumPy. The project separately credits its classical and learned research foundations; the optional EulerMormer runner invokes an external model and is not bundled into the core estimator.",
+    "evidence_url": "/assets/featured/evidence.html#vibescope",
+    "media": [
+      {
+        "src": "/assets/featured/vibescope/measurement-story.png",
+        "mobile_src": "/assets/featured/vibescope/measurement-story-mobile.png",
+        "alt": "Actual original and gain-20 enhanced frames, followed by the identical gain-5 and gain-20 displacement traces and a spectrum from the original frames.",
+        "caption": "Recorded synthetic paired runs. Frame 72 shows original input and gain-20 visualization; all 240 displacement samples per gain and 120 positive-frequency bins are retained in the figure and source artifacts."
+      },
+      {
+        "src": "/assets/featured/vibescope/workspace-current.png",
+        "alt": "Actual VibeScope workspace after reopening the saved gain-20 measurement following a server restart.",
+        "caption": "The recorded workspace reopened the saved gain-20 run after server restart. The source video, completed result and warnings remain part of the measurement history."
+      }
+    ],
+    "technical_details": [
+      "The original and enhanced frame pixels are retained at native 320 × 192 resolution; nearest-neighbor enlargement changes display size only. No selective contrast, color or denoising adjustment was applied for the portfolio figure.",
+      "The figure reads the browser-exported reports and CSVs. It performs no new estimator, fit, filter or physical experiment."
+    ],
+    "legacy_fragment": [
+      "case-vibescope"
+    ]
+  },
+  {
+    "slug": "instrumentzero",
+    "name": "InstrumentZero",
+    "repository_url": "https://github.com/nazeeh111/InstrumentZero",
+    "source_revision": "c1a252300159e2e8e161db43191aafcbea701077",
+    "case_url": "/work/instrumentzero/",
+    "lead": "Create a seeded ringdown, compare processing placements, and inspect the resonance and damping estimates alongside the signal and its assumptions.",
+    "action": {
+      "label": "Run locally",
+      "url": "https://github.com/nazeeh111/InstrumentZero#run-the-lab"
+    },
+    "secondary_action": {
+      "label": "Inspect the sample record",
+      "url": "https://github.com/nazeeh111/InstrumentZero/blob/c1a252300159e2e8e161db43191aafcbea701077/examples/edge/simulation-confirmation-v0.3-final/custom-1.json"
+    },
+    "problem": "A frequency or damping estimate is hard to assess without the input signal, processing path and calibration assumptions. Agreement with a reference calculation also needs to be distinguished from a physical measurement.",
+    "mechanism": "InstrumentZero turns supported experiment questions into procedures, calibration contracts and executable analysis. This case uses its Edge simulation workflow: a seeded signal passes through explicit processing placements, with sample records and numerical references retained beside the estimates.",
+    "observed_result": "The retained custom ringdown contains 769 displayed acceleration samples. Its analytic model is 9.75 Hz with decay 0.45 s⁻¹ at seed 9132301. The stored numerical reference returns 9.750006565906396 Hz and decay 0.4499236618270089 s⁻¹ on the same captured input.",
+    "scope_note": "This is seeded simulation and a same-input numerical reference, not a physical sensor capture or independently measured resonance. The declared resolution/clock envelope is not a validated confidence interval or a coverage guarantee.",
+    "foundations": "The retained reference uses NumPy float64 processing and SciPy lfilter, distinguished from the recorded C-path results. The project’s external recordings and dependencies retain their own notices; none is relabeled as this synthetic capture.",
+    "evidence_url": "/assets/featured/evidence.html#instrumentzero",
+    "media": [
+      {
+        "src": "/assets/featured/instrumentzero-ringdown.png",
+        "mobile_src": "/assets/featured/instrumentzero-ringdown-mobile.png",
+        "alt": "All stored acceleration samples of the seeded InstrumentZero ringdown with its retained reference frequency and decay.",
+        "caption": "Seeded 9.75 Hz, 0.45 s⁻¹ ringdown. All 769 stored plot samples are shown without new fitting or filtering; the eight-second run’s processed plot segment ends at 7.68 seconds."
+      }
+    ],
+    "technical_details": [
+      "The portfolio figure displays stored time in seconds and acceleration in m/s². Connecting lines aid reading between samples and do not create additional observations.",
+      "The same retained JSON includes raw-host, calibrated-edge and filtered-edge C-path results, estimator diagnostics and source identity. It supports comparing processing paths without calling numerical agreement a hardware measurement."
+    ],
+    "legacy_fragment": [
+      "case-instrumentzero"
+    ]
+  },
+  {
+    "slug": "nstack",
+    "name": "nstack",
+    "repository_url": "https://github.com/nazeeh111/nstack",
+    "source_revision": "c7f6c73bb3ae7fd5aba7c9bd41d8514a932926b7",
+    "case_url": "/work/nstack/",
+    "lead": "Find a reviewed specialist capability, inspect its exact source and prerequisites, then decide whether it belongs in the current task.",
+    "action": {
+      "label": "Run locally",
+      "url": "https://github.com/nazeeh111/nstack#explore-before-installing"
+    },
+    "secondary_action": {
+      "label": "Inspect the recorded route",
+      "url": "/assets/featured/nstack-route.json"
+    },
+    "problem": "A list of agent skills does not explain when a capability applies, what it depends on or which licensed source will be installed. Discovery needs to stay separate from activation.",
+    "mechanism": "nstack keeps a reviewed capability registry with source revisions, selected paths, rights, activation conditions and task checks. Its search, show and route commands expose those decisions before installation. A component can contain several native skills; its catalog identifier is not the same as an installed skill name.",
+    "observed_result": "The recorded search for web-ui-design returned component L010 with web-ui-design and mcp-builder. Show and route exposed the pinned upstream source, selected paths, rights and prerequisites. The absent temporary state directory stayed absent throughout this read-only session.",
+    "scope_note": "This case verifies source-only discovery, not an installed runtime, live activation, rollback or another machine’s setup. A catalog route is not permission to install, and available source is not target-specific acceptance.",
+    "foundations": "Each selected capability keeps its upstream identity and license. In this recorded L010 case, the source is anthropics/skills at ca45fc496a3436251f191354091d557da31c15b5; only the eligible selected leaves are covered by the stated route.",
+    "evidence_url": "/assets/featured/evidence.html#nstack",
+    "media": [],
+    "technical_details": [
+      "The actual command sequence is python3 nstack.py search web-ui-design --brief, followed by show L010 and route L010. The complete JSON outputs are retained as site assets, so readers can inspect the result rather than a mock terminal.",
+      "The selected route distinguishes Apache-2.0 frontend/MCP leaves from restricted artifact sources. Discovery, source preparation and actual target-runtime checks remain separate operations."
+    ],
+    "legacy_fragment": [
+      "case-nstack"
+    ]
+  },
+  {
+    "slug": "solidrift",
+    "name": "Solidrift",
+    "repository_url": "https://github.com/nazeeh111/Solidrift",
+    "source_revision": "8fc9e23471a18165d73646e290700cc10d351eea",
+    "case_url": "/work/solidrift/",
+    "lead": "Shrink a native mesh Boolean failure while preserving the bug, then inspect a reversible geometry intervention and its source ancestry.",
+    "action": {
+      "label": "Inspect recorded case",
+      "url": "https://nazeeh111.github.io/Solidrift/"
+    },
+    "secondary_action": {
+      "label": "Read the reducer source",
+      "url": "https://github.com/nazeeh111/Solidrift"
+    },
+    "problem": "A Boolean union quietly drops part of the input. Sending the full model is easy; reducing it to a valid, small example that still reproduces the same failure is harder.",
+    "mechanism": "Solidrift contracts edges while checking that both operands remain valid closed solids and the same native failure survives. It tracks each vertex’s source ancestry, searches small boundary interventions on the witness, lifts a selected intervention back to the full inputs, and records native repair and undo results.",
+    "observed_result": "The retained investigation reduces 132 input triangles to a 12-triangle witness through 60 accepted contractions. Its recorded intervention moves three witness vertices whose ancestry covers thirteen original vertices. Undo restores the original input coordinates and the native omission. The two portfolio panels show the original 132-triangle stage, not the later witness.",
+    "scope_note": "The browser viewer replays stored geometry and never runs Blender. This is a bounded greedy reduction, not a globally smallest witness. The intervention changes the input geometry, not Blender’s implementation; agreement with MANIFOLD is not proof of an ideal union.",
+    "foundations": "The two operands are Manifold regression fixtures under Apache-2.0, not original models. Blender supplies the FLOAT and MANIFOLD Boolean implementations. Solidrift’s implementation is MIT licensed, with fixture attribution retained.",
+    "evidence_url": "/assets/provenance.html#solidrift",
+    "media": [
+      {
+        "src": "/assets/solidrift-input.svg",
+        "alt": "The original recorded Solidrift input: two overlapping mesh bodies, one cyan and one blue, before the FLOAT union.",
+        "caption": "Original 132-triangle input stage, recomposed from preserved polygon coordinates. These are Manifold regression fixtures."
+      },
+      {
+        "src": "/assets/solidrift-union.svg",
+        "alt": "The recorded Blender FLOAT union retains the blue body while the cyan body is absent.",
+        "caption": "Stored FLOAT output for the original inputs. The figure is a recorded result, not a fresh Blender execution or an image of the 12-triangle witness."
+      }
+    ],
+    "technical_details": [
+      "This case is tied to the retained Blender 5.3.0 Alpha build bad8871dc58d record at the cited source revision. Newer public investigations have separate backend identities and must not be merged into this older capture’s provenance.",
+      "The compact case bundles original identities, reduced and restored operands, contraction trace, coordinate patch, validity checks and backend identity. Intermediate input states can be replayed without inventing intermediate native output surfaces."
+    ],
+    "legacy_fragment": [
+      "geometry"
+    ]
+  },
+  {
+    "slug": "materialmind",
+    "name": "MaterialMind",
+    "repository_url": "https://github.com/nazeeh111/MaterialMind",
+    "source_revision": "c879afa4b616649cac73ef46b010f24e12ed3544",
+    "case_url": "/work/materialmind/",
+    "lead": "Compare crystal stability predictions and active-learning query choices with archived computed reference data.",
+    "action": {
+      "label": "Run the local laboratory",
+      "url": "https://github.com/nazeeh111/MaterialMind#run-the-laboratory"
+    },
+    "secondary_action": {
+      "label": "Inspect and reopen the recorded case",
+      "url": "https://github.com/nazeeh111/MaterialMind/blob/main/docs/presentation/README.md"
+    },
+    "problem": "A high query rank or confident stability score can hide an inaccurate energy prediction. The evidence needs to distinguish what the model knew before reveal from the archived reference it is compared against.",
+    "mechanism": "The workbench retains an initial crystal, its pre-reveal prediction and uncertainty, and the acquisition components used to choose a query. Revealing the existing DFT reference exposes that one selected energy lies outside the stated interval; it does not acquire a new physical measurement.",
+    "observed_result": "PaMnF6 ranks first in this recorded query. Its pre-reveal energy estimate is −2.198549726666667 eV/atom, with a stated 90% interval from −2.284320417627142 to −2.1127790357061924. The archived reference is −1.951794 eV/atom, outside that interval. Both energies are below the fixed reference hull.",
+    "scope_note": "One selected retrospective interval miss, not an uncertainty-coverage study or new DFT calculation. The fitted policy did not outperform adapted greedy in the released study. No synthesis, physical stability or official blind-benchmark claim.",
+    "foundations": "Retained WBM/Matbench Discovery computed reference data, Janosh Riebesell and contributors, CC-BY-4.0; original WBM by Wang, Botti and Marques. Code MIT. Original data attribution and transformations stay with the case assets.",
+    "evidence_url": "/assets/featured/evidence.html#materialmind",
+    "media": [
+      {
+        "src": "/assets/featured/materialmind/query.png",
+        "mobile_src": "/assets/featured/materialmind/query-mobile.png",
+        "mobile_width": 960,
+        "alt": "PaMnF6 initial crystal, pre-reveal model interval and archived DFT energy outside that interval; the query score explains why the model ranked it first.",
+        "caption": "Unchanged source-derived figure from the recorded initial crystal, pre-reveal prediction and revealed computed reference. A selected failure of the interval, not a new coverage study."
+      }
+    ],
+    "technical_details": [
+      "The crystal view uses the retained lattice and eight atomic sites. It does not represent a synthesized specimen or predict a new structure.",
+      "Query rank, stability probability and energy-interval accuracy answer different questions. The source, raw values, native save/reopen evidence and negative aggregate result remain available in the owning repository."
+    ],
+    "legacy_fragment": [
+      "case-materialmind"
+    ]
+  }
+]

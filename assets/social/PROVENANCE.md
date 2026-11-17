@@ -1,20 +1,11 @@
 # Engineering portfolio social preview
 
-The1200×630 PNG is the portfolio's social image, not a product screenshot. It combines Nazeeh Abdul-Hadi's supplied electrical-engineering/physics identity with the existing recorded Solidrift input/union projections. The comparison shows the original recorded case, not the later12-triangle witness. No new geometry, native run, metric, model, photograph or testimonial was produced.
+The 1200 × 630 PNG is a designed share image for this portfolio. It combines Nazeeh Abdul-Hadi’s existing engineering/physics identity, licensed self-hosted Rethink Sans, retained N avatar and the actual VibeScope visualization ×20 output at frame 72. It is not a screenshot of a new application run, a live measurement or evidence of physical calibration.
 
-## Editable sources and rendering
+[Editable HTML](portfolio-preview.html) is the current rendering source. It uses local files, a fixed 1200 × 630 canvas and native HTML/CSS. The canonical [PNG](portfolio-preview.png) is captured in an isolated headless browser at device scale 1 after the local font and original image decode. The image is enlarged by nearest-neighbor display; no new detail, recoloring, retouching or estimator is introduced. The raw 320 × 192 frame remains unchanged at [its original URL](../featured/vibescope/enhanced-frame72.png), SHA-256 `da9b3af617c00e113c160ae7dcb01b398f507927cd4f683dbf2da974a703dc79`.
 
-- [Self-contained HTML](portfolio-preview.html) uses inline SVG and the exact licensed Rethink Sans font bytes embedded as a data URL. [Standalone SVG](portfolio-preview.svg) preserves editable text and embeds that same font. Its declared fallback stack is Rethink Sans, Arial, Helvetica, sans-serif.
-- [PNG](portfolio-preview.png) is an actual isolated Chrome capture of the SVG at native1200×630 with device scale1. All meaningful labels stay within the64px safe area. The PNG is the canonical fixed-pixel social asset; older SVG editors may substitute fallback typography.
-- The surrounding text/paper/navy/wheat treatment follows the accepted website identity. Original mesh XML is unchanged except outer x/y/width/height placement.
+The VibeScope source and synthetic examples retain their [MIT notice](../featured/VibeScope-LICENSE.txt). The [case evidence](../featured/evidence.html#vibescope) records the source revision, paired runs, pixel hashes and limitations. Rethink Sans retains its [SIL Open Font License](../fonts/OFL.txt) and [font source record](../fonts/SOURCE.json). Font SHA-256: `c700224149f9248587ccb1e1482bb01c1c779076c8c593720838877ad9643347`.
 
-## Inputs and rights
+The earlier [Solidrift SVG composition](portfolio-preview.svg) is retained as a historical editable artifact. It is separate from the current PNG rendering source. Its original [input](../solidrift-input.svg), [recorded union](../solidrift-union.svg), [provenance](../provenance.html#solidrift) and [Apache-2.0 fixture terms](../sources/solidrift-fixture-LICENSE.txt) remain available. Its underlying geometry is unchanged.
 
-Pinned site source parent: `6c5a2416663c6678457d610068b811b63e24fd9f`; tree `b0806921a3aee508dc2fef68077c5051452e560a`. Existing [input projection](../solidrift-input.svg), [recorded union](../solidrift-union.svg) and [original geometry provenance](../provenance.html#solidrift) remain available. The original operands derive from Manifold regression fixtures under retained [Apache-2.0 terms](../sources/solidrift-fixture-LICENSE.txt).
-
-Rethink Sans is retained under [SIL Open Font License](../fonts/OFL.txt), with [font source record](../fonts/SOURCE.json). Embedded font SHA256: `c700224149f9248587ccb1e1482bb01c1c779076c8c593720838877ad9643347`. No font package or runtime was installed. Source projections:
-
-- `assets/solidrift-input.svg` SHA256 `a68626244e31d592295f6bfd3e1bbded9bd39a4d90a676d7f657e2e14ac65d9a`
-- `assets/solidrift-union.svg` SHA256 `bc7b13416cddc36dc7170c2cdbb645a5bb311d6e0f12db829c2e5b35d3c2d70d`
-
-Accessible share description: Nazeeh Abdul-Hadi's electrical engineering and physics portfolio, with Solidrift's two input meshes and the recorded Blender union missing one body.
+Accessible share description: Nazeeh Abdul-Hadi’s electrical engineering and physics portfolio, showing a recorded controlled-synthetic VibeScope visualization.

@@ -42,27 +42,24 @@ class BuildTests(unittest.TestCase):
    fresh=Path(d)/'fresh';builder.publish(fresh,rendered);self.assertTrue((fresh/'.build-manifest.json').is_file())
    for path,data in rendered.items():self.assertEqual(hashlib.sha256((fresh/path).read_bytes()).digest(),hashlib.sha256(data).digest())
 
- def test_retained_catalog_and_cross_discipline_membership(self):
-  output=builder.render(self.files)['index.html'].decode()
+ def test_retained_curation_case_assets_and_generated_work_index(self):
+  outputs=builder.render(self.files)
   from html.parser import HTMLParser
   class Catalog(HTMLParser):
    def __init__(self):super().__init__();self.entries=[]
    def handle_starttag(self,tag,attrs):
-    data=dict(attrs)
-    if tag=='li' and data.get('class')=='project-item':self.entries.append(data)
-  page=Catalog();page.feed(output);self.assertEqual(len(page.entries),59)
-  projects=json.loads(self.files['projects.json'])['projects']
-  names={p['url'].rstrip('/').rsplit('/',1)[-1] for p in projects}
+    a=dict(attrs)
+    if tag=='li' and a.get('class')=='project-item':self.entries.append(a)
+  page=Catalog();page.feed(outputs['work/index.html'].decode());self.assertEqual(len(page.entries),59)
+  projects=json.loads(self.files['projects.json'])['projects'];names={p['url'].rsplit('/',1)[-1]for p in projects}
   self.assertFalse(names & {'AsterScan','AdaCAD','advisory-database','pattern-projector','binaryen.js','meent','fluids'})
   for name in ('QubitGuard','FLUXATLAS'):
-   entry=next(e for e in page.entries if e['data-search'].startswith(name.lower()+' '))
+   entry=next(e for e in page.entries if name in e['data-search'])
    self.assertEqual(set(entry['data-subjects'].split('|')),{'Physics & quantum','ML & data'})
-
- def test_invalid_memberships_refuse_without_generation(self):
-  for invalid in ([],['Physics & quantum','Physics & quantum'],['Unknown'],"ML & data",['ML & data']):
-   files=dict(self.files);projects=json.loads(files['projects.json']);projects['projects'][0]['subjects']=invalid
-   files['projects.json']=json.dumps(projects).encode()
-   with self.subTest(invalid=invalid),self.assertRaisesRegex(ValueError,'discipline memberships'):builder.render(files)
+  cases=json.loads(self.files['cases.json']);self.assertEqual(len(cases),9)
+  for case in cases:self.assertIn(case['case_url'].lstrip('/')+'index.html',outputs)
+  self.assertIn(b'/assets/featured/materialmind/query-mobile.png',outputs['work/materialmind/index.html'])
+  self.assertIn(b'Open my GitHub profile',outputs['index.html'])
 
  def test_only_reviewed_inputs_enter_extracted_archive_build(self):
   with tempfile.TemporaryDirectory() as d:
@@ -77,3 +74,20 @@ class BuildTests(unittest.TestCase):
     listed=source/'research/papers/counterpatch.md';listed.unlink()
     with self.assertRaisesRegex(ValueError,'Missing regular public input'):builder.snapshot(source)
    finally:builder.ROOT=old
+
+ def test_asset_cache_identity_changes_with_asset_bytes_and_stays_stable_otherwise(self):
+  old=builder.render(self.files)
+  files=dict(self.files);files['assets/design/portfolio.css']+=b'\n/* SYNTHETIC CACHE REVISION */'
+  new=builder.render(files)
+  old_css=b'/assets/design/portfolio.css?v='+hashlib.sha256(self.files['assets/design/portfolio.css']).hexdigest()[:16].encode()
+  new_css=b'/assets/design/portfolio.css?v='+hashlib.sha256(files['assets/design/portfolio.css']).hexdigest()[:16].encode()
+  for page in ['index.html','work/index.html','work/solidframe/index.html','assets/provenance.html','assets/featured/evidence.html']:
+   self.assertIn(old_css,old[page]);self.assertIn(new_css,new[page]);self.assertNotIn(old_css,new[page])
+  stable_js=b'/assets/portfolio.js?v='+hashlib.sha256(self.files['assets/portfolio.js']).hexdigest()[:16].encode()
+  self.assertIn(stable_js,old['index.html']);self.assertIn(stable_js,new['index.html'])
+  self.assertEqual(builder.stamp_asset_urls(new),new)
+  self.assertNotEqual(files['assets/design/portfolio.css'],self.files['assets/design/portfolio.css'])
+
+  literal=b'<code>src="/assets/work.js"</code>'
+  sample=dict(self.files);sample['scripts/portfolio.html']+=literal
+  self.assertIn(literal,builder.render(sample)['index.html'])

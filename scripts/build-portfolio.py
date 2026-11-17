@@ -5,19 +5,6 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DISCIPLINES = {
-    "Creative & everyday tools", "EE & sensing", "Geometry & CAD",
-    "ML & data", "Physics & quantum", "Systems & developer tools",
-}
-
-
-def disciplines(project):
-    values = project.get("subjects", [project["subject"]])
-    if (not isinstance(values, list) or not values or
-            any(not isinstance(value, str) or value not in DISCIPLINES for value in values) or
-            len(set(values)) != len(values) or project["subject"] not in values):
-        raise ValueError("Invalid project discipline memberships")
-    return values
 
 
 def escape(value):
@@ -26,17 +13,16 @@ def escape(value):
 
 def render(catalog, template):
     entries = []
-    groups = sorted({group for project in catalog["projects"] for group in disciplines(project)})
+    groups = sorted({project["subject"] for project in catalog["projects"]})
     for project in catalog["projects"]:
         name = escape(project["name"])
         summary = escape(project["summary"])
-        memberships = disciplines(project)
-        searchable = escape(" ".join([project["name"], project["summary"], *memberships, *project["topics"], *project.get("aliases", [])]).lower())
+        searchable = escape(" ".join([project["name"], project["summary"], project["subject"], *project["topics"], *project.get("aliases", [])]).lower())
         upstream = ""
         if project.get("upstream"):
             parent = escape(project["upstream"])
             upstream = f'<p class="upstream">Based on <a href="https://github.com/{parent}">{parent}</a></p>'
-        entries.append(f'''<li class="project-item" data-subject="{escape(project['subject'])}" data-subjects="{escape('|'.join(memberships))}" data-search="{searchable}">
+        entries.append(f'''<li class="project-item" data-subject="{escape(project['subject'])}" data-search="{searchable}">
 <div><h3><a class="project-wordmark" href="{escape(project['url'])}">{name}</a></h3><p>{summary}</p>{upstream}</div>
 <span class="project-kind">{escape('Fork' if project.get('upstream') else project['kind'])}</span></li>''')
     options = "".join(f'<option value="{escape(group)}">{escape(group)}</option>' for group in groups)
