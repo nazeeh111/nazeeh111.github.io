@@ -1091,20 +1091,26 @@
       "source_revision": "37f9fd5c3de31bcd73799d89e0bd50ce2a49f1ef"
     },
     {
-      "name": "pattern-projector",
-      "summary": "Fork of Pattern Projector with work on viewport-outline transforms for sewing patterns.",
+      "name": "Pattern Projector",
+      "summary": "Sewing-pattern projection fork: four-corner calibration, PDF layers and page stitching, with recoverable settings and compact controls.",
       "url": "https://github.com/nazeeh111/pattern-projector",
       "subject": "Geometry & CAD",
       "kind": "Fork",
       "topics": [
-        "projector-calibration",
-        "sewing-patterns",
+        "nextjs",
         "pdf-viewer",
+        "progressive-web-app",
+        "projective-geometry",
+        "projector-calibration",
         "react",
+        "sewing-patterns",
         "typescript"
       ],
       "upstream": "Pattern-Projector/pattern-projector",
-      "source_revision": "3c9152f3c44dd8e3fa87311018c5e280348f46bb"
+      "source_revision": "93e8c6936cd5fb65a5c811cb2132aabbd8db79d8",
+      "aliases": [
+        "pattern-projector"
+      ]
     },
     {
       "name": "Automation Hub",
