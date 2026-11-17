@@ -1,0 +1,197 @@
+{
+  "observed": "2026-11-17",
+  "entries": {
+    "solidframe": {
+      "files": [
+        "solidframe-fixture.jpg"
+      ],
+      "repository": "SolidFrame",
+      "evidence_commit": "3876655ea1e19eba6b5f2de204d3b6a0f946263e",
+      "repository_head_observed": "4f3540f949be41ef9f35e1c3f8b815db0826d29d",
+      "source_path": "docs/images/editable-fixture.jpg",
+      "recorded_date": "2026-10-26",
+      "kind": "retained actual browser capture",
+      "current_source_check": "Older native-fixture snapshot checked relative to image commit; root-selected current default commit/tree recorded separately. Retained October26capture, not a newly accepted application capture.",
+      "limit": "Not a new browser execution or manufacturing approval; part dimensions are independent",
+      "foundations": [
+        "Chili3D",
+        "OpenCascade"
+      ],
+      "copied_sha256": {
+        "solidframe-fixture.jpg": "accfe975d068db4255538d78b8eb94ed15e2322515464182eb2ce5d954d0a274"
+      },
+      "repository_tree_observed": "80335116d0893f33e781b66bca7d5cd57b381ebc"
+    },
+    "vibescope": {
+      "files": [
+        "vibescope-measurement.png"
+      ],
+      "repository": "VibeScope",
+      "evidence_commit": "28be68bee807a9e901f901ae4d4967a464cba919",
+      "measurement_interface_reference": "7dbfef264152a27fcbfe16625573d32e351c18fb",
+      "repository_head_observed": "5c649a4870238ff9521159a63f6ebf29740f59c1",
+      "source_path": "examples/measurement/measurement.png",
+      "recorded_date": "2026-10-25",
+      "kind": "retained actual controlled-synthetic measurement export",
+      "current_source_check": "motion.py, signals.py, pipeline.py unchanged from documented measurement commit; current Local history additions preserve the approved measurement interface",
+      "limit": "Original-frame image-plane displacement; display gain is excluded; physical calibration and arbitrary media not established",
+      "copied_sha256": {
+        "vibescope-measurement.png": "67d6019c1ed0cee398e8bcb4318728ab7ae79aa6e6e192cf720df82c3246f58e"
+      }
+    },
+    "nstack": {
+      "files": [
+        "nstack-search.json",
+        "nstack-show.json",
+        "nstack-route.json"
+      ],
+      "repository": "nstack",
+      "evidence_commit": "c7f6c73bb3ae7fd5aba7c9bd41d8514a932926b7",
+      "source_path": "docs/presentation/README.md",
+      "recorded_date": "2026-11-17",
+      "kind": "actual read-only source discovery command outputs",
+      "limit": "Absent temporary state stayed absent; not installed-native discovery, target runtime or activation/rollback acceptance",
+      "copied_sha256": {
+        "nstack-search.json": "779e28465ebaf7ad005271ed740181a2ec124757b5971d768148a8124b1e48ac",
+        "nstack-show.json": "774c3970c0c077e4e91fe9f18f8df20b1c8ec2f89fc4a6071ca2d5f50d49a053",
+        "nstack-route.json": "2a8bfc4d0451acba54b5962d6a306e8c03473ecee7316affce7c2c5ff31e6d5f"
+      }
+    },
+    "qloom": {
+      "repository": "QLOOM",
+      "evidence_commit": "ddcce9317bdc59e053f6b6fec3cedf43b9203111",
+      "source_tree": "2b4a0d71f22f147154a229b61bac53c5e7e7ca9b",
+      "kind": "source-derived presentation of retained data; no new computation",
+      "final_declared_bytes_verified": true,
+      "acceptance_status": "root-directed corrected presentation successor; no fresh study acceptance",
+      "copied": {
+        "qloom-circuit.png": {
+          "producer_path": "docs/presentation/circuit-handoff.png",
+          "sha256": "d19f3c60ea295e7dae5c31dc83a98feb4cbbcb68d1771b870e8c346e34056057",
+          "bytes": 79756
+        },
+        "qloom-circuit-mobile.png": {
+          "producer_path": "docs/presentation/circuit-handoff-mobile.png",
+          "sha256": "e74365618382612d6de2c3b8636cdc15dbc62f3995b6afa091ed30bf4600dcf6",
+          "bytes": 49675
+        },
+        "qloom-circuit.svg": {
+          "producer_path": "docs/presentation/circuit-handoff.svg",
+          "sha256": "dd012b9b6850f67445c0629d012de6dfbb0d96aa2a2d386b9da6c5ecd94bb8f9",
+          "bytes": 13383
+        },
+        "qloom-circuit-mobile.svg": {
+          "producer_path": "docs/presentation/circuit-handoff-mobile.svg",
+          "sha256": "bf967cfe9a6e44644bbaadcef1281d40de7de2e8f75508b2023ee11a0aad5340",
+          "bytes": 12468
+        },
+        "qloom-source-note.md": {
+          "producer_path": "docs/presentation/README.md",
+          "sha256": "ed87304bc549ba101c9e98869f82c2c91ee4a4cbf95d457f336b4d3388a1e129",
+          "bytes": 1862
+        },
+        "qloom-figure-manifest.json": {
+          "producer_path": "docs/presentation/manifest.json",
+          "sha256": "1aa31f4ed5c2cf16130ff2a86b8a98d1456967cf7dfce1c81e03553cb03e541e",
+          "bytes": 1303
+        },
+        "qloom-mobile-figure-manifest.json": {
+          "producer_path": "docs/presentation/manifest-mobile.json",
+          "sha256": "720c648cb5474fd21d5fd67c2db27f267c1efd4fcabd95997864dd13c40e383f",
+          "bytes": 1317
+        }
+      }
+    },
+    "photonsmith": {
+      "repository": "PhotonSmith",
+      "evidence_commit": "13912d9d640938acf8ce299a152298666ae61d44",
+      "source_tree": "80ac5c590a499e383f4ccd5de20da0d031b60c97",
+      "kind": "source-derived presentation of retained data; no new computation",
+      "final_declared_bytes_verified": true,
+      "acceptance_status": "root-directed corrected presentation successor; no fresh study acceptance",
+      "copied": {
+        "photonsmith-field.png": {
+          "producer_path": "docs/presentation/field-and-spectrum.png",
+          "sha256": "e7e69b4b8a844b54e2279f131148f0258abeb9c3a3b1ec7b3cf4127aa1a653e4",
+          "bytes": 150584
+        },
+        "photonsmith-field-mobile.png": {
+          "producer_path": "docs/presentation/field-and-spectrum-mobile.png",
+          "sha256": "6bc66368738d47272d205eb4eed9435af293fa20ab5bfbb9741997c5ce888836",
+          "bytes": 130956
+        },
+        "photonsmith-field.svg": {
+          "producer_path": "docs/presentation/field-and-spectrum.svg",
+          "sha256": "4c5e0e96880c4159919a4dfe898fff9c777085daae662bc5e5300a1e7153b8c9",
+          "bytes": 58176
+        },
+        "photonsmith-field-mobile.svg": {
+          "producer_path": "docs/presentation/field-and-spectrum-mobile.svg",
+          "sha256": "fe3fd65db0644f31f583fb9e56881332d8b8c87194d76edfc4f7ee9fdf4738f7",
+          "bytes": 63227
+        },
+        "photonsmith-source-note.md": {
+          "producer_path": "docs/presentation/README.md",
+          "sha256": "9be6c8ace2a656476db2a0e1248a0cf8e652be62c54a26f0d1adf670fb2fb414",
+          "bytes": 2144
+        },
+        "photonsmith-figure-manifest.json": {
+          "producer_path": "docs/presentation/manifest.json",
+          "sha256": "5a833332ef71273d8ae5458419d54af111f9751c2a6bae5f224ca3a45e511fe9",
+          "bytes": 1689
+        },
+        "photonsmith-mobile-figure-manifest.json": {
+          "producer_path": "docs/presentation/manifest-mobile.json",
+          "sha256": "78654a9aac648b7531b5e98ad4951ab228d6c3ec5022e0bcc1c6ce5ee6a4e88e",
+          "bytes": 1703
+        }
+      }
+    },
+    "instrumentzero": {
+      "repository": "InstrumentZero",
+      "evidence_commit": "c1a252300159e2e8e161db43191aafcbea701077",
+      "source_tree": "eb09189bfc421dc87268f5585886cc5d4b788e4d",
+      "kind": "source-derived presentation of retained data; no new computation",
+      "final_declared_bytes_verified": true,
+      "acceptance_status": "root-directed corrected presentation successor; no fresh study acceptance",
+      "copied": {
+        "instrumentzero-ringdown.png": {
+          "producer_path": "docs/presentation/seeded-ringdown.png",
+          "sha256": "d5a52409dcaad13258dcccf8965a5738ab94ddc5c2f05550c964255abf787cfd",
+          "bytes": 176358
+        },
+        "instrumentzero-ringdown-mobile.png": {
+          "producer_path": "docs/presentation/seeded-ringdown-mobile.png",
+          "sha256": "3f7478f7e3c2a7baee1e1a7621dd30a76ef117603e16cc59a45e1302cf97467c",
+          "bytes": 123425
+        },
+        "instrumentzero-ringdown.svg": {
+          "producer_path": "docs/presentation/seeded-ringdown.svg",
+          "sha256": "d906e57330da1c5a6136f87c6f8bbd5de7831635e2a9f54479d7447389ddcfdb",
+          "bytes": 30307
+        },
+        "instrumentzero-ringdown-mobile.svg": {
+          "producer_path": "docs/presentation/seeded-ringdown-mobile.svg",
+          "sha256": "7e77e0fc0131c44a734591dc8545ae8c264e1f5ff8d70a5cbcde965f0fd7e0ed",
+          "bytes": 33019
+        },
+        "instrumentzero-source-note.md": {
+          "producer_path": "docs/presentation/README.md",
+          "sha256": "c6d249ab98e04b7ee169fa9105dd7f0821418fa7c98cc55d9708ab45211e06e8",
+          "bytes": 1930
+        },
+        "instrumentzero-figure-manifest.json": {
+          "producer_path": "docs/presentation/manifest.json",
+          "sha256": "7ff6d683bdc20116c37ecd7bef7e3964d5fb3a3dc129bf4d9cd4e06c30640986",
+          "bytes": 1533
+        },
+        "instrumentzero-mobile-figure-manifest.json": {
+          "producer_path": "docs/presentation/manifest-mobile.json",
+          "sha256": "0f1c0cf17113c9912086d3ef65748d92b7640be9a25c0e8647dee26b36c115b1",
+          "bytes": 1547
+        }
+      }
+    }
+  },
+  "science_handoff": "Corrected root-selected source trees and rendering successors. Exact declared bytes checked for all21 science files. InstrumentZero simplification disabled in repaired source; original data and fitted values unchanged."
+}

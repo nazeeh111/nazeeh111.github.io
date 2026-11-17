@@ -1,0 +1,92 @@
+{
+  "id": "L010",
+  "repository": "anthropics/skills",
+  "revision": "ca45fc496a3436251f191354091d557da31c15b5",
+  "role": "Anthropic specialist skills and packaging examples.",
+  "activation": "Frontend craft or MCP tool interface design.",
+  "non_use": "Restricted artifact skills without rights; blanket brand/style injection.",
+  "implementation_mode": "upstream skill with narrow patch",
+  "dependencies": "Apache-2 selected skill rights; actual frontend/MCP runtimes as task requires.",
+  "license": "Per skill: frontend-design and mcp-builder Apache-2.0; docx restricted All rights reserved (do not port).",
+  "adaptations": [
+    "Frontend-design: apply the brief and existing design system first; remove the fictitious client history and unconditional subject-confirmation. Load this lightweight direction only on new/reshaped interfaces.",
+    "MCP-builder: map sample SDK and transports to the target version and native tooling, validate authenticating/error paths using the server protocol. Other artifact leaves require their own rights; use separately supported formats."
+  ],
+  "acceptance_checks": [
+    "Frontend tested on mobile/keyboard/reduced motion; MCP read/write annotations match real behavior and pagination limits."
+  ],
+  "decision": "selective-merge",
+  "deployment": "on demand",
+  "source": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/skills/frontend-design/SKILL.md",
+  "runtime_release_or_toolchain": null,
+  "installation_mode": "Build a repository-scoped leaf directory from the pinned upstream directory, retain its sibling assets and notices, apply the listed changes and validate activation.",
+  "selected_paths": [
+    {
+      "candidate_id": "L010",
+      "source_repository": "anthropics/skills",
+      "source_path": "skills/frontend-design/SKILL.md",
+      "revision": "ca45fc496a3436251f191354091d557da31c15b5",
+      "source_url": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/skills/frontend-design/SKILL.md",
+      "delivery": "narrow-patched leaf",
+      "decision": "adapt",
+      "details": "Patch the imagined client rejection, the instruction to confirm the subject when missing, and source-prescriptive visual choices: use the actual brief and ask only when purpose materially changes the result. Preserve art direction, typography and subject-specific layout.",
+      "closure": "Resolve and preserve referenced support files and parent-level dependencies at the same pin.",
+      "rights": "Per skill: frontend-design and mcp-builder Apache-2.0; docx restricted All rights reserved (do not port)."
+    },
+    {
+      "candidate_id": "L010",
+      "source_repository": "anthropics/skills",
+      "source_path": "skills/mcp-builder/SKILL.md",
+      "revision": "ca45fc496a3436251f191354091d557da31c15b5",
+      "source_url": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/skills/mcp-builder/SKILL.md",
+      "delivery": "narrow-patched leaf",
+      "decision": "adapt",
+      "details": "Apache2 tool schema/interface design on actual MCP build task.",
+      "closure": "Resolve and preserve referenced support files and parent-level dependencies at the same pin.",
+      "rights": "Per skill: frontend-design and mcp-builder Apache-2.0; docx restricted All rights reserved (do not port)."
+    }
+  ],
+  "staged_builds": [],
+  "operation_recipes": [],
+  "native_activation_route": {
+    "id": "L010",
+    "deployment": "on demand",
+    "activation": "Frontend craft or MCP tool interface design.",
+    "non_use": "Restricted artifact skills without rights; blanket brand/style injection.",
+    "rights": "Per skill: frontend-design and mcp-builder Apache-2.0; docx restricted All rights reserved (do not port).",
+    "prerequisites": "Apache-2 selected skill rights; actual frontend/MCP runtimes as task requires.",
+    "source": {
+      "repository": "anthropics/skills",
+      "revision": "ca45fc496a3436251f191354091d557da31c15b5",
+      "locator": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/skills/frontend-design/SKILL.md"
+    },
+    "required_adaptations": [
+      "Frontend-design: apply the brief and existing design system first; remove the fictitious client history and unconditional subject-confirmation. Load this lightweight direction only on new/reshaped interfaces.",
+      "MCP-builder: map sample SDK and transports to the target version and native tooling, validate authenticating/error paths using the server protocol. Other artifact leaves require their own rights; use separately supported formats."
+    ],
+    "task_acceptance": [
+      "Frontend tested on mobile/keyboard/reduced motion; MCP read/write annotations match real behavior and pagination limits."
+    ],
+    "state": "Available only under the stated activation rules; source preparation is not target runtime acceptance.",
+    "kind": "reviewed native specialist",
+    "acquire": [
+      {
+        "source_path": "skills/frontend-design/SKILL.md",
+        "repository": "anthropics/skills",
+        "revision": "ca45fc496a3436251f191354091d557da31c15b5",
+        "native_name": null,
+        "command": "nstack build L010 skills/frontend-design/SKILL.md"
+      },
+      {
+        "source_path": "skills/mcp-builder/SKILL.md",
+        "repository": "anthropics/skills",
+        "revision": "ca45fc496a3436251f191354091d557da31c15b5",
+        "native_name": null,
+        "command": "nstack build L010 skills/mcp-builder/SKILL.md"
+      }
+    ],
+    "activate": "The normal native installer exposes the exact named on-demand entries with their complete support. No project initialization is required. Heavy tool runtimes are separate task-triggered dependencies; inspect this component source and actual installed entrypoint before use.",
+    "verify": "Start a normally launched fresh Codex session; verify the native name and support resolve, perform the requested concrete operation, and independently reopen/check the final artifact. Report unavailable runtimes or prerequisite gates honestly.",
+    "deactivate": "Use the recorded Terminal rollback for the native profile. Preserve knowledge, project source, conversation data and unrelated settings."
+  }
+}

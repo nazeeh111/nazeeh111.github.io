@@ -1,0 +1,41 @@
+{
+  "id": "L010",
+  "deployment": "on demand",
+  "activation": "Frontend craft or MCP tool interface design.",
+  "non_use": "Restricted artifact skills without rights; blanket brand/style injection.",
+  "rights": "Per skill: frontend-design and mcp-builder Apache-2.0; docx restricted All rights reserved (do not port).",
+  "prerequisites": "Apache-2 selected skill rights; actual frontend/MCP runtimes as task requires.",
+  "source": {
+    "repository": "anthropics/skills",
+    "revision": "ca45fc496a3436251f191354091d557da31c15b5",
+    "locator": "https://github.com/anthropics/skills/blob/ca45fc496a3436251f191354091d557da31c15b5/skills/frontend-design/SKILL.md"
+  },
+  "required_adaptations": [
+    "Frontend-design: apply the brief and existing design system first; remove the fictitious client history and unconditional subject-confirmation. Load this lightweight direction only on new/reshaped interfaces.",
+    "MCP-builder: map sample SDK and transports to the target version and native tooling, validate authenticating/error paths using the server protocol. Other artifact leaves require their own rights; use separately supported formats."
+  ],
+  "task_acceptance": [
+    "Frontend tested on mobile/keyboard/reduced motion; MCP read/write annotations match real behavior and pagination limits."
+  ],
+  "state": "Available only under the stated activation rules; source preparation is not target runtime acceptance.",
+  "kind": "reviewed native specialist",
+  "acquire": [
+    {
+      "source_path": "skills/frontend-design/SKILL.md",
+      "repository": "anthropics/skills",
+      "revision": "ca45fc496a3436251f191354091d557da31c15b5",
+      "native_name": null,
+      "command": "nstack build L010 skills/frontend-design/SKILL.md"
+    },
+    {
+      "source_path": "skills/mcp-builder/SKILL.md",
+      "repository": "anthropics/skills",
+      "revision": "ca45fc496a3436251f191354091d557da31c15b5",
+      "native_name": null,
+      "command": "nstack build L010 skills/mcp-builder/SKILL.md"
+    }
+  ],
+  "activate": "The normal native installer exposes the exact named on-demand entries with their complete support. No project initialization is required. Heavy tool runtimes are separate task-triggered dependencies; inspect this component source and actual installed entrypoint before use.",
+  "verify": "Start a normally launched fresh Codex session; verify the native name and support resolve, perform the requested concrete operation, and independently reopen/check the final artifact. Report unavailable runtimes or prerequisite gates honestly.",
+  "deactivate": "Use the recorded Terminal rollback for the native profile. Preserve knowledge, project source, conversation data and unrelated settings."
+}

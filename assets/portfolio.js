@@ -8,6 +8,30 @@ const empty = document.querySelector("#catalog-empty");
 const catalogToggle = document.querySelector("#catalog-toggle");
 let showAll = false;
 
+// Keep a catalog view shareable without requiring a server or client router.
+function readCatalogLocation() {
+  const params = new URL(location.href).searchParams;
+  search.value = params.get("q") || "";
+  const requestedSubject = params.get("discipline") || "";
+  subject.value = [...subject.options].some((option) => option.value === requestedSubject)
+    ? requestedSubject
+    : "";
+  showAll = params.get("all") === "1";
+}
+
+function writeCatalogLocation() {
+  const url = new URL(location.href);
+  for (const [key, value] of [
+    ["q", search.value.trim()],
+    ["discipline", subject.value],
+    ["all", showAll ? "1" : ""],
+  ]) {
+    if (value) url.searchParams.set(key, value);
+    else url.searchParams.delete(key);
+  }
+  if (url.href !== location.href) history.replaceState(null, "", url);
+}
+
 function words(value) {
   return value
     .normalize("NFKD")
@@ -27,7 +51,7 @@ function selectExhibit(id) {
     choice.setAttribute("aria-pressed", String(choice.dataset.exhibit === id));
 }
 
-function filterProjects() {
+function filterProjects({ updateLocation = true } = {}) {
   const query = words(search.value);
   const category = subject.value;
   const filtering = Boolean(query.length || category);
@@ -50,6 +74,7 @@ function filterProjects() {
     : `Browse all ${entries.length} repositories`;
   catalogToggle.setAttribute("aria-expanded", String(showAll));
   empty.hidden = visible > 0;
+  if (updateLocation) writeCatalogLocation();
 }
 
 for (const choice of choices)
@@ -61,8 +86,8 @@ catalogToggle.addEventListener("click", () => {
   showAll = !showAll;
   filterProjects();
 });
-search.addEventListener("input", filterProjects);
-subject.addEventListener("change", filterProjects);
+search.addEventListener("input", () => filterProjects());
+subject.addEventListener("change", () => filterProjects());
 document.querySelector("#reset-search").addEventListener("click", () => {
   search.value = "";
   subject.value = "";
@@ -91,5 +116,11 @@ function restoreFragment() {
   }
 }
 addEventListener("hashchange", restoreFragment);
+addEventListener("popstate", () => {
+  readCatalogLocation();
+  filterProjects({ updateLocation: false });
+  restoreFragment();
+});
+readCatalogLocation();
 restoreFragment();
-filterProjects();
+filterProjects({ updateLocation: false });
