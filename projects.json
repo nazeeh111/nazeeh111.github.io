@@ -1072,7 +1072,7 @@
         "scientific-computing"
       ],
       "upstream": "CalebBell/fluids",
-      "source_revision": "cbcce36c65704ee771fed38c3e79b132019d30f8"
+      "source_revision": "f98d25034f6bd4264d5e12dca8d360ba4627aa34"
     },
     {
       "name": "meent",
