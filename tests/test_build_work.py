@@ -95,7 +95,8 @@ class WorkBuilderTests(unittest.TestCase):
         self.assertEqual(parsed.projects[0]["data-subject"], subject)
         self.assertIn(alias, parsed.projects[0]["data-search"])
         self.assertNotIn("data-extra", parsed.projects[0])
-        self.assertEqual(len(parsed.inputs), 1)
+        self.assertEqual([(item.get("id"), item.get("type")) for item in parsed.inputs],
+                         [("project-search", "search"), ("case-filter", "checkbox")])
 
     def test_template_like_project_text_remains_literal_data(self):
         catalog = {"projects": [project("{{COUNT}}", "literal", aliases=["{{SUBJECTS}}"])]}
