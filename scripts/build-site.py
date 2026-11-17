@@ -117,6 +117,11 @@ def render(files):
     outputs.update(research.render(catalog, by_id, sum(v == 'pdf' for v in formats.values()),
                                    sum(v == 'md' for v in formats.values()), len(archive)))
     outputs['index.html'] = portfolio.render(projects, files['scripts/portfolio.html'].decode('utf-8'))
+    cases = json.loads(files['cases.json'])
+    work = module('work_builder', files['scripts/build-work.py'], ROOT / 'scripts/build-work.py')
+    case_builder = module('case_builder', files['scripts/build-cases.py'], ROOT / 'scripts/build-cases.py')
+    outputs['work/index.html'] = work.render(projects, files['scripts/work.html'].decode('utf-8'), cases)
+    outputs.update(case_builder.render(cases, files))
     return outputs
 
 

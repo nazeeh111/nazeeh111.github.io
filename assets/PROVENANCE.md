@@ -19,3 +19,9 @@ The existing `research/figures/phaseglass-quantum.webp` is the study's finite-sh
 ## Identity
 
 `identity.png` retains Nazeeh's existing waveform N avatar from the public profile repository. No new authorship or credential is implied by the redesign.
+
+## Recorded comparison and responsive details
+
+The homepage compares `featured/vibescope/original-frame72.png` and `featured/vibescope/enhanced-frame72.png`, both retained 320 × 192 output frames at index 72. The latter is the recorded visualization ×20, not a gain-5 image or an intermediate-gain computation. The range reveals these two images; it does not run the estimator. The gain-5 and gain-20 recorded analyses have identical signal arrays, metrics and displacement CSV bytes. The displayed 7.30 Hz and 0.280 px are rounded observed values for this controlled synthetic example. They do not establish physical calibration or arbitrary-video accuracy. Presentation timing was not independently verified. See [the case evidence](featured/evidence.html#vibescope) and its retained run manifest. The original PNG pixels and VibeScope MIT notice are unchanged.
+
+On phones, SolidFrame and Capsulith use CSS viewports to enlarge selected portions of their retained desktop captures. `cases.json` records bounded source-pixel rectangles and plain captions. These are desktop details, not screenshots of a mobile application. SolidFrame’s model and Properties fields come from `featured/solidframe-fixture-current.png`; Capsulith’s original/restored views and byte-inspector fields come from `capsulith-restored.jpg`. Every case provides a visible link to its complete original capture. The image files are unchanged. The Capsulith JPEG records the UI and cannot act as a lossless RGBA byte oracle.

@@ -1,126 +1,64 @@
-const panels = [...document.querySelectorAll(".exhibit")];
-const choices = [...document.querySelectorAll("[data-exhibit]")];
-const search = document.querySelector("#project-search");
-const subject = document.querySelector("#project-subject");
-const entries = [...document.querySelectorAll(".project-item")];
-const status = document.querySelector("#catalog-status");
-const empty = document.querySelector("#catalog-empty");
-const catalogToggle = document.querySelector("#catalog-toggle");
-let showAll = false;
-
-// Keep a catalog view shareable without requiring a server or client router.
-function readCatalogLocation() {
-  const params = new URL(location.href).searchParams;
-  search.value = params.get("q") || "";
-  const requestedSubject = params.get("discipline") || "";
-  subject.value = [...subject.options].some((option) => option.value === requestedSubject)
-    ? requestedSubject
-    : "";
-  showAll = params.get("all") === "1";
-}
-
-function writeCatalogLocation() {
-  const url = new URL(location.href);
-  for (const [key, value] of [
-    ["q", search.value.trim()],
-    ["discipline", subject.value],
-    ["all", showAll ? "1" : ""],
-  ]) {
-    if (value) url.searchParams.set(key, value);
-    else url.searchParams.delete(key);
-  }
-  if (url.href !== location.href) history.replaceState(null, "", url);
-}
-
-function words(value) {
-  return value
-    .normalize("NFKD")
-    .replace(/\p{M}/gu, "")
-    .toLocaleLowerCase()
-    .replace(/[^\p{L}\p{N}]+/gu, " ")
-    .trim()
-    .split(/\s+/u)
-    .filter(Boolean);
-}
-const searchableWords = new Map(entries.map((entry) => [entry, words(entry.dataset.search)]));
-
-function selectExhibit(id) {
-  if (!panels.some((panel) => panel.id === id)) return;
-  for (const panel of panels) panel.hidden = panel.id !== id;
-  for (const choice of choices)
-    choice.setAttribute("aria-pressed", String(choice.dataset.exhibit === id));
-}
-
-function filterProjects({ updateLocation = true } = {}) {
-  const query = words(search.value);
-  const category = subject.value;
-  const filtering = Boolean(query.length || category);
-  let visible = 0;
-  for (const [index, entry] of entries.entries()) {
-    const match =
-      (!category || entry.dataset.subject === category) &&
-      query.every((term) => searchableWords.get(entry).some((word) => word.startsWith(term))) &&
-      (filtering || showAll || index < 12);
-    entry.hidden = !match;
-    if (match) visible += 1;
-  }
-  status.textContent =
-    !filtering && !showAll
-      ? `${visible} selected projects from ${entries.length} public repositories`
-      : `${visible} of ${entries.length} public repositories`;
-  catalogToggle.hidden = filtering;
-  catalogToggle.textContent = showAll
-    ? "Show selected projects"
-    : `Browse all ${entries.length} repositories`;
-  catalogToggle.setAttribute("aria-expanded", String(showAll));
-  empty.hidden = visible > 0;
-  if (updateLocation) writeCatalogLocation();
-}
-
-for (const choice of choices)
-  choice.addEventListener("click", () => {
-    selectExhibit(choice.dataset.exhibit);
-    history.replaceState(null, "", `#${choice.dataset.exhibit}`);
-  });
-catalogToggle.addEventListener("click", () => {
-  showAll = !showAll;
-  filterProjects();
-});
-search.addEventListener("input", () => filterProjects());
-subject.addEventListener("change", () => filterProjects());
-document.querySelector("#reset-search").addEventListener("click", () => {
-  search.value = "";
-  subject.value = "";
-  showAll = false;
-  filterProjects();
-  search.focus();
-});
-document.documentElement.classList.replace("no-js", "js");
-const requested = location.hash.slice(1);
-selectExhibit(panels.some((panel) => panel.id === requested) ? requested : "geometry");
-const legacyCategories = {
+// Keep legacy bookmarks useful while giving the homepage and work index separate jobs.
+const caseRoutes = {
+  "case-solidframe": "/work/solidframe/",
+  "case-vibescope": "/work/vibescope/",
+  "case-qloom": "/work/qloom/",
+  "case-photonsmith": "/work/photonsmith/",
+  "case-instrumentzero": "/work/instrumentzero/",
+  "case-nstack": "/work/nstack/",
+  geometry: "/work/solidrift/",
+  science: "/research/phaseglass-quantum/",
+  systems: "/work/capsulith/",
+};
+const categories = {
   "project-geometry": "Geometry & CAD",
   "project-sensing": "EE & sensing",
   "project-data-and-motion": "ML & data",
   "project-systems": "Systems & developer tools",
   "project-scientific-tools": "Physics & quantum",
 };
-function restoreFragment() {
-  const fragment = location.hash.slice(1);
-  selectExhibit(fragment);
-  if (legacyCategories[fragment]) {
-    search.value = "";
-    subject.value = legacyCategories[fragment];
-    filterProjects();
-    document.querySelector("#projects").scrollIntoView();
+function legacyDestination() {
+  const source = new URL(location.href),
+    hash = source.hash.slice(1);
+  if (Object.hasOwn(caseRoutes, hash))
+    return new URL(caseRoutes[hash], location.origin);
+  if (Object.hasOwn(categories, hash)) {
+    const target = new URL("/work/", location.origin);
+    target.searchParams.set("discipline", categories[hash]);
+    target.hash = "projects";
+    return target;
   }
+  if (
+    hash === "projects" ||
+    ["q", "discipline", "all"].some((key) => source.searchParams.has(key))
+  ) {
+    const target = new URL("/work/", location.origin);
+    for (const key of ["q", "discipline", "all"])
+      if (source.searchParams.has(key))
+        target.searchParams.set(key, source.searchParams.get(key));
+    target.hash = "projects";
+    return target;
+  }
+  return null;
 }
-addEventListener("hashchange", restoreFragment);
-addEventListener("popstate", () => {
-  readCatalogLocation();
-  filterProjects({ updateLocation: false });
-  restoreFragment();
+const destination = legacyDestination();
+if (destination) location.replace(destination.href);
+const reveal = document.querySelector("#frame-reveal"),
+  comparison = document.querySelector(".frame-comparison"),
+  comparisonControl = document.querySelector(".comparison-control");
+if (reveal && comparison && comparisonControl) {
+  function updateComparison() {
+    const value = Number(reveal.value);
+    comparison.style.setProperty("--reveal", value + "%");
+    reveal.setAttribute("aria-valuetext", value + "% enhanced view");
+  }
+  reveal.addEventListener("input", updateComparison);
+  updateComparison();
+  comparison.classList.add("is-ready");
+  comparisonControl.hidden = false;
+}
+addEventListener("hashchange", () => {
+  const target = legacyDestination();
+  if (target) location.replace(target.href);
 });
-readCatalogLocation();
-restoreFragment();
-filterProjects({ updateLocation: false });
+document.documentElement.classList.replace("no-js", "js");
