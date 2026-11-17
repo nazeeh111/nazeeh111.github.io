@@ -151,7 +151,8 @@ def render(catalog, template, cases=None):
         technology = (f'<p class="technology">{escape(project["kind"])}</p>'
                       if project["kind"] in LANGUAGES else "")
         case_url = case_links.get(url.casefold())
-        case_link = f'<a class="case-link" href="{escape(case_url)}">Read case</a>' if case_url else ""
+        case_link = (f'<a class="case-link" href="{escape(case_url)}" '
+                     f'aria-label="Read case: {escape(project["name"])}">Read case</a>') if case_url else ""
         meta = f'<div class="project-meta">{technology}{case_link}</div>' if technology or case_link else ""
         entries.append(
             f'<li class="project-item" id="repository-{identity}" '
