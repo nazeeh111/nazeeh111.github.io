@@ -1,0 +1,52 @@
+{
+  "schema": "portfolio-lossless-delivery-v1",
+  "source_parent": "2271a15671eeec9c44cc0d6c49a07b0f048516f6",
+  "purpose": "Pixel-identical browser delivery derivatives; original scientific PNGs remain unchanged and are HTML fallbacks.",
+  "encoder": "Existing Pillow with lossless WebP, quality100,method6,exact=true",
+  "pixel_comparison": "Every decoded RGBA byte equal,320x192, no source ICC metadata",
+  "files": [
+    {
+      "file": "original-frame72",
+      "source_mode": "RGB",
+      "size": [
+        320,
+        192
+      ],
+      "png_bytes": 90349,
+      "webp_bytes": 28088,
+      "saved_percent": 68.91166476662718,
+      "decoded_RGBA_sha256": "febc5c2bf424044369a399bbbff3f90b3baaef166dd2348f92ee76792738514d",
+      "all_decoded_RGBA_bytes_equal": true,
+      "source_sha256": "08eeb3b37ff278398d8af8699128110cd505f1570954a22cb973c78b5f8651f6",
+      "webp_sha256": "f8b01a9bf806c328ed0eda9ae057ecc6da976e61d41def67471dbc83d7c16cd8",
+      "source_metadata": "{}"
+    },
+    {
+      "file": "enhanced-frame72",
+      "source_mode": "RGB",
+      "size": [
+        320,
+        192
+      ],
+      "png_bytes": 88281,
+      "webp_bytes": 29596,
+      "saved_percent": 66.47523249623362,
+      "decoded_RGBA_sha256": "b2018112143e0e53d3a740bdd8645ce1c0764c173b922682eb0b46bf1f05aa9a",
+      "all_decoded_RGBA_bytes_equal": true,
+      "source_sha256": "da9b3af617c00e113c160ae7dcb01b398f507927cd4f683dbf2da974a703dc79",
+      "webp_sha256": "8483aad4374fbf0022f215ce9d41fe57d9e5fd351025dcc9bcae44fb6d6c1065",
+      "source_metadata": "{}"
+    }
+  ],
+  "encoder_versions": {
+    "Pillow": "13.0.0",
+    "libwebp": "1.6.0"
+  },
+  "encoding_options": {
+    "format": "WEBP",
+    "lossless": true,
+    "quality": 100,
+    "method": 6,
+    "exact": true
+  }
+}
