@@ -1088,7 +1088,7 @@
         "python"
       ],
       "upstream": "kc-ml2/meent",
-      "source_revision": "bae28024476d4af2826b8412cb8288d79a0630ac"
+      "source_revision": "37f9fd5c3de31bcd73799d89e0bd50ce2a49f1ef"
     },
     {
       "name": "pattern-projector",
