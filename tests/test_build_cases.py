@@ -44,3 +44,21 @@ class CaseBuilderTests(unittest.TestCase):
         page=builder.render([self.case],self.files)['work/tool/index.html']
         self.assertIn(b'Open full capture',page)
         self.assertIn(b'href="/assets/tool.png"',page)
+
+    def test_media_breakpoint_is_bounded_integer_and_preserves_default(self):
+        self.files['assets/tool-mobile.png']=b'SYNTHETIC PORTRAIT'
+        self.case['media'][0]['mobile_src']='/assets/tool-mobile.png'
+        self.assertIn(b'(max-width:640px)',builder.render([self.case],self.files)['work/tool/index.html'])
+        self.case['media'][0]['mobile_width']=960
+        self.assertIn(b'(max-width:960px)',builder.render([self.case],self.files)['work/tool/index.html'])
+        for width in (True,0,1601,'960;display:none'):
+            self.case['media'][0]['mobile_width']=width
+            with self.subTest(width=width),self.assertRaises(ValueError):builder.render([self.case],self.files)
+
+    def test_only_the_first_overview_is_prioritized(self):
+        self.files['assets/second.png']=b'SYNTHETIC SECOND'
+        self.case['media'].append({'src':'/assets/second.png','alt':'Second retained view','caption':'Second view'})
+        page=builder.render([self.case],self.files)['work/tool/index.html']
+        self.assertEqual(page.count(b'loading="eager" fetchpriority="high"'),1)
+        self.assertEqual(page.count(b'loading="lazy"'),1)
+        self.assertLess(page.index(b'loading="eager"'),page.index(b'loading="lazy"'))

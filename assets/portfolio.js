@@ -6,6 +6,7 @@ const caseRoutes = {
   "case-photonsmith": "/work/photonsmith/",
   "case-instrumentzero": "/work/instrumentzero/",
   "case-nstack": "/work/nstack/",
+  "case-materialmind": "/work/materialmind/",
   geometry: "/work/solidrift/",
   science: "/research/phaseglass-quantum/",
   systems: "/work/capsulith/",
@@ -20,22 +21,18 @@ const categories = {
 function legacyDestination() {
   const source = new URL(location.href),
     hash = source.hash.slice(1);
-  if (Object.hasOwn(caseRoutes, hash))
-    return new URL(caseRoutes[hash], location.origin);
-  if (Object.hasOwn(categories, hash)) {
+  const explicitCatalog = ["q", "discipline", "all"].some((key) => source.searchParams.has(key));
+  if (explicitCatalog || hash === "projects") {
     const target = new URL("/work/", location.origin);
-    target.searchParams.set("discipline", categories[hash]);
+    for (const key of ["q", "discipline", "all"])
+      if (source.searchParams.has(key)) target.searchParams.set(key, source.searchParams.get(key));
     target.hash = "projects";
     return target;
   }
-  if (
-    hash === "projects" ||
-    ["q", "discipline", "all"].some((key) => source.searchParams.has(key))
-  ) {
+  if (Object.hasOwn(caseRoutes, hash)) return new URL(caseRoutes[hash], location.origin);
+  if (Object.hasOwn(categories, hash)) {
     const target = new URL("/work/", location.origin);
-    for (const key of ["q", "discipline", "all"])
-      if (source.searchParams.has(key))
-        target.searchParams.set(key, source.searchParams.get(key));
+    target.searchParams.set("discipline", categories[hash]);
     target.hash = "projects";
     return target;
   }

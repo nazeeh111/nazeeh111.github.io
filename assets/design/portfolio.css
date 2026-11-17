@@ -350,3 +350,6 @@ pre {
 
 /* Mobile: state the task before the retained field without repeating copy. */
 @media(max-width:650px){.photon-panels{display:flex;flex-direction:column;gap:0}.field-panel{order:2}.spectrum-column{display:contents}.spectrum-column .body{order:1;margin-bottom:22px}.photon-statement{order:3;margin-top:30px}.spectrum-column figure{order:4}}
+
+/* Published multi-discipline empty-result recovery. */
+.empty-actions{display:flex;gap:24px;flex-wrap:wrap;margin-top:24px}.empty-actions .button{border:0}

@@ -7,6 +7,8 @@
   const status = document.querySelector("#catalog-status");
   const empty = document.querySelector("#catalog-empty");
   const reset = document.querySelector("#reset-search");
+  const recovery = document.querySelector("#search-all-disciplines");
+  const emptyMessage = document.querySelector("#catalog-empty-message");
   const entries = [...document.querySelectorAll(".project-item")];
   if (!search || !subject || !filters || !status || !empty || !reset) return;
 
@@ -35,7 +37,7 @@
     entries.map((entry) => [entry, words(entry.dataset.search || "")]),
   );
 
-  function writeLocation({ categoryFragment = false } = {}) {
+  function writeLocation({ categoryFragment = false, clearAll = false } = {}) {
     const url = new URL(location.href);
     for (const [key, value] of [
       ["q", search.value.trim()],
@@ -44,8 +46,8 @@
       if (value) url.searchParams.set(key, value);
       else url.searchParams.delete(key);
     }
-    // The complete index is now the default. Old all=1 URLs remain equivalent.
-    url.searchParams.delete("all");
+    // Full index is the default; retain an explicit legacy all URL until reset.
+    if (clearAll) url.searchParams.delete("all");
     if (categoryFragment) url.hash = "projects";
     if (url.href !== location.href) history.replaceState(null, "", url);
   }
@@ -54,12 +56,12 @@
     const query = words(search.value);
     const category = subject.value;
     let visible = 0;
+    let acrossDisciplines = 0;
     for (const entry of entries) {
-      const matches =
-        (!category || entry.dataset.subject === category) &&
-        query.every((term) =>
-          searchable.get(entry).some((word) => word.startsWith(term)),
-        );
+      const queryMatches = query.every((term) => searchable.get(entry).some((word) => word.startsWith(term)));
+      if (queryMatches) acrossDisciplines += 1;
+      const subjects = (entry.dataset.subjects || entry.dataset.subject).split("|");
+      const matches = (!category || subjects.includes(category)) && queryMatches;
       entry.hidden = !matches;
       if (matches) visible += 1;
     }
@@ -68,6 +70,10 @@
       ? `${visible} of ${entries.length} public repositories`
       : `${entries.length} public repositories`;
     empty.hidden = visible !== 0;
+    if (emptyMessage) emptyMessage.textContent = category
+      ? `No projects match${search.value.trim() ? ` “${search.value.trim()}”` : ""} in ${category}.`
+      : "No projects match this search.";
+    if (recovery) recovery.hidden = !(visible === 0 && category && query.length && acrossDisciplines > 0);
     reset.hidden = !filtering;
     writeLocation(options);
   }
@@ -81,9 +87,8 @@
     const category = Object.hasOwn(categories, fragment)
       ? categories[fragment]
       : null;
-    if (category && validSubjects.has(category)) {
-      // Old category anchors took precedence over q. Normalize the fragment so
-      // subsequent typing/reloading does not repeatedly discard a new query.
+    if (category && validSubjects.has(category) && !["q", "discipline", "all"].some((key) => params.has(key))) {
+      // A legacy fragment supplies a default scope only without explicit catalog parameters.
       search.value = "";
       subject.value = category;
     }
@@ -94,6 +99,11 @@
   subject.addEventListener("change", () => filterProjects());
   reset.addEventListener("click", () => {
     search.value = "";
+    subject.value = "";
+    filterProjects({ clearAll: true });
+    search.focus();
+  });
+  if (recovery) recovery.addEventListener("click", () => {
     subject.value = "";
     filterProjects();
     search.focus();

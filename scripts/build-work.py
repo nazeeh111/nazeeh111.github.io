@@ -10,6 +10,19 @@ LANGUAGES = frozenset({
     "MATLAB", "Python", "R", "Rust", "Swift", "TypeScript", "Verilog",
 })
 SLUG = re.compile(r"[A-Za-z0-9_.-]+\Z")
+DISCIPLINES = frozenset({"Creative & everyday tools", "EE & sensing", "Geometry & CAD", "ML & data", "Physics & quantum", "Systems & developer tools"})
+
+
+def memberships(project, subject):
+    values = project.get("subjects", [subject])
+    if (not isinstance(values, list) or not values or
+            any(not isinstance(v, str) or not v.strip() or "|" in v for v in values) or
+            len(set(values)) != len(values) or subject not in values or
+            ("subjects" in project and any(v not in DISCIPLINES for v in values))):
+        raise ValueError("Invalid project discipline memberships")
+    return values
+
+
 CASE_PATH = re.compile(r"/work/[a-z0-9]+(?:-[a-z0-9]+)*/\Z")
 
 
@@ -109,7 +122,7 @@ def render(catalog, template, cases=None):
         upstream = _upstream(project.get("upstream"))
         projects.append({"name": name, "summary": summary, "subject": subject,
                          "url": url, "kind": kind, "topics": topics,
-                         "aliases": aliases, "upstream": upstream})
+                         "aliases": aliases, "upstream": upstream, "subjects": memberships(project, subject)})
 
     case_links = _case_links(cases, known)
     # Optional editorial order uses canonical identities. Unselected work keeps
@@ -128,7 +141,7 @@ def render(catalog, template, cases=None):
             item["name"].casefold(), item["url"].casefold())):
         url = project["url"]
         upstream = project["upstream"]
-        words = [project["name"], project["summary"], project["subject"],
+        words = [project["name"], project["summary"], *project["subjects"],
                  project["kind"], *project["topics"], *project["aliases"]]
         if upstream:
             words.extend([upstream, "fork"])
@@ -142,13 +155,13 @@ def render(catalog, template, cases=None):
         meta = f'<div class="project-meta">{technology}{case_link}</div>' if technology or case_link else ""
         entries.append(
             f'<li class="project-item" id="repository-{identity}" '
-            f'data-subject="{escape(project["subject"])}" '
+            f'data-subject="{escape(project["subject"])}" data-subjects="{escape("|".join(project["subjects"]))}" '
             f'data-search="{escape(" ".join(words))}">\n'
             f'<div class="project-copy"><h2><a class="project-wordmark" href="{escape(url)}">'
             f'{escape(project["name"])}</a></h2><p class="project-summary">'
             f'{escape(project["summary"])}</p>{credit}{meta}</div></li>'
         )
-    subjects = sorted({project["subject"] for project in projects}, key=str.casefold)
+    subjects = sorted({subject for project in projects for subject in project["subjects"]}, key=str.casefold)
     options = "".join(f'<option value="{escape(subject)}">{escape(subject)}</option>' for subject in subjects)
     values = {"{{PROJECTS}}": "\n".join(entries), "{{SUBJECTS}}": options,
               "{{COUNT}}": str(len(projects))}

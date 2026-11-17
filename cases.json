@@ -340,6 +340,44 @@
     ]
   },
   {
+    "slug": "materialmind",
+    "name": "MaterialMind",
+    "repository_url": "https://github.com/nazeeh111/MaterialMind",
+    "source_revision": "c879afa4b616649cac73ef46b010f24e12ed3544",
+    "case_url": "/work/materialmind/",
+    "lead": "Compare crystal stability predictions and active-learning query choices with archived computed reference data.",
+    "action": {
+      "label": "Run the local laboratory",
+      "url": "https://github.com/nazeeh111/MaterialMind#run-the-laboratory"
+    },
+    "secondary_action": {
+      "label": "Inspect and reopen the recorded case",
+      "url": "https://github.com/nazeeh111/MaterialMind/blob/main/docs/presentation/README.md"
+    },
+    "problem": "A high query rank or confident stability score can hide an inaccurate energy prediction. The evidence needs to distinguish what the model knew before reveal from the archived reference it is compared against.",
+    "mechanism": "The workbench retains an initial crystal, its pre-reveal prediction and uncertainty, and the acquisition components used to choose a query. Revealing the existing DFT reference exposes that one selected energy lies outside the stated interval; it does not acquire a new physical measurement.",
+    "observed_result": "PaMnF6 ranks first in this recorded query. Its pre-reveal energy estimate is −2.198549726666667 eV/atom, with a stated 90% interval from −2.284320417627142 to −2.1127790357061924. The archived reference is −1.951794 eV/atom, outside that interval. Both energies are below the fixed reference hull.",
+    "scope_note": "One selected retrospective interval miss, not an uncertainty-coverage study or new DFT calculation. The fitted policy did not outperform adapted greedy in the released study. No synthesis, physical stability or official blind-benchmark claim.",
+    "foundations": "Retained WBM/Matbench Discovery computed reference data, Janosh Riebesell and contributors, CC-BY-4.0; original WBM by Wang, Botti and Marques. Code MIT. Original data attribution and transformations stay with the case assets.",
+    "evidence_url": "/assets/featured/evidence.html#materialmind",
+    "media": [
+      {
+        "src": "/assets/featured/materialmind/query.png",
+        "mobile_src": "/assets/featured/materialmind/query-mobile.png",
+        "mobile_width": 960,
+        "alt": "PaMnF6 initial crystal, pre-reveal model interval and archived DFT energy outside that interval; the query score explains why the model ranked it first.",
+        "caption": "Unchanged source-derived figure from the recorded initial crystal, pre-reveal prediction and revealed computed reference. A selected failure of the interval, not a new coverage study."
+      }
+    ],
+    "technical_details": [
+      "The crystal view uses the retained lattice and eight atomic sites. It does not represent a synthesized specimen or predict a new structure.",
+      "Query rank, stability probability and energy-interval accuracy answer different questions. The source, raw values, native save/reopen evidence and negative aggregate result remain available in the owning repository."
+    ],
+    "legacy_fragment": [
+      "case-materialmind"
+    ]
+  },
+  {
     "slug": "siliconpilot",
     "name": "SILICONPILOT",
     "repository_url": "https://github.com/nazeeh111/SILICONPILOT",
@@ -381,62 +419,6 @@
     ],
     "legacy_fragment": [],
     "notices_url": "/assets/featured/notices/siliconpilot/README.md"
-  },
-  {
-    "slug": "materialmind",
-    "name": "MaterialMind",
-    "repository_url": "https://github.com/nazeeh111/MaterialMind",
-    "source_revision": "8d11857fd54d93d1f5159e7e5105e1f927ccf33d",
-    "case_url": "/work/materialmind/",
-    "lead": "Choose the next crystal to evaluate, inspect the model’s uncertainty and reveal the existing reference result.",
-    "action": {
-      "label": "Run the laboratory locally",
-      "url": "https://github.com/nazeeh111/MaterialMind/blob/8d11857fd54d93d1f5159e7e5105e1f927ccf33d/README.md#run-the-laboratory"
-    },
-    "secondary_action": {
-      "label": "Read the experiment",
-      "url": "https://github.com/nazeeh111/MaterialMind/blob/8d11857fd54d93d1f5159e7e5105e1f927ccf33d/README.md#what-the-experiment-found"
-    },
-    "problem": "Expensive evaluations make candidate selection important. A useful materials workflow must distinguish a model estimate from a reference result and show whether its selection rule actually helps.",
-    "mechanism": "MaterialMind displays real WBM crystal structures alongside stability estimates, uncertainty and acquisition scores. Frozen pretrained CHGNet embeddings and composition descriptors feed a fitted residual ensemble. The workbench ranks a held-out candidate pool; revealing a historical DFT label updates the session, while CIF and portable-record exports preserve the geometry and decision trail.",
-    "observed_result": "The study uses 3,072 existing structures, with 641 chemical-system-held-out candidates. At a budget of 40 evaluations, the fitted policy finds an average 29.6 stable candidates versus 6.7 for random selection and 30.6 for adapted greedy. The actual local workflow also reveals a reference, exports, resets and restores the session with history and candidate order intact.",
-    "scope_note": "This is retrospective evaluation against previously computed DFT labels. It reports no new DFT calculations, synthesis or newly discovered materials; the fitted policy did not beat adapted greedy.",
-    "foundations": "WBM structures, labels and published CHGNet predictions come from the Matbench Discovery collection by Janosh Riebesell and contributors (CC BY 4.0), with the original Wang–Botti–Marques WBM study credited. CHGNet 0.3.0 is a frozen BSD-3-Clause foundation; the residual model and acquisition study are the project’s work. Code and bundled Three.js are MIT licensed with their respective notices.",
-    "evidence_url": "https://github.com/nazeeh111/MaterialMind/blob/8d11857fd54d93d1f5159e7e5105e1f927ccf33d/docs/SESSIONS.md",
-    "media": [
-      {
-        "src": "/assets/featured/materialmind-workbench.jpg",
-        "alt": "MaterialMind workbench with PaMnF6 selected, its crystal structure and model estimates; one earlier ErI4 reference is in the session.",
-        "caption": "Actual workbench candidate published at 8d11857. PaMnF6 is selected but its reference is unrevealed; one earlier ErI4 reference is in the session. The selected estimates are predictions.",
-        "mobile_details": [
-          {
-            "x": 355,
-            "y": 270,
-            "width": 720,
-            "height": 690,
-            "source_width": 1440,
-            "source_height": 1000,
-            "alt": "Recorded PaMnF6 crystal geometry; the selected reference is still unrevealed.",
-            "caption": "Desktop crystal detail from the same retained workbench. Model estimates are predictions; WBM/Matbench Discovery data, CC BY 4.0."
-          }
-        ]
-      },
-      {
-        "src": "/assets/featured/materialmind-workflow.png",
-        "alt": "MaterialMind data workflow separating dataset partitions, frozen features, residual fitting, calibration, acquisition and reference reveals.",
-        "caption": "Project workflow diagram, not a new experiment or measured performance chart. Fitting, prediction and reference reveal are separate stages."
-      }
-    ],
-    "technical_details": [
-      "The pictured workbench source was published as 8d11857fd54d93d1f5159e7e5105e1f927ccf33d. Capture provenance records base b6da6866 plus the portable-session/UI candidate and SHA-256 c575895f647c7c2a9548df175767f7f2e7d0dc6080a7dac13175e4e3c9d5dde4. Later 2340213234ab6ddf8e0f5f86361d71ac432ff59c changes only CSS readability; actual exported records match except their export timestamps. It did not rerun the scientific campaign.",
-      "The CPU demo includes frozen graph features/source predictions and needs no model download. First startup fits the small residual model. The server binds to loopback; the primary action opens installation instructions, not a hosted laboratory.",
-      "Frozen CHGNet 0.3.0 embeddings plus 20 composition descriptors feed an ExtraTrees residual ensemble and held-out calibration. No official blind Matbench Discovery score, universal acquisition improvement or novel algorithm is established. The chosen policy stays frozen; the better greedy comparator is not relabeled as the validated policy.",
-      "Revealing a label retrieves a previously computed reference, not a new DFT solve. Imported geometry remains geometry-only without a compatible prediction/composition reference. A schema-3 record restores only under matching dataset, policy, code and scientific environment; export is not automatic persistence or arbitrary-version migration.",
-      "The recorded HTTP workflow covered reveal/export/reset/restore/reload and session isolation; controlled UI checks covered stale and failed responses. These workflow checks do not rerun all original materials experiments or establish physical discoveries.",
-      "Preserve DATA_LICENSE.md, materialmind/data/provenance.json, source DOI 10.6084/m9.figshare.22715158, WBM/Matbench/CHGNet citations and the recorded changes. Keep project MIT and bundled Three.js MIT notices. Its data are CC BY 4.0; a crystal image derived from them should retain that source credit."
-    ],
-    "legacy_fragment": [],
-    "notices_url": "/assets/featured/notices/materialmind/README.md"
   },
   {
     "slug": "morphproof",

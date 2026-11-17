@@ -131,6 +131,18 @@ class WorkBuilderTests(unittest.TestCase):
             self.assertIn(value, text)
         self.assertNotIn("original", text.lower())
 
+    def test_reviewed_cross_discipline_memberships_enter_filters_and_search(self):
+        catalog = {"projects": [project("Decoder", "decoder", subjects=["Physics & quantum", "ML & data"])]}
+        data = builder.render(catalog, TEMPLATE).decode()
+        entry = Index(data).projects[0]
+        self.assertEqual(entry["data-subjects"], "Physics & quantum|ML & data")
+        self.assertIn("ML & data", entry["data-search"])
+        self.assertIn('<option value="ML &amp; data">', data)
+        for bad in ([], ["Physics & quantum", "Physics & quantum"], ["Unknown"], "ML & data", ["ML & data"]):
+            value = copy.deepcopy(catalog); value["projects"][0]["subjects"] = bad
+            with self.subTest(bad=bad), self.assertRaisesRegex(ValueError, "discipline memberships"):
+                builder.render(value, TEMPLATE)
+
     def test_invalid_public_inputs_and_case_paths_fail_without_mutating_model(self):
         base = {"projects": [project("One", "one")]}
         bad = []

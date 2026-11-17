@@ -66,8 +66,8 @@ def render(cases, files):
             raise ValueError("Recorded case revision must be a full Git hash")
         media=[]
         if slug=='vibescope':
-            media.append('<section class="case-comparison" aria-labelledby="comparison-title"><h2 id="comparison-title">Display gain, fixed measurement</h2><div class="frame-comparison" style="--reveal:50%"><figure class="frame-original"><img src="/assets/featured/vibescope/original-frame72.png" width="320" height="192" alt="Original recorded synthetic frame72."><figcaption>Original</figcaption></figure><figure class="frame-enhanced"><img src="/assets/featured/vibescope/enhanced-frame72.png" width="320" height="192" alt="The same recorded frame with visualization gain20."><figcaption>Visualization ×20</figcaption></figure><span class="comparison-divider" aria-hidden="true"></span></div><div class="comparison-control" hidden><label for="frame-reveal">Reveal enhanced view</label><input id="frame-reveal" type="range" min="0" max="100" value="50" step="1" aria-describedby="comparison-note"><div class="comparison-ends" aria-hidden="true"><span>Original</span><span>Visualization ×20</span></div></div><p id="comparison-note">Both stored gain runs analyze the original frames: 7.30 Hz and 0.280 px remain fixed. This control reveals recorded images, not a new measurement.</p></section>')
-        for image in case['media']:
+            media.append('<section class="case-comparison" aria-labelledby="comparison-title"><h2 id="comparison-title">Display gain, fixed measurement</h2><div class="frame-comparison" style="--reveal:50%"><figure class="frame-original"><picture><source srcset="/assets/featured/vibescope/original-frame72.webp" type="image/webp"><img src="/assets/featured/vibescope/original-frame72.png" width="320" height="192" alt="Original recorded synthetic frame72."></picture><figcaption>Original</figcaption></figure><figure class="frame-enhanced"><picture><source srcset="/assets/featured/vibescope/enhanced-frame72.webp" type="image/webp"><img src="/assets/featured/vibescope/enhanced-frame72.png" width="320" height="192" alt="The same recorded frame with visualization gain20."></picture><figcaption>Visualization ×20</figcaption></figure><span class="comparison-divider" aria-hidden="true"></span></div><div class="comparison-control" hidden><label for="frame-reveal">Reveal enhanced view</label><input id="frame-reveal" type="range" min="0" max="100" value="50" step="1" aria-describedby="comparison-note"><div class="comparison-ends" aria-hidden="true"><span>Original</span><span>Visualization ×20</span></div></div><p id="comparison-note">Both stored gain runs analyze the original frames: 7.30 Hz and 0.280 px remain fixed. This control reveals recorded images, not a new measurement.</p></section>')
+        for image_index,image in enumerate(case['media']):
             src=url(image['src'])
             if not src.startswith('/') or src[1:]not in files:
                 raise ValueError("Case media must be a listed public asset")
@@ -76,10 +76,14 @@ def render(cases, files):
                 m=url(image['mobile_src'])
                 if not m.startswith('/') or m[1:]not in files:
                     raise ValueError("Case mobile image must be a listed public asset")
-                mobile='<source media="(max-width:640px)" srcset="'+escape(m)+'">'
+                width=image.get('mobile_width',640)
+                if type(width) is not int or not 320<=width<=1600:
+                    raise ValueError("Case mobile width must be an integer between320 and1600")
+                mobile='<source media="(max-width:'+str(width)+'px)" srcset="'+escape(m)+'">'
             crops=details(image,src)
             css='case-media has-details' if crops else 'case-media'
-            media.append('<figure class="'+css+'"><a class="capture-overview" href="'+escape(src)+'"><picture>'+mobile+'<img src="'+escape(src)+'" alt="'+escape(image['alt'])+'" loading="lazy"></picture></a>'+crops+'<figcaption>'+escape(image['caption'])+' <a class="full-capture-link" href="'+escape(src)+'">Open full capture <span aria-hidden="true">↗</span></a></figcaption></figure>')
+            loading=' loading="eager" fetchpriority="high"' if image_index==0 else ' loading="lazy"'
+            media.append('<figure class="'+css+'"><a class="capture-overview" href="'+escape(src)+'"><picture>'+mobile+'<img src="'+escape(src)+'" alt="'+escape(image['alt'])+'"'+loading+'></picture></a>'+crops+'<figcaption>'+escape(image['caption'])+' <a class="full-capture-link" href="'+escape(src)+'">Open full capture <span aria-hidden="true">↗</span></a></figcaption></figure>')
         evidence=url(case['evidence_url'])
         if evidence.startswith('/') and evidence.split('#',1)[0][1:]not in files:
             raise ValueError("Case evidence must be in the public source inventory")
