@@ -6,6 +6,8 @@ const entries = [...document.querySelectorAll(".project-item")];
 const status = document.querySelector("#catalog-status");
 const empty = document.querySelector("#catalog-empty");
 const catalogToggle = document.querySelector("#catalog-toggle");
+const emptyMessage = document.querySelector("#catalog-empty-message");
+const searchAll = document.querySelector("#search-all-disciplines");
 let showAll = false;
 
 // Keep a catalog view shareable without requiring a server or client router.
@@ -43,6 +45,7 @@ function words(value) {
     .filter(Boolean);
 }
 const searchableWords = new Map(entries.map((entry) => [entry, words(entry.dataset.search)]));
+const disciplines = new Map(entries.map((entry) => [entry, (entry.dataset.subjects || entry.dataset.subject).split("|")]));
 
 function selectExhibit(id) {
   if (!panels.some((panel) => panel.id === id)) return;
@@ -56,10 +59,13 @@ function filterProjects({ updateLocation = true } = {}) {
   const category = subject.value;
   const filtering = Boolean(query.length || category);
   let visible = 0;
+  let matchesAcrossDisciplines = 0;
   for (const [index, entry] of entries.entries()) {
+    const queryMatches = query.every((term) => searchableWords.get(entry).some((word) => word.startsWith(term)));
+    if (queryMatches) matchesAcrossDisciplines += 1;
     const match =
-      (!category || entry.dataset.subject === category) &&
-      query.every((term) => searchableWords.get(entry).some((word) => word.startsWith(term))) &&
+      (!category || disciplines.get(entry).includes(category)) &&
+      queryMatches &&
       (filtering || showAll || index < 12);
     entry.hidden = !match;
     if (match) visible += 1;
@@ -67,13 +73,17 @@ function filterProjects({ updateLocation = true } = {}) {
   status.textContent =
     !filtering && !showAll
       ? `${visible} selected projects from ${entries.length} public repositories`
-      : `${visible} of ${entries.length} public repositories`;
+      : `${visible} of ${entries.length} public repositories${category ? ` · ${category}` : ""}`;
   catalogToggle.hidden = filtering;
   catalogToggle.textContent = showAll
     ? "Show selected projects"
     : `Browse all ${entries.length} repositories`;
   catalogToggle.setAttribute("aria-expanded", String(showAll));
   empty.hidden = visible > 0;
+  emptyMessage.textContent = category
+    ? `No projects match${search.value.trim() ? ` “${search.value.trim()}”` : ""} in ${category}.`
+    : "No projects match this search.";
+  searchAll.hidden = !(visible === 0 && category && query.length && matchesAcrossDisciplines > 0);
   if (updateLocation) writeCatalogLocation();
 }
 
@@ -88,6 +98,11 @@ catalogToggle.addEventListener("click", () => {
 });
 search.addEventListener("input", () => filterProjects());
 subject.addEventListener("change", () => filterProjects());
+searchAll.addEventListener("click", () => {
+  subject.value = "";
+  filterProjects();
+  search.focus();
+});
 document.querySelector("#reset-search").addEventListener("click", () => {
   search.value = "";
   subject.value = "";
@@ -108,9 +123,17 @@ const legacyCategories = {
 function restoreFragment() {
   const fragment = location.hash.slice(1);
   selectExhibit(fragment);
-  if (legacyCategories[fragment]) {
-    search.value = "";
-    subject.value = legacyCategories[fragment];
+  if (Object.hasOwn(legacyCategories, fragment)) {
+    const url = new URL(location.href);
+    const explicitCatalog = ["q", "discipline", "all"].some((key) => url.searchParams.has(key));
+    if (!explicitCatalog) {
+      search.value = "";
+      subject.value = legacyCategories[fragment];
+    }
+    // Legacy bookmarks supply an initial scope, then use the canonical catalog
+    // anchor so a later recovery or reset survives reload and shared links.
+    url.hash = "projects";
+    history.replaceState(null, "", url);
     filterProjects();
     document.querySelector("#projects").scrollIntoView();
   }

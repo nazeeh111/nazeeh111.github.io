@@ -1,0 +1,45 @@
+{
+  "repository": "nazeeh111/MaterialMind",
+  "accepted_public_commit": "c879afa4b616649cac73ef46b010f24e12ed3544",
+  "accepted_public_tree": "c48084973e4034d59fe69521632e6e90932070a8",
+  "kind": "Unchanged source-derived figures from actual pre-reveal/revealed native records; no new model fit or DFT",
+  "copied": {
+    "query.png": {
+      "producer_path": "docs/presentation/query.png",
+      "sha256": "5cf3a616884f00944f9919649d43c46d20591acba3659f484d28d3ca0ba092d1",
+      "bytes": 70906
+    },
+    "query-mobile.png": {
+      "producer_path": "docs/presentation/query-mobile.png",
+      "sha256": "5f7ce49c9b105c7e39bbb67b4ef9ee01803631f1bdedb2e173c5bd165dccaf30",
+      "bytes": 60790
+    },
+    "query.svg": {
+      "producer_path": "docs/presentation/query.svg",
+      "sha256": "01ed4006f25cc04eda3adba86b4e02fd3b237bcbd811bbed62875e1011fa8f87",
+      "bytes": 6485
+    },
+    "query-mobile.svg": {
+      "producer_path": "docs/presentation/query-mobile.svg",
+      "sha256": "328da93ae939f901ba2b8a665fa58f4e034635528f211049ddd54e66108bbc04",
+      "bytes": 6471
+    },
+    "figure-data.json": {
+      "producer_path": "docs/presentation/figure-data.json",
+      "sha256": "fe24f157e3baa1751eaf4f5cb4bc9cffb0a847e196094860dc0d6974ca6aeace",
+      "bytes": 2668
+    },
+    "LICENSE": {
+      "producer_path": "LICENSE",
+      "sha256": "08b86cd47be5b3a86c7252f0ec3279bcc8c3df5879532953badc934e15391bf4",
+      "bytes": 1063
+    },
+    "DATA_LICENSE.md": {
+      "producer_path": "DATA_LICENSE.md",
+      "sha256": "06496c42a0ea4541fb53b11581553fe16774f9547d85b2b13a8e372c94eb0e77",
+      "bytes": 2261
+    }
+  },
+  "data_attribution": "WBM/Matbench Discovery, Janosh Riebesell and contributors, CC-BY-4.0. Original WBM: Wang, Botti and Marques. Full sources and transformations in DATA_LICENSE.md and owning project provenance.",
+  "limit": "One selected interval miss, not coverage estimation. Retrospective computed reference; no synthesis, new DFT or official blind benchmark."
+}

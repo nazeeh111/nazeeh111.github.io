@@ -42,6 +42,28 @@ class BuildTests(unittest.TestCase):
    fresh=Path(d)/'fresh';builder.publish(fresh,rendered);self.assertTrue((fresh/'.build-manifest.json').is_file())
    for path,data in rendered.items():self.assertEqual(hashlib.sha256((fresh/path).read_bytes()).digest(),hashlib.sha256(data).digest())
 
+ def test_retained_catalog_and_cross_discipline_membership(self):
+  output=builder.render(self.files)['index.html'].decode()
+  from html.parser import HTMLParser
+  class Catalog(HTMLParser):
+   def __init__(self):super().__init__();self.entries=[]
+   def handle_starttag(self,tag,attrs):
+    data=dict(attrs)
+    if tag=='li' and data.get('class')=='project-item':self.entries.append(data)
+  page=Catalog();page.feed(output);self.assertEqual(len(page.entries),59)
+  projects=json.loads(self.files['projects.json'])['projects']
+  names={p['url'].rstrip('/').rsplit('/',1)[-1] for p in projects}
+  self.assertFalse(names & {'AsterScan','AdaCAD','advisory-database','pattern-projector','binaryen.js','meent','fluids'})
+  for name in ('QubitGuard','FLUXATLAS'):
+   entry=next(e for e in page.entries if e['data-search'].startswith(name.lower()+' '))
+   self.assertEqual(set(entry['data-subjects'].split('|')),{'Physics & quantum','ML & data'})
+
+ def test_invalid_memberships_refuse_without_generation(self):
+  for invalid in ([],['Physics & quantum','Physics & quantum'],['Unknown'],"ML & data",['ML & data']):
+   files=dict(self.files);projects=json.loads(files['projects.json']);projects['projects'][0]['subjects']=invalid
+   files['projects.json']=json.dumps(projects).encode()
+   with self.subTest(invalid=invalid),self.assertRaisesRegex(ValueError,'discipline memberships'):builder.render(files)
+
  def test_only_reviewed_inputs_enter_extracted_archive_build(self):
   with tempfile.TemporaryDirectory() as d:
    root=Path(d);source=root/'source';shutil.copytree(ROOT,source,ignore=shutil.ignore_patterns('.git','__pycache__'))
