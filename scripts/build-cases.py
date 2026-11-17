@@ -64,7 +64,7 @@ def render(cases, files):
         if revision is not None and (not isinstance(revision,str) or not REVISION.fullmatch(revision)):
             raise ValueError("Recorded case revision must be a full Git hash")
         media=[]
-        for image in case['media']:
+        for image_index, image in enumerate(case['media']):
             src=url(image['src'])
             if not src.startswith('/') or src[1:]not in files:
                 raise ValueError("Case media must be a listed public asset")
@@ -79,7 +79,8 @@ def render(cases, files):
                 mobile='<source media="(max-width:'+str(width)+'px)" srcset="'+escape(m)+'">'
             crops=details(image,src)
             css='case-media has-details' if crops else 'case-media'
-            media.append('<figure class="'+css+'"><a class="capture-overview" href="'+escape(src)+'"><picture>'+mobile+'<img src="'+escape(src)+'" alt="'+escape(image['alt'])+'" loading="lazy"></picture></a>'+crops+'<figcaption>'+escape(image['caption'])+' <a class="full-capture-link" href="'+escape(src)+'">Open full capture <span aria-hidden="true">↗</span></a></figcaption></figure>')
+            loading = ' loading="eager" fetchpriority="high"' if image_index == 0 else ' loading="lazy"'
+            media.append('<figure class="'+css+'"><a class="capture-overview" href="'+escape(src)+'"><picture>'+mobile+'<img src="'+escape(src)+'" alt="'+escape(image['alt'])+'"'+loading+'></picture></a>'+crops+'<figcaption>'+escape(image['caption'])+' <a class="full-capture-link" href="'+escape(src)+'">Open full capture <span aria-hidden="true">↗</span></a></figcaption></figure>')
         evidence=url(case['evidence_url'])
         if evidence.startswith('/') and evidence.split('#',1)[0][1:]not in files:
             raise ValueError("Case evidence must be in the public source inventory")
