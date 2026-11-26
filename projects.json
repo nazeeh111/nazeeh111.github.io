@@ -17,7 +17,11 @@
         "Python"
       ],
       "upstream": null,
-      "source_revision": "66bf422806891121d1fed7e5f08e7fa8aa89d3df"
+      "source_revision": "66bf422806891121d1fed7e5f08e7fa8aa89d3df",
+      "browser_action": {
+        "label": "Replay the geometry failure",
+        "url": "https://nazeeh111.github.io/Solidrift/"
+      }
     },
     {
       "name": "SolidFrame",
@@ -34,7 +38,11 @@
         "webassembly"
       ],
       "upstream": null,
-      "source_revision": "7986c79725cf7429d7ec816d647805947ce434bf"
+      "source_revision": "7986c79725cf7429d7ec816d647805947ce434bf",
+      "browser_action": {
+        "label": "Open the editable bracket",
+        "url": "https://nazeeh111.github.io/SolidFrame/?model=https://raw.githubusercontent.com/nazeeh111/SolidFrame/0ffd50b029138097ea204cc7757f4280a44ff2e3/docs/presentation/drilled-bracket.cd"
+      }
     },
     {
       "name": "nstack",
@@ -116,7 +124,11 @@
       "subjects": [
         "EE & sensing",
         "ML & data"
-      ]
+      ],
+      "browser_action": {
+        "label": "Explore routed designs",
+        "url": "https://nazeeh111.github.io/SILICONPILOT/"
+      }
     },
     {
       "name": "EchoSight",
@@ -137,7 +149,11 @@
       "subjects": [
         "EE & sensing",
         "Physics & quantum"
-      ]
+      ],
+      "browser_action": {
+        "label": "Inspect ultrasound slices",
+        "url": "https://nazeeh111.github.io/EchoSight/"
+      }
     },
     {
       "name": "Capsulith",
@@ -155,7 +171,11 @@
         "JavaScript"
       ],
       "upstream": null,
-      "source_revision": "45e5ec4a02201e91c52d60b89b911e7b4d92b0c8"
+      "source_revision": "45e5ec4a02201e91c52d60b89b911e7b4d92b0c8",
+      "browser_action": {
+        "label": "Run the image codec",
+        "url": "https://nazeeh111.github.io/Capsulith/studio/image.html"
+      }
     },
     {
       "name": "SolveTide",
@@ -207,7 +227,11 @@
         "python"
       ],
       "upstream": null,
-      "source_revision": "1f25fabdf066358cd56963acddaa647f5349bc5c"
+      "source_revision": "1f25fabdf066358cd56963acddaa647f5349bc5c",
+      "browser_action": {
+        "label": "Explore a causal replay",
+        "url": "https://nazeeh111.github.io/CausalOS/demo/"
+      }
     },
     {
       "name": "ReplaySmith",
@@ -239,7 +263,11 @@
         "python"
       ],
       "upstream": null,
-      "source_revision": "4925ccafeddf92682fe40f87dbae1aa4f40c5ecf"
+      "source_revision": "4925ccafeddf92682fe40f87dbae1aa4f40c5ecf",
+      "browser_action": {
+        "label": "Inspect the recorded mechanism",
+        "url": "https://nazeeh111.github.io/Sweepforge/"
+      }
     },
     {
       "name": "ETHERGLASS",
@@ -300,7 +328,11 @@
       "repository": "Aetiory",
       "aliases": [
         "Aetiory"
-      ]
+      ],
+      "browser_action": {
+        "label": "Replay a Python return",
+        "url": "https://nazeeh111.github.io/Aetiory/"
+      }
     },
     {
       "name": "AHEADDB",
@@ -351,7 +383,11 @@
         "Python"
       ],
       "upstream": null,
-      "source_revision": "6ea2e84013c9f68a66019c6cd67b1f25a0e3c98c"
+      "source_revision": "6ea2e84013c9f68a66019c6cd67b1f25a0e3c98c",
+      "browser_action": {
+        "label": "Replay a flight network",
+        "url": "https://cascade-flight-intelligence.nazeeh1.chatgpt.site"
+      }
     },
     {
       "name": "PhaseGlass RF",
@@ -374,7 +410,11 @@
       "aliases": [
         "Caustryn",
         "PhaseGlass"
-      ]
+      ],
+      "browser_action": {
+        "label": "Inspect recorded radio trials",
+        "url": "https://nazeeh111.github.io/Caustryn/demo/"
+      }
     },
     {
       "name": "Certloom",
@@ -392,7 +432,11 @@
         "Enclose"
       ],
       "upstream": null,
-      "source_revision": "0c7728c9af019b60209a9f7c557a97fbd5b197f7"
+      "source_revision": "0c7728c9af019b60209a9f7c557a97fbd5b197f7",
+      "browser_action": {
+        "label": "Verify a certificate",
+        "url": "https://nazeeh111.github.io/Certloom/"
+      }
     },
     {
       "name": "ChirpMotion",
@@ -426,7 +470,11 @@
         "reproducible-research"
       ],
       "upstream": null,
-      "source_revision": "f2cec5dfc41cfdb321f08c621d7303f3de828b1f"
+      "source_revision": "f2cec5dfc41cfdb321f08c621d7303f3de828b1f",
+      "browser_action": {
+        "label": "Replay the holdout",
+        "url": "https://nazeeh111.github.io/assets/featured/chronal/report.html"
+      }
     },
     {
       "name": "CipherShape",
@@ -465,7 +513,11 @@
         "Python"
       ],
       "upstream": null,
-      "source_revision": "ac039d70182bf00175ac2ccefacd38f62bcfde88"
+      "source_revision": "ac039d70182bf00175ac2ccefacd38f62bcfde88",
+      "browser_action": {
+        "label": "Browse federal awards",
+        "url": "https://civicledger.nazeeh1.chatgpt.site"
+      }
     },
     {
       "name": "DurableStore",
@@ -502,7 +554,11 @@
       "subjects": [
         "Physics & quantum",
         "ML & data"
-      ]
+      ],
+      "browser_action": {
+        "label": "Explore recorded transport fields",
+        "url": "https://nazeeh111.github.io/FLUXATLAS/"
+      }
     },
     {
       "name": "Forkwake",
@@ -553,7 +609,11 @@
         "electrical-engineering"
       ],
       "upstream": null,
-      "source_revision": "c649cc9b9ee84b8b667aa0fa26984d1d7746bc9d"
+      "source_revision": "c649cc9b9ee84b8b667aa0fa26984d1d7746bc9d",
+      "browser_action": {
+        "label": "Draft a hardware plan",
+        "url": "https://nazeeh111.github.io/hardware-studio-skill/"
+      }
     },
     {
       "name": "InstrumentZero",
@@ -596,7 +656,11 @@
       "subjects": [
         "Systems & developer tools",
         "ML & data"
-      ]
+      ],
+      "browser_action": {
+        "label": "Replay a GPU investigation",
+        "url": "https://nazeeh111.github.io/KERNELDARWIN/"
+      }
     },
     {
       "name": "Kinetyl",
@@ -613,7 +677,11 @@
         "JavaScript"
       ],
       "upstream": null,
-      "source_revision": "b5d42527f70ee4016a31f75d1bbd1997daec183d"
+      "source_revision": "b5d42527f70ee4016a31f75d1bbd1997daec183d",
+      "browser_action": {
+        "label": "Edit a motion path",
+        "url": "https://nazeeh111.github.io/Kinetyl/"
+      }
     },
     {
       "name": "MorphProof",
@@ -646,7 +714,11 @@
         "JavaScript"
       ],
       "upstream": null,
-      "source_revision": "aed0636566e7936c996564beeecb9c69172ea3a6"
+      "source_revision": "aed0636566e7936c996564beeecb9c69172ea3a6",
+      "browser_action": {
+        "label": "Repair a rota",
+        "url": "https://nazeeh111.github.io/Muster/"
+      }
     },
     {
       "name": "nazeeh111",
@@ -762,7 +834,11 @@
         "python"
       ],
       "upstream": null,
-      "source_revision": "534b42d19b55460b14ee8e617ac34b7e0d329da4"
+      "source_revision": "534b42d19b55460b14ee8e617ac34b7e0d329da4",
+      "browser_action": {
+        "label": "Review a mesh merge",
+        "url": "https://nazeeh111.github.io/Polyweft/interference/"
+      }
     },
     {
       "name": "ProofRipple",
@@ -813,7 +889,11 @@
         "Python"
       ],
       "upstream": null,
-      "source_revision": "9d4b6b008c6474afd4bc91a1ab19de36c15b9106"
+      "source_revision": "9d4b6b008c6474afd4bc91a1ab19de36c15b9106",
+      "browser_action": {
+        "label": "Inspect binary samples",
+        "url": "https://nazeeh111.github.io/Reclay/"
+      }
     },
     {
       "name": "Reticle",
@@ -845,7 +925,11 @@
         "python"
       ],
       "upstream": null,
-      "source_revision": "e9f4261b9ffda97186fa1ced4cbcfc6a78516189"
+      "source_revision": "e9f4261b9ffda97186fa1ced4cbcfc6a78516189",
+      "browser_action": {
+        "label": "Run a state transition",
+        "url": "https://nazeeh111.github.io/Rewynth/lesson/"
+      }
     },
     {
       "name": "Keepstep",
@@ -969,7 +1053,11 @@
         "javascript"
       ],
       "upstream": null,
-      "source_revision": "62811f5a6a36e0ac3cf62996af2c9db43d762b42"
+      "source_revision": "62811f5a6a36e0ac3cf62996af2c9db43d762b42",
+      "browser_action": {
+        "label": "Work a math example",
+        "url": "https://nazeeh111.github.io/Syllune/"
+      }
     },
     {
       "name": "TAILSENTRY",
@@ -1061,10 +1149,10 @@
     }
   ],
   "featured_repositories": [
-    "https://github.com/nazeeh111/PhotonSmith",
+    "https://github.com/nazeeh111/SolidFrame",
+    "https://github.com/nazeeh111/VibeScope",
+    "https://github.com/nazeeh111/QLOOM",
     "https://github.com/nazeeh111/SILICONPILOT",
-    "https://github.com/nazeeh111/MaterialMind",
-    "https://github.com/nazeeh111/MorphProof",
-    "https://github.com/nazeeh111/LadderProof"
+    "https://github.com/nazeeh111/nstack"
   ]
 }

@@ -96,7 +96,21 @@ class WorkBuilderTests(unittest.TestCase):
         self.assertIn(alias, parsed.projects[0]["data-search"])
         self.assertNotIn("data-extra", parsed.projects[0])
         self.assertEqual([(item.get("id"), item.get("type")) for item in parsed.inputs],
-                         [("project-search", "search"), ("case-filter", "checkbox")])
+                         [("project-search", "search"), ("browser-filter", "checkbox"), ("case-filter", "checkbox")])
+
+    def test_browser_action_is_a_specific_link_and_marks_just_its_project(self):
+        item = project("Tool", "tool", browser_action={
+            "url": "https://nazeeh111.github.io/tool/replay/",
+            "label": "Inspect the recorded comparison",
+        })
+        data = builder.render({"projects": [item, project("Library", "library")]}, TEMPLATE)
+        parsed = Index(data.decode())
+        self.assertEqual([p.get("data-browser") for p in parsed.projects], [None, "true"])
+        self.assertEqual([a["href"] for a in parsed.links if a.get("class") == "browser-action"],
+                         [item["browser_action"]["url"]])
+        item["browser_action"]["url"] = "javascript:alert(1)"
+        with self.assertRaisesRegex(ValueError, "browser destination"):
+            builder.render({"projects": [item]}, TEMPLATE)
 
     def test_template_like_project_text_remains_literal_data(self):
         catalog = {"projects": [project("{{COUNT}}", "literal", aliases=["{{SUBJECTS}}"])]}

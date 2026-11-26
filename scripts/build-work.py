@@ -82,27 +82,30 @@ def _case_links(cases, known_urls):
     return links
 
 
-def sample_gallery(case_links):
-    # Each plate links to the case that interprets the recorded artifact.
-    samples = (
-        ("/work/solidrift/", "SolidRift", "A Boolean failure reduced to 12 triangles",
-         "/assets/solidrift-union.svg", "Recorded Boolean output of the reduced mesh."),
-        ("/work/vibescope/", "VibeScope", "One frame, two views of small motion",
-         "/assets/featured/vibescope/enhanced-frame72.webp", "Enhanced synthetic video frame 72 from the recorded gain-20 run."),
-        ("/work/chronal/", "Chronal", "A strategy loses on the holdout",
-         "/assets/featured/chronal/chronology.svg", "The observed development and holdout equity curves."),
-    )
-    items = []
-    for route, name, label, image, alt in samples:
-        if route not in case_links.values():
-            continue
-        esc = lambda value: html.escape(value, quote=True)
-        items.append(f'<li><a href="{esc(route)}"><div class="sample-print"><img src="{esc(image)}" alt="{esc(alt)}"></div>'
-                     f'<span class="sample-name">{esc(name)}</span><span class="sample-note">{esc(label)}</span></a></li>')
-    if not items:
+def browser_link(action):
+    if action is None:
         return ""
-    return ('<section aria-labelledby="sample-title"><h2 id="sample-title">Case studies</h2>'
-            '<ul>' + ''.join(items) + '</ul></section>')
+    if not isinstance(action, dict):
+        raise ValueError("Invalid browser action")
+    label = _text(action.get("label"), "browser action label")
+    url = _text(action.get("url"), "browser action URL")
+    parsed = urlsplit(url)
+    if parsed.scheme != "https" or parsed.netloc not in {
+        "nazeeh111.github.io", "cascade-flight-intelligence.nazeeh1.chatgpt.site",
+        "civicledger.nazeeh1.chatgpt.site",
+    }:
+        raise ValueError("Expected a reviewed public browser destination")
+    return f'<a class="browser-action" href="{html.escape(url, quote=True)}">{html.escape(label)}</a>'
+
+
+def bracket_plate():
+    return '''<figure class="bracket-plate"><picture>
+<source media="(max-width: 650px)" srcset="/assets/featured/solidframe-bracket/isometric-mobile.webp">
+<img src="/assets/featured/solidframe-bracket/bracket.png" width="1920" height="1132"
+ alt="Isometric view of the editable right-angle bracket with a two-by-two hole grid on each flange.">
+</picture><figcaption><span>100 × 80 × 60 mm · 6 mm stock · Ø8 mm through-holes</span>
+<span><a href="/assets/featured/solidframe-bracket/bracket-mobile.png">Dimensioned drawing</a> ·
+<a href="https://github.com/nazeeh111/SolidFrame/tree/0ffd50b029138097ea204cc7757f4280a44ff2e3/docs/presentation">Drawing source</a></span></figcaption></figure>'''
 
 
 def render(catalog, template, cases=None):
@@ -145,7 +148,7 @@ def render(catalog, template, cases=None):
         upstream = _upstream(project.get("upstream"))
         projects.append({"name": name, "summary": summary, "subject": subject,
                          "url": url, "kind": kind, "topics": topics,
-                         "aliases": aliases, "upstream": upstream, "subjects": memberships(project, subject)})
+                         "aliases": aliases, "browser_action": project.get("browser_action"), "upstream": upstream, "subjects": memberships(project, subject)})
 
     case_links = _case_links(cases, known)
     # Optional editorial order uses canonical identities. Unselected work keeps
@@ -176,20 +179,32 @@ def render(catalog, template, cases=None):
         case_url = case_links.get(url.casefold())
         case_link = (f'<a class="case-link" href="{escape(case_url)}" '
                      f'aria-label="Read case: {escape(project["name"])}">Read case</a>') if case_url else ""
-        meta = f'<div class="project-meta">{technology}{case_link}</div>' if technology or case_link else ""
+        action = browser_link(project["browser_action"])
+        is_bracket = url == "https://github.com/nazeeh111/SolidFrame" and bool(action)
+        feature = ' data-bracket="true"' if is_bracket else ''
+        browser = ' data-browser="true"' if action else ''
+        if action:
+            words.append(project["browser_action"]["label"])
+        if is_bracket:
+            words.extend(["bracket", "flanges", "hole grids"])
+        meta = (f'<div class="project-meta">{action}{case_link}{technology}</div>'
+                if action or case_link or technology else "")
         discipline = f'<p class="project-discipline">{escape(project["subject"])}</p>'
+        summary = ('Edit the stock or either flange’s hole grid, then rebuild the solid. '
+                   'Powered by Chili3D and OpenCascade.' if is_bracket else escape(project["summary"]))
         entries.append(
-            f'<li class="project-item" id="repository-{identity}" '
+            f'<li class="project-item" id="repository-{identity}"{feature}{browser} '
             f'data-subject="{escape(project["subject"])}" data-subjects="{escape("|".join(project["subjects"]))}" '
             f'data-search="{escape(" ".join(words))}">\n'
             f'<div class="project-title"><h2><a class="project-wordmark" href="{escape(url)}">'
             f'{escape(project["name"])}</a></h2>{discipline}</div>'
-            f'<div class="project-copy"><p class="project-summary">{escape(project["summary"])}</p>{credit}</div>{meta}</li>'
+            f'<div class="project-copy"><p class="project-summary">{summary}</p>{credit}</div>'
+            f'{meta}{bracket_plate() if is_bracket else ""}</li>'
         )
     subjects = sorted({subject for project in projects for subject in project["subjects"]}, key=str.casefold)
     options = "".join(f'<option value="{escape(subject)}">{escape(subject)}</option>' for subject in subjects)
     values = {"{{PROJECTS}}": "\n".join(entries), "{{SUBJECTS}}": options,
-              "{{COUNT}}": str(len(projects)), "{{SAMPLES}}": sample_gallery(case_links)}
+              "{{COUNT}}": str(len(projects))}
     tokens = set(re.findall(r"\{\{[A-Z_]+\}\}", template))
     if tokens - values.keys():
         raise ValueError("Unresolved work template token")

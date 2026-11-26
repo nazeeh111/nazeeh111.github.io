@@ -111,7 +111,7 @@ def prepare(files):
 
 def stamp_asset_urls(outputs):
     """Give shared browser assets cache identities derived from their actual bytes."""
-    assets = ('assets/design/portfolio.css', 'assets/design/logic.css', 'assets/design/interior.css', 'assets/portfolio.js',
+    assets = ('assets/design/portfolio.css', 'assets/design/logic.css', 'assets/design/interior.css', 'assets/design/discovery.css', 'assets/portfolio.js',
               'assets/work.js', 'assets/social/portfolio-preview.png',
               'research/style.css', 'research/app.js')
     result = dict(outputs)
