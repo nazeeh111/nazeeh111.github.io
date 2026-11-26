@@ -19,7 +19,12 @@
         "default": 100.0,
         "max": 125.0
       }
-    ]
+    ],
+    "webfont": {
+      "file": "Archivo.woff2",
+      "sha256": "6ff769840a6c0eb37d13afe7e9f603fa5cdb5f391ff87cc7aab75a3a4d44fdf4",
+      "encoding": "WOFF2, complete original glyph set and variation axes"
+    }
   },
   {
     "file": "IBMPlexSans.ttf",
@@ -41,6 +46,11 @@
         "default": 100.0,
         "max": 100.0
       }
-    ]
+    ],
+    "webfont": {
+      "file": "IBMPlexSans.woff2",
+      "sha256": "4aea8c49bb04155bced7cdea9ed0ed86b5a45da94b2ca54065ac9cb4098efcdb",
+      "encoding": "WOFF2, complete original glyph set and variation axes"
+    }
   }
 ]

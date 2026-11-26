@@ -435,8 +435,8 @@
     "case_url": "/work/siliconpilot/",
     "lead": "Turn a small neural classifier into inspectable hardware, then see what accuracy, area and latency cost.",
     "action": {
-      "label": "Explore recorded designs",
-      "url": "https://nazeeh111.github.io/SILICONPILOT/"
+      "label": "Compare the two circuits",
+      "url": "https://nazeeh111.github.io/SILICONPILOT/#schedule-case"
     },
     "secondary_action": {
       "label": "Generate Verilog locally",
