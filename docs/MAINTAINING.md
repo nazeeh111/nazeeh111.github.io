@@ -2,7 +2,7 @@
 
 The checked-in HTML, CSS, scripts and media form the deployable site. The [README](../README.md) links to the public portfolio, project catalog and research library.
 
-The homepage follows SiliconPilot’s classifier into two fixed-point Verilog schedules. Its [figure sources and terms](../assets/logic/PROVENANCE.md) identify the compiled quantities and the recorded verification. PhotonSmith’s wavelength probe reads its 21 stored solves. The README previews are Chromium captures of the actual homepage at 1440 and 390 CSS pixels, encoded as WebP without changing their dimensions. Replace both captures when the homepage’s opening view changes.
+The homepage follows SiliconPilot’s classifier into two fixed-point Verilog schedules. Its [figure sources and terms](../assets/logic/PROVENANCE.md) identify the compiled quantities and the recorded verification. PhotonSmith’s wavelength probe reads its 21 stored solves. The README previews are Chromium captures of the actual homepage at 1440 and 390 CSS pixels, encoded as WebP without changing their dimensions. Replace both captures when the homepage’s opening view changes. The silent walkthrough records the live model, schedules and reference results, then opens the native bracket in SolidFrame. The cut skips application startup.
 
 The site uses static HTML and CSS with self-hosted Archivo and IBM Plex Sans. WOFF2 and original TrueType fallbacks retain the upstream Open Font License notices.
 

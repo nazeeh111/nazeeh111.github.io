@@ -11,6 +11,8 @@ I study electrical engineering and physics at Virginia Tech. This portfolio coll
 
 The opening case follows one neural classifier into two fixed-point Verilog circuits. Both matched the integer reference on the same 78 test vectors. Their first outputs arrived after 49 and 27 core clocks in RTL simulation. [Read the build](https://nazeeh111.github.io/work/siliconpilot/) · [Inspect the circuits](https://nazeeh111.github.io/SILICONPILOT/#schedule-case)
 
+[Watch the 14-second walkthrough](https://nazeeh111.github.io/docs/presentation/portfolio-walkthrough.mp4) to see the two circuit schedules and open an editable bracket from the project index.
+
 ## Local preview
 
 From the repository root, choose a fresh output directory.
