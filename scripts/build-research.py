@@ -81,17 +81,39 @@ def article(study,files):
     html+='</ul></section>'+downloads(study,files)+'</div></div></article><nav class="article-end" aria-label="Research navigation"><a href="/research/">← Back to the research library</a></nav></main>'+footer()
     return html, bibliography(study)+'\n'
 
+def research_feature(study):
+    return f'''<section class="survey-feature" aria-labelledby="survey-title">
+<div class="survey-copy"><p class="study-byline">{esc(study["name"])} <span>/</span> Simulated sensing</p>
+<h2 id="survey-title">Does sensor weighting reveal more movement?</h2>
+<p>On 16 fresh simulated rock slopes, weighting the camera and laser observations by quality improved movement-detection recall.</p>
+<div class="recall-pair" aria-label="Recall on the 16 simulated sites"><div><strong>82.33%</strong><span>Learned fusion recall</span></div><div><strong>75.93%</strong><span>Simple fusion recall</span></div></div>
+<p class="survey-limit">Observation coverage was 95.13% for both. Equal false-positive rates were not established.</p>
+<a class="study-action" href="/research/{esc(study["id"])}/">Read the study <span aria-hidden="true">↗</span></a></div>
+<figure class="survey-plate"><div class="survey-panels"><div class="survey-camera"><h3>Camera survey 6</h3>
+<img src="/research/figures/cragshift-survey.webp" width="436" height="327" alt="Simulated stereo-left camera view of a jointed rock face during survey six."></div>
+<div class="survey-map"><h3>Fused normal change</h3><img src="/research/figures/cragshift-anchors.svg" width="286" height="235" alt="Measured anchors on the development rock face. Positive normal movement clusters near the center. Color shows signed displacement in metres."></div></div>
+<figcaption>Development site. Colors show estimated movement perpendicular to the surface at measured anchors. <a href="/research/sources/cragshift.zip" download>Original figure in manuscript source</a></figcaption>
+</figure></section>'''
+
+
 def render(catalog,files,pdf_count,report_count,archive_bytes):
-    html=header('Research','Study write-ups, results, original papers, and manuscript sources.','/research/')
-    html+=f'''<main id="main" class="shell"><header class="library-intro"><div class="eyebrow">Independent research</div><h1>Research</h1><p>Physics, numerical methods, sensing, agents, and finance.</p><div class="library-actions"><a href="/research/all-papers.zip" download>Download all papers <span>{pdf_count} PDFs + {report_count} report{'s' if report_count != 1 else ''} · {size(archive_bytes)} ↓</span></a></div></header>
-<section class="library" aria-label="Research studies"><form class="search-form" role="search" hidden><label for="paper-search">Search studies</label><div class="search-row"><input id="paper-search" type="search" name="q" placeholder="Search topics, methods, or results…" autocomplete="off"><button type="reset" class="reset-search">Clear</button></div><fieldset><legend>Filter by topic</legend><div class="filters"><button type="button" data-topic="all" aria-pressed="true">All studies</button>'''
+    html=header('Research','Study findings, original papers and manuscript sources.','/research/','/research/figures/cragshift-survey.webp')
+    html=html.replace('<body>', '<body class="research-index">').replace('content="dark"', 'content="light"').replace('content="#0b0d10"', 'content="#f9faf6"')
+    html+=f'''<main id="main" class="shell"><header class="atlas-title"><h1>Research</h1>
+<a class="index-jump" href="#study-index"><span class="jump-label">Browse {len(catalog)} studies</span> <span aria-hidden="true">↓</span></a></header>'''
+    featured=next((s for s in catalog if s['id']=='cragshift'),None)
+    if featured:html+=research_feature(featured)
+    html+=f'''<section id="study-index" class="catalog-index" aria-labelledby="index-heading" tabindex="-1"><header class="index-heading">
+<h2 id="index-heading">Study index</h2><a href="/research/all-papers.zip" download>Download all papers <span>{pdf_count} PDFs + {report_count} report{'s' if report_count != 1 else ''} · {size(archive_bytes)}</span></a></header>
+<form class="search-form" role="search" hidden><div class="search-row"><label for="paper-search">Search studies</label><input id="paper-search" type="search" name="q" placeholder="Title, topic or result" autocomplete="off"><button type="reset" class="reset-search">Clear</button></div>
+<fieldset><legend>Filter by topic</legend><div class="filters"><button type="button" data-topic="all" aria-pressed="true">All</button>'''
     for topic in dict.fromkeys(d['topic'] for d in catalog):html+=f'<button type="button" data-topic="{esc(topic)}" aria-pressed="false">{esc(topic)}</button>'
-    html+=f'''</div></fieldset></form><div class="results-line"><p id="result-count" role="status" aria-live="polite">{len(catalog)} studies</p></div><div class="paper-list">'''
+    html+=f'''</div></fieldset></form><div class="results-line"><p id="result-count" role="status" aria-live="polite">{len(catalog)} studies</p></div><div class="index-rows">'''
     for study in catalog:
         slug=study['id'];body=study['article']
         terms=' '.join([study['name'],study['title'],study['topic'],study['summary'],study['outcome'],study['finding'],study.get('lineage',''),body['title']])
-        html+=f'''<article class="paper-row" data-category="{esc(study['topic'])}" data-search="{esc(terms.lower())}"><div class="paper-meta"><span>{esc(study.get('lineage',study['topic']))}</span><span>{esc(study['name'])}</span></div><h2><a href="/research/{slug}/">{esc(body['title'])}</a></h2><p>{esc(study['summary'])}</p><div class="paper-bottom"><span class="outcome">{esc(study['outcome'])}</span><a href="/research/{slug}/" class="study-link">Read study ↗</a></div><p class="paper-date" data-date-status="{esc(study.get('dateStatus','verified'))}">{esc(display_date(study))}</p></article>'''
-    html+='''</div><div class="empty-state" hidden><h2>No matching studies</h2><p>Try another search or clear the filter.</p><button type="button" id="show-all">Show all studies</button></div></section></main>'''+footer()
+        html+=f'''<article class="paper-row" data-category="{esc(study['topic'])}" data-search="{esc(terms.lower())}"><div class="row-subject">{esc(study['topic'])}<span>{esc(study['name'])}</span></div><div class="row-work"><h3><a href="/research/{slug}/">{esc(body['title'])}</a></h3><p>{esc(study['summary'])}</p></div><div class="row-finding">{esc(study['outcome'])}<time datetime="{esc(study.get('displayDate',study['date']))}" data-date-status="{esc(study.get('dateStatus','verified'))}">{esc(display_date(study))}</time></div></article>'''
+    html+=''''</div><div class="empty-state" hidden><h3>No matching studies</h3><p>Try another search or clear the filter.</p><button type="button" id="show-all">Show all studies</button></div></section></main>'''+footer()
     outputs={'research/index.html':html.encode('utf-8')}
     for study in catalog:
         page,bib=article(study,files)

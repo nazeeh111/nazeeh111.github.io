@@ -4,6 +4,11 @@ if (form) {
   const input = document.querySelector('#paper-search');
   const topics = [...document.querySelectorAll('[data-topic]')];
   const rows = [...document.querySelectorAll('.paper-row')];
+  const jump = document.querySelector('.index-jump');
+  if (jump) {
+    jump.href = '#paper-search';
+    jump.querySelector('.jump-label').textContent = `Search ${rows.length} studies`;
+  }
   const count = document.querySelector('#result-count');
   const empty = document.querySelector('.empty-state');
   let topic = 'all';
@@ -32,6 +37,10 @@ if (form) {
   form.addEventListener('reset', event => { event.preventDefault(); input.value = ''; topic = 'all'; filter(); input.focus(); });
   document.querySelector('#show-all').addEventListener('click', () => { input.value = ''; topic = 'all'; filter(); input.focus(); });
   filter();
+  // A shared filtered URL opens at its matching studies, even on a short screen.
+  if (!location.hash && (input.value.trim() || topic !== 'all')) {
+    document.querySelector('#study-index')?.scrollIntoView({behavior: 'instant'});
+  }
 }
 const copy = document.querySelector('.copy-button');
 if (copy) {
