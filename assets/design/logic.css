@@ -139,3 +139,5 @@
 }
 /* Anchor navigation is immediate. Scrolling the document still drives the plate. */
 html:has(.logic-home) { scroll-behavior: auto; }
+
+.chapter .companion-action { margin-top: 12px; }

@@ -2,7 +2,7 @@
 
 [Open the portfolio](https://nazeeh111.github.io/) to follow a four-input neural classifier into two fixed-point Verilog circuits. Scroll through its compiled weights, hardware schedule and reference scores, or use the three section links. Each step remains readable on a phone and without JavaScript. The [work index](https://nazeeh111.github.io/work/) includes 59 public repositories and 13 case studies. The [research library](https://nazeeh111.github.io/research/) contains twelve studies with downloadable sources.
 
-The site uses static HTML, CSS, self-hosted Archivo and IBM Plex Sans. Figures use recorded data. The homepage also includes a wavelength probe built from PhotonSmith’s 21 stored solutions. [SiliconPilot figure sources and terms](assets/logic/PROVENANCE.md).
+The site uses static HTML, CSS, self-hosted WOFF2 versions of Archivo and IBM Plex Sans, with the original TrueType files available as fallbacks. Figures use recorded data. The homepage also includes a wavelength probe built from PhotonSmith’s 21 stored solutions. [SiliconPilot figure sources and terms](assets/logic/PROVENANCE.md).
 
 ## Update the portfolio
 
