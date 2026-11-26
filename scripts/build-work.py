@@ -187,11 +187,13 @@ def render(catalog, template, cases=None):
             words.append(project["browser_action"]["label"])
         if is_bracket:
             words.extend(["bracket", "flanges", "hole grids"])
+        if is_bracket:
+            technology = f'<p class="technology">{escape(project["kind"])} · Powered by Chili3D and OpenCascade.</p>'
         meta = (f'<div class="project-meta">{action}{case_link}{technology}</div>'
                 if action or case_link or technology else "")
         discipline = f'<p class="project-discipline">{escape(project["subject"])}</p>'
-        summary = ('Edit the stock or either flange’s hole grid, then rebuild the solid. '
-                   'Powered by Chili3D and OpenCascade.' if is_bracket else escape(project["summary"]))
+        summary = ('Edit the stock or either flange’s hole grid, then rebuild the solid.'
+                   if is_bracket else escape(project["summary"]))
         entries.append(
             f'<li class="project-item" id="repository-{identity}"{feature}{browser} '
             f'data-subject="{escape(project["subject"])}" data-subjects="{escape("|".join(project["subjects"]))}" '

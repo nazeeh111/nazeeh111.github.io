@@ -33,9 +33,6 @@
 @media(max-width:650px) {
  .work-register .catalog-controls .case-filter { flex-basis:auto; font-size:14px; }
  .work-register .catalog-status { flex-basis:100%; margin-left:0; }
- .work-register [data-bracket] .project-meta { grid-row:2; }
- .work-register [data-bracket] .bracket-plate { grid-row:3; }
- .work-register [data-bracket] .project-copy { grid-row:4; }
 }
 @media(max-width:359px) {
  .work-register .folio-nav { flex-wrap:wrap; gap:0 16px; padding-block:5px; }
