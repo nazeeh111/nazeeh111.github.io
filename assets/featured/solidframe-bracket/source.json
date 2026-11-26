@@ -1,0 +1,22 @@
+{
+  "source_commit": "0ffd50b029138097ea204cc7757f4280a44ff2e3",
+  "source_commit_url": "https://github.com/nazeeh111/SolidFrame/commit/0ffd50b029138097ea204cc7757f4280a44ff2e3",
+  "commit_verification": {
+    "provider": "GitHub",
+    "verified": true,
+    "reason": "valid"
+  },
+  "source_directory": "docs/presentation/",
+  "original_manifest": "bracket-manifest.json",
+  "local_sha256": {
+    "bracket-manifest.json": "3ea13c830ae5c91c7a950d51c96aa4a6b8d33565d832657232f8941cdbb34f35",
+    "bracket-mobile.png": "a196575b759a1a0d96b634090d89082749c8e5565a368d8814fe50a159dfa354",
+    "bracket.png": "1f5c3f4394f97358416467c961e206c2798f7a14621445c5708b93655b6797b9",
+    "isometric-mobile.webp": "d5915e1b4baf9ccb787c4b845d6df93f1d6b88361414d3f6bbf46bba723fed8f"
+  },
+  "mobile_thumbnail": "Lossless RGB crop from bracket-mobile.png, source pixel rectangle [36,186,824,792). The full dimensioned mobile drawing remains available.",
+  "notices": [
+    "../SolidFrame-LICENSE.txt",
+    "../SolidFrame-WASM-NOTICE.txt"
+  ]
+}
