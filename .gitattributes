@@ -2,3 +2,7 @@ research/papers/*.pdf binary
 
 # Preserve exact browser-exported CSV evidence bytes.
 /assets/featured/vibescope/*-displacement.csv -text -eol
+
+# Preserve native saved report and experiment CSV bytes.
+/assets/featured/chronal/report.html -text -eol
+/assets/featured/chronal/*.csv -text -eol

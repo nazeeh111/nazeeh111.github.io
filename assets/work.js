@@ -10,6 +10,7 @@
   const reset = document.querySelector("#reset-search");
   const recovery = document.querySelector("#search-all-disciplines");
   const emptyMessage = document.querySelector("#catalog-empty-message");
+  const samples = document.querySelector("#register-samples");
   const entries = [...document.querySelectorAll(".project-item")];
   if (!search || !subject || !filters || !status || !empty || !reset) return;
 
@@ -83,6 +84,7 @@
       ? `No ${resultType} match${search.value.trim() ? ` “${search.value.trim()}”` : ""} in ${category}.`
       : `No ${resultType} match this search.`;
     if (recovery) recovery.hidden = !(visible === 0 && category && query.length && acrossDisciplines > 0);
+    if (samples) samples.hidden = filtering || casesOnly;
     reset.hidden = !(filtering || casesOnly);
     writeLocation(options);
   }

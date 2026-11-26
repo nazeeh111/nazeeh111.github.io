@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chronal · Nazeeh Abdul-Hadi</title>
+<meta name="description" content="Chronal froze its winning strategy. On fictional holdout prices, it lost 1.461%. Follow the simulated trades behind that result.">
+<link rel="canonical" href="https://nazeeh111.github.io/work/chronal/">
+<link rel="icon" href="/assets/favicon.svg">
+<link rel="stylesheet" href="/assets/design/portfolio.css?v=6c305ac7454ae57d">
+<link rel="stylesheet" href="/assets/design/interior.css?v=f1717bc3e17535e8">
+</head>
+<body class="folio-interior case-register">
+<a class="skip" href="#main">Skip to content</a>
+<header class="folio-band">
+  <div class="folio-width folio-nav">
+    <a class="folio-mark" href="/" aria-label="Nazeeh Abdul-Hadi home">Nazeeh Abdul-Hadi</a>
+    <nav aria-label="Main navigation"><a href="/work/">Work</a><a href="/research/">Research</a><a href="/#about">About</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="folio-band">
+    <div class="folio-width case-opening">
+      <div><a class="back-to-work" href="/work/#projects">Work index</a><h1>Chronal</h1></div>
+      <div class="case-entry"><p class="folio-lead">Chronal froze its winning strategy. On fictional holdout prices, it lost 1.461%. Follow the simulated trades behind that result.</p><div class="folio-actions"><a class="folio-action" href="/assets/featured/chronal/report.html">Open the interactive holdout</a><a class="folio-secondary" href="https://github.com/nazeeh111/chronal/raw/f2cec5dfc41cfdb321f08c621d7303f3de828b1f/docs/presentation/worked-example.zip">Download the complete replay</a></div><details class="record-detail"><summary>How to find the first fill</summary><p>In the report, set Inspect exact session date to June 3, 2020 and choose Execution from the section menu. With a keyboard, press /, enter session #2, then enter goto execution.</p></details></div>
+    </div>
+  </div>
+  <div class="folio-width case-reader">
+    <div class="case-evidence"><figure class="case-media"><div class="capture-overview"><picture><source media="(max-width:760px)" srcset="/assets/featured/chronal/chronology-mobile.svg"><img src="/assets/featured/chronal/chronology.svg" alt="Training, development and held-out sessions. Both holdout strategies lose value. The detailed fill shows how execution and commission reduce available cash." loading="eager" fetchpriority="high"></picture></div><figcaption>Every marked equity value with initial capital. Each panel uses the same vertical scale and rebases its separate account to 100. <a class="full-capture-link" href="/assets/featured/chronal/chronology.svg">Open full capture</a></figcaption></figure></div>
+    <div class="case-account">
+      <section class="result-ledger"><h2>A 1.461% loss on the holdout</h2><p>The selected strategy returned +1.775% in development and −1.461% on the holdout. Equal weight returned −4.528% on the holdout. The selected strategy incurred 233.486 units of holdout commission. Spread and slippage enter fill prices.</p><h3>Interpretation</h3><p>This experiment uses fictional prices. Session numbers in the figure are zero-based. The terminal’s session command counts from one within the displayed period. Results describe this run under Chronal’s daily execution assumptions.</p></section>
+      <div class="case-argument">
+        <section><h2>When a development winner loses</h2><p>A strategy can win on development data and still lose on the next unseen period. The worked experiment freezes the candidate, fill rules and costs so a reader can trace how that result arose.</p></section>
+        <section><h2>Freeze the strategy before evaluation</h2><p>Training and evaluation advance in chronological windows. Chronal ranks four candidates by development Sharpe, freezes trend60, then compares it with equal weight across 126 holdout sessions. Both start the holdout with 100,000 simulated account units.</p></section>
+      </div>
+    </div>
+    <section class="case-appendix">
+      <div><h2>Foundations</h2><p>Chronal uses Python and NumPy for chronological fitting and cash-aware simulation. The saved terminal contains the recorded data and runs in the browser with no external dependencies.</p></div>
+      <div><h2>Sources and supporting evidence</h2><p>The request originated at close 630 and filled at open 631, the second reported holdout session.</p><p>The recorded SYN_C buy spent 50,025.0000 units on 412.8366 shares and paid 25.0125 units in commission. The fills CSV records 49,949.9875 units of cash immediately afterward, displayed as $49,950 in the report. The chart and account panel show close-of-session values.</p><p><a href="/assets/featured/chronal/LICENSE.txt">Source, data and license notices</a></p><p class="case-source"><a href="https://github.com/nazeeh111/chronal/blob/f2cec5dfc41cfdb321f08c621d7303f3de828b1f/docs/presentation/README.md">Recorded evidence and limits</a><a href="https://github.com/nazeeh111/chronal">Project source</a></p><p class="case-source"><a href="https://github.com/nazeeh111/chronal/tree/f2cec5dfc41cfdb321f08c621d7303f3de828b1f">Source revision <code>f2cec5dfc41c</code></a></p></div>
+    </section>
+  </div>
+</main>
+<footer class="folio-band">
+  <div class="folio-width interior-footer"><a href="/">Nazeeh Abdul-Hadi</a><nav aria-label="Footer"><a href="/work/#projects">All projects</a><a href="/research/">Research</a><a href="https://github.com/nazeeh111">GitHub</a></nav></div>
+</footer>
+</body>
+</html>

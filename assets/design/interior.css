@@ -1,0 +1,247 @@
+/* Work index and project case pages. */
+.folio-interior {
+  --paper-folio: #f6f8fb;
+  --ink-folio: #101820;
+  --dull: #465462;
+  --paper-rule: #d2dae3;
+  --ink-accent: #254ce3;
+  --wash: #e7eef8;
+  --white-folio: #fff;
+  --sans: Archivo, Arial, sans-serif;
+  --folio-pad: clamp(20px, 5vw, 82px);
+  background: var(--paper-folio);
+  color: var(--ink-folio);
+  font-family: "IBM Plex Sans", Arial, sans-serif;
+}
+
+.folio-interior [hidden] { display: none !important; }
+.folio-interior :is(a, button, input, select, summary):focus-visible {
+  outline: 3px solid var(--ink-accent);
+  outline-offset: 4px;
+}
+.folio-interior .skip { color: var(--white-folio); background: var(--ink-accent); }
+.folio-width { max-width: 1540px; padding-inline: var(--folio-pad); margin-inline: auto; }
+.folio-band { background: var(--paper-folio); color: var(--ink-folio); }
+footer.folio-band { background: var(--wash); }
+.folio-interior .folio-nav, .interior-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 68px;
+  column-gap: 16px;
+}
+.folio-interior :is(.folio-nav,.interior-footer) nav {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: clamp(16px, 3vw, 44px);
+  row-gap: 0;
+  font: 500 15px/1.35 var(--sans);
+}
+.folio-interior :is(.folio-nav,.interior-footer) a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+.folio-interior .folio-nav a { text-decoration: none; }
+.folio-interior .folio-nav a:hover, .folio-interior .folio-nav a[aria-current] { text-decoration: underline; }
+.folio-mark { font: 650 clamp(14px, 1.5vw, 19px)/1.2 var(--sans); letter-spacing: -.025em; }
+.interior-footer { padding-block: 15px; flex-wrap: wrap; }
+.interior-footer > a { font-size: 17px; }
+.folio-interior :is(h1,h2,h3,.sample-name) {
+  font-family: var(--sans);
+  font-weight: 660;
+  font-stretch: normal;
+  letter-spacing: -.038em;
+  line-height: .98;
+  overflow-wrap: anywhere;
+}
+.folio-interior h1 { font-size: clamp(58px, 7.1vw, 105px); }
+.folio-interior h2 { font-size: clamp(29px, 3vw, 46px); }
+.register-intro, .case-opening {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+  align-items: end;
+  column-gap: clamp(24px, 7vw, 105px);
+  row-gap: 18px;
+  padding-block: clamp(20px, 4vw, 58px) clamp(29px, 4vw, 64px);
+}
+.register-intro p, .folio-lead {
+  max-width: 37ch;
+  color: var(--dull);
+  font-size: clamp(17px, 1.65vw, 24px);
+  line-height: 1.4;
+}
+.register-intro p { padding-bottom: .2em; }
+
+.register-body {
+  padding-top: clamp(24px, 3vw, 42px);
+  padding-bottom: clamp(45px, 7vw, 104px);
+}
+.work-register .filters {
+  display: grid;
+  grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr);
+  width: min(100%, 820px);
+  gap: clamp(14px, 3vw, 35px);
+  margin-bottom: 10px;
+}
+.work-register .filters label {
+  display: block;
+  font: 500 15px/1.4 var(--sans);
+  margin-bottom: 8px;
+}
+.work-register .filters :is(input,select) {
+  min-height: 48px;
+  width: 100%;
+  border: 1px solid var(--dull);
+  border-radius: 0;
+  background: var(--white-folio);
+  color: var(--ink-folio);
+  font: 16px/1.2 "IBM Plex Sans", Arial, sans-serif;
+  padding-inline: 12px;
+  margin: 0;
+}
+.work-register .filters input::placeholder { color: var(--dull); }
+.work-register .catalog-controls {
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2px 24px;
+  margin-bottom: 16px;
+}
+.work-register :is(.case-filter,#reset-search) { min-height: 44px; }
+.work-register .case-filter input { accent-color: var(--ink-accent); }
+.work-register .catalog-status { color: var(--dull); font-size: 15px; }
+.work-register #reset-search { color: var(--ink-accent); }
+.work-register .empty {
+  background: var(--wash);
+  border: 0;
+  padding: 22px;
+}
+.work-register .empty h2 { margin-bottom: 12px; }
+.work-register #search-all-disciplines { background: var(--ink-folio); color: var(--white-folio); }
+.register-samples:not(:empty) { margin-block: 10px 42px; border-top: 1px solid var(--paper-rule); padding-top: 17px; }
+.register-samples h2 { font-size: clamp(28px, 2.8vw, 43px); margin-bottom: 15px; }
+.register-samples ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(10px, 2.5vw, 38px); list-style: none; padding: 0; }
+.register-samples li { min-width: 0; }
+.register-samples a { display: block; text-decoration: none; }
+.sample-print { height: clamp(100px, 13vw, 193px); background: var(--wash); }
+.sample-print img { width: 100%; height: 100%; object-fit: cover; }
+.register-samples li:last-child img { object-fit: contain; background: var(--wash); }
+.sample-name { display: block; font-size: clamp(21px, 2.5vw, 36px); margin-top: 11px; }
+.sample-note { display: block; color: var(--dull); font-size: 15px; margin-top: 6px; line-height: 1.3; }
+.register-samples a:hover .sample-name { text-decoration: underline; text-decoration-thickness: 1px; }
+
+.work-register .project-list { display: block; border-top: 1px solid var(--ink-folio); }
+.work-register .project-item {
+  width: 100%;
+  padding: 20px 0;
+  background: transparent;
+  border-bottom: 1px solid var(--paper-rule);
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.3fr) minmax(92px, .34fr);
+  column-gap: clamp(16px, 4vw, 66px);
+  row-gap: 7px;
+  align-items: baseline;
+}
+.work-register .project-item h2 { margin-bottom: 6px; font-size: clamp(23px, 2.5vw, 36px); }
+.work-register .project-discipline { font: 500 13px/1.4 var(--sans); color: var(--dull); }
+.work-register .project-summary { font-size: 17px; line-height: 1.4; }
+.work-register :is(.technology, .upstream) { color: var(--dull); font-size: 14px; margin-top: 5px; }
+.work-register .project-meta { flex-direction: column; gap: 0; align-items: flex-start; margin: 0; }
+.work-register .case-link { order: -1; min-height: 42px; color: var(--ink-accent); font-weight: 500; }
+
+.case-opening { align-items: start; padding-top: clamp(10px, 2.6vw, 42px); }
+.case-entry { padding-top: clamp(8px, 3.5vw, 52px); }
+.back-to-work {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin-bottom: 8px;
+  color: var(--dull);
+  font: 500 15px/1.4 var(--sans);
+}
+.case-opening h1 { font-size: clamp(53px, 6.8vw, 98px); }
+.folio-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  align-items: center;
+  margin-top: 17px;
+  font: 500 15px/1.3 var(--sans);
+}
+.folio-actions > a { display: inline-flex; align-items: center; min-height: 44px; }
+.folio-action { background: var(--ink-accent); color: var(--white-folio); padding: 11px 15px; text-decoration: none; }
+.folio-action:hover { background: #1939b5; }
+.folio-secondary { color: var(--ink-folio); }
+.case-entry .record-detail { margin-top: 9px; }
+.case-entry .record-detail p { color: var(--dull); max-width: 50ch; font-size: 16px; }
+
+.case-reader { padding-top: clamp(20px, 3.6vw, 52px); padding-bottom: clamp(42px, 7vw, 95px); }
+.case-evidence { max-width: 1130px; margin-inline: auto; }
+.case-evidence .case-media { margin-bottom: clamp(28px, 4vw, 60px); min-width: 0; }
+.case-evidence .case-media:last-child { margin-bottom: 0; }
+.case-evidence .capture-overview img { background: var(--white-folio); }
+.case-evidence :is(.case-media,.mobile-details) figcaption { color: var(--dull); max-width: 80ch; line-height: 1.45; margin-top: 10px; }
+.case-evidence .full-capture-link { display: inline-flex; min-height: 36px; align-items: center; margin-left: 5px; color: var(--ink-accent); }
+.case-evidence pre { background: var(--ink-folio); color: var(--white-folio); }
+.case-evidence .case-comparison { margin-bottom: clamp(24px, 4vw, 58px); }
+.case-evidence .case-comparison h2 { margin-bottom: 15px; }
+.case-account {
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+  gap: clamp(25px, 5vw, 80px);
+  margin-top: clamp(35px, 6vw, 82px);
+  border-top: 1px solid var(--ink-folio);
+  padding-top: clamp(21px, 3vw, 44px);
+}
+.case-account p, .case-appendix p { max-width: 60ch; overflow-wrap: anywhere; }
+.case-account :is(h2,h3), .case-appendix h2 { margin-bottom: 11px; }
+.case-account .result-ledger {
+  align-self: start;
+  background: var(--wash);
+  padding: clamp(19px, 2.8vw, 42px);
+}
+.case-account .result-ledger h3 { font: 500 15px/1.4 var(--sans); letter-spacing: 0; margin: 22px 0 7px; }
+.case-account .result-ledger h3 + p { color: var(--dull); font-size: 16px; }
+.case-argument section + section { margin-top: 27px; }
+.case-appendix {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: clamp(26px, 6vw, 92px);
+  border-top: 1px solid var(--paper-rule);
+  margin-top: clamp(34px, 6vw, 86px);
+  padding-top: 28px;
+}
+.case-appendix h2 { font-size: clamp(30px, 2.6vw, 43px); }
+.case-appendix p + p { margin-top: 13px; }
+.case-appendix .case-source { display: flex; flex-wrap: wrap; column-gap: 22px; margin-top: 10px; color: var(--ink-accent); }
+.case-appendix .case-source a { gap: 6px; min-height: 42px; }
+
+@media(max-width: 750px) {
+  .work-register .project-item { grid-template-columns: minmax(0, 1fr) auto; }
+  .work-register .project-copy { grid-column: 1 / -1; grid-row: 2; }
+  .work-register .project-meta { grid-column: 2; grid-row: 1; justify-self: end; align-items: flex-end; }
+  .work-register .technology { margin-top: 0; }
+}
+@media(max-width: 650px) {
+  .folio-interior .folio-nav { min-height: 56px; column-gap: 9px; }
+  .folio-interior :is(.folio-nav,.interior-footer) nav { gap: 0 11px; font-size: 14px; }
+  .register-intro, .case-opening, .case-account, .case-appendix {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .register-intro { padding-top: 18px; }
+  .folio-interior h1 { font-size: clamp(44px, 10.8vw, 66px); }
+  .back-to-work { margin-bottom: 1px; }
+  .case-entry { padding-top: 2px; }
+  .folio-actions { margin-top: 12px; }
+  .sample-print { height: clamp(62px, 17vw, 116px); }
+  .sample-name { font-size: clamp(16px, 4.3vw, 27px); margin-top: 7px; }
+  .sample-note { font-size: 13px; line-height: 1.3; }
+  .register-samples:not(:empty) { margin-bottom: 28px; }
+  .work-register .project-summary { font-size: 16px; }
+  .case-account p,.case-appendix p { font-size: 17px; }
+}
+@media(max-width: 470px) {
+  .work-register .filters { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 12px; }
+  .work-register .catalog-controls { gap: 0 14px; }
+  .work-register .filters input::placeholder { color: transparent; }
+}

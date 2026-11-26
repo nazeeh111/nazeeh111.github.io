@@ -1,34 +1,35 @@
-"""Build the static public project catalog and the portfolio homepage."""
-
-import html
-import json
-from pathlib import Path
-
-ROOT = Path(__file__).resolve().parents[1]
+"""Render the portfolio's spectrum probe from the recorded PhotonSmith solutions."""
+import csv
+import io
+import math
 
 
-def escape(value):
-    return html.escape(str(value), quote=True)
+def render(template, spectrum_csv):
+    rows = csv.DictReader(io.StringIO(spectrum_csv.decode("utf-8")))
+    samples = [(float(row["wavelength_nm"]), float(row["efficiency_percent"])) for row in rows]
+    if len(samples) < 2 or any(not math.isfinite(nm) or not 0 <= efficiency <= 100 for nm, efficiency in samples):
+        raise ValueError("Spectrum needs at least two finite wavelengths and valid efficiencies")
+    if any(left[0] >= right[0] for left, right in zip(samples, samples[1:])):
+        raise ValueError("Spectrum wavelengths must increase")
 
-
-def render(catalog, template):
-    entries = []
-    groups = sorted({project["subject"] for project in catalog["projects"]})
-    for project in catalog["projects"]:
-        name = escape(project["name"])
-        summary = escape(project["summary"])
-        searchable = escape(" ".join([project["name"], project["summary"], project["subject"], *project["topics"], *project.get("aliases", [])]).lower())
-        upstream = ""
-        if project.get("upstream"):
-            parent = escape(project["upstream"])
-            upstream = f'<p class="upstream">Based on <a href="https://github.com/{parent}">{parent}</a></p>'
-        entries.append(f'''<li class="project-item" data-subject="{escape(project['subject'])}" data-search="{searchable}">
-<div><h3><a class="project-wordmark" href="{escape(project['url'])}">{name}</a></h3><p>{summary}</p>{upstream}</div>
-<span class="project-kind">{escape('Fork' if project.get('upstream') else project['kind'])}</span></li>''')
-    options = "".join(f'<option value="{escape(group)}">{escape(group)}</option>' for group in groups)
-    result = template.replace("{{PROJECTS}}", "\n".join(entries)).replace("{{SUBJECTS}}", options).replace("{{COUNT}}", str(len(entries)))
-    return result.encode("utf-8")
-
-
-if __name__ == '__main__':
-    raise SystemExit('Use python3 scripts/build-site.py --out <new-directory>')
+    first, last = samples[0][0], samples[-1][0]
+    points = []
+    marks = []
+    peak = max(range(len(samples)), key=lambda index: samples[index][1])
+    for index, (nm, efficiency) in enumerate(samples):
+        x = 34 + 298 * (nm - first) / (last - first)
+        y = 8 + 70 * (1 - efficiency / 100)
+        points.append(f"{x:.3f},{y:.3f}")
+        selected = ' class="peak"' if index == peak else ''
+        marks.append(f'<circle cx="{x:.3f}" cy="{y:.3f}" r="2.6" data-nm="{nm:g}" '
+                     f'data-percent="{efficiency:.2f}"{selected}/>')
+    chart = f'''<figure class="spectrum-probe" aria-label="Saved efficiency spectrum">
+<figcaption>Efficiency into order +1</figcaption>
+<svg viewBox="0 0 346 104" role="img" aria-label="Target-order efficiency across {len(samples)} stored wavelength solves. The highest sample is {samples[peak][1]:.2f} percent at {samples[peak][0]:g} nanometres.">
+<g class="axes"><path d="M34 8H332M34 78H332"/></g>
+<g class="scale"><text x="0" y="12">100%</text><text x="11" y="82">0%</text><text x="34" y="99">{first:g} nm</text><text x="332" y="99" text-anchor="end">{last:g} nm</text></g>
+<polyline class="curve" points="{' '.join(points)}"/><g class="samples">{''.join(marks)}</g></svg>
+<label class="probe-control" hidden><span>Wavelength</span><input type="range" min="0" max="{len(samples)-1}" step="1" value="{peak}" aria-label="Inspect a saved wavelength"></label>
+<output>{samples[peak][0]:g} nm · {samples[peak][1]:.2f}% into order +1</output>
+</figure>'''
+    return template.replace("{{SPECTRUM}}", chart).encode("utf-8")

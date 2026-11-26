@@ -59,3 +59,64 @@ addEventListener("hashchange", () => {
   if (target) location.replace(target.href);
 });
 document.documentElement.classList.replace("no-js", "js");
+
+const spectrum = document.querySelector('.spectrum-probe');
+if (spectrum) {
+  const samples = [...spectrum.querySelectorAll('circle[data-nm]')];
+  const slider = spectrum.querySelector('input');
+  const value = spectrum.querySelector('output');
+  function inspectWavelength() {
+    const selected = samples[slider.valueAsNumber];
+    for (const sample of samples) sample.classList.toggle('peak', sample === selected);
+    const reading = selected.dataset.nm + ' nm · ' + selected.dataset.percent + '% into order +1';
+    value.textContent = reading;
+    slider.setAttribute('aria-valuetext', reading);
+  }
+  slider.addEventListener('input', inspectWavelength);
+  inspectWavelength();
+  slider.closest('label').hidden = false;
+}
+
+// Scrolling changes the evidence on the reading desk. Small screens and the
+// script-free document keep each plate beside its own explanation.
+const desk = document.querySelector('.logic-story');
+if (desk) {
+  const chapters = [...desk.querySelectorAll('.chapter[data-image]')];
+  const navigation = [...desk.querySelectorAll('.story-rail a')];
+  const viewer = desk.querySelector('.viewer');
+  const image = viewer.querySelector('img');
+  const caption = viewer.querySelector('#logic-caption');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  let active;
+  function reflectPosition() {
+    const line = Math.min(innerHeight * .48, 420);
+    const selected = chapters.filter(chapter => chapter.getBoundingClientRect().top <= line).at(-1) || chapters[0];
+    if (active === selected) return;
+    const initial = !active;
+    active = selected;
+    const plate = selected.querySelector('img');
+    image.src = plate.getAttribute('src');
+    image.alt = plate.alt;
+    caption.textContent = {model: 'Compiled logical network', schedule: 'Core clock allocation', verification: 'Reference score words'}[selected.dataset.image];
+    navigation.forEach(link => {
+      if (link.hash === '#' + selected.id) link.setAttribute('aria-current', 'step');
+      else link.removeAttribute('aria-current');
+    });
+    if (!initial && !reduced.matches && image.animate) {
+      image.animate([{opacity:.55, transform:'translateY(5px)'},{opacity:1, transform:'translateY(0)'}],{duration:180,easing:'ease-out'});
+    }
+  }
+  reflectPosition();
+  viewer.hidden = false;
+  desk.classList.add('enhanced');
+  let pending = false;
+  addEventListener('scroll', () => {
+    if (pending) return;
+    pending = true;
+    requestAnimationFrame(() => {
+      pending = false;
+      reflectPosition();
+    });
+  }, {passive:true});
+  addEventListener('resize', reflectPosition, {passive:true});
+}

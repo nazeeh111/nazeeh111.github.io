@@ -82,6 +82,29 @@ def _case_links(cases, known_urls):
     return links
 
 
+def sample_gallery(case_links):
+    # Each plate links to the case that interprets the recorded artifact.
+    samples = (
+        ("/work/solidrift/", "SolidRift", "A Boolean failure reduced to 12 triangles",
+         "/assets/solidrift-union.svg", "Recorded Boolean output of the reduced mesh."),
+        ("/work/vibescope/", "VibeScope", "One frame, two views of small motion",
+         "/assets/featured/vibescope/enhanced-frame72.webp", "Enhanced synthetic video frame 72 from the recorded gain-20 run."),
+        ("/work/chronal/", "Chronal", "A strategy loses on the holdout",
+         "/assets/featured/chronal/chronology.svg", "The observed development and holdout equity curves."),
+    )
+    items = []
+    for route, name, label, image, alt in samples:
+        if route not in case_links.values():
+            continue
+        esc = lambda value: html.escape(value, quote=True)
+        items.append(f'<li><a href="{esc(route)}"><div class="sample-print"><img src="{esc(image)}" alt="{esc(alt)}"></div>'
+                     f'<span class="sample-name">{esc(name)}</span><span class="sample-note">{esc(label)}</span></a></li>')
+    if not items:
+        return ""
+    return ('<section aria-labelledby="sample-title"><h2 id="sample-title">Case studies</h2>'
+            '<ul>' + ''.join(items) + '</ul></section>')
+
+
 def render(catalog, template, cases=None):
     """Return complete work/index.html bytes from the existing public catalog.
 
@@ -154,18 +177,19 @@ def render(catalog, template, cases=None):
         case_link = (f'<a class="case-link" href="{escape(case_url)}" '
                      f'aria-label="Read case: {escape(project["name"])}">Read case</a>') if case_url else ""
         meta = f'<div class="project-meta">{technology}{case_link}</div>' if technology or case_link else ""
+        discipline = f'<p class="project-discipline">{escape(project["subject"])}</p>'
         entries.append(
             f'<li class="project-item" id="repository-{identity}" '
             f'data-subject="{escape(project["subject"])}" data-subjects="{escape("|".join(project["subjects"]))}" '
             f'data-search="{escape(" ".join(words))}">\n'
-            f'<div class="project-copy"><h2><a class="project-wordmark" href="{escape(url)}">'
-            f'{escape(project["name"])}</a></h2><p class="project-summary">'
-            f'{escape(project["summary"])}</p>{credit}{meta}</div></li>'
+            f'<div class="project-title"><h2><a class="project-wordmark" href="{escape(url)}">'
+            f'{escape(project["name"])}</a></h2>{discipline}</div>'
+            f'<div class="project-copy"><p class="project-summary">{escape(project["summary"])}</p>{credit}</div>{meta}</li>'
         )
     subjects = sorted({subject for project in projects for subject in project["subjects"]}, key=str.casefold)
     options = "".join(f'<option value="{escape(subject)}">{escape(subject)}</option>' for subject in subjects)
     values = {"{{PROJECTS}}": "\n".join(entries), "{{SUBJECTS}}": options,
-              "{{COUNT}}": str(len(projects))}
+              "{{COUNT}}": str(len(projects)), "{{SAMPLES}}": sample_gallery(case_links)}
     tokens = set(re.findall(r"\{\{[A-Z_]+\}\}", template))
     if tokens - values.keys():
         raise ValueError("Unresolved work template token")
