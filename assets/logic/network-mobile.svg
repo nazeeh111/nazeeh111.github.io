@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 365" role="img" aria-labelledby="t d"><title id="t">All 48 compiled weights</title><desc id="d">Four input columns and two score columns share eight hidden-unit rows. Each cell contains its exact signed quantized coefficient. Blue means positive, slate negative, and pale gray zero.</desc><metadata>https://github.com/nazeeh111/SILICONPILOT/tree/fc774a8411f0a008821e95637b810db2a508c962/docs/presentation</metadata><style>text{font-family:Arial,Helvetica,sans-serif;fill:#101820}.mono{font-family:Menlo,monospace}</style>
+<text x="2" y="21" font-size="16" font-weight="700" text-anchor="start" style="fill:#101820" class="">4 inputs → 8 hidden → 2 scores</text>
+<text x="2" y="48" font-size="13" font-weight="600" text-anchor="start" style="fill:#47596a" class="">Hidden</text>
+<text x="104" y="48" font-size="14" font-weight="600" text-anchor="middle" style="fill:#47596a" class="">Input weights</text>
+<text x="230" y="48" font-size="14" font-weight="600" text-anchor="middle" style="fill:#47596a" class="">Score weights</text>
+<text x="52" y="72" font-size="14" font-weight="600" text-anchor="middle" style="fill:#101820" class="mono">x0</text>
+<text x="84" y="72" font-size="14" font-weight="600" text-anchor="middle" style="fill:#101820" class="mono">x1</text>
+<text x="116" y="72" font-size="14" font-weight="600" text-anchor="middle" style="fill:#101820" class="mono">x2</text>
+<text x="148" y="72" font-size="14" font-weight="600" text-anchor="middle" style="fill:#101820" class="mono">x3</text>
+<text x="209" y="72" font-size="14" font-weight="600" text-anchor="middle" style="fill:#101820" class="mono">s0</text>
+<text x="244" y="72" font-size="14" font-weight="600" text-anchor="middle" style="fill:#101820" class="mono">s1</text>
+<text x="4" y="96" font-size="14" font-weight="700" text-anchor="start" style="fill:#101820" class="mono">h0</text>
+<g data-layer="0" data-source="0" data-target="0" data-weight="-2">
+<rect x="37.00" y="80.00" width="30.00" height="22.00" fill="#374b5b"/>
+<text x="52" y="95" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">-2</text>
+</g>
+<g data-layer="0" data-source="1" data-target="0" data-weight="0">
+<rect x="69.00" y="80.00" width="30.00" height="22.00" fill="#e5eaf0"/>
+<text x="84" y="95" font-size="13" font-weight="600" text-anchor="middle" style="fill:#47596a" class="mono">0</text>
+</g>
+<g data-layer="0" data-source="2" data-target="0" data-weight="-1">
+<rect x="101.00" y="80.00" width="30.00" height="22.00" fill="#374b5b"/>
+<text x="116" y="95" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">-1</text>
+</g>
+<g data-layer="0" data-source="3" data-target="0" data-weight="-1">
+<rect x="133.00" y="80.00" width="30.00" height="22.00" fill="#374b5b"/>
+<text x="148" y="95" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">-1</text>
+</g>
+<g data-layer="1" data-source="0" data-target="0" data-weight="0">
+<rect x="194.00" y="80.00" width="30.00" height="22.00" fill="#e5eaf0"/>
+<text x="209" y="95" font-size="13" font-weight="600" text-anchor="middle" style="fill:#47596a" class="mono">0</text>
+</g>
+<g data-layer="1" data-source="0" data-target="1" data-weight="0">
+<rect x="229.00" y="80.00" width="30.00" height="22.00" fill="#e5eaf0"/>
+<text x="244" y="95" font-size="13" font-weight="600" text-anchor="middle" style="fill:#47596a" class="mono">0</text>
+</g>
+<text x="4" y="120" font-size="14" font-weight="700" text-anchor="start" style="fill:#101820" class="mono">h1</text>
+<g data-layer="0" data-source="0" data-target="1" data-weight="-31">
+<rect x="37.00" y="104.00" width="30.00" height="22.00" fill="#374b5b"/>
+<text x="52" y="119" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">-31</text>
+</g>
+<g data-layer="0" data-source="1" data-target="1" data-weight="-30">
+<rect x="69.00" y="104.00" width="30.00" height="22.00" fill="#374b5b"/>
+<text x="84" y="119" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">-30</text>
+</g>
+<g data-layer="0" data-source="2" data-target="1" data-weight="-80">
+<rect x="101.00" y="104.00" width="30.00" height="22.00" fill="#374b5b"/>
+<text x="116" y="119" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">-80</text>
+</g>
+<g data-layer="0" data-source="3" data-target="1" data-weight="4">
+<rect x="133.00" y="104.00" width="30.00" height="22.00" fill="#234bcf"/>
+<text x="148" y="119" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">4</text>
+</g>
+<g data-layer="1" data-source="1" data-target="0" data-weight="-13">
+<rect x="194.00" y="104.00" width="30.00" height="22.00" fill="#374b5b"/>
+<text x="209" y="119" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">-13</text>
+</g>
+<g data-layer="1" data-source="1" data-target="1" data-weight="13">
+<rect x="229.00" y="104.00" width="30.00" height="22.00" fill="#234bcf"/>
+<text x="244" y="119" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">13</text>
+</g>
+<text x="4" y="144" font-size="14" font-weight="700" text-anchor="start" style="fill:#101820" class="mono">h2</text>
+<g data-layer="0" data-source="0" data-target="2" data-weight="-45">
+<rect x="37.00" y="128.00" width="30.00" height="22.00" fill="#374b5b"/>
+<text x="52" y="143" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">-45</text>
+</g>
+<g data-layer="0" data-source="1" data-target="2" data-weight="-15">
+<rect x="69.00" y="128.00" width="30.00" height="22.00" fill="#374b5b"/>
+<text x="84" y="143" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">-15</text>
+</g>
+<g data-layer="0" data-source="2" data-target="2" data-weight="14">
+<rect x="101.00" y="128.00" width="30.00" height="22.00" fill="#234bcf"/>
+<text x="116" y="143" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">14</text>
+</g>
+<g data-layer="0" data-source="3" data-target="2" data-weight="63">
+<rect x="133.00" y="128.00" width="30.00" height="22.00" fill="#234bcf"/>
+<text x="148" y="143" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">63</text>
+</g>
+<g data-layer="1" data-source="2" data-target="0" data-weight="-8">
+<rect x="194.00" y="128.00" width="30.00" height="22.00" fill="#374b5b"/>
+<text x="209" y="143" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">-8</text>
+</g>
+<g data-layer="1" data-source="2" data-target="1" data-weight="8">
+<rect x="229.00" y="128.00" width="30.00" height="22.00" fill="#234bcf"/>
+<text x="244" y="143" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">8</text>
+</g>
+<text x="4" y="168" font-size="14" font-weight="700" text-anchor="start" style="fill:#101820" class="mono">h3</text>
+<g data-layer="0" data-source="0" data-target="3" data-weight="14">
+<rect x="37.00" y="152.00" width="30.00" height="22.00" fill="#234bcf"/>
+<text x="52" y="167" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">14</text>
+</g>
+<g data-layer="0" data-source="1" data-target="3" data-weight="78">
+<rect x="69.00" y="152.00" width="30.00" height="22.00" fill="#234bcf"/>
+<text x="84" y="167" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">78</text>
+</g>
+<g data-layer="0" data-source="2" data-target="3" data-weight="40">
+<rect x="101.00" y="152.00" width="30.00" height="22.00" fill="#234bcf"/>
+<text x="116" y="167" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">40</text>
+</g>
+<g data-layer="0" data-source="3" data-target="3" data-weight="14">
+<rect x="133.00" y="152.00" width="30.00" height="22.00" fill="#234bcf"/>
+<text x="148" y="167" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">14</text>
+</g>
+<g data-layer="1" data-source="3" data-target="0" data-weight="1">
+<rect x="194.00" y="152.00" width="30.00" height="22.00" fill="#234bcf"/>
+<text x="209" y="167" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">1</text>
+</g>
+<g data-layer="1" data-source="3" data-target="1" data-weight="-1">
+<rect x="229.00" y="152.00" width="30.00" height="22.00" fill="#374b5b"/>
+<text x="244" y="167" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">-1</text>
+</g>
+<text x="4" y="192" font-size="14" font-weight="700" text-anchor="start" style="fill:#101820" class="mono">h4</text>
+<g data-layer="0" data-source="0" data-target="4" data-weight="0">
+<rect x="37.00" y="176.00" width="30.00" height="22.00" fill="#e5eaf0"/>
+<text x="52" y="191" font-size="13" font-weight="600" text-anchor="middle" style="fill:#47596a" class="mono">0</text>
+</g>
+<g data-layer="0" data-source="1" data-target="4" data-weight="0">
+<rect x="69.00" y="176.00" width="30.00" height="22.00" fill="#e5eaf0"/>
+<text x="84" y="191" font-size="13" font-weight="600" text-anchor="middle" style="fill:#47596a" class="mono">0</text>
+</g>
+<g data-layer="0" data-source="2" data-target="4" data-weight="1">
+<rect x="101.00" y="176.00" width="30.00" height="22.00" fill="#234bcf"/>
+<text x="116" y="191" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">1</text>
+</g>
+<g data-layer="0" data-source="3" data-target="4" data-weight="-1">
+<rect x="133.00" y="176.00" width="30.00" height="22.00" fill="#374b5b"/>
+<text x="148" y="191" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">-1</text>
+</g>
+<g data-layer="1" data-source="4" data-target="0" data-weight="0">
+<rect x="194.00" y="176.00" width="30.00" height="22.00" fill="#e5eaf0"/>
+<text x="209" y="191" font-size="13" font-weight="600" text-anchor="middle" style="fill:#47596a" class="mono">0</text>
+</g>
+<g data-layer="1" data-source="4" data-target="1" data-weight="0">
+<rect x="229.00" y="176.00" width="30.00" height="22.00" fill="#e5eaf0"/>
+<text x="244" y="191" font-size="13" font-weight="600" text-anchor="middle" style="fill:#47596a" class="mono">0</text>
+</g>
+<text x="4" y="216" font-size="14" font-weight="700" text-anchor="start" style="fill:#101820" class="mono">h5</text>
+<g data-layer="0" data-source="0" data-target="5" data-weight="0">
+<rect x="37.00" y="200.00" width="30.00" height="22.00" fill="#e5eaf0"/>
+<text x="52" y="215" font-size="13" font-weight="600" text-anchor="middle" style="fill:#47596a" class="mono">0</text>
+</g>
+<g data-layer="0" data-source="1" data-target="5" data-weight="0">
+<rect x="69.00" y="200.00" width="30.00" height="22.00" fill="#e5eaf0"/>
+<text x="84" y="215" font-size="13" font-weight="600" text-anchor="middle" style="fill:#47596a" class="mono">0</text>
+</g>
+<g data-layer="0" data-source="2" data-target="5" data-weight="0">
+<rect x="101.00" y="200.00" width="30.00" height="22.00" fill="#e5eaf0"/>
+<text x="116" y="215" font-size="13" font-weight="600" text-anchor="middle" style="fill:#47596a" class="mono">0</text>
+</g>
+<g data-layer="0" data-source="3" data-target="5" data-weight="0">
+<rect x="133.00" y="200.00" width="30.00" height="22.00" fill="#e5eaf0"/>
+<text x="148" y="215" font-size="13" font-weight="600" text-anchor="middle" style="fill:#47596a" class="mono">0</text>
+</g>
+<g data-layer="1" data-source="5" data-target="0" data-weight="0">
+<rect x="194.00" y="200.00" width="30.00" height="22.00" fill="#e5eaf0"/>
+<text x="209" y="215" font-size="13" font-weight="600" text-anchor="middle" style="fill:#47596a" class="mono">0</text>
+</g>
+<g data-layer="1" data-source="5" data-target="1" data-weight="0">
+<rect x="229.00" y="200.00" width="30.00" height="22.00" fill="#e5eaf0"/>
+<text x="244" y="215" font-size="13" font-weight="600" text-anchor="middle" style="fill:#47596a" class="mono">0</text>
+</g>
+<text x="4" y="240" font-size="14" font-weight="700" text-anchor="start" style="fill:#101820" class="mono">h6</text>
+<g data-layer="0" data-source="0" data-target="6" data-weight="26">
+<rect x="37.00" y="224.00" width="30.00" height="22.00" fill="#234bcf"/>
+<text x="52" y="239" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">26</text>
+</g>
+<g data-layer="0" data-source="1" data-target="6" data-weight="29">
+<rect x="69.00" y="224.00" width="30.00" height="22.00" fill="#234bcf"/>
+<text x="84" y="239" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">29</text>
+</g>
+<g data-layer="0" data-source="2" data-target="6" data-weight="22">
+<rect x="101.00" y="224.00" width="30.00" height="22.00" fill="#234bcf"/>
+<text x="116" y="239" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">22</text>
+</g>
+<g data-layer="0" data-source="3" data-target="6" data-weight="-3">
+<rect x="133.00" y="224.00" width="30.00" height="22.00" fill="#374b5b"/>
+<text x="148" y="239" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">-3</text>
+</g>
+<g data-layer="1" data-source="6" data-target="0" data-weight="15">
+<rect x="194.00" y="224.00" width="30.00" height="22.00" fill="#234bcf"/>
+<text x="209" y="239" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">15</text>
+</g>
+<g data-layer="1" data-source="6" data-target="1" data-weight="-15">
+<rect x="229.00" y="224.00" width="30.00" height="22.00" fill="#374b5b"/>
+<text x="244" y="239" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">-15</text>
+</g>
+<text x="4" y="264" font-size="14" font-weight="700" text-anchor="start" style="fill:#101820" class="mono">h7</text>
+<g data-layer="0" data-source="0" data-target="7" data-weight="-50">
+<rect x="37.00" y="248.00" width="30.00" height="22.00" fill="#374b5b"/>
+<text x="52" y="263" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">-50</text>
+</g>
+<g data-layer="0" data-source="1" data-target="7" data-weight="-55">
+<rect x="69.00" y="248.00" width="30.00" height="22.00" fill="#374b5b"/>
+<text x="84" y="263" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">-55</text>
+</g>
+<g data-layer="0" data-source="2" data-target="7" data-weight="-42">
+<rect x="101.00" y="248.00" width="30.00" height="22.00" fill="#374b5b"/>
+<text x="116" y="263" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">-42</text>
+</g>
+<g data-layer="0" data-source="3" data-target="7" data-weight="5">
+<rect x="133.00" y="248.00" width="30.00" height="22.00" fill="#234bcf"/>
+<text x="148" y="263" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">5</text>
+</g>
+<g data-layer="1" data-source="7" data-target="0" data-weight="-10">
+<rect x="194.00" y="248.00" width="30.00" height="22.00" fill="#374b5b"/>
+<text x="209" y="263" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">-10</text>
+</g>
+<g data-layer="1" data-source="7" data-target="1" data-weight="10">
+<rect x="229.00" y="248.00" width="30.00" height="22.00" fill="#234bcf"/>
+<text x="244" y="263" font-size="13" font-weight="600" text-anchor="middle" style="fill:white" class="mono">10</text>
+</g>
+<path d="M179.00 57.00L179.00 272.00" stroke="#aebccb" stroke-width="1"/>
+<text x="2" y="296" font-size="14" font-weight="400" text-anchor="start" style="fill:#101820" class="">x0  variance</text>
+<text x="142" y="296" font-size="14" font-weight="400" text-anchor="start" style="fill:#101820" class="">x1  skewness</text>
+<text x="2" y="317" font-size="14" font-weight="400" text-anchor="start" style="fill:#101820" class="">x2  curtosis</text>
+<text x="142" y="317" font-size="14" font-weight="400" text-anchor="start" style="fill:#101820" class="">x3  entropy</text>
+<text x="2" y="348" font-size="14" font-weight="400" text-anchor="start" style="fill:#47596a" class="">Each row follows one hidden unit.</text>
+</svg>

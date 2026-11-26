@@ -1,0 +1,265 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 430" role="img" aria-labelledby="t d"><title id="t">78 reference score words</title><desc id="d">Three strips of 26 consecutively indexed test vectors show the signed high and low score bytes from the independent reference, with the same vertical scale in each strip. Both RTL cores passed all 78 comparisons.</desc><metadata>https://github.com/nazeeh111/SILICONPILOT/tree/fc774a8411f0a008821e95637b810db2a508c962/docs/presentation</metadata><style>text{font-family:Arial,Helvetica,sans-serif;fill:#101820}.mono{font-family:Menlo,monospace}</style>
+<text x="2" y="22" font-size="21" font-weight="700" text-anchor="start" style="fill:#101820" class="">Reference scores</text>
+<text x="2" y="48" font-size="15" font-weight="400" text-anchor="start" style="fill:#234bcf" class="">●</text>
+<text x="20" y="48" font-size="14" font-weight="400" text-anchor="start" style="fill:#101820" class="">High byte</text>
+<path d="M120.00 44.00L132.00 44.00" stroke="#101820" stroke-width="2.8"/>
+<text x="139" y="48" font-size="14" font-weight="400" text-anchor="start" style="fill:#101820" class="">Low byte</text>
+<text x="2" y="76" font-size="14" font-weight="700" text-anchor="start" style="fill:#101820" class="">Vectors 00–25</text>
+<text x="36" y="92.0" font-size="13" font-weight="400" text-anchor="end" style="fill:#47596a" class="mono">127</text>
+<path d="M42.00 88.00L277.00 88.00" stroke="#e1e7ee" stroke-width="1"/>
+<text x="36" y="122.099" font-size="13" font-weight="400" text-anchor="end" style="fill:#47596a" class="mono">0</text>
+<path d="M42.00 118.10L277.00 118.10" stroke="#bcc8d2" stroke-width="1"/>
+<text x="36" y="152.435" font-size="13" font-weight="400" text-anchor="end" style="fill:#47596a" class="mono">−128</text>
+<path d="M42.00 148.44L277.00 148.44" stroke="#e1e7ee" stroke-width="1"/>
+<g data-vector="0" data-high="-15" data-low="14">
+<path d="M43.20 114.78L48.80 114.78" stroke="#101820" stroke-width="2.5"/>
+<circle cx="46.00" cy="121.65" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="1" data-high="87" data-low="-87">
+<path d="M52.25 138.72L57.85 138.72" stroke="#101820" stroke-width="2.5"/>
+<circle cx="55.05" cy="97.48" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="2" data-high="-55" data-low="54">
+<path d="M61.30 105.30L66.90 105.30" stroke="#101820" stroke-width="2.5"/>
+<circle cx="64.10" cy="131.13" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="3" data-high="-64" data-low="63">
+<path d="M70.35 103.17L75.95 103.17" stroke="#101820" stroke-width="2.5"/>
+<circle cx="73.15" cy="133.27" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="4" data-high="-19" data-low="18">
+<path d="M79.40 113.83L85.00 113.83" stroke="#101820" stroke-width="2.5"/>
+<circle cx="82.20" cy="122.60" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="5" data-high="-11" data-low="10">
+<path d="M88.45 115.73L94.05 115.73" stroke="#101820" stroke-width="2.5"/>
+<circle cx="91.25" cy="120.71" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="6" data-high="-67" data-low="66">
+<path d="M97.50 102.46L103.10 102.46" stroke="#101820" stroke-width="2.5"/>
+<circle cx="100.30" cy="133.98" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="7" data-high="118" data-low="-119">
+<path d="M106.55 146.30L112.15 146.30" stroke="#101820" stroke-width="2.5"/>
+<circle cx="109.35" cy="90.13" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="8" data-high="-68" data-low="67">
+<path d="M115.60 102.22L121.20 102.22" stroke="#101820" stroke-width="2.5"/>
+<circle cx="118.40" cy="134.22" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="9" data-high="98" data-low="-99">
+<path d="M124.65 141.56L130.25 141.56" stroke="#101820" stroke-width="2.5"/>
+<circle cx="127.45" cy="94.87" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="10" data-high="-58" data-low="57">
+<path d="M133.70 104.59L139.30 104.59" stroke="#101820" stroke-width="2.5"/>
+<circle cx="136.50" cy="131.84" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="11" data-high="87" data-low="-87">
+<path d="M142.75 138.72L148.35 138.72" stroke="#101820" stroke-width="2.5"/>
+<circle cx="145.55" cy="97.48" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="12" data-high="34" data-low="-35">
+<path d="M151.80 126.39L157.40 126.39" stroke="#101820" stroke-width="2.5"/>
+<circle cx="154.60" cy="110.04" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="13" data-high="-30" data-low="29">
+<path d="M160.85 111.23L166.45 111.23" stroke="#101820" stroke-width="2.5"/>
+<circle cx="163.65" cy="125.21" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="14" data-high="-47" data-low="46">
+<path d="M169.90 107.20L175.50 107.20" stroke="#101820" stroke-width="2.5"/>
+<circle cx="172.70" cy="129.24" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="15" data-high="104" data-low="-105">
+<path d="M178.95 142.98L184.55 142.98" stroke="#101820" stroke-width="2.5"/>
+<circle cx="181.75" cy="93.45" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="16" data-high="117" data-low="-118">
+<path d="M188.00 146.06L193.60 146.06" stroke="#101820" stroke-width="2.5"/>
+<circle cx="190.80" cy="90.37" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="17" data-high="-12" data-low="11">
+<path d="M197.05 115.49L202.65 115.49" stroke="#101820" stroke-width="2.5"/>
+<circle cx="199.85" cy="120.94" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="18" data-high="-68" data-low="67">
+<path d="M206.10 102.22L211.70 102.22" stroke="#101820" stroke-width="2.5"/>
+<circle cx="208.90" cy="134.22" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="19" data-high="87" data-low="-87">
+<path d="M215.15 138.72L220.75 138.72" stroke="#101820" stroke-width="2.5"/>
+<circle cx="217.95" cy="97.48" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="20" data-high="-68" data-low="67">
+<path d="M224.20 102.22L229.80 102.22" stroke="#101820" stroke-width="2.5"/>
+<circle cx="227.00" cy="134.22" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="21" data-high="-38" data-low="37">
+<path d="M233.25 109.33L238.85 109.33" stroke="#101820" stroke-width="2.5"/>
+<circle cx="236.05" cy="127.10" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="22" data-high="-68" data-low="67">
+<path d="M242.30 102.22L247.90 102.22" stroke="#101820" stroke-width="2.5"/>
+<circle cx="245.10" cy="134.22" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="23" data-high="-2" data-low="1">
+<path d="M251.35 117.86L256.95 117.86" stroke="#101820" stroke-width="2.5"/>
+<circle cx="254.15" cy="118.57" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="24" data-high="-30" data-low="29">
+<path d="M260.40 111.23L266.00 111.23" stroke="#101820" stroke-width="2.5"/>
+<circle cx="263.20" cy="125.21" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="25" data-high="80" data-low="-81">
+<path d="M269.45 137.30L275.05 137.30" stroke="#101820" stroke-width="2.5"/>
+<circle cx="272.25" cy="99.14" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<text x="2" y="176" font-size="14" font-weight="700" text-anchor="start" style="fill:#101820" class="">Vectors 26–51</text>
+<text x="36" y="192.0" font-size="13" font-weight="400" text-anchor="end" style="fill:#47596a" class="mono">127</text>
+<path d="M42.00 188.00L277.00 188.00" stroke="#e1e7ee" stroke-width="1"/>
+<text x="36" y="222.099" font-size="13" font-weight="400" text-anchor="end" style="fill:#47596a" class="mono">0</text>
+<path d="M42.00 218.10L277.00 218.10" stroke="#bcc8d2" stroke-width="1"/>
+<text x="36" y="252.435" font-size="13" font-weight="400" text-anchor="end" style="fill:#47596a" class="mono">−128</text>
+<path d="M42.00 248.44L277.00 248.44" stroke="#e1e7ee" stroke-width="1"/>
+<g data-vector="26" data-high="-68" data-low="67">
+<path d="M43.20 202.22L48.80 202.22" stroke="#101820" stroke-width="2.5"/>
+<circle cx="46.00" cy="234.22" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="27" data-high="118" data-low="-119">
+<path d="M52.25 246.30L57.85 246.30" stroke="#101820" stroke-width="2.5"/>
+<circle cx="55.05" cy="190.13" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="28" data-high="47" data-low="-48">
+<path d="M61.30 229.47L66.90 229.47" stroke="#101820" stroke-width="2.5"/>
+<circle cx="64.10" cy="206.96" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="29" data-high="20" data-low="-21">
+<path d="M70.35 223.08L75.95 223.08" stroke="#101820" stroke-width="2.5"/>
+<circle cx="73.15" cy="213.36" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="30" data-high="-22" data-low="21">
+<path d="M79.40 213.12L85.00 213.12" stroke="#101820" stroke-width="2.5"/>
+<circle cx="82.20" cy="223.31" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="31" data-high="-38" data-low="37">
+<path d="M88.45 209.33L94.05 209.33" stroke="#101820" stroke-width="2.5"/>
+<circle cx="91.25" cy="227.10" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="32" data-high="-54" data-low="53">
+<path d="M97.50 205.54L103.10 205.54" stroke="#101820" stroke-width="2.5"/>
+<circle cx="100.30" cy="230.90" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="33" data-high="85" data-low="-86">
+<path d="M106.55 238.48L112.15 238.48" stroke="#101820" stroke-width="2.5"/>
+<circle cx="109.35" cy="197.95" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="34" data-high="-66" data-low="65">
+<path d="M115.60 202.69L121.20 202.69" stroke="#101820" stroke-width="2.5"/>
+<circle cx="118.40" cy="233.74" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="35" data-high="-15" data-low="14">
+<path d="M124.65 214.78L130.25 214.78" stroke="#101820" stroke-width="2.5"/>
+<circle cx="127.45" cy="221.65" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="36" data-high="-37" data-low="36">
+<path d="M133.70 209.57L139.30 209.57" stroke="#101820" stroke-width="2.5"/>
+<circle cx="136.50" cy="226.87" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="37" data-high="69" data-low="-70">
+<path d="M142.75 234.69L148.35 234.69" stroke="#101820" stroke-width="2.5"/>
+<circle cx="145.55" cy="201.75" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="38" data-high="57" data-low="-58">
+<path d="M151.80 231.84L157.40 231.84" stroke="#101820" stroke-width="2.5"/>
+<circle cx="154.60" cy="204.59" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="39" data-high="87" data-low="-87">
+<path d="M160.85 238.72L166.45 238.72" stroke="#101820" stroke-width="2.5"/>
+<circle cx="163.65" cy="197.48" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="40" data-high="-32" data-low="31">
+<path d="M169.90 210.75L175.50 210.75" stroke="#101820" stroke-width="2.5"/>
+<circle cx="172.70" cy="225.68" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="41" data-high="-2" data-low="1">
+<path d="M178.95 217.86L184.55 217.86" stroke="#101820" stroke-width="2.5"/>
+<circle cx="181.75" cy="218.57" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="42" data-high="53" data-low="-54">
+<path d="M188.00 230.90L193.60 230.90" stroke="#101820" stroke-width="2.5"/>
+<circle cx="190.80" cy="205.54" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="43" data-high="85" data-low="-85">
+<path d="M197.05 238.24L202.65 238.24" stroke="#101820" stroke-width="2.5"/>
+<circle cx="199.85" cy="197.95" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="44" data-high="30" data-low="-31">
+<path d="M206.10 225.45L211.70 225.45" stroke="#101820" stroke-width="2.5"/>
+<circle cx="208.90" cy="210.99" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="45" data-high="-3" data-low="2">
+<path d="M215.15 217.62L220.75 217.62" stroke="#101820" stroke-width="2.5"/>
+<circle cx="217.95" cy="218.81" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="46" data-high="118" data-low="-119">
+<path d="M224.20 246.30L229.80 246.30" stroke="#101820" stroke-width="2.5"/>
+<circle cx="227.00" cy="190.13" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="47" data-high="35" data-low="-36">
+<path d="M233.25 226.63L238.85 226.63" stroke="#101820" stroke-width="2.5"/>
+<circle cx="236.05" cy="209.80" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="48" data-high="66" data-low="-67">
+<path d="M242.30 233.98L247.90 233.98" stroke="#101820" stroke-width="2.5"/>
+<circle cx="245.10" cy="202.46" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="49" data-high="-68" data-low="67">
+<path d="M251.35 202.22L256.95 202.22" stroke="#101820" stroke-width="2.5"/>
+<circle cx="254.15" cy="234.22" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="50" data-high="-68" data-low="67">
+<path d="M260.40 202.22L266.00 202.22" stroke="#101820" stroke-width="2.5"/>
+<circle cx="263.20" cy="234.22" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="51" data-high="79" data-low="-80">
+<path d="M269.45 237.06L275.05 237.06" stroke="#101820" stroke-width="2.5"/>
+<circle cx="272.25" cy="199.38" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<text x="2" y="276" font-size="14" font-weight="700" text-anchor="start" style="fill:#101820" class="">Vectors 52–77</text>
+<text x="36" y="292.0" font-size="13" font-weight="400" text-anchor="end" style="fill:#47596a" class="mono">127</text>
+<path d="M42.00 288.00L277.00 288.00" stroke="#e1e7ee" stroke-width="1"/>
+<text x="36" y="322.099" font-size="13" font-weight="400" text-anchor="end" style="fill:#47596a" class="mono">0</text>
+<path d="M42.00 318.10L277.00 318.10" stroke="#bcc8d2" stroke-width="1"/>
+<text x="36" y="352.435" font-size="13" font-weight="400" text-anchor="end" style="fill:#47596a" class="mono">−128</text>
+<path d="M42.00 348.44L277.00 348.44" stroke="#e1e7ee" stroke-width="1"/>
+<g data-vector="52" data-high="-58" data-low="57">
+<path d="M43.20 304.59L48.80 304.59" stroke="#101820" stroke-width="2.5"/>
+<circle cx="46.00" cy="331.85" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="53" data-high="-68" data-low="67">
+<path d="M52.25 302.22L57.85 302.22" stroke="#101820" stroke-width="2.5"/>
+<circle cx="55.05" cy="334.21" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="54" data-high="-68" data-low="67">
+<path d="M61.30 302.22L66.90 302.22" stroke="#101820" stroke-width="2.5"/>
+<circle cx="64.10" cy="334.21" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="55" data-high="67" data-low="-68">
+<path d="M70.35 334.21L75.95 334.21" stroke="#101820" stroke-width="2.5"/>
+<circle cx="73.15" cy="302.22" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="56" data-high="7" data-low="-8">
+<path d="M79.40 320.00L85.00 320.00" stroke="#101820" stroke-width="2.5"/>
+<circle cx="82.20" cy="316.44" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="57" data-high="87" data-low="-87">
+<path d="M88.45 338.72L94.05 338.72" stroke="#101820" stroke-width="2.5"/>
+<circle cx="91.25" cy="297.48" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="58" data-high="32" data-low="-33">
+<path d="M97.50 325.92L103.10 325.92" stroke="#101820" stroke-width="2.5"/>
+<circle cx="100.30" cy="310.51" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="59" data-high="87" data-low="-87">
+<path d="M106.55 338.72L112.15 338.72" stroke="#101820" stroke-width="2.5"/>
+<circle cx="109.35" cy="297.48" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="60" data-high="118" data-low="-119">
+<path d="M115.60 346.30L121.20 346.30" stroke="#101820" stroke-width="2.5"/>
+<circle cx="118.40" cy="290.13" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="61" data-high="-68" data-low="67">
+<path d="M124.65 302.22L130.25 302.22" stroke="#101820" stroke-width="2.5"/>
+<circle cx="127.45" cy="334.21" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="62" data-high="49" data-low="-50">
+<path d="M133.70 329.95L139.30 329.95" stroke="#101820" stroke-width="2.5"/>
+<circle cx="136.50" cy="306.49" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="63" data-high="-35" data-low="34">
+<path d="M142.75 310.04L148.35 310.04" stroke="#101820" stroke-width="2.5"/>
+<circle cx="145.55" cy="326.39" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="64" data-high="-68" data-low="67">
+<path d="M151.80 302.22L157.40 302.22" stroke="#101820" stroke-width="2.5"/>
+<circle cx="154.60" cy="334.21" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="65" data-high="94" data-low="-95">
+<path d="M160.85 340.61L166.45 340.61" stroke="#101820" stroke-width="2.5"/>
+<circle cx="163.65" cy="295.82" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="66" data-high="87" data-low="-87">
+<path d="M169.90 338.72L175.50 338.72" stroke="#101820" stroke-width="2.5"/>
+<circle cx="172.70" cy="297.48" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="67" data-high="-6" data-low="5">
+<path d="M178.95 316.91L184.55 316.91" stroke="#101820" stroke-width="2.5"/>
+<circle cx="181.75" cy="319.52" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="68" data-high="-10" data-low="9">
+<path d="M188.00 315.97L193.60 315.97" stroke="#101820" stroke-width="2.5"/>
+<circle cx="190.80" cy="320.47" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="69" data-high="118" data-low="-119">
+<path d="M197.05 346.30L202.65 346.30" stroke="#101820" stroke-width="2.5"/>
+<circle cx="199.85" cy="290.13" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="70" data-high="-66" data-low="65">
+<path d="M206.10 302.69L211.70 302.69" stroke="#101820" stroke-width="2.5"/>
+<circle cx="208.90" cy="333.74" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="71" data-high="66" data-low="-67">
+<path d="M215.15 333.98L220.75 333.98" stroke="#101820" stroke-width="2.5"/>
+<circle cx="217.95" cy="302.46" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="72" data-high="-67" data-low="66">
+<path d="M224.20 302.46L229.80 302.46" stroke="#101820" stroke-width="2.5"/>
+<circle cx="227.00" cy="333.98" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="73" data-high="-68" data-low="67">
+<path d="M233.25 302.22L238.85 302.22" stroke="#101820" stroke-width="2.5"/>
+<circle cx="236.05" cy="334.21" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="74" data-high="-68" data-low="67">
+<path d="M242.30 302.22L247.90 302.22" stroke="#101820" stroke-width="2.5"/>
+<circle cx="245.10" cy="334.21" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="75" data-high="-54" data-low="53">
+<path d="M251.35 305.54L256.95 305.54" stroke="#101820" stroke-width="2.5"/>
+<circle cx="254.15" cy="330.90" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="76" data-high="19" data-low="-19">
+<path d="M260.40 322.60L266.00 322.60" stroke="#101820" stroke-width="2.5"/>
+<circle cx="263.20" cy="313.60" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<g data-vector="77" data-high="-38" data-low="37">
+<path d="M269.45 309.33L275.05 309.33" stroke="#101820" stroke-width="2.5"/>
+<circle cx="272.25" cy="327.11" r="2.2" stroke="#fff" stroke-width=".55" fill="#234bcf"/></g>
+<path d="M2.00 371.00L278.00 371.00" stroke="#b9c6d2" stroke-width="1"/>
+<text x="2" y="396" font-size="17" font-weight="700" text-anchor="start" style="fill:#101820" class="">78/78 passed in both cores</text>
+<text x="2" y="419" font-size="14" font-weight="400" text-anchor="start" style="fill:#47596a" class="">14 directed · 64 random · seed 1729</text>
+</svg>

@@ -1,0 +1,246 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 289" role="img" aria-labelledby="t d"><title id="t">First result on a shared clock scale</title><desc id="d">The direct-product core takes 32 clocks, one clock to hand off, then 16 clocks. The two-lane registered-product core needs 17, one, and nine. The bars share one clock scale.</desc><metadata>https://github.com/nazeeh111/SILICONPILOT/tree/fc774a8411f0a008821e95637b810db2a508c962/docs/presentation</metadata><style>text{font-family:Arial,Helvetica,sans-serif;fill:#101820}.mono{font-family:Menlo,monospace}</style>
+<text x="2" y="23" font-size="20" font-weight="700" text-anchor="start" style="fill:#101820" class="">Core clocks to first output</text>
+<text x="2" y="56" font-size="16" font-weight="700" text-anchor="start" style="fill:#101820" class="">1 lane · direct products</text>
+<g data-schedule="direct" data-stage="stage0" data-clock="0">
+<rect x="3.00" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="1">
+<rect x="8.42" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="2">
+<rect x="13.84" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="3">
+<rect x="19.26" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="4">
+<rect x="24.68" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="5">
+<rect x="30.10" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="6">
+<rect x="35.52" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="7">
+<rect x="40.94" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="8">
+<rect x="46.36" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="9">
+<rect x="51.78" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="10">
+<rect x="57.20" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="11">
+<rect x="62.62" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="12">
+<rect x="68.04" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="13">
+<rect x="73.46" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="14">
+<rect x="78.88" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="15">
+<rect x="84.30" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="16">
+<rect x="89.72" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="17">
+<rect x="95.14" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="18">
+<rect x="100.56" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="19">
+<rect x="105.98" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="20">
+<rect x="111.40" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="21">
+<rect x="116.82" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="22">
+<rect x="122.24" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="23">
+<rect x="127.66" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="24">
+<rect x="133.08" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="25">
+<rect x="138.50" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="26">
+<rect x="143.92" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="27">
+<rect x="149.34" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="28">
+<rect x="154.76" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="29">
+<rect x="160.18" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="30">
+<rect x="165.60" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="stage0" data-clock="31">
+<rect x="171.02" y="70.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="direct" data-stage="handoff" data-clock="32">
+<rect x="176.44" y="70.00" width="4.86" height="23.00" fill="#93610a"/>
+</g>
+<g data-schedule="direct" data-stage="stage1" data-clock="33">
+<rect x="181.86" y="70.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="direct" data-stage="stage1" data-clock="34">
+<rect x="187.28" y="70.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="direct" data-stage="stage1" data-clock="35">
+<rect x="192.70" y="70.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="direct" data-stage="stage1" data-clock="36">
+<rect x="198.12" y="70.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="direct" data-stage="stage1" data-clock="37">
+<rect x="203.54" y="70.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="direct" data-stage="stage1" data-clock="38">
+<rect x="208.96" y="70.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="direct" data-stage="stage1" data-clock="39">
+<rect x="214.38" y="70.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="direct" data-stage="stage1" data-clock="40">
+<rect x="219.80" y="70.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="direct" data-stage="stage1" data-clock="41">
+<rect x="225.22" y="70.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="direct" data-stage="stage1" data-clock="42">
+<rect x="230.64" y="70.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="direct" data-stage="stage1" data-clock="43">
+<rect x="236.06" y="70.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="direct" data-stage="stage1" data-clock="44">
+<rect x="241.48" y="70.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="direct" data-stage="stage1" data-clock="45">
+<rect x="246.90" y="70.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="direct" data-stage="stage1" data-clock="46">
+<rect x="252.32" y="70.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="direct" data-stage="stage1" data-clock="47">
+<rect x="257.74" y="70.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="direct" data-stage="stage1" data-clock="48">
+<rect x="263.16" y="70.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<path d="M268.58 66.00L268.58 99.00" stroke="#101820" stroke-width="1"/>
+<text x="2" y="118" font-size="17" font-weight="500" text-anchor="start" style="fill:#47596a" class="mono">32 + 1 + 16 =</text>
+<text x="157" y="118" font-size="22" font-weight="700" text-anchor="start" style="fill:#234bcf" class="">49 clocks</text>
+<text x="2" y="166" font-size="16" font-weight="700" text-anchor="start" style="fill:#101820" class="">2 lanes · registered products</text>
+<g data-schedule="overlapped" data-stage="stage0" data-clock="0">
+<rect x="3.00" y="180.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage0" data-clock="1">
+<rect x="8.42" y="180.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage0" data-clock="2">
+<rect x="13.84" y="180.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage0" data-clock="3">
+<rect x="19.26" y="180.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage0" data-clock="4">
+<rect x="24.68" y="180.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage0" data-clock="5">
+<rect x="30.10" y="180.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage0" data-clock="6">
+<rect x="35.52" y="180.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage0" data-clock="7">
+<rect x="40.94" y="180.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage0" data-clock="8">
+<rect x="46.36" y="180.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage0" data-clock="9">
+<rect x="51.78" y="180.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage0" data-clock="10">
+<rect x="57.20" y="180.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage0" data-clock="11">
+<rect x="62.62" y="180.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage0" data-clock="12">
+<rect x="68.04" y="180.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage0" data-clock="13">
+<rect x="73.46" y="180.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage0" data-clock="14">
+<rect x="78.88" y="180.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage0" data-clock="15">
+<rect x="84.30" y="180.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage0" data-clock="16">
+<rect x="89.72" y="180.00" width="4.86" height="23.00" fill="#234bcf"/>
+</g>
+<g data-schedule="overlapped" data-stage="handoff" data-clock="17">
+<rect x="95.14" y="180.00" width="4.86" height="23.00" fill="#93610a"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage1" data-clock="18">
+<rect x="100.56" y="180.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage1" data-clock="19">
+<rect x="105.98" y="180.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage1" data-clock="20">
+<rect x="111.40" y="180.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage1" data-clock="21">
+<rect x="116.82" y="180.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage1" data-clock="22">
+<rect x="122.24" y="180.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage1" data-clock="23">
+<rect x="127.66" y="180.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage1" data-clock="24">
+<rect x="133.08" y="180.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage1" data-clock="25">
+<rect x="138.50" y="180.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<g data-schedule="overlapped" data-stage="stage1" data-clock="26">
+<rect x="143.92" y="180.00" width="4.86" height="23.00" fill="#344b5f"/>
+</g>
+<path d="M149.34 176.00L149.34 209.00" stroke="#101820" stroke-width="1"/>
+<text x="2" y="228" font-size="17" font-weight="500" text-anchor="start" style="fill:#47596a" class="mono">17 + 1 + 9 =</text>
+<text x="157" y="228" font-size="22" font-weight="700" text-anchor="start" style="fill:#234bcf" class="">27 clocks</text>
+<path d="M2.00 243.00L277.00 243.00" stroke="#b9c6d2" stroke-width="1"/>
+<rect x="2.00" y="258.00" width="10.00" height="10.00" fill="#234bcf"/>
+<text x="18" y="268" font-size="14" font-weight="400" text-anchor="start" style="fill:#101820" class="">Layer 1</text>
+<rect x="95.00" y="258.00" width="10.00" height="10.00" fill="#93610a"/>
+<text x="111" y="268" font-size="14" font-weight="400" text-anchor="start" style="fill:#101820" class="">Handoff</text>
+<rect x="191.00" y="258.00" width="10.00" height="10.00" fill="#344b5f"/>
+<text x="207" y="268" font-size="14" font-weight="400" text-anchor="start" style="fill:#101820" class="">Layer 2</text>
+</svg>

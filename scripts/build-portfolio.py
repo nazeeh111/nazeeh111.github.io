@@ -2,9 +2,33 @@
 import csv
 import io
 import math
+import xml.etree.ElementTree as ET
 
 
-def render(template, spectrum_csv):
+def render_weight_table(network):
+    """Read the exact signed coefficients embedded in the illustrated connections."""
+    edges = {}
+    for group in ET.fromstring(network).iterfind(".//{http://www.w3.org/2000/svg}g[@data-weight]"):
+        key = tuple(int(group.attrib[name]) for name in ("data-layer", "data-source", "data-target"))
+        if key in edges:
+            raise ValueError("Repeated classifier connection")
+        edges[key] = int(group.attrib["data-weight"])
+    inputs = [(0, feature, hidden) for hidden in range(8) for feature in range(4)]
+    outputs = [(1, hidden, score) for hidden in range(8) for score in range(2)]
+    if set(edges) != set(inputs + outputs):
+        raise ValueError("Incomplete classifier connections")
+    rows = []
+    for hidden in range(8):
+        keys = [(0, feature, hidden) for feature in range(4)] + [(1, hidden, score) for score in range(2)]
+        cells = "".join(f'<td>{edges[key]}</td>' for key in keys)
+        rows.append(f'<tr><th scope="row">h{hidden}</th>{cells}</tr>')
+    return ('<table><caption>Weights entering and leaving each hidden unit</caption>'
+            '<thead><tr><th scope="col">Unit</th>'
+            + "".join(f'<th scope="col">{name}</th>' for name in ("x0", "x1", "x2", "x3", "s0", "s1"))
+            + "</tr></thead><tbody>" + "".join(rows) + "</tbody></table>")
+
+
+def render(template, spectrum_csv, network):
     rows = csv.DictReader(io.StringIO(spectrum_csv.decode("utf-8")))
     samples = [(float(row["wavelength_nm"]), float(row["efficiency_percent"])) for row in rows]
     if len(samples) < 2 or any(not math.isfinite(nm) or not 0 <= efficiency <= 100 for nm, efficiency in samples):
@@ -32,4 +56,4 @@ def render(template, spectrum_csv):
 <label class="probe-control" hidden><span>Wavelength</span><input type="range" min="0" max="{len(samples)-1}" step="1" value="{peak}" aria-label="Inspect a saved wavelength"></label>
 <output>{samples[peak][0]:g} nm · {samples[peak][1]:.2f}% into order +1</output>
 </figure>'''
-    return template.replace("{{SPECTRUM}}", chart).encode("utf-8")
+    return template.replace("{{SPECTRUM}}", chart).replace("{{WEIGHTS}}", render_weight_table(network)).encode("utf-8")
