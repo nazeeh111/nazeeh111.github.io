@@ -134,7 +134,8 @@ def render(files):
     outputs.update(research.render(catalog, by_id, sum(v == 'pdf' for v in formats.values()),
                                    sum(v == 'md' for v in formats.values()), len(archive)))
     outputs['index.html'] = portfolio.render(files['scripts/portfolio.html'].decode('utf-8'),
-                                             files['assets/featured/photonsmith-hero/assets/spectrum.csv'])
+                                             files['assets/featured/photonsmith-hero/assets/spectrum.csv'],
+                                             files['assets/logic/network-portrait.svg'])
     cases = json.loads(files['cases.json'])
     work = module('work_builder', files['scripts/build-work.py'], ROOT / 'scripts/build-work.py')
     case_builder = module('case_builder', files['scripts/build-cases.py'], ROOT / 'scripts/build-cases.py')

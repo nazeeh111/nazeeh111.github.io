@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 382" role="img" aria-labelledby="diagram-title diagram-description">
+<title id="diagram-title">Banknote classifier from inputs to scores</title>
+<desc id="diagram-description">Four inputs connect to eight hidden ReLU units, then to two scores. All 48 stored signed coefficients are shown. Solid cobalt means positive; dashed graphite means negative; dotted gray means zero. This is the logical model, not the hardware layout.</desc>
+<metadata>SiliconPilot compiled-example.zip SHA-256: c412cde4a1dec54ef69a2df56bb96e41856c117784327cf60129f79071fcf4ed. Retained source: https://github.com/nazeeh111/SILICONPILOT/tree/fc774a8411f0a008821e95637b810db2a508c962/docs/presentation</metadata>
+<style>
+text{font-family:Arial,sans-serif;fill:#101820}
+.port-id{font-family:ui-monospace,monospace;font-weight:700}
+.route{fill:none;stroke-linecap:round}
+</style>
+<rect width="280" height="382" fill="#fff"/>
+<path d="M4 74H276V149H4zM4 210H276V279H4z" fill="#f1f5fa"/>
+
+<g data-layer="0" data-source="1" data-target="0" data-weight="0" data-sign="zero"><title>x1 → h0: +0</title><path class="route" d="M98.16 72 C98.16 100 17.80 119 17.80 151" stroke="#72849a" stroke-width="1.2" opacity=".85" stroke-dasharray="1 3.2"/></g>
+<g data-layer="0" data-source="0" data-target="4" data-weight="0" data-sign="zero"><title>x0 → h4: +0</title><path class="route" d="M37.02 72 C37.02 100 153.68 119 153.68 151" stroke="#72849a" stroke-width="1.2" opacity=".85" stroke-dasharray="1 3.2"/></g>
+<g data-layer="0" data-source="1" data-target="4" data-weight="0" data-sign="zero"><title>x1 → h4: +0</title><path class="route" d="M106.36 72 C106.36 100 156.08 119 156.08 151" stroke="#72849a" stroke-width="1.2" opacity=".85" stroke-dasharray="1 3.2"/></g>
+<g data-layer="0" data-source="0" data-target="5" data-weight="0" data-sign="zero"><title>x0 → h5: +0</title><path class="route" d="M39.08 72 C39.08 100 188.25 119 188.25 151" stroke="#72849a" stroke-width="1.2" opacity=".85" stroke-dasharray="1 3.2"/></g>
+<g data-layer="0" data-source="1" data-target="5" data-weight="0" data-sign="zero"><title>x1 → h5: +0</title><path class="route" d="M108.41 72 C108.41 100 190.65 119 190.65 151" stroke="#72849a" stroke-width="1.2" opacity=".85" stroke-dasharray="1 3.2"/></g>
+<g data-layer="0" data-source="2" data-target="5" data-weight="0" data-sign="zero"><title>x2 → h5: +0</title><path class="route" d="M177.74 72 C177.74 100 193.05 119 193.05 151" stroke="#72849a" stroke-width="1.2" opacity=".85" stroke-dasharray="1 3.2"/></g>
+<g data-layer="0" data-source="3" data-target="5" data-weight="0" data-sign="zero"><title>x3 → h5: +0</title><path class="route" d="M247.07 72 C247.07 100 195.45 119 195.45 151" stroke="#72849a" stroke-width="1.2" opacity=".85" stroke-dasharray="1 3.2"/></g>
+<g data-layer="1" data-source="0" data-target="0" data-weight="0" data-sign="zero"><title>h0 → s0: +0</title><path class="route" d="M17.30 207 C17.30 234 71.25 253 71.25 282" stroke="#72849a" stroke-width="1.2" opacity=".85" stroke-dasharray="1 3.2"/></g>
+<g data-layer="1" data-source="4" data-target="0" data-weight="0" data-sign="zero"><title>h4 → s0: +0</title><path class="route" d="M155.58 207 C155.58 234 81.25 253 81.25 282" stroke="#72849a" stroke-width="1.2" opacity=".85" stroke-dasharray="1 3.2"/></g>
+<g data-layer="1" data-source="5" data-target="0" data-weight="0" data-sign="zero"><title>h5 → s0: +0</title><path class="route" d="M190.15 207 C190.15 234 83.75 253 83.75 282" stroke="#72849a" stroke-width="1.2" opacity=".85" stroke-dasharray="1 3.2"/></g>
+<g data-layer="1" data-source="0" data-target="1" data-weight="0" data-sign="zero"><title>h0 → s1: +0</title><path class="route" d="M20.70 207 C20.70 234 191.25 253 191.25 282" stroke="#72849a" stroke-width="1.2" opacity=".85" stroke-dasharray="1 3.2"/></g>
+<g data-layer="1" data-source="4" data-target="1" data-weight="0" data-sign="zero"><title>h4 → s1: +0</title><path class="route" d="M158.98 207 C158.98 234 201.25 253 201.25 282" stroke="#72849a" stroke-width="1.2" opacity=".85" stroke-dasharray="1 3.2"/></g>
+<g data-layer="1" data-source="5" data-target="1" data-weight="0" data-sign="zero"><title>h5 → s1: +0</title><path class="route" d="M193.55 207 C193.55 234 203.75 253 203.75 282" stroke="#72849a" stroke-width="1.2" opacity=".85" stroke-dasharray="1 3.2"/></g>
+<g data-layer="0" data-source="2" data-target="0" data-weight="-1" data-sign="negative"><title>x2 → h0: -1</title><path class="route" d="M167.49 72 C167.49 100 20.20 119 20.20 151" stroke="#26394b" stroke-width="1.35" opacity=".88" stroke-dasharray="4 2.5"/></g>
+<g data-layer="0" data-source="3" data-target="0" data-weight="-1" data-sign="negative"><title>x3 → h0: -1</title><path class="route" d="M236.82 72 C236.82 100 22.60 119 22.60 151" stroke="#26394b" stroke-width="1.35" opacity=".88" stroke-dasharray="4 2.5"/></g>
+<g data-layer="0" data-source="2" data-target="4" data-weight="1" data-sign="positive"><title>x2 → h4: +1</title><path class="route" d="M175.69 72 C175.69 100 158.48 119 158.48 151" stroke="#234bcf" stroke-width="1.35" opacity=".90" /></g>
+<g data-layer="0" data-source="3" data-target="4" data-weight="-1" data-sign="negative"><title>x3 → h4: -1</title><path class="route" d="M245.03 72 C245.03 100 160.88 119 160.88 151" stroke="#26394b" stroke-width="1.35" opacity=".88" stroke-dasharray="4 2.5"/></g>
+<g data-layer="1" data-source="3" data-target="0" data-weight="1" data-sign="positive"><title>h3 → s0: +1</title><path class="route" d="M121.01 207 C121.01 234 78.75 253 78.75 282" stroke="#234bcf" stroke-width="1.35" opacity=".90" /></g>
+<g data-layer="1" data-source="3" data-target="1" data-weight="-1" data-sign="negative"><title>h3 → s1: -1</title><path class="route" d="M124.41 207 C124.41 234 198.75 253 198.75 282" stroke="#26394b" stroke-width="1.35" opacity=".88" stroke-dasharray="4 2.5"/></g>
+<g data-layer="0" data-source="0" data-target="0" data-weight="-2" data-sign="negative"><title>x0 → h0: -2</title><path class="route" d="M28.83 72 C28.83 100 15.40 119 15.40 151" stroke="#26394b" stroke-width="1.35" opacity=".88" stroke-dasharray="4 2.5"/></g>
+<g data-layer="0" data-source="3" data-target="6" data-weight="-3" data-sign="negative"><title>x3 → h6: -3</title><path class="route" d="M249.12 72 C249.12 100 230.02 119 230.02 151" stroke="#26394b" stroke-width="1.35" opacity=".88" stroke-dasharray="4 2.5"/></g>
+<g data-layer="0" data-source="3" data-target="1" data-weight="4" data-sign="positive"><title>x3 → h1: +4</title><path class="route" d="M238.88 72 C238.88 100 57.17 119 57.17 151" stroke="#234bcf" stroke-width="1.35" opacity=".90" /></g>
+<g data-layer="0" data-source="3" data-target="7" data-weight="5" data-sign="positive"><title>x3 → h7: +5</title><path class="route" d="M251.18 72 C251.18 100 264.59 119 264.59 151" stroke="#234bcf" stroke-width="1.35" opacity=".90" /></g>
+<g data-layer="1" data-source="2" data-target="0" data-weight="-8" data-sign="negative"><title>h2 → s0: -8</title><path class="route" d="M86.44 207 C86.44 234 76.25 253 76.25 282" stroke="#26394b" stroke-width="1.35" opacity=".88" stroke-dasharray="4 2.5"/></g>
+<g data-layer="1" data-source="2" data-target="1" data-weight="8" data-sign="positive"><title>h2 → s1: +8</title><path class="route" d="M89.84 207 C89.84 234 196.25 253 196.25 282" stroke="#234bcf" stroke-width="1.35" opacity=".90" /></g>
+<g data-layer="1" data-source="7" data-target="0" data-weight="-10" data-sign="negative"><title>h7 → s0: -10</title><path class="route" d="M259.29 207 C259.29 234 88.75 253 88.75 282" stroke="#26394b" stroke-width="1.35" opacity=".88" stroke-dasharray="4 2.5"/></g>
+<g data-layer="1" data-source="7" data-target="1" data-weight="10" data-sign="positive"><title>h7 → s1: +10</title><path class="route" d="M262.69 207 C262.69 234 208.75 253 208.75 282" stroke="#234bcf" stroke-width="1.35" opacity=".90" /></g>
+<g data-layer="1" data-source="1" data-target="0" data-weight="-13" data-sign="negative"><title>h1 → s0: -13</title><path class="route" d="M51.87 207 C51.87 234 73.75 253 73.75 282" stroke="#26394b" stroke-width="1.35" opacity=".88" stroke-dasharray="4 2.5"/></g>
+<g data-layer="1" data-source="1" data-target="1" data-weight="13" data-sign="positive"><title>h1 → s1: +13</title><path class="route" d="M55.27 207 C55.27 234 193.75 253 193.75 282" stroke="#234bcf" stroke-width="1.35" opacity=".90" /></g>
+<g data-layer="0" data-source="2" data-target="2" data-weight="14" data-sign="positive"><title>x2 → h2: +14</title><path class="route" d="M171.59 72 C171.59 100 89.34 119 89.34 151" stroke="#234bcf" stroke-width="1.35" opacity=".90" /></g>
+<g data-layer="0" data-source="0" data-target="3" data-weight="14" data-sign="positive"><title>x0 → h3: +14</title><path class="route" d="M34.98 72 C34.98 100 119.11 119 119.11 151" stroke="#234bcf" stroke-width="1.35" opacity=".90" /></g>
+<g data-layer="0" data-source="3" data-target="3" data-weight="14" data-sign="positive"><title>x3 → h3: +14</title><path class="route" d="M242.97 72 C242.97 100 126.31 119 126.31 151" stroke="#234bcf" stroke-width="1.35" opacity=".90" /></g>
+<g data-layer="0" data-source="1" data-target="2" data-weight="-15" data-sign="negative"><title>x1 → h2: -15</title><path class="route" d="M102.25 72 C102.25 100 86.94 119 86.94 151" stroke="#26394b" stroke-width="1.35" opacity=".88" stroke-dasharray="4 2.5"/></g>
+<g data-layer="1" data-source="6" data-target="0" data-weight="15" data-sign="positive"><title>h6 → s0: +15</title><path class="route" d="M224.72 207 C224.72 234 86.25 253 86.25 282" stroke="#234bcf" stroke-width="1.35" opacity=".90" /></g>
+<g data-layer="1" data-source="6" data-target="1" data-weight="-15" data-sign="negative"><title>h6 → s1: -15</title><path class="route" d="M228.12 207 C228.12 234 206.25 253 206.25 282" stroke="#26394b" stroke-width="1.35" opacity=".88" stroke-dasharray="4 2.5"/></g>
+<g data-layer="0" data-source="2" data-target="6" data-weight="22" data-sign="positive"><title>x2 → h6: +22</title><path class="route" d="M179.79 72 C179.79 100 227.62 119 227.62 151" stroke="#234bcf" stroke-width="1.35" opacity=".90" /></g>
+<g data-layer="0" data-source="0" data-target="6" data-weight="26" data-sign="positive"><title>x0 → h6: +26</title><path class="route" d="M41.12 72 C41.12 100 222.82 119 222.82 151" stroke="#234bcf" stroke-width="1.35" opacity=".90" /></g>
+<g data-layer="0" data-source="1" data-target="6" data-weight="29" data-sign="positive"><title>x1 → h6: +29</title><path class="route" d="M110.45 72 C110.45 100 225.22 119 225.22 151" stroke="#234bcf" stroke-width="1.35" opacity=".90" /></g>
+<g data-layer="0" data-source="1" data-target="1" data-weight="-30" data-sign="negative"><title>x1 → h1: -30</title><path class="route" d="M100.20 72 C100.20 100 52.37 119 52.37 151" stroke="#26394b" stroke-width="1.35" opacity=".88" stroke-dasharray="4 2.5"/></g>
+<g data-layer="0" data-source="0" data-target="1" data-weight="-31" data-sign="negative"><title>x0 → h1: -31</title><path class="route" d="M30.88 72 C30.88 100 49.97 119 49.97 151" stroke="#26394b" stroke-width="1.35" opacity=".88" stroke-dasharray="4 2.5"/></g>
+<g data-layer="0" data-source="2" data-target="3" data-weight="40" data-sign="positive"><title>x2 → h3: +40</title><path class="route" d="M173.64 72 C173.64 100 123.91 119 123.91 151" stroke="#234bcf" stroke-width="1.35" opacity=".90" /></g>
+<g data-layer="0" data-source="2" data-target="7" data-weight="-42" data-sign="negative"><title>x2 → h7: -42</title><path class="route" d="M181.84 72 C181.84 100 262.19 119 262.19 151" stroke="#26394b" stroke-width="1.35" opacity=".88" stroke-dasharray="4 2.5"/></g>
+<g data-layer="0" data-source="0" data-target="2" data-weight="-45" data-sign="negative"><title>x0 → h2: -45</title><path class="route" d="M32.92 72 C32.92 100 84.54 119 84.54 151" stroke="#26394b" stroke-width="1.35" opacity=".88" stroke-dasharray="4 2.5"/></g>
+<g data-layer="0" data-source="0" data-target="7" data-weight="-50" data-sign="negative"><title>x0 → h7: -50</title><path class="route" d="M43.17 72 C43.17 100 257.39 119 257.39 151" stroke="#26394b" stroke-width="1.35" opacity=".88" stroke-dasharray="4 2.5"/></g>
+<g data-layer="0" data-source="1" data-target="7" data-weight="-55" data-sign="negative"><title>x1 → h7: -55</title><path class="route" d="M112.50 72 C112.50 100 259.79 119 259.79 151" stroke="#26394b" stroke-width="1.35" opacity=".88" stroke-dasharray="4 2.5"/></g>
+<g data-layer="0" data-source="3" data-target="2" data-weight="63" data-sign="positive"><title>x3 → h2: +63</title><path class="route" d="M240.93 72 C240.93 100 91.74 119 91.74 151" stroke="#234bcf" stroke-width="1.35" opacity=".90" /></g>
+<g data-layer="0" data-source="1" data-target="3" data-weight="78" data-sign="positive"><title>x1 → h3: +78</title><path class="route" d="M104.30 72 C104.30 100 121.51 119 121.51 151" stroke="#234bcf" stroke-width="1.35" opacity=".90" /></g>
+<g data-layer="0" data-source="2" data-target="1" data-weight="-80" data-sign="negative"><title>x2 → h1: -80</title><path class="route" d="M169.54 72 C169.54 100 54.77 119 54.77 151" stroke="#26394b" stroke-width="1.35" opacity=".88" stroke-dasharray="4 2.5"/></g>
+<text x="4" y="17" font-size="14" font-weight="750" text-anchor="start" >4 inputs</text>
+<rect x="5.00" y="24" width="62" height="46" fill="#fff" stroke="#b9c6d7"/>
+<text x="36" y="42" font-size="14" font-weight="700" text-anchor="middle" class="port-id">x0</text>
+<text x="36" y="60" font-size="12" font-weight="500" text-anchor="middle" >variance</text>
+<rect x="74.33" y="24" width="62" height="46" fill="#fff" stroke="#b9c6d7"/>
+<text x="105.33" y="42" font-size="14" font-weight="700" text-anchor="middle" class="port-id">x1</text>
+<text x="105.33" y="60" font-size="12" font-weight="500" text-anchor="middle" >skewness</text>
+<rect x="143.67" y="24" width="62" height="46" fill="#fff" stroke="#b9c6d7"/>
+<text x="174.67" y="42" font-size="14" font-weight="700" text-anchor="middle" class="port-id">x2</text>
+<text x="174.67" y="60" font-size="12" font-weight="500" text-anchor="middle" >curtosis</text>
+<rect x="213.00" y="24" width="62" height="46" fill="#fff" stroke="#b9c6d7"/>
+<text x="244" y="42" font-size="14" font-weight="700" text-anchor="middle" class="port-id">x3</text>
+<text x="244" y="60" font-size="12" font-weight="500" text-anchor="middle" >entropy</text>
+<rect x="4" y="149" width="272" height="59" fill="#223fb9"/>
+<text x="140" y="171" font-size="14" font-weight="720" text-anchor="middle" style="fill:#fff">8 hidden ReLU units</text>
+<rect x="7.00" y="178" width="24" height="24" fill="#122b90"/>
+<text x="19" y="195" font-size="13" font-weight="700" text-anchor="middle" class="port-id" style="fill:#fff">h0</text>
+<rect x="41.57" y="178" width="24" height="24" fill="#122b90"/>
+<text x="53.57" y="195" font-size="13" font-weight="700" text-anchor="middle" class="port-id" style="fill:#fff">h1</text>
+<rect x="76.14" y="178" width="24" height="24" fill="#122b90"/>
+<text x="88.14" y="195" font-size="13" font-weight="700" text-anchor="middle" class="port-id" style="fill:#fff">h2</text>
+<rect x="110.71" y="178" width="24" height="24" fill="#122b90"/>
+<text x="122.71" y="195" font-size="13" font-weight="700" text-anchor="middle" class="port-id" style="fill:#fff">h3</text>
+<rect x="145.28" y="178" width="24" height="24" fill="#122b90"/>
+<text x="157.28" y="195" font-size="13" font-weight="700" text-anchor="middle" class="port-id" style="fill:#fff">h4</text>
+<rect x="179.85" y="178" width="24" height="24" fill="#122b90"/>
+<text x="191.85" y="195" font-size="13" font-weight="700" text-anchor="middle" class="port-id" style="fill:#fff">h5</text>
+<rect x="214.42" y="178" width="24" height="24" fill="#122b90"/>
+<text x="226.42" y="195" font-size="13" font-weight="700" text-anchor="middle" class="port-id" style="fill:#fff">h6</text>
+<rect x="248.99" y="178" width="24" height="24" fill="#122b90"/>
+<text x="260.99" y="195" font-size="13" font-weight="700" text-anchor="middle" class="port-id" style="fill:#fff">h7</text>
+<rect x="41" y="281" width="78" height="31" fill="#fff" stroke="#b9c6d7"/>
+<text x="80" y="301" font-size="14" font-weight="700" text-anchor="middle" class="port-id">s0</text>
+<rect x="161" y="281" width="78" height="31" fill="#fff" stroke="#b9c6d7"/>
+<text x="200" y="301" font-size="14" font-weight="700" text-anchor="middle" class="port-id">s1</text>
+<text x="140" y="331" font-size="14" font-weight="750" text-anchor="middle" >2 scores</text>
+<path class="route" d="M4 359h20" stroke="#234bcf" stroke-width="2" />
+<text x="29" y="363" font-size="13" font-weight="500" text-anchor="start" >Positive</text>
+<path class="route" d="M98 359h20" stroke="#26394b" stroke-width="2" stroke-dasharray="4 2.5"/>
+<text x="123" y="363" font-size="13" font-weight="500" text-anchor="start" >Negative</text>
+<path class="route" d="M195 359h20" stroke="#72849a" stroke-width="2" stroke-dasharray="1 3.2"/>
+<text x="220" y="363" font-size="13" font-weight="500" text-anchor="start" >Zero</text>
+</svg>

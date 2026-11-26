@@ -15,3 +15,7 @@ Each SVG includes a title and description. When embedding it with an HTML image 
 The alternative hero, `network.svg`, shows all 14 logical ports in source order, including the four named standardized inputs from the [pinned dataset manifest](https://github.com/nazeeh111/SILICONPILOT/blob/fc774a8411f0a008821e95637b810db2a508c962/models/dataset_manifest.json). Run `python3 network.py PATH_TO_SILICONPILOT` to reproduce it. Every connection carries its signed integer coefficient and source/target index in the SVG. All 48 endpoints and weights were checked against the compiled bundle. The three tilted rails are a drawing convention for logical layers.
 
 The network illustration is a logical model. Reproduce it with `python3 network.py PATH_TO_SILICONPILOT`. The presentation also retains the [SiliconPilot license](SiliconPilot-LICENSE.txt) and [third-party notices](SiliconPilot-NOTICES.md).
+
+## Narrow screens
+
+The portrait model figure arranges the same 48 logical connections vertically and differentiates sign by stroke pattern. An expandable HTML table and a [standalone numeric figure](network-mobile.svg) show both signed-coefficient matrices aligned by hidden unit. The clock and reference figures stack their plots. All three use the same archived data as the wide figures. Run `python3 generate_portrait.py PATH_TO_SILICONPILOT` for the network and `python3 generate_mobile.py PATH_TO_SILICONPILOT` for the numeric, clock and reference figures. The homepage builder reads the signed connections in the portrait SVG to create the accessible HTML table.

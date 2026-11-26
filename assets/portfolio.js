@@ -85,6 +85,7 @@ if (desk) {
   const navigation = [...desk.querySelectorAll('.story-rail a')];
   const viewer = desk.querySelector('.viewer');
   const image = viewer.querySelector('img');
+  const narrowSource = viewer.querySelector('source');
   const caption = viewer.querySelector('#logic-caption');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   let active;
@@ -95,7 +96,13 @@ if (desk) {
     const initial = !active;
     active = selected;
     const plate = selected.querySelector('img');
+    const source = selected.querySelector('picture source');
+    for (const name of ['srcset', 'width', 'height']) {
+      narrowSource.setAttribute(name, source.getAttribute(name));
+    }
     image.src = plate.getAttribute('src');
+    image.width = Number(plate.getAttribute('width'));
+    image.height = Number(plate.getAttribute('height'));
     image.alt = plate.alt;
     caption.textContent = {model: 'Compiled logical network', schedule: 'Core clock allocation', verification: 'Reference score words'}[selected.dataset.image];
     navigation.forEach(link => {

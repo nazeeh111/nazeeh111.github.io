@@ -99,6 +99,7 @@
 .about-block li span { font-size: 14px; color: var(--secondary); }
 .logic-footer { border-top: 1px solid var(--type); padding-block: 20px; font-size: 14px; flex-wrap: wrap; }
 @media(max-width:760px) {
+  .chapter .inline-plate { max-width: 450px; }
   .instrument-grid,.optics,.research-inner,.about-block { grid-template-columns: minmax(0,1fr); gap: 22px; }
   .logic-head { align-items: start; flex-wrap: wrap; gap: 5px 20px; padding-block: 14px; }
   .logic-head nav { gap: 15px; }
@@ -141,3 +142,11 @@
 html:has(.logic-home) { scroll-behavior: auto; }
 
 .chapter .companion-action { margin-top: 12px; }
+
+.coefficient-table { margin-top: 18px; max-width: 370px; width: 100%; font: 450 14px/1.45 var(--body-face); }
+.coefficient-table summary { cursor: pointer; padding-block: 7px; }
+.coefficient-table table { width: 100%; margin-block: 8px; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.coefficient-table caption { text-align: left; margin-bottom: 6px; }
+.coefficient-table :is(th, td) { border-bottom: 1px solid #bbc9d6; text-align: right; padding: 4px 2px; }
+.coefficient-table tr > :first-child { text-align: left; }
+.coefficient-table p { font: inherit; margin-block: 8px; }
