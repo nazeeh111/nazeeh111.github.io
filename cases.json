@@ -1,6 +1,11 @@
 [
   {
     "slug": "solidframe",
+    "story_headings": {
+      "problem": "Editable dimensions",
+      "mechanism": "From dimensions to native solids",
+      "observed_result": "One edit through Undo and Redo"
+    },
     "name": "SolidFrame",
     "repository_url": "https://github.com/nazeeh111/SolidFrame",
     "source_revision": "7986c79725cf7429d7ec816d647805947ce434bf",
@@ -59,6 +64,11 @@
   },
   {
     "slug": "capsulith",
+    "story_headings": {
+      "problem": "An initialized decoder",
+      "mechanism": "Reopening the allocation",
+      "observed_result": "49,152 bytes restored"
+    },
     "name": "Capsulith",
     "repository_url": "https://github.com/nazeeh111/Capsulith",
     "source_revision": null,
@@ -117,6 +127,11 @@
   },
   {
     "slug": "qloom",
+    "story_headings": {
+      "problem": "Routing without changing the circuit",
+      "mechanism": "A compiler for a device graph",
+      "observed_result": "The three-qubit line device"
+    },
     "name": "QLOOM",
     "repository_url": "https://github.com/nazeeh111/QLOOM",
     "source_revision": "ddcce9317bdc59e053f6b6fec3cedf43b9203111",
@@ -154,6 +169,11 @@
   },
   {
     "slug": "photonsmith",
+    "story_headings": {
+      "problem": "What a surrogate can miss",
+      "mechanism": "From screening to Maxwell solves",
+      "observed_result": "A grating for 1550 nm"
+    },
     "name": "PhotonSmith",
     "repository_url": "https://github.com/nazeeh111/PhotonSmith",
     "source_revision": "13912d9d640938acf8ce299a152298666ae61d44",
@@ -191,6 +211,11 @@
   },
   {
     "slug": "vibescope",
+    "story_headings": {
+      "problem": "Visible motion and measured motion",
+      "mechanism": "Tracking the original frames",
+      "observed_result": "The same signal at two gains"
+    },
     "name": "VibeScope",
     "repository_url": "https://github.com/nazeeh111/VibeScope",
     "source_revision": "db2594d6ff15d75151785c388ed35c473533d3b9",
@@ -233,6 +258,11 @@
   },
   {
     "slug": "instrumentzero",
+    "story_headings": {
+      "problem": "What a ringdown estimate needs",
+      "mechanism": "From seeded signal to fit",
+      "observed_result": "A 9.75 Hz reference ringdown"
+    },
     "name": "InstrumentZero",
     "repository_url": "https://github.com/nazeeh111/InstrumentZero",
     "source_revision": "c1a252300159e2e8e161db43191aafcbea701077",
@@ -270,6 +300,11 @@
   },
   {
     "slug": "nstack",
+    "story_headings": {
+      "problem": "Finding a capability by task",
+      "mechanism": "The reviewed capability registry",
+      "observed_result": "A search for web UI design"
+    },
     "name": "nstack",
     "repository_url": "https://github.com/nazeeh111/nstack",
     "source_revision": "c7f6c73bb3ae7fd5aba7c9bd41d8514a932926b7",
@@ -300,6 +335,11 @@
   },
   {
     "slug": "solidrift",
+    "story_headings": {
+      "problem": "A Boolean union drops material",
+      "mechanism": "Reduce the mesh, preserve the failure",
+      "observed_result": "132 triangles reduced to 12"
+    },
     "name": "Solidrift",
     "repository_url": "https://github.com/nazeeh111/Solidrift",
     "source_revision": "8fc9e23471a18165d73646e290700cc10d351eea",
@@ -341,6 +381,11 @@
   },
   {
     "slug": "materialmind",
+    "story_headings": {
+      "problem": "Prediction and archived reference",
+      "mechanism": "What the model sees before reveal",
+      "observed_result": "The PaMnF₆ query"
+    },
     "name": "MaterialMind",
     "repository_url": "https://github.com/nazeeh111/MaterialMind",
     "source_revision": "c879afa4b616649cac73ef46b010f24e12ed3544",
@@ -379,6 +424,11 @@
   },
   {
     "slug": "siliconpilot",
+    "story_headings": {
+      "problem": "Tradeoffs in fixed-point hardware",
+      "mechanism": "From dense layers to Verilog",
+      "observed_result": "40 synthesized and routed designs"
+    },
     "name": "SILICONPILOT",
     "repository_url": "https://github.com/nazeeh111/SILICONPILOT",
     "source_revision": "61badd38086dc8c0395fff3dfd814f4073c90b93",
@@ -422,6 +472,11 @@
   },
   {
     "slug": "morphproof",
+    "story_headings": {
+      "problem": "A build cannot verify behavior",
+      "mechanism": "Run both versions and shrink the input",
+      "observed_result": "A one-element witness"
+    },
     "name": "MorphProof",
     "repository_url": "https://github.com/nazeeh111/MorphProof",
     "source_revision": "36208c6a6ed15ae62c62e73eb99076fd5c79286d",
@@ -468,6 +523,11 @@
   },
   {
     "slug": "ladderproof",
+    "story_headings": {
+      "problem": "When the next code lowers voltage",
+      "mechanism": "Exact corner enumeration",
+      "observed_result": "A reversal at code 31 to 32"
+    },
     "name": "LadderProof",
     "repository_url": "https://github.com/nazeeh111/LadderProof",
     "source_revision": "12604d131498ba3851bea6a45066a0d1d71fa7c0",
@@ -520,5 +580,50 @@
     ],
     "legacy_fragment": [],
     "notices_url": "/assets/featured/notices/ladderproof/README.md"
+  },
+  {
+    "slug": "chronal",
+    "story_headings": {
+      "problem": "When a development winner loses",
+      "mechanism": "Freeze the strategy before evaluation",
+      "observed_result": "A 1.461% loss on the holdout"
+    },
+    "name": "Chronal",
+    "repository_url": "https://github.com/nazeeh111/chronal",
+    "source_revision": "f2cec5dfc41cfdb321f08c621d7303f3de828b1f",
+    "case_url": "/work/chronal/",
+    "lead": "Chronal froze its winning strategy. On fictional holdout prices, it lost 1.461%. Follow the simulated trades behind that result.",
+    "action": {
+      "label": "Open the interactive holdout",
+      "url": "/assets/featured/chronal/report.html"
+    },
+    "secondary_action": {
+      "label": "Download the complete replay",
+      "url": "https://github.com/nazeeh111/chronal/raw/f2cec5dfc41cfdb321f08c621d7303f3de828b1f/docs/presentation/worked-example.zip"
+    },
+    "reader_guide": {
+      "label": "How to find the first fill",
+      "instructions": "In the report, set Inspect exact session date to June 3, 2020 and choose Execution from the section menu. With a keyboard, press /, enter session #2, then enter goto execution."
+    },
+    "problem": "A strategy can win on development data and still lose on the next unseen period. The worked experiment freezes the candidate, fill rules and costs so a reader can trace how that result arose.",
+    "mechanism": "Training and evaluation advance in chronological windows. Chronal ranks four candidates by development Sharpe, freezes trend60, then compares it with equal weight across 126 holdout sessions. Both start the holdout with 100,000 simulated account units.",
+    "observed_result": "The selected strategy returned +1.775% in development and −1.461% on the holdout. Equal weight returned −4.528% on the holdout. The selected strategy incurred 233.486 units of holdout commission. Spread and slippage enter fill prices.",
+    "scope_note": "This experiment uses fictional prices. Session numbers in the figure are zero-based. The terminal’s session command counts from one within the displayed period. Results describe this run under Chronal’s daily execution assumptions.",
+    "foundations": "Chronal uses Python and NumPy for chronological fitting and cash-aware simulation. The saved terminal contains the recorded data and runs in the browser with no external dependencies.",
+    "evidence_url": "https://github.com/nazeeh111/chronal/blob/f2cec5dfc41cfdb321f08c621d7303f3de828b1f/docs/presentation/README.md",
+    "notices_url": "/assets/featured/chronal/LICENSE.txt",
+    "media": [
+      {
+        "src": "/assets/featured/chronal/chronology.svg",
+        "mobile_src": "/assets/featured/chronal/chronology-mobile.svg",
+        "mobile_width": 760,
+        "alt": "Training, development and held-out sessions. Both holdout strategies lose value. The detailed fill shows how execution and commission reduce available cash.",
+        "caption": "Every marked equity value with initial capital. Each panel uses the same vertical scale and rebases its separate account to 100."
+      }
+    ],
+    "technical_details": [
+      "The request originated at close 630 and filled at open 631, the second reported holdout session.",
+      "The recorded SYN_C buy spent 50,025.0000 units on 412.8366 shares and paid 25.0125 units in commission. The fills CSV records 49,949.9875 units of cash immediately afterward, displayed as $49,950 in the report. The chart and account panel show close-of-session values."
+    ]
   }
 ]

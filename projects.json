@@ -413,7 +413,7 @@
       "source_revision": "db81f1af36f09498c8b3eaeb4368e93347420225"
     },
     {
-      "name": "chronal",
+      "name": "Chronal",
       "summary": "Test portfolio strategies with simulated trades, train-only models and an offline research terminal.",
       "url": "https://github.com/nazeeh111/chronal",
       "subject": "ML & data",
@@ -426,7 +426,7 @@
         "reproducible-research"
       ],
       "upstream": null,
-      "source_revision": "d3ffe89c012756309844d1d5659fd6befdb0b062"
+      "source_revision": "f2cec5dfc41cfdb321f08c621d7303f3de828b1f"
     },
     {
       "name": "CipherShape",

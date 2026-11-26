@@ -24,24 +24,26 @@
       crossorigin
     />
     <link rel="stylesheet" href="/assets/design/portfolio.css" />
+    <link rel="stylesheet" href="/assets/design/interior.css" />
     <script src="/assets/work.js" defer></script>
     <title>Work · Nazeeh Abdul-Hadi</title>
   </head>
-  <body>
+  <body class="folio-interior work-register">
     <a class="skip" href="#main">Skip to content</a>
-    <header class="masthead shell">
-  <a class="identity" href="/" aria-label="Nazeeh Abdul-Hadi home"><span class="full-name">Nazeeh Abdul-Hadi</span><span class="short-name" aria-hidden="true">Nazeeh</span></a>
-  <nav aria-label="Main navigation"><a href="/work/" aria-current="page">Work</a><a href="/research/">Research</a><a href="/#about">About</a></nav>
-</header>
-    <main class="shell catalog-page" id="main">
-      <section id="projects" aria-labelledby="work-heading">
-        <div class="catalog-heading">
-          <h1 id="work-heading">All projects.</h1>
-          <p>
-            Selected work first, then the complete alphabetical index.
-          </p>
+    <header class="folio-band">
+      <div class="folio-width folio-nav">
+        <a class="folio-mark" href="/" aria-label="Nazeeh Abdul-Hadi home">Nazeeh Abdul-Hadi</a>
+        <nav aria-label="Main navigation"><a href="/work/" aria-current="page">Work</a><a href="/research/">Research</a><a href="/#about">About</a></nav>
+      </div>
+    </header>
+    <main id="main">
+      <div class="folio-band">
+        <div class="folio-width register-intro">
+          <h1>Work index</h1>
+          <p>Engineering projects across physics, computing and design. Open a case to inspect the evidence, or go straight to the repository.</p>
         </div>
-        <p class="work-research">Quantum research: <a href="/research/phaseglass-quantum/">Phaseglass Quantum</a>. <a href="/research/">All studies</a>.</p>
+      </div>
+      <section class="folio-width register-body" id="projects" aria-label="Project index">
         <div class="filters" id="work-filters" hidden>
           <div>
             <label for="project-search">Search projects</label
@@ -82,30 +84,21 @@
           <button type="button" id="reset-search" hidden>Clear filters</button>
         </div>
         <noscript><p>All repositories are listed below.</p></noscript>
+        <div class="register-samples" id="register-samples">{{SAMPLES}}</div>
         <div id="catalog-empty" class="empty" hidden>
           <h2>No matching results.</h2>
           <p id="catalog-empty-message">No projects match these filters.</p>
           <div class="empty-actions"><button class="button" id="search-all-disciplines" type="button" hidden>Search all disciplines</button></div>
         </div>
-        <ul class="project-list" id="project-list">
+        <ul aria-label="Public repositories" class="project-list" id="project-list">
           {{PROJECTS}}
         </ul>
       </section>
     </main>
-    <footer class="site-footer">
-      <div class="shell footer-top">
-        <a class="brand" href="/" aria-label="Nazeeh Abdul-Hadi home"
-          ><img src="/assets/identity.png" alt="" width="32" height="32" /><span
-            >Nazeeh Abdul-Hadi</span
-          ></a
-        >
-        <nav class="site-nav" aria-label="Footer">
-          <a href="/research/">Research</a
-          ><a href="https://github.com/nazeeh111">GitHub</a
-          ><a href="https://github.com/nazeeh111/nazeeh111.github.io"
-            >Site source</a
-          >
-        </nav>
+    <footer class="folio-band">
+      <div class="folio-width interior-footer">
+        <a href="/">Nazeeh Abdul-Hadi</a>
+        <nav aria-label="Footer"><a href="/research/">Research</a><a href="https://github.com/nazeeh111">GitHub</a><a href="https://github.com/nazeeh111/nazeeh111.github.io">Site source</a></nav>
       </div>
     </footer>
   </body>

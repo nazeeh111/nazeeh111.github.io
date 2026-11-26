@@ -1,4 +1,8 @@
-# Engineering portfolio social preview
+# Portfolio share images
+
+The current homepage shares [Weights to Verilog](logic-preview.png), rendered at 1200 × 630 from [its layout](logic-preview.html), self-hosted Archivo, and the [recorded logical network](../logic/PROVENANCE.md). The connections represent compiled coefficients. The image depicts no physical chip or hardware measurement.
+
+## Earlier VibeScope preview
 
 The 1200 × 630 PNG is a designed share image for this portfolio. It combines Nazeeh Abdul-Hadi’s existing engineering/physics identity, licensed self-hosted Rethink Sans, retained N avatar and the actual VibeScope visualization ×20 output at frame 72. It is not a screenshot of a new application run, a live measurement or evidence of physical calibration.
 

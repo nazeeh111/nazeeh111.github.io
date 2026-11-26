@@ -1,0 +1,17 @@
+# SiliconPilot evidence illustrations
+
+The three standalone SVGs are original illustrations generated from the [published case artifacts at fc774a8](https://github.com/nazeeh111/SILICONPILOT/tree/fc774a8411f0a008821e95637b810db2a508c962/docs/presentation). The case records compiler revision [6e2bbbe](https://github.com/nazeeh111/SILICONPILOT/tree/6e2bbbe2faca1f10eb4a2a1e71a8aa858c56ffd1). Run `python3 generate.py PATH_TO_SILICONPILOT` with a checkout containing that evidence. Generation uses the Python standard library and checks the original ZIP and expected-vector SHA-256 digests. The illustrations use compiled coefficients, recorded schedules and synthetic verification vectors.
+
+| View | Accessible description and interpretation |
+| --- | --- |
+| model.svg | The banknote classifier takes four standardized features, applies eight hidden ReLU units and returns two signed scores. Each tower represents one compiled integer coefficient from the 4 × 8 or 8 × 2 transformation. Height shows absolute magnitude on one common scale. Positive coefficients have blue faces, negative coefficients have slate faces and zeros have a flat white tile. The drawing describes logical weights. |
+| schedule.svg | Each tile represents one core clock. One direct lane takes 32 + 1 + 16 clocks before the first output. Two lanes with registered products take 17 + 1 + 9. The middle tile is the handoff. The schedules share a scale. Their sustained output intervals are 34 and 19 clocks, respectively. |
+| verification.svg | Two aligned plots show the signed high and low bytes from each independent expected word. Every core passed 14 directed and 64 random input vectors, using seed 1729. The packed expected words are byte-identical across schedules. The plots show reference values, and the pass count comes from the saved simulator results. |
+
+The project distributes its source under [Apache-2.0](https://github.com/nazeeh111/SILICONPILOT/blob/fc774a8411f0a008821e95637b810db2a508c962/LICENSE). The original [third-party and dataset notices](https://github.com/nazeeh111/SILICONPILOT/blob/fc774a8411f0a008821e95637b810db2a508c962/docs/THIRD_PARTY.md) remain in the [downloadable evidence](https://github.com/nazeeh111/SILICONPILOT/blob/fc774a8411f0a008821e95637b810db2a508c962/docs/presentation/compiled-example.zip). The drawing reads generated model coefficients and digital test results. It uses no photographed hardware or inferred physical placement.
+
+Each SVG includes a title and description. When embedding it with an HTML image element, supply equivalent alt text in that element.
+
+The alternative hero, `network.svg`, shows all 14 logical ports in source order, including the four named standardized inputs from the [pinned dataset manifest](https://github.com/nazeeh111/SILICONPILOT/blob/fc774a8411f0a008821e95637b810db2a508c962/models/dataset_manifest.json). Run `python3 network.py PATH_TO_SILICONPILOT` to reproduce it. Every connection carries its signed integer coefficient and source/target index in the SVG. All 48 endpoints and weights were checked against the compiled bundle. The three tilted rails are a drawing convention for logical layers.
+
+The network illustration is a logical model. Reproduce it with `python3 network.py PATH_TO_SILICONPILOT`. The presentation also retains the [SiliconPilot license](SiliconPilot-LICENSE.txt) and [third-party notices](SiliconPilot-NOTICES.md).

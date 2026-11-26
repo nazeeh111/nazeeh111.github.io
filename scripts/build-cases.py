@@ -26,7 +26,7 @@ def paragraph(value):
     return '<p>'+escape(value)+'</p>'
 
 def action(record, primary=False):
-    css='button' if primary else 'text-link'
+    css='folio-action' if primary else 'folio-secondary'
     return '<a class="'+css+'" href="'+escape(url(record['url']))+'">'+escape(record['label'])+'</a>'
 
 def details(image, src):
@@ -83,7 +83,7 @@ def render(cases, files):
             crops=details(image,src)
             css='case-media has-details' if crops else 'case-media'
             loading=' loading="eager" fetchpriority="high"' if image_index==0 else ' loading="lazy"'
-            media.append('<figure class="'+css+'"><a class="capture-overview" href="'+escape(src)+'"><picture>'+mobile+'<img src="'+escape(src)+'" alt="'+escape(image['alt'])+'"'+loading+'></picture></a>'+crops+'<figcaption>'+escape(image['caption'])+' <a class="full-capture-link" href="'+escape(src)+'">Open full capture <span aria-hidden="true">↗</span></a></figcaption></figure>')
+            media.append('<figure class="'+css+'"><div class="capture-overview"><picture>'+mobile+'<img src="'+escape(src)+'" alt="'+escape(image['alt'])+'"'+loading+'></picture></div>'+crops+'<figcaption>'+escape(image['caption'])+' <a class="full-capture-link" href="'+escape(src)+'">Open full capture</a></figcaption></figure>')
         evidence=url(case['evidence_url'])
         if evidence.startswith('/') and evidence.split('#',1)[0][1:]not in files:
             raise ValueError("Case evidence must be in the public source inventory")
@@ -99,14 +99,66 @@ def render(cases, files):
             data=files['assets/featured/nstack-search.json'].decode('utf-8')
             json.loads(data)
             media.append('<figure class="case-media"><pre><code>'+escape(data)+'</code></pre><figcaption>Complete recorded source-only search output. Installation and target-runtime acceptance are separate.</figcaption></figure>')
+        guide=case.get('reader_guide')
+        guide_html='<details class="record-detail"><summary>'+escape(guide['label'])+'</summary>'+paragraph(guide['instructions'])+'</details>' if guide else ''
         recorded=''
         if revision:
-            recorded='<p class="case-source">Recorded case source: <a href="'+escape(repo+'/tree/'+revision)+'">'+escape(revision)+'</a></p>'
-        page=r'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>__NAME__ · Nazeeh Abdul-Hadi</title><meta name="description" content="__DESCRIPTION__"><link rel="canonical" href="https://nazeeh111.github.io__ROUTE__"><link rel="icon" href="/assets/favicon.svg"><link rel="stylesheet" href="/assets/design/portfolio.css"><link rel="preload" href="/assets/fonts/IBMPlexSans.ttf" as="font" type="font/ttf" crossorigin></head><body><a class="skip" href="#main">Skip to content</a><header class="masthead shell">
-  <a class="identity" href="/" aria-label="Nazeeh Abdul-Hadi home"><span class="full-name">Nazeeh Abdul-Hadi</span><span class="short-name" aria-hidden="true">Nazeeh</span></a>
-  <nav aria-label="Main navigation"><a href="/work/">Work</a><a href="/research/">Research</a><a href="/#about">About</a></nav>
-</header><main class="case-page shell" id="main"><div class="case-hero"><div><h1>__NAME__</h1><p class="case-lead">__DESCRIPTION__</p><div class="case-actions">__ACTIONS__</div></div></div>__MEDIA__<section class="case-notes"><h2>Scope of this case</h2><p>__SCOPE__</p></section><section class="case-text"><div><h2>The problem</h2>__PROBLEM__</div><div><h2>The mechanism</h2>__MECHANISM__</div></section><section class="case-text"><div><h2>The observed result</h2>__RESULT__</div><div><h2>Foundations</h2>__FOUNDATIONS__</div></section><section class="case-details"><h2>Inspect the details</h2>__EXTRA__<p class="case-source"><a href="__EVIDENCE__">Recorded evidence and limits</a> · <a href="__REPO__">Project source</a></p>__RECORDED__</section></main><footer class="site-footer"><div class="shell footer-top"><a class="brand" href="/">Nazeeh Abdul-Hadi</a><nav aria-label="Footer"><a href="/work/">All projects</a><a href="/research/">Research</a><a href="https://github.com/nazeeh111">GitHub</a></nav></div></footer></body></html>'''
-        values={'NAME':name,'DESCRIPTION':escape(case['lead']),'ROUTE':escape(route),'ACTIONS':action(case['action'],True)+action(case['secondary_action']),'SCOPE':escape(case['scope_note']),'MEDIA':''.join(media),'PROBLEM':paragraph(case['problem']),'MECHANISM':paragraph(case['mechanism']),'RESULT':paragraph(case['observed_result']),'FOUNDATIONS':paragraph(case['foundations']),'EXTRA':extra,'EVIDENCE':escape(evidence),'REPO':escape(repo),'RECORDED':recorded}
+            recorded='<p class="case-source"><a href="'+escape(repo+'/tree/'+revision)+'">Source revision <code>'+escape(revision[:12])+'</code></a></p>'
+        default_headings={'problem':'Research question','mechanism':'Method','observed_result':'Result'}
+        headings=case.get('story_headings',{})
+        if not isinstance(headings,dict) or not set(headings)<=set(default_headings):
+            raise ValueError("Unknown case story heading")
+        if any(not isinstance(label,str) or not label.strip() for label in headings.values()):
+            raise ValueError("Case story headings must be nonempty text")
+        default_headings.update(headings)
+        page=r'''<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>__NAME__ · Nazeeh Abdul-Hadi</title>
+<meta name="description" content="__DESCRIPTION__">
+<link rel="canonical" href="https://nazeeh111.github.io__ROUTE__">
+<link rel="icon" href="/assets/favicon.svg">
+<link rel="stylesheet" href="/assets/design/portfolio.css">
+<link rel="stylesheet" href="/assets/design/interior.css">
+</head>
+<body class="folio-interior case-register">
+<a class="skip" href="#main">Skip to content</a>
+<header class="folio-band">
+  <div class="folio-width folio-nav">
+    <a class="folio-mark" href="/" aria-label="Nazeeh Abdul-Hadi home">Nazeeh Abdul-Hadi</a>
+    <nav aria-label="Main navigation"><a href="/work/">Work</a><a href="/research/">Research</a><a href="/#about">About</a></nav>
+  </div>
+</header>
+<main id="main">
+  <div class="folio-band">
+    <div class="folio-width case-opening">
+      <div><a class="back-to-work" href="/work/#projects">Work index</a><h1>__NAME__</h1></div>
+      <div class="case-entry"><p class="folio-lead">__DESCRIPTION__</p><div class="folio-actions">__ACTIONS__</div>__GUIDE__</div>
+    </div>
+  </div>
+  <div class="folio-width case-reader">
+    <div class="case-evidence">__MEDIA__</div>
+    <div class="case-account">
+      <section class="result-ledger"><h2>__RESULTHEAD__</h2>__RESULT__<h3>Interpretation</h3><p>__SCOPE__</p></section>
+      <div class="case-argument">
+        <section><h2>__PROBLEMHEAD__</h2>__PROBLEM__</section>
+        <section><h2>__MECHANISMHEAD__</h2>__MECHANISM__</section>
+      </div>
+    </div>
+    <section class="case-appendix">
+      <div><h2>Foundations</h2>__FOUNDATIONS__</div>
+      <div><h2>Sources and supporting evidence</h2>__EXTRA__<p class="case-source"><a href="__EVIDENCE__">Recorded evidence and limits</a><a href="__REPO__">Project source</a></p>__RECORDED__</div>
+    </section>
+  </div>
+</main>
+<footer class="folio-band">
+  <div class="folio-width interior-footer"><a href="/">Nazeeh Abdul-Hadi</a><nav aria-label="Footer"><a href="/work/#projects">All projects</a><a href="/research/">Research</a><a href="https://github.com/nazeeh111">GitHub</a></nav></div>
+</footer>
+</body>
+</html>'''
+        values={'NAME':name,'DESCRIPTION':escape(case['lead']),'ROUTE':escape(route),'ACTIONS':action(case['action'],True)+action(case['secondary_action']),'GUIDE':guide_html,'SCOPE':escape(case['scope_note']),'MEDIA':''.join(media),'PROBLEMHEAD':escape(default_headings['problem']),'MECHANISMHEAD':escape(default_headings['mechanism']),'RESULTHEAD':escape(default_headings['observed_result']),'PROBLEM':paragraph(case['problem']),'MECHANISM':paragraph(case['mechanism']),'RESULT':paragraph(case['observed_result']),'FOUNDATIONS':paragraph(case['foundations']),'EXTRA':extra,'EVIDENCE':escape(evidence),'REPO':escape(repo),'RECORDED':recorded}
         page=re.sub(r'__([A-Z]+)__',lambda match:values[match[1]],page)
         if slug=='vibescope':
             page=page.replace('</head>','<script src="/assets/portfolio.js" defer></script></head>')

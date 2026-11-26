@@ -56,10 +56,11 @@ class BuildTests(unittest.TestCase):
   for name in ('QubitGuard','FLUXATLAS'):
    entry=next(e for e in page.entries if name in e['data-search'])
    self.assertEqual(set(entry['data-subjects'].split('|')),{'Physics & quantum','ML & data'})
-  cases=json.loads(self.files['cases.json']);self.assertEqual(len(cases),12)
-  self.assertEqual({case["slug"] for case in cases},{"solidframe","capsulith","qloom","photonsmith","vibescope","instrumentzero","nstack","solidrift","materialmind","siliconpilot","morphproof","ladderproof"})
+  cases=json.loads(self.files['cases.json']);self.assertEqual(len(cases),13)
+  self.assertEqual({case["slug"] for case in cases},{"solidframe","capsulith","qloom","photonsmith","vibescope","instrumentzero","nstack","solidrift","materialmind","siliconpilot","morphproof","ladderproof","chronal"})
   for case in cases:self.assertIn(case['case_url'].lstrip('/')+'index.html',outputs)
   self.assertIn(b'/assets/featured/materialmind/query-mobile.png',outputs['work/materialmind/index.html'])
+  self.assertIn(b'/assets/featured/chronal/report.html',outputs['work/chronal/index.html'])
   self.assertIn(b'Open my GitHub profile',outputs['index.html'])
 
  def test_only_reviewed_inputs_enter_extracted_archive_build(self):

@@ -111,7 +111,7 @@ def prepare(files):
 
 def stamp_asset_urls(outputs):
     """Give shared browser assets cache identities derived from their actual bytes."""
-    assets = ('assets/design/portfolio.css', 'assets/portfolio.js',
+    assets = ('assets/design/portfolio.css', 'assets/design/logic.css', 'assets/design/interior.css', 'assets/portfolio.js',
               'assets/work.js', 'assets/social/portfolio-preview.png',
               'research/style.css', 'research/app.js')
     result = dict(outputs)
@@ -133,7 +133,8 @@ def render(files):
     outputs = dict(files)
     outputs.update(research.render(catalog, by_id, sum(v == 'pdf' for v in formats.values()),
                                    sum(v == 'md' for v in formats.values()), len(archive)))
-    outputs['index.html'] = portfolio.render(projects, files['scripts/portfolio.html'].decode('utf-8'))
+    outputs['index.html'] = portfolio.render(files['scripts/portfolio.html'].decode('utf-8'),
+                                             files['assets/featured/photonsmith-hero/assets/spectrum.csv'])
     cases = json.loads(files['cases.json'])
     work = module('work_builder', files['scripts/build-work.py'], ROOT / 'scripts/build-work.py')
     case_builder = module('case_builder', files['scripts/build-cases.py'], ROOT / 'scripts/build-cases.py')
