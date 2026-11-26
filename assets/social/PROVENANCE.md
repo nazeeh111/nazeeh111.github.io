@@ -13,3 +13,19 @@ The VibeScope source and synthetic examples retain their [MIT notice](../feature
 The earlier [Solidrift SVG composition](portfolio-preview.svg) is retained as a historical editable artifact. It is separate from the current PNG rendering source. Its original [input](../solidrift-input.svg), [recorded union](../solidrift-union.svg), [provenance](../provenance.html#solidrift) and [Apache-2.0 fixture terms](../sources/solidrift-fixture-LICENSE.txt) remain available. Its underlying geometry is unchanged.
 
 Accessible share description: Nazeeh Abdul-Hadi’s electrical engineering and physics portfolio, showing a recorded controlled-synthetic VibeScope visualization.
+
+## Work index and case pages
+
+The index uses the existing [SolidFrame technical plate](../featured/solidframe-bracket/bracket.png) with its [signed upstream source and file hashes](../featured/solidframe-bracket/source.json). Cases use their retained project captures, findings and notices. nstack shares a text summary of its recorded CLI lookup.
+
+The additional PNGs under `cases/` are presentation copies of evidence already distributed with this site. The QLOOM, PhotonSmith, InstrumentZero and VibeScope copies fit their complete wide source images inside 1200 × 630 without cropping their labels, axes or panels. Solidrift and Chronal rasterize the existing SVGs the same way. LadderProof contains the complete interval-bound result panel from the retained workbench screenshot, cropped at source rectangle (450, 681) to (1252, 1336), then fitted to the same canvas. These transformations add no data, simulations or claims.
+
+| Case | Source image |
+| --- | --- |
+| QLOOM | [Compiled circuit and mapping](../featured/qloom-circuit.png) |
+| PhotonSmith | [Recorded field and wavelength sweep](../featured/photonsmith-field.png) |
+| InstrumentZero | [Synthetic ringdown](../featured/instrumentzero-ringdown.png) |
+| VibeScope | [Paired original-frame measurement](../featured/vibescope/measurement-story.png) |
+| Solidrift | [Original-stage geometry comparison](../solidrift-comparison.svg) |
+| Chronal | [Simulated equity and execution record](../featured/chronal/chronology.svg) |
+| LadderProof | [Exact interval-bound workbench](../featured/ladderproof-workbench.jpg) |

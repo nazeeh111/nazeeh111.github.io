@@ -60,7 +60,11 @@
     ],
     "legacy_fragment": [
       "case-solidframe"
-    ]
+    ],
+    "share": {
+      "title": "Changing a fixture without rebuilding it",
+      "description": "Edit a base plate from 70 to 85 mm, then undo and redo the change while retaining all seven solids in the browser CAD workspace."
+    }
   },
   {
     "slug": "capsulith",
@@ -123,7 +127,11 @@
     ],
     "legacy_fragment": [
       "systems"
-    ]
+    ],
+    "share": {
+      "title": "Reopening a decoded image in a fresh worker",
+      "description": "A prepared native image component decodes a QOI image. A fresh browser worker restores all 49,152 RGBA bytes from the recorded result."
+    }
   },
   {
     "slug": "qloom",
@@ -165,7 +173,12 @@
     ],
     "legacy_fragment": [
       "case-qloom"
-    ]
+    ],
+    "share": {
+      "title": "Routing a circuit without changing its operation",
+      "description": "Follow a three-qubit circuit onto a simulated line device and inspect the recorded operator-equivalence check.",
+      "image": "/assets/social/cases/qloom.png"
+    }
   },
   {
     "slug": "photonsmith",
@@ -207,7 +220,12 @@
     ],
     "legacy_fragment": [
       "case-photonsmith"
-    ]
+    ],
+    "share": {
+      "title": "Tracing light through a periodic grating",
+      "description": "Inspect a retained numerical field at 1550 nm and the calculated diffraction efficiency across 21 wavelength samples.",
+      "image": "/assets/social/cases/photonsmith.png"
+    }
   },
   {
     "slug": "vibescope",
@@ -254,7 +272,12 @@
     ],
     "legacy_fragment": [
       "case-vibescope"
-    ]
+    ],
+    "share": {
+      "title": "One measured signal at two display gains",
+      "description": "The same synthetic 240-frame recording gives identical displacement CSVs at 5× and 20× display gain. Inspect the paired frames and measured signal.",
+      "image": "/assets/social/cases/vibescope.png"
+    }
   },
   {
     "slug": "instrumentzero",
@@ -296,7 +319,12 @@
     ],
     "legacy_fragment": [
       "case-instrumentzero"
-    ]
+    ],
+    "share": {
+      "title": "Estimating the decay of a seeded ringdown",
+      "description": "Inspect 769 processed samples from a synthetic vibration with a 9.75 Hz model frequency and 0.45 per second decay.",
+      "image": "/assets/social/cases/instrumentzero.png"
+    }
   },
   {
     "slug": "nstack",
@@ -331,7 +359,11 @@
     ],
     "legacy_fragment": [
       "case-nstack"
-    ]
+    ],
+    "share": {
+      "title": "Tracing a skill to its source",
+      "description": "Follow a read-only registry lookup from web-ui-design to the pinned source, selected paths, rights and prerequisites of component L010."
+    }
   },
   {
     "slug": "solidrift",
@@ -377,7 +409,13 @@
     ],
     "legacy_fragment": [
       "geometry"
-    ]
+    ],
+    "share": {
+      "title": "Finding a smaller witness for a missing solid",
+      "description": "A recorded Blender union drops a body. Follow the reduction from 132 input triangles to a 12-triangle witness.",
+      "image": "/assets/social/cases/solidrift.png",
+      "alt": "Two original recorded mesh bodies before the Blender FLOAT union and the single retained body after it."
+    }
   },
   {
     "slug": "materialmind",
@@ -420,7 +458,11 @@
     ],
     "legacy_fragment": [
       "case-materialmind"
-    ]
+    ],
+    "share": {
+      "title": "Checking a prediction against its archived reference",
+      "description": "PaMnF6 ranked first, but its archived DFT energy fell outside the model’s pre-reveal interval. Inspect the query and comparison."
+    }
   },
   {
     "slug": "siliconpilot",
@@ -468,7 +510,13 @@
       "The matched-budget finite replay does not show broad learned-search superiority: the fixed sweep recovers the full reference tradeoff volume and uses less compilation time on average. Cost uncertainty under-covers. Established compilers/search methods, including hls4ml, are credited in docs/research.md; this project does not invent hardware-aware optimization."
     ],
     "legacy_fragment": [],
-    "notices_url": "/assets/featured/notices/siliconpilot/README.md"
+    "notices_url": "/assets/featured/notices/siliconpilot/README.md",
+    "share": {
+      "title": "Choosing between two routed hardware designs",
+      "description": "Compare recorded LUT4 counts and simulated core latencies for two classifiers that achieve the same accuracy on the retained validation split.",
+      "image": "/assets/featured/siliconpilot-waveform.png",
+      "alt": "Recorded waveform replay associated with a selected compiled SILICONPILOT design."
+    }
   },
   {
     "slug": "morphproof",
@@ -519,7 +567,13 @@
       "If redistributing native artifacts, preserve docs/presentation/LICENSE.txt, DEPENDENCIES.md, Cargo.lock files and the actual dependency notices. This portfolio links the intact worked package rather than stripping notices or copying its binaries. Separately attributed boltons/more_itertools research fixtures are not inputs to this case."
     ],
     "legacy_fragment": [],
-    "notices_url": "/assets/featured/notices/morphproof/README.md"
+    "notices_url": "/assets/featured/notices/morphproof/README.md",
+    "share": {
+      "title": "One omitted loop, one changed answer",
+      "description": "A deliberately omitted loop makes Python return 1.0 and Rust return 0.0 on a one-element synthetic input. Inspect the reduced witness.",
+      "image": "/assets/featured/morphproof-witness.png",
+      "alt": "Mechanism diagram of a disclosed skip-first-item seed: input [1.0] returns Python 1.0 and Rust 0.0; deterministic restoration passes the finite comparisons."
+    }
   },
   {
     "slug": "ladderproof",
@@ -579,7 +633,13 @@
       "Keep the MIT license and docs/references.md context with redistributed material. Runtime uses Python standard-library exact arithmetic and local browser code; no account, paid service or hardware is needed."
     ],
     "legacy_fragment": [],
-    "notices_url": "/assets/featured/notices/ladderproof/README.md"
+    "notices_url": "/assets/featured/notices/ladderproof/README.md",
+    "share": {
+      "title": "When a higher code lowers the voltage",
+      "description": "In the six-bit ±5% resistor model, code 31 to 32 can step backward. Inspect the exact bound over all 4,096 admitted corners.",
+      "image": "/assets/social/cases/ladderproof.png",
+      "alt": "LadderProof workbench result showing a −0.0351438 V worst step from code 31 to 32 across 4,096 modeled corners."
+    }
   },
   {
     "slug": "chronal",
@@ -624,6 +684,11 @@
     "technical_details": [
       "The request originated at close 630 and filled at open 631, the second reported holdout session.",
       "The recorded SYN_C buy spent 50,025.0000 units on 412.8366 shares and paid 25.0125 units in commission. The fills CSV records 49,949.9875 units of cash immediately afterward, displayed as $49,950 in the report. The chart and account panel show close-of-session values."
-    ]
+    ],
+    "share": {
+      "title": "A development winner loses on the holdout",
+      "description": "On fictional prices, a frozen strategy gained 1.775% in development and lost 1.461% on holdout. Trace the simulated fills and costs.",
+      "image": "/assets/social/cases/chronal.png"
+    }
   }
 ]

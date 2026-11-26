@@ -49,6 +49,40 @@ def details(image, src):
         rendered.append('<figure><a class="capture-detail" style="'+style+'" href="'+escape(src)+'"><img src="'+escape(src)+'" width="'+str(sw)+'" height="'+str(sh)+'" alt="'+escape(alt)+'" loading="lazy"></a>'+caption_html+'</figure>')
     return '<div class="mobile-details">'+''.join(rendered)+'</div>' if rendered else ''
 
+def share_metadata(case, files):
+    origin = "https://nazeeh111.github.io"
+    share = case.get("share", {})
+    title = case["name"]
+    if "title" in share:
+        title += " · " + share["title"]
+    description = share.get("description", case["lead"])
+    preview = case["media"][0] if case["media"] else {}
+    image = share.get("image", preview.get("src"))
+    tags = [
+        ("property", "og:type", "article"), ("property", "og:site_name", "Nazeeh Abdul-Hadi"),
+        ("property", "og:title", title), ("property", "og:description", description),
+        ("property", "og:url", origin + case["case_url"]),
+        ("name", "twitter:card", "summary_large_image" if image else "summary"),
+        ("name", "twitter:title", title), ("name", "twitter:description", description),
+    ]
+    if image:
+        mime = {".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg"}
+        if not isinstance(image, str):
+            raise ValueError("Share image must be a local path")
+        suffix = "." + image.rsplit(".", 1)[-1].lower()
+        if not image.startswith("/assets/") or image[1:] not in files or suffix not in mime:
+            raise ValueError("Share image must be a listed local PNG or JPEG")
+        alt = share.get("alt", preview.get("alt"))
+        if not isinstance(alt, str) or not alt.strip():
+            raise ValueError("Share image needs descriptive alt text")
+        tags.extend([
+            ("property", "og:image", origin + image), ("property", "og:image:type", mime[suffix]),
+            ("property", "og:image:alt", alt), ("name", "twitter:image", origin + image),
+            ("name", "twitter:image:alt", alt),
+        ])
+    return "\n".join(f'<meta {attr}="{key}" content="{escape(value)}">' for attr, key, value in tags)
+
+
 def render(cases, files):
     if not isinstance(cases,list) or not cases:
         raise ValueError("Reviewed cases must be a nonempty list")
@@ -118,6 +152,7 @@ def render(cases, files):
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>__NAME__ · Nazeeh Abdul-Hadi</title>
 <meta name="description" content="__DESCRIPTION__">
+__SOCIAL__
 <link rel="canonical" href="https://nazeeh111.github.io__ROUTE__">
 <link rel="icon" href="/assets/favicon.svg">
 <link rel="stylesheet" href="/assets/design/portfolio.css">
@@ -158,7 +193,7 @@ def render(cases, files):
 </footer>
 </body>
 </html>'''
-        values={'NAME':name,'DESCRIPTION':escape(case['lead']),'ROUTE':escape(route),'ACTIONS':action(case['action'],True)+action(case['secondary_action']),'GUIDE':guide_html,'SCOPE':escape(case['scope_note']),'MEDIA':''.join(media),'PROBLEMHEAD':escape(default_headings['problem']),'MECHANISMHEAD':escape(default_headings['mechanism']),'RESULTHEAD':escape(default_headings['observed_result']),'PROBLEM':paragraph(case['problem']),'MECHANISM':paragraph(case['mechanism']),'RESULT':paragraph(case['observed_result']),'FOUNDATIONS':paragraph(case['foundations']),'EXTRA':extra,'EVIDENCE':escape(evidence),'REPO':escape(repo),'RECORDED':recorded}
+        values={'SOCIAL':share_metadata(case,files),'NAME':name,'DESCRIPTION':escape(case['lead']),'ROUTE':escape(route),'ACTIONS':action(case['action'],True)+action(case['secondary_action']),'GUIDE':guide_html,'SCOPE':escape(case['scope_note']),'MEDIA':''.join(media),'PROBLEMHEAD':escape(default_headings['problem']),'MECHANISMHEAD':escape(default_headings['mechanism']),'RESULTHEAD':escape(default_headings['observed_result']),'PROBLEM':paragraph(case['problem']),'MECHANISM':paragraph(case['mechanism']),'RESULT':paragraph(case['observed_result']),'FOUNDATIONS':paragraph(case['foundations']),'EXTRA':extra,'EVIDENCE':escape(evidence),'REPO':escape(repo),'RECORDED':recorded}
         page=re.sub(r'__([A-Z]+)__',lambda match:values[match[1]],page)
         if slug=='vibescope':
             page=page.replace('</head>','<script src="/assets/portfolio.js" defer></script></head>')
