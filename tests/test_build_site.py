@@ -1,4 +1,4 @@
-import hashlib, importlib.util, json, shutil, tempfile, unittest, zipfile
+import hashlib, importlib.util, json, re, shutil, tempfile, unittest, zipfile
 from pathlib import Path
 from unittest.mock import patch
 ROOT=Path(__file__).resolve().parents[1]
@@ -60,7 +60,14 @@ class BuildTests(unittest.TestCase):
   self.assertEqual({case["slug"] for case in cases},{"solidframe","capsulith","qloom","photonsmith","vibescope","instrumentzero","nstack","solidrift","materialmind","siliconpilot","morphproof","ladderproof","chronal"})
   for case in cases:self.assertIn(case['case_url'].lstrip('/')+'index.html',outputs)
   self.assertIn(b'/assets/featured/materialmind/query-mobile.png',outputs['work/materialmind/index.html'])
-  self.assertIn(b'/assets/featured/chronal/report.html',outputs['work/chronal/index.html'])
+  self.assertIn(b'/assets/featured/chronal/review.html',outputs['work/chronal/index.html'])
+  payloads = []
+  for path in ('report.html', 'review.html'):
+   document = outputs['assets/featured/chronal/'+path]
+   embedded = re.findall(rb'<script[^>]+type="application/json"[^>]*>(.*?)</script>', document, re.S)
+   self.assertEqual(len(embedded), 1)
+   payloads.append(embedded[0])
+  self.assertEqual(payloads[0], payloads[1])
   self.assertIn(b'Open my GitHub profile',outputs['index.html'])
 
  def test_only_reviewed_inputs_enter_extracted_archive_build(self):

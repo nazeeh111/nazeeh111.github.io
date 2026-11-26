@@ -594,8 +594,8 @@
     "case_url": "/work/chronal/",
     "lead": "Chronal froze its winning strategy. On fictional holdout prices, it lost 1.461%. Follow the simulated trades behind that result.",
     "action": {
-      "label": "Open the interactive holdout",
-      "url": "/assets/featured/chronal/report.html"
+      "label": "Inspect the holdout report",
+      "url": "/assets/featured/chronal/review.html"
     },
     "secondary_action": {
       "label": "Download the complete replay",
@@ -603,14 +603,14 @@
     },
     "reader_guide": {
       "label": "How to find the first fill",
-      "instructions": "In the report, set Inspect exact session date to June 3, 2020 and choose Execution from the section menu. With a keyboard, press /, enter session #2, then enter goto execution."
+      "instructions": "Open the holdout report and choose Inspect the first simulated fill. The ledger moves to June 3, 2020 and shows the recorded SYN_C buy."
     },
     "problem": "A strategy can win on development data and still lose on the next unseen period. The worked experiment freezes the candidate, fill rules and costs so a reader can trace how that result arose.",
     "mechanism": "Training and evaluation advance in chronological windows. Chronal ranks four candidates by development Sharpe, freezes trend60, then compares it with equal weight across 126 holdout sessions. Both start the holdout with 100,000 simulated account units.",
     "observed_result": "The selected strategy returned +1.775% in development and −1.461% on the holdout. Equal weight returned −4.528% on the holdout. The selected strategy incurred 233.486 units of holdout commission. Spread and slippage enter fill prices.",
     "scope_note": "This experiment uses fictional prices. Session numbers in the figure are zero-based. The terminal’s session command counts from one within the displayed period. Results describe this run under Chronal’s daily execution assumptions.",
     "foundations": "Chronal uses Python and NumPy for chronological fitting and cash-aware simulation. The saved terminal contains the recorded data and runs in the browser with no external dependencies.",
-    "evidence_url": "https://github.com/nazeeh111/chronal/blob/f2cec5dfc41cfdb321f08c621d7303f3de828b1f/docs/presentation/README.md",
+    "evidence_url": "/assets/featured/chronal/provenance.html",
     "notices_url": "/assets/featured/chronal/LICENSE.txt",
     "media": [
       {
