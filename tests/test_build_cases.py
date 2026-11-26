@@ -19,6 +19,23 @@ class CaseBuilderTests(unittest.TestCase):
         self.assertIn(b'&lt;script&gt;',result)
         self.assertIn(b'__MEDIA__ &amp; &lt;a',result)
         self.assertIn(b'href="/assets/evidence.html#tool"',result)
+    def test_share_cards_use_public_images_or_a_text_summary(self):
+        self.case['share']={'title':'Retained comparison','description':'Two <values> differ.'}
+        def render():
+            return builder.render([self.case], self.files)['work/tool/index.html']
+        page=render()
+        self.assertIn('property="og:title" content="Tool · Retained comparison"'.encode(), page)
+        self.assertIn(b'name="twitter:description" content="Two &lt;values&gt; differ."', page)
+        self.assertIn(b'property="og:url" content="https://nazeeh111.github.io/work/tool/"', page)
+        self.assertIn(b'name="twitter:image" content="https://nazeeh111.github.io/assets/tool.png"', page)
+        self.assertIn(b'property="og:image:alt" content="The recorded tool."', page)
+        self.case['media']=[]
+        self.assertIn(b'name="twitter:card" content="summary"', render())
+        self.assertNotIn(b'property="og:image"', render())
+        self.case['share']['image']='/assets/not-public.jpg'
+        with self.assertRaisesRegex(ValueError,'listed local PNG or JPEG'):
+            render()
+
     def test_unlisted_media_and_evidence_never_enter_pages(self):
         for key,value in [('media','/private-note.png'),('evidence','/private-note.html')]:
             c=copy.deepcopy(self.case)
